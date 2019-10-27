@@ -25,7 +25,7 @@ import io.realm.RealmMigration
 class QkRealmMigration : RealmMigration {
 
     companion object {
-        const val SCHEMA_VERSION: Long = 7
+        const val SCHEMA_VERSION: Long = 8
     }
 
     override fun migrate(realm: DynamicRealm, oldVersion: Long, newVersion: Long) {
@@ -88,6 +88,18 @@ class QkRealmMigration : RealmMigration {
             realm.schema.get("MmsPart")
                     ?.addField("seq", Integer::class.java, FieldAttribute.REQUIRED)
                     ?.addField("name", String::class.java)
+
+            version++
+        }
+
+        if (version == 7L) {
+            realm.schema.create("ContactGroup")
+                    .addField("id", Long::class.java, FieldAttribute.PRIMARY_KEY, FieldAttribute.REQUIRED)
+                    .addField("title", String::class.java, FieldAttribute.REQUIRED)
+                    .addRealmListField("contacts", realm.schema.get("Contact"))
+
+            realm.schema.get("Contact")
+                    ?.addField("starred", Boolean::class.java, FieldAttribute.REQUIRED)
 
             version++
         }
