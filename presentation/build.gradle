@@ -22,13 +22,18 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+// Load keystore properties
+def keystorePropertiesFile = file("../../keys/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     flavorDimensions "analytics"
 
     defaultConfig {
-        applicationId "com.moez.QKSMS"
+        applicationId "com.fulldive.moneysms"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 2203
@@ -37,7 +42,12 @@ android {
     }
 
     signingConfigs {
-        release
+        releaseConfig {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
     }
 
     buildTypes {
@@ -45,7 +55,7 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.releaseConfig
         }
     }
 
