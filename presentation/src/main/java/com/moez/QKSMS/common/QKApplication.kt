@@ -25,6 +25,7 @@ import android.content.BroadcastReceiver
 import androidx.core.provider.FontRequest
 import androidx.emoji.text.EmojiCompat
 import androidx.emoji.text.FontRequestEmojiCompatConfig
+import com.fulldive.eventsender.lib.EventSender
 import com.moez.QKSMS.R
 import com.moez.QKSMS.common.util.CrashlyticsTree
 import com.moez.QKSMS.common.util.FileLoggingTree
@@ -36,11 +37,7 @@ import com.moez.QKSMS.migration.QkRealmMigration
 import com.moez.QKSMS.util.NightModeManager
 import com.uber.rxdogtag.RxDogTag
 import com.uber.rxdogtag.autodispose.AutoDisposeConfigurer
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import dagger.android.HasBroadcastReceiverInjector
-import dagger.android.HasServiceInjector
+import dagger.android.*
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import timber.log.Timber
@@ -94,6 +91,8 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
         RxDogTag.builder()
                 .configureWith(AutoDisposeConfigurer::configure)
                 .install()
+
+        EventSender.getInstance(this) // initialize
     }
 
     override fun activityInjector(): AndroidInjector<Activity> {

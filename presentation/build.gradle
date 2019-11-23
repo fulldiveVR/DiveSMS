@@ -197,6 +197,8 @@ dependencies {
     withAnalyticsImplementation 'com.google.firebase:firebase-core:16.0.9'
     withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
+    implementation "com.fulldive:eventsender:0.1.5"
+
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')
     withAnalyticsDebug project(path: ':data', configuration: 'withAnalyticsDebug')
