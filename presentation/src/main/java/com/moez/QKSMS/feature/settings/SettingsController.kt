@@ -182,13 +182,13 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
     }
 
     override fun showQksmsPlusSnackbar() {
-        view?.run {
-            Snackbar.make(contentView, R.string.toast_qksms_plus, Snackbar.LENGTH_LONG).run {
-                setAction(R.string.button_more) { viewQksmsPlusSubject.onNext(Unit) }
-                setActionTextColor(colors.theme().theme)
-                show()
-            }
-        }
+//        view?.run {
+//            Snackbar.make(contentView, R.string.toast_qksms_plus, Snackbar.LENGTH_LONG).run {
+//                setAction(R.string.button_more) { viewQksmsPlusSubject.onNext(Unit) }
+//                setActionTextColor(colors.theme().theme)
+//                show()
+//            }
+//        }
     }
 
     // TODO change this to a PopupWindow

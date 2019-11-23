@@ -169,7 +169,7 @@ class BackupController : QkController<BackupView, BackupState, BackupPresenter>(
 
         fabLabel.setText(when (state.upgraded) {
             true -> R.string.backup_now
-            false -> R.string.title_qksms_plus
+            false -> R.string.backup_now //R.string.title_qksms_plus
         })
     }
 

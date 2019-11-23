@@ -89,11 +89,11 @@ class ThemePickerController(val threadId: Long = 0L) : QkController<ThemePickerV
     }
 
     override fun showQksmsPlusSnackbar() {
-        Snackbar.make(contentView, R.string.toast_qksms_plus, Snackbar.LENGTH_LONG).run {
-            setAction(R.string.button_more) { viewQksmsPlusSubject.onNext(Unit) }
-            setActionTextColor(colors.theme().theme)
-            show()
-        }
+//        Snackbar.make(contentView, R.string.toast_qksms_plus, Snackbar.LENGTH_LONG).run {
+//            setAction(R.string.button_more) { viewQksmsPlusSubject.onNext(Unit) }
+//            setActionTextColor(colors.theme().theme)
+//            show()
+//        }
     }
 
     override fun themeSelected(): Observable<Int> = themeAdapter.colorSelected

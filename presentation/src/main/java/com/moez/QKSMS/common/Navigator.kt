@@ -75,9 +75,9 @@ class Navigator @Inject constructor(
      * one of [main_menu, compose_schedule, settings_night, settings_theme]
      */
     fun showQksmsPlusActivity(source: String) {
-        analyticsManager.track("Viewed QKSMS+", Pair("source", source))
-        val intent = Intent(context, PlusActivity::class.java)
-        startActivity(intent)
+//        analyticsManager.track("Viewed QKSMS+", Pair("source", source))
+//        val intent = Intent(context, PlusActivity::class.java)
+//        startActivity(intent)
     }
 
     /**
