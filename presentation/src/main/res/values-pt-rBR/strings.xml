@@ -219,6 +219,7 @@
     <string name="settings_delivery_title">Confirmações de entrega</string>
     <string name="settings_delivery_summary">Confirme que as mensagens foram enviadas com sucesso</string>
     <string name="settings_signature_title">Assinatura</string>
+    <string name="settings_signature_summary">Adicionar uma assinatura às mensagens</string>
     <string name="settings_unicode_title">Remover acentos</string>
     <string name="settings_unicode_summary">Remover acentos de caracteres em mensagens SMS enviadas</string>
     <string name="settings_mobile_title">Somente números de celular</string>
@@ -238,7 +239,7 @@
     <string name="blocking_manager_title">Gestor de bloqueios</string>
     <string name="blocking_manager_qksms_title">QKSMS</string>
     <string name="blocking_manager_qksms_summary">Funcionalidade de bloqueio, nativa no QKSMS</string>
-    <string name="blocking_manager_call_control_summary">Filtrar automaticamente as chamadas e as mensagens no local apropriado. Community IQ™ permite-lhe descartar as mensagens que forem enviadas pelo \'spammers\' reconhecidos pela comunidade.</string>
+    <string name="blocking_manager_call_control_summary">Filtrar automaticamente as chamadas e as mensagens com a aplicação Community IQ™, com a qual pode descartar as mensagens que forem enviadas pelo \'spammers\' reconhecidos na comunidade</string>
     <string name="blocking_manager_sia_summary">Automaticamente filtrar mensagens não solicitadas usando o aplicativo \"Should I Answer\"</string>
     <string name="blocking_manager_copy_title">Copiar números bloqueados</string>
     <string name="blocking_manager_copy_summary">Continuar para %s e substituir os números bloqueados</string>

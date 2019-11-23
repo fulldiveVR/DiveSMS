@@ -33,6 +33,8 @@ import android.webkit.MimeTypeMap
 import androidx.core.content.contentValuesOf
 import com.google.android.mms.ContentType
 import com.google.android.mms.MMSPart
+import com.google.android.mms.pdu_alt.MultimediaMessagePdu
+import com.google.android.mms.pdu_alt.PduPersister
 import com.klinker.android.send_message.SmsManagerFactory
 import com.klinker.android.send_message.StripAccents
 import com.klinker.android.send_message.Transaction
@@ -48,7 +50,6 @@ import com.moez.QKSMS.receiver.SendSmsReceiver
 import com.moez.QKSMS.receiver.SmsDeliveredReceiver
 import com.moez.QKSMS.receiver.SmsSentReceiver
 import com.moez.QKSMS.util.ImageUtils
-import com.moez.QKSMS.util.PhoneNumberUtils
 import com.moez.QKSMS.util.Preferences
 import com.moez.QKSMS.util.tryOrNull
 import io.realm.Case
@@ -69,7 +70,6 @@ class MessageRepositoryImpl @Inject constructor(
     private val context: Context,
     private val imageRepository: ImageRepository,
     private val messageIds: KeyManager,
-    private val phoneNumberUtils: PhoneNumberUtils,
     private val prefs: Preferences,
     private val syncRepository: SyncRepository
 ) : MessageRepository {
@@ -95,6 +95,7 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun getMessage(id: Long): Message? {
         return Realm.getDefaultInstance()
+                .also { realm -> realm.refresh() }
                 .where(Message::class.java)
                 .equalTo("id", id)
                 .findFirst()
@@ -113,7 +114,7 @@ class MessageRepositoryImpl @Inject constructor(
             realm.where(Conversation::class.java)
                     .equalTo("archived", false)
                     .equalTo("blocked", false)
-                    .equalTo("read", false)
+                    .equalTo("lastMessage.read", false)
                     .count()
         }
     }
@@ -146,7 +147,12 @@ class MessageRepositoryImpl @Inject constructor(
         val dir = File(Environment.getExternalStorageDirectory(), "QKSMS/Media").apply { mkdirs() }
         val fileName = part.name?.takeIf { name -> name.endsWith(extension) }
                 ?: "${part.type.split("/").last()}_$date.$extension"
-        val file = File(dir, fileName)
+        var file: File
+        var index = 0
+        do {
+            file = File(dir, if (index == 0) fileName else fileName.replace(".$extension", " ($index).$extension"))
+            index++
+        } while (file.exists())
 
         try {
             FileOutputStream(file).use { outputStream ->
@@ -246,13 +252,15 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun markUnread(vararg threadIds: Long) {
         Realm.getDefaultInstance()?.use { realm ->
-            val conversation = realm.where(Conversation::class.java)
+            val conversations = realm.where(Conversation::class.java)
                     .anyOf("id", threadIds)
-                    .equalTo("read", true)
+                    .equalTo("lastMessage.read", true)
                     .findAll()
 
             realm.executeTransaction {
-                conversation.forEach { it.read = false }
+                conversations.forEach { conversation ->
+                    conversation.lastMessage?.read = false
+                }
             }
         }
     }
@@ -295,6 +303,12 @@ class MessageRepositoryImpl @Inject constructor(
                 parts += MMSPart("text", ContentType.TEXT_PLAIN, signedBody.toByteArray())
             }
 
+            val smsManager = subId.takeIf { it != -1 }
+                    ?.let(SmsManagerFactory::createSmsManager)
+                    ?: SmsManager.getDefault()
+            val width = smsManager.carrierConfigValues.getInt(SmsManager.MMS_CONFIG_MAX_IMAGE_WIDTH)
+            val height = smsManager.carrierConfigValues.getInt(SmsManager.MMS_CONFIG_MAX_IMAGE_HEIGHT)
+
             // Add the GIFs as attachments
             parts += attachments
                     .mapNotNull { attachment -> attachment as? Attachment.Image }
@@ -309,7 +323,7 @@ class MessageRepositoryImpl @Inject constructor(
                     .mapNotNull { attachment -> attachment as? Attachment.Image }
                     .filter { attachment -> !attachment.isGif(context) }
                     .mapNotNull { attachment -> attachment.getUri() }
-                    .mapNotNull { uri -> tryOrNull { imageRepository.loadImage(uri) } }
+                    .mapNotNull { uri -> tryOrNull { imageRepository.loadImage(uri, width, height) } }
                     .also { totalImageBytes = it.sumBy { it.allocationByteCount } }
                     .map { bitmap ->
                         val byteRatio = bitmap.allocationByteCount / totalImageBytes.toFloat()
@@ -323,8 +337,7 @@ class MessageRepositoryImpl @Inject constructor(
                     .map { attachment -> attachment.vCard.toByteArray() }
                     .map { vCard -> MMSPart("contact", ContentType.TEXT_VCARD, vCard) }
 
-            val transaction = Transaction(context)
-            transaction.sendNewMessage(subId, threadId, addresses.map(phoneNumberUtils::normalizeNumber), parts, null)
+            Transaction(context).sendNewMessage(subId, threadId, addresses, parts, null, null)
         }
     }
 
@@ -361,6 +374,25 @@ class MessageRepositoryImpl @Inject constructor(
             Timber.w(e, "Message body lengths: ${parts.map { it?.length }}")
             markFailed(message.id, Telephony.MmsSms.ERR_TYPE_GENERIC)
         }
+    }
+
+    override fun resendMms(message: Message) {
+        val subId = message.subId
+        val threadId = message.threadId
+        val pdu = tryOrNull {
+            PduPersister.getPduPersister(context).load(message.getUri()) as MultimediaMessagePdu
+        } ?: return
+
+        val addresses = pdu.to.map { it.string }.filter { it.isNotBlank() }
+        val parts = message.parts.mapNotNull { part ->
+            val bytes = tryOrNull {
+                context.contentResolver.openInputStream(part.getUri())?.use { inputStream -> inputStream.readBytes() }
+            } ?: return@mapNotNull null
+
+            MMSPart(part.name.orEmpty(), part.type, bytes)
+        }
+
+        Transaction(context).sendNewMessage(subId, threadId, addresses, parts, message.subject, message.getUri())
     }
 
     override fun cancelDelayedSms(id: Long) {
@@ -482,12 +514,17 @@ class MessageRepositoryImpl @Inject constructor(
             message?.let {
                 // Update the message in realm
                 realm.executeTransaction {
-                    message.boxId = Telephony.Sms.MESSAGE_TYPE_OUTBOX
+                    message.boxId = when (message.isSms()) {
+                        true -> Telephony.Sms.MESSAGE_TYPE_OUTBOX
+                        false -> Telephony.Mms.MESSAGE_BOX_OUTBOX
+                    }
                 }
 
                 // Update the message in the native ContentProvider
-                val values = ContentValues()
-                values.put(Telephony.Sms.TYPE, Telephony.Sms.MESSAGE_TYPE_OUTBOX)
+                val values = when (message.isSms()) {
+                    true -> contentValuesOf(Telephony.Sms.TYPE to Telephony.Sms.MESSAGE_TYPE_OUTBOX)
+                    false -> contentValuesOf(Telephony.Mms.MESSAGE_BOX to Telephony.Mms.MESSAGE_BOX_OUTBOX)
+                }
                 context.contentResolver.update(message.getUri(), values, null, null)
             }
         }

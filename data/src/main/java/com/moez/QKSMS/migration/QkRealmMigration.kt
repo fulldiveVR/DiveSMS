@@ -21,11 +21,12 @@ package com.moez.QKSMS.migration
 import io.realm.DynamicRealm
 import io.realm.FieldAttribute
 import io.realm.RealmMigration
+import io.realm.Sort
 
 class QkRealmMigration : RealmMigration {
 
     companion object {
-        const val SCHEMA_VERSION: Long = 7
+        const val SCHEMA_VERSION: Long = 8
     }
 
     override fun migrate(realm: DynamicRealm, oldVersion: Long, newVersion: Long) {
@@ -92,9 +93,32 @@ class QkRealmMigration : RealmMigration {
             version++
         }
 
-        if (version < newVersion) {
-            throw IllegalStateException("Migration missing from v$oldVersion to v$newVersion")
+        if (version == 7L) {
+            realm.schema.get("Conversation")
+                    ?.addRealmObjectField("lastMessage", realm.schema.get("Message"))
+                    ?.removeField("count")
+                    ?.removeField("date")
+                    ?.removeField("snippet")
+                    ?.removeField("read")
+                    ?.removeField("me")
+
+            val conversations = realm.where("Conversation")
+                    .findAll()
+
+            val messages = realm.where("Message")
+                    .sort("date", Sort.DESCENDING)
+                    .distinct("threadId")
+                    .findAll()
+                    .associateBy { message -> message.getLong("threadId") }
+
+            conversations.forEach { conversation ->
+                conversation.setObject("lastMessage", messages[conversation.getLong("id")])
+            }
+
+            version++
         }
+
+        check(version >= newVersion) { "Migration missing from v$oldVersion to v$newVersion" }
     }
 
 }
