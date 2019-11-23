@@ -55,11 +55,11 @@
     <string name="archived_empty_text">بایگانی اینجا نمایش داده می‌شود</string>
     <string name="main_fab_cd">شروع گفتگوی جدید</string>
     <string name="main_default_sms_title">Love texting again</string>
-    <string name="main_default_sms_message">QKSMS را به عنوان نرم‌افزار پیش‌فرض پیامک انتخاب کنید</string>
+    <string name="main_default_sms_message">MoneySMS را به عنوان نرم‌افزار پیش‌فرض پیامک انتخاب کنید</string>
     <string name="main_default_sms_change">تغییر</string>
     <string name="main_permission_required">نیاز به اجازه</string>
     <string name="main_permission_sms">qksms برای ارسال و دیدن پیام ها نیاز به اجازه دارد</string>
-    <string name="main_permission_contacts">QKSMS needs permission to view your contacts</string>
+    <string name="main_permission_contacts">MoneySMS needs permission to view your contacts</string>
     <string name="main_permission_allow">اجازه</string>
     <string name="drawer_inbox">صندوق ورودی</string>
     <string name="drawer_archived">بایگانی</string>
@@ -92,7 +92,7 @@
     <string name="compose_vcard_label">کارت تماس</string>
     <string name="compose_scheduled_for">Scheduled for</string>
     <string name="compose_scheduled_future">Selected time must be in the future!</string>
-    <string name="compose_scheduled_plus">You must unlock QKSMS+ to use scheduled messaging</string>
+    <string name="compose_scheduled_plus">You must unlock MoneySMS+ to use scheduled messaging</string>
     <string name="compose_scheduled_toast">Added to scheduled messages</string>
     <string name="compose_hint">نوشتن پیام&#8230;</string>
     <string name="compose_menu_copy">کپی کردن متن</string>
@@ -142,7 +142,7 @@
     <string name="backup_never">هرگز</string>
     <string name="backup_restore_title">بازگردانشانی</string>
     <string name="backup_restore_summary">یک پشتیبان را انتخاب کنید</string>
-    <string name="backup_restore_error_plus">Please unlock QKSMS+ to use backup and restore</string>
+    <string name="backup_restore_error_plus">Please unlock MoneySMS+ to use backup and restore</string>
     <string name="backup_restore_error_backup">Backup in progress&#8230;</string>
     <string name="backup_restore_error_restore">Restore in progress&#8230;</string>
     <string name="backup_restore_confirm_title">Restore from backup</string>
@@ -227,7 +227,7 @@
     <string name="settings_mms_size_title">فشرده سازی خودکار پیوست ها</string>
     <string name="settings_sync_title">همگام سازی پیام ها</string>
     <string name="settings_sync_summary">همگام سازی پیام ها با پایگاه داده</string>
-    <string name="settings_about_title">در مورد QKSMS</string>
+    <string name="settings_about_title">در مورد MoneySMS</string>
     <string name="settings_version">نسخه ی %s</string>
     <string name="settings_logging_enabled">ورود به سیستم دیباگ فعال است</string>
     <string name="settings_logging_disabled">ورد به سیستم دیباگ غیرفعال است</string>
@@ -237,8 +237,8 @@
     <string name="blocking_drop_summary">Drop incoming messages from blocked senders instead of hiding them</string>
     <string name="blocking_conversations">Blocked conversations</string>
     <string name="blocking_manager_title">Blocking Manager</string>
-    <string name="blocking_manager_qksms_title">QKSMS</string>
-    <string name="blocking_manager_qksms_summary">Built-in blocking functionality in QKSMS</string>
+    <string name="blocking_manager_qksms_title">MoneySMS</string>
+    <string name="blocking_manager_qksms_summary">Built-in blocking functionality in MoneySMS</string>
     <string name="blocking_manager_call_control_summary">Automatically filter your calls and messages in one convenient place! Community IQ™ allows you to prevent unwanted messages from community known spammers</string>
     <string name="blocking_manager_sia_summary">با استفاده از برنامه «باید جواب بده»، پیامها را از شماره های ناخواسته به طور خودکار فیلتر کنید</string>
     <string name="blocking_manager_copy_title">Copy blocked numbers</string>
@@ -277,7 +277,7 @@
     <string name="qksms_plus_upgrade_donate">نسخه پیشرفته و حمایت %1$s %2$s</string>
     <string name="qksms_plus_thanks_title">ممنون از حمایت شما!</string>
     <string name="qksms_plus_thanks_summary">حال شما به همه امکانات دسترسی دارید</string>
-    <string name="qksms_plus_free_title">QKSMS + برای کاربران F-Droid رایگان است! اگر میخواهید از توسعه حمایت کنید، احساس رایگان کنید تا کمک مالی شود.</string>
+    <string name="qksms_plus_free_title">MoneySMS + برای کاربران F-Droid رایگان است! اگر میخواهید از توسعه حمایت کنید، احساس رایگان کنید تا کمک مالی شود.</string>
     <string name="qksms_plus_donate">از طریق PayPal کمک مالی کنید</string>
     <string name="qksms_plus_coming_soon">به زودی</string>
     <string name="qksms_plus_themes_title">پوسته پیشرفته</string>
@@ -299,7 +299,7 @@
     <string name="qksms_plus_respond_title">پاسخ خودکار</string>
     <string name="qksms_plus_respond_summary">ارسال جواب خودکار به پیامک ها</string>
     <string name="qksms_plus_more_title">بیشتر</string>
-    <string name="qksms_plus_more_summary">QKSMS در حال توسعه فعال است، و خرید شما شامل تمام ویژگی های آینده QKSMS + نیز هست !</string>
+    <string name="qksms_plus_more_summary">MoneySMS در حال توسعه فعال است، و خرید شما شامل تمام ویژگی های آینده MoneySMS + نیز هست !</string>
     <string name="widget_loading">بارگذاری&#8230;</string>
     <string name="widget_more">مشاهده مکالمات بیشتر</string>
     <string name="qkreply_menu_read">خوانده شده</string>
