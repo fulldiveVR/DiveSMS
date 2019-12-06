@@ -178,7 +178,7 @@ class Navigator @Inject constructor(
     }
 
     fun showRating() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.moez.QKSMS"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${BuildConfig.APPLICATION_ID}"))
                 .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY
                         or Intent.FLAG_ACTIVITY_NEW_DOCUMENT
                         or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
@@ -186,7 +186,7 @@ class Navigator @Inject constructor(
         try {
             startActivityExternal(intent)
         } catch (e: ActivityNotFoundException) {
-            val url = "http://play.google.com/store/apps/details?id=com.moez.QKSMS"
+            val url = "http://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}"
             startActivityExternal(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
         }
     }
@@ -224,16 +224,16 @@ class Navigator @Inject constructor(
                         .takeIf { BuildConfig.FLAVOR != "noAnalytics" }
                         .takeIf { billingManager.upgradeStatus.blockingFirst() } ?: "")
                 .toString())
-        startActivityExternal(intent)
+//        startActivityExternal(intent)
     }
 
     fun showInvite() {
-        analyticsManager.track("Clicked Invite")
-        Intent(Intent.ACTION_SEND)
-                .setType("text/plain")
-                .putExtra(Intent.EXTRA_TEXT, "http://qklabs.com/download")
-                .let { Intent.createChooser(it, null) }
-                .let(::startActivityExternal)
+//        analyticsManager.track("Clicked Invite")
+//        Intent(Intent.ACTION_SEND)
+//                .setType("text/plain")
+//                .putExtra(Intent.EXTRA_TEXT, "http://qklabs.com/download")
+//                .let { Intent.createChooser(it, null) }
+//                .let(::startActivityExternal)
     }
 
     fun addContact(address: String) {

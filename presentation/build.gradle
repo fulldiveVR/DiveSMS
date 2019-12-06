@@ -59,6 +59,14 @@ android {
         }
     }
 
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def nameSuff = variant.buildType.versionNameSuffix == null ? variant.versionName
+                    : variant.versionName.replace(variant.buildType.versionNameSuffix, "")
+            output.outputFileName = "MoneySMS-${variant.name}-${nameSuff}.apk"
+        }
+    }
+
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8
@@ -198,6 +206,7 @@ dependencies {
     withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     implementation "com.fulldive:eventsender:0.1.6"
+    implementation project(":libsms")
 
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')
