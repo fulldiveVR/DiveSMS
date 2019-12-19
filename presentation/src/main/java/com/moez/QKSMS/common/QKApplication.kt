@@ -26,6 +26,7 @@ import androidx.core.provider.FontRequest
 import androidx.emoji.text.EmojiCompat
 import androidx.emoji.text.FontRequestEmojiCompatConfig
 import com.fulldive.eventsender.lib.EventSender
+import com.fulldive.eventsender.lib.EventSenderConfig
 import com.moez.QKSMS.R
 import com.moez.QKSMS.common.util.CrashlyticsTree
 import com.moez.QKSMS.common.util.FileLoggingTree
@@ -92,6 +93,10 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
                 .configureWith(AutoDisposeConfigurer::configure)
                 .install()
 
+        // setup
+        EventSenderConfig.apply {
+            textPopupCustom = R.string.comFulldiveEventsender_textPopupCustom
+        }
         EventSender.getInstance(this) // initialize
     }
 

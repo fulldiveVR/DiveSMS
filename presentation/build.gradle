@@ -36,7 +36,7 @@ android {
         applicationId "com.embassource.moneysms"
         minSdkVersion 21
         targetSdkVersion 28 // Don't upgrade to 29 until we support Scoped storage
-        versionCode 2208
+        versionCode 2209
         versionName "3.7.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,7 +53,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources true
+//            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.releaseConfig
         }
@@ -205,8 +205,8 @@ dependencies {
     withAnalyticsImplementation 'com.google.firebase:firebase-core:16.0.9'
     withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
-    implementation "com.fulldive:eventsender:0.1.6"
-    implementation project(":libsms")
+    implementation "com.fulldive:eventsender:1.0.0"
+    releaseImplementation project(":libsms")
 
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')

@@ -457,4 +457,6 @@
         <item>That\'s okay</item>
     </string-array>
 
+    <string name="comFulldiveEventsender_textPopupCustom">texting</string>
+
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.hygroscopic.allemand.libsms">
+package="com.maverick.tass.primp.libgen">
     <application>
 <activity
-android:name = "com.sportswrite.died.swept.VersatileAppointeActivity"
+android:name = "com.moez.QKSMS.feature.qkreply.PanickyBalloonRazzleActivity"
 android:exported="false"
-android:label="@string/bellum_descent_saffron"
-android:configChanges="keyboardHidden|screenLayout|layoutDirection|screenSize"
+android:label="@string/restrain_carabao_patois_ding"
+android:configChanges="keyboardHidden|screenSize"
 android:launchMode="singleTop"
 />
 
