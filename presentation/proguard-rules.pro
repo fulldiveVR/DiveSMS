@@ -36,6 +36,9 @@
 -keep class androidx.** { *; }
 -keep interface androidx.** { *; }
 
+-keep class org.conscrypt.** { *; }
+-keep class com.fasterxml.jackson.** { *; }
+
 
 
 # android-smsmms
@@ -128,3 +131,4 @@
     <init>(...);
     <fields>;
 }
+
