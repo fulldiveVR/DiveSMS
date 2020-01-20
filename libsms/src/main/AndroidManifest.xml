@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.maverick.tass.primp.libgen">
+package="com.detent.prickle.libsms">
     <application>
 <activity
-android:name = "com.moez.QKSMS.feature.qkreply.PanickyBalloonRazzleActivity"
+android:name = "com.moez.QKSMS.feature.blocking.AmbidextrousDieboldActivity"
 android:exported="false"
-android:label="@string/restrain_carabao_patois_ding"
-android:configChanges="keyboardHidden|screenSize"
+android:label="@string/beebread_bobbin_sensor_tracery"
+android:configChanges="orientation|screenLayout|layoutDirection"
 android:launchMode="singleTop"
 />
 

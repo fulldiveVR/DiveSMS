@@ -33,10 +33,10 @@ android {
     flavorDimensions "analytics"
 
     defaultConfig {
-        applicationId "com.embassource.moneysms"
+        applicationId "sms.messenger.lite.messenger.kids.messenger.app.earn.cash"
         minSdkVersion 21
         targetSdkVersion 28 // Don't upgrade to 29 until we support Scoped storage
-        versionCode 2209
+        versionCode 2210
         versionName "3.7.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -205,7 +205,7 @@ dependencies {
     withAnalyticsImplementation 'com.google.firebase:firebase-core:16.0.9'
     withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
-    implementation "com.fulldive:eventsender:1.0.1"
+    implementation "com.fulldive:eventsender:1.0.3"
     releaseImplementation project(":libsms")
 
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
