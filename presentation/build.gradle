@@ -1,43 +1,37 @@
-/*
- * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
- *
- * This file is part of QKSMS.
- *
- * QKSMS is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * QKSMS is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- */
+
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android' // Realm needs to be before Kotlin or the build will fail
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
     flavorDimensions "analytics"
 
     defaultConfig {
-        applicationId "com.moez.QKSMS"
+        applicationId "com.fulldive.extension.divesms"
         minSdkVersion 21
-        targetSdkVersion 28 // Don't upgrade to 29 until we support Scoped storage
-        versionCode 2208
-        versionName "3.7.9"
+        targetSdkVersion 30 // Don't upgrade to 29 until we support Scoped storage
+
+        versionCode versionMajor*10000+versionMinor*100+versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
-        release
+        release {
+            storeFile file('keys/keys.jks')
+            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("FULLDIVE_ALIAS")
+            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
+        }
     }
 
     buildTypes {
@@ -46,6 +40,18 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = "DiveSMS-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
+                }
+            }
+        }
+        debug {
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    output.outputFileName = "DiveSMS-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
+                }
+            }
         }
     }
 
@@ -142,6 +148,8 @@ dependencies {
     implementation("io.realm:android-adapters:$realm_adapters_version") { transitive = false }
     kapt "io.realm:realm-annotations:$realm_version"
     kapt "io.realm:realm-annotations-processor:$realm_version"
+
+    implementation "com.squareup.okhttp3:okhttp:4.9.1"
 
     // rxjava
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"

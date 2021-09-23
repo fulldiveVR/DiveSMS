@@ -1,21 +1,4 @@
-/*
- * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
- *
- * This file is part of QKSMS.
- *
- * QKSMS is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * QKSMS is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- */
+
 package com.moez.QKSMS.feature.backup
 
 import android.content.Context
@@ -64,7 +47,7 @@ class BackupPresenter @Inject constructor(
                 .distinctUntilChanged()
                 .switchMap { backupRepo.getBackups() }
                 .doOnNext { backups -> newState { copy(backups = backups) } }
-                .map { backups -> backups.map { it.date }.max() ?: 0L }
+                .map { backups -> backups.map { it.date }.maxOrNull() ?: 0L }
                 .map { lastBackup ->
                     when (lastBackup) {
                         0L -> context.getString(R.string.backup_never)

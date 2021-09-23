@@ -1,22 +1,4 @@
-<!--
-  ~ Copyright (C) 2019 Moez Bhatti <moez.bhatti@gmail.com>
-  ~
-  ~ This file is part of QKSMS.
-  ~
-  ~ QKSMS is free software: you can redistribute it and/or modify
-  ~ it under the terms of the GNU General Public License as published by
-  ~ the Free Software Foundation, either version 3 of the License, or
-  ~ (at your option) any later version.
-  ~
-  ~ QKSMS is distributed in the hope that it will be useful,
-  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~ GNU General Public License for more details.
-  ~
-  ~ You should have received a copy of the GNU General Public License
-  ~ along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
-  -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="TextPrimary">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
@@ -127,4 +109,17 @@
         <item name="android:layout_marginEnd">32dp</item>
     </style>
 
+    <style name="AppThemeIntro" parent="AppTheme">
+        <!-- Translucent status bar is only available in API 19+ -->
+        <item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>
+    </style>
+    <style name="stealthTheme" parent="AppThemeIntro">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 </resources>
