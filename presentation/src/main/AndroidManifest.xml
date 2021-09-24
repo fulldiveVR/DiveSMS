@@ -153,16 +153,7 @@
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.SendScheduledMessageReceiver" />
-        <receiver android:name=".feature.widget.WidgetProvider">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.moez.QKSMS.intent.action.ACTION_NOTIFY_DATASET_CHANGED" />
-            </intent-filter>
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_info" />
-        </receiver>
         <receiver android:name=".receiver.SendSmsReceiver" />
 
         <service android:name="com.android.mms.transaction.TransactionService" />
@@ -215,6 +206,17 @@
             android:authorities="com.fulldive.extension.divesms.FulldiveContentProvider"
             android:exported="true"
             android:permission="com.fulldive.extension.divesms.access.read" />
+
+        <receiver android:name=".feature.widget.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.fulldive.extension.divesms.intent.action.ACTION_NOTIFY_DATASET_CHANGED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
     </application>
 
 </manifest>

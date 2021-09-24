@@ -15,8 +15,9 @@ class WidgetManagerImpl @Inject constructor(private val context: Context) : Widg
     }
 
     override fun updateTheme() {
+
         val ids = AppWidgetManager.getInstance(context)
-                .getAppWidgetIds(ComponentName("com.moez.QKSMS", "com.moez.QKSMS.feature.widget.WidgetProvider"))
+                .getAppWidgetIds(ComponentName("com.fulldive.extension.divesms", "com.fulldive.extension.divesms.feature.widget.WidgetProvider"))
 
         val intent = Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
 

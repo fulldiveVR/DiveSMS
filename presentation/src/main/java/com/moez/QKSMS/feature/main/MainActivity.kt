@@ -104,7 +104,6 @@ class MainActivity : QkThemedActivity(), MainView {
         )
     }
     override val optionsItemIntent: Subject<Int> = PublishSubject.create()
-    override val plusBannerIntent by lazy { plusBanner.clicks() }
     override val dismissRatingIntent by lazy { rateDismiss.clicks() }
     override val rateIntent by lazy { rateOkay.clicks() }
     override val conversationsSelectedIntent by lazy { conversationsAdapter.selectionChanges }
@@ -193,7 +192,6 @@ class MainActivity : QkThemedActivity(), MainView {
                 }
                 syncingProgress?.progressTintList = ColorStateList.valueOf(theme.theme)
                 syncingProgress?.indeterminateTintList = ColorStateList.valueOf(theme.theme)
-                plusIcon.setTint(theme.theme)
                 rateIcon.setTint(theme.theme)
                 compose.setBackgroundTint(theme.theme)
 
@@ -260,7 +258,6 @@ class MainActivity : QkThemedActivity(), MainView {
         listOf(plusBadge1, plusBadge2).forEach { badge ->
             badge.isVisible = drawerBadgesExperiment.variant && !state.upgraded
         }
-        plusBanner.isVisible = !state.upgraded
         rateLayout.setVisible(state.showRating)
 
         compose.setVisible(state.page is Inbox || state.page is Archived)

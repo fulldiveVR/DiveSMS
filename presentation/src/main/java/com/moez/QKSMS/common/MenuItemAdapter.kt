@@ -1,4 +1,3 @@
-
 package com.moez.QKSMS.common
 
 import android.content.Context
@@ -21,7 +20,10 @@ import javax.inject.Inject
 
 data class MenuItem(val title: String, val actionId: Int)
 
-class MenuItemAdapter @Inject constructor(private val context: Context, private val colors: Colors) : QkAdapter<MenuItem>() {
+class MenuItemAdapter @Inject constructor(
+    private val context: Context,
+    private val colors: Colors
+) : QkAdapter<MenuItem>() {
 
     val menuItemClicks: Subject<Int> = PublishSubject.create()
 
@@ -39,10 +41,11 @@ class MenuItemAdapter @Inject constructor(private val context: Context, private 
         }
 
     fun setData(@ArrayRes titles: Int, @ArrayRes values: Int = -1) {
-        val valueInts = if (values != -1) context.resources.getIntArray(values) else null
+        val valueInts =
+            if (values != -1) context.resources.getStringArray(values).map { it.toInt() } else null
 
         data = context.resources.getStringArray(titles)
-                .mapIndexed { index, title -> MenuItem(title, valueInts?.getOrNull(index) ?: index) }
+            .mapIndexed { index, title -> MenuItem(title, valueInts?.getOrNull(index) ?: index) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
@@ -50,8 +53,9 @@ class MenuItemAdapter @Inject constructor(private val context: Context, private 
         val view = layoutInflater.inflate(R.layout.menu_list_item, parent, false)
 
         val states = arrayOf(
-                intArrayOf(android.R.attr.state_activated),
-                intArrayOf(-android.R.attr.state_activated))
+            intArrayOf(android.R.attr.state_activated),
+            intArrayOf(-android.R.attr.state_activated)
+        )
 
         val text = parent.context.resolveThemeColor(android.R.attr.textColorTertiary)
         view.check.imageTintList = ColorStateList(states, intArrayOf(colors.theme().theme, text))

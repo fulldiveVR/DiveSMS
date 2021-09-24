@@ -317,13 +317,6 @@ class MainViewModel @Inject constructor(
                 .autoDisposable(view.scope())
                 .subscribe()
 
-        view.plusBannerIntent
-                .autoDisposable(view.scope())
-                .subscribe {
-                    newState { copy(drawerOpen = false) }
-                    navigator.showQksmsPlusActivity("main_banner")
-                }
-
         view.rateIntent
                 .autoDisposable(view.scope())
                 .subscribe {
