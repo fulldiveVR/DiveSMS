@@ -1,4 +1,3 @@
-
 package com.moez.QKSMS.feature.conversationinfo
 
 import android.view.View
@@ -27,14 +26,21 @@ import javax.inject.Inject
 
 class ConversationInfoController(
     val threadId: Long = 0
-) : QkController<ConversationInfoView, ConversationInfoState, ConversationInfoPresenter>(), ConversationInfoView {
+) : QkController<ConversationInfoView, ConversationInfoState, ConversationInfoPresenter>(),
+    ConversationInfoView {
 
-    @Inject override lateinit var presenter: ConversationInfoPresenter
-    @Inject lateinit var blockingDialog: BlockingDialog
-    @Inject lateinit var navigator: Navigator
-    @Inject lateinit var recipientAdapter: ConversationRecipientAdapter
-    @Inject lateinit var mediaAdapter: ConversationMediaAdapter
-    @Inject lateinit var itemDecoration: GridSpacingItemDecoration
+    @Inject
+    override lateinit var presenter: ConversationInfoPresenter
+    @Inject
+    lateinit var blockingDialog: BlockingDialog
+    @Inject
+    lateinit var navigator: Navigator
+    @Inject
+    lateinit var recipientAdapter: ConversationRecipientAdapter
+    @Inject
+    lateinit var mediaAdapter: ConversationMediaAdapter
+    @Inject
+    lateinit var itemDecoration: GridSpacingItemDecoration
 
     private val nameDialog: FieldDialog by lazy {
         FieldDialog(activity!!, activity!!.getString(R.string.info_name), nameChangeSubject::onNext)
@@ -45,10 +51,10 @@ class ConversationInfoController(
 
     init {
         appComponent
-                .conversationInfoBuilder()
-                .conversationInfoModule(ConversationInfoModule(this))
-                .build()
-                .inject(this)
+            .conversationInfoBuilder()
+            .conversationInfoModule(ConversationInfoModule(this))
+            .build()
+            .inject(this)
 
         layoutRes = R.layout.conversation_info_controller
     }
@@ -62,9 +68,9 @@ class ConversationInfoController(
         media.addItemDecoration(itemDecoration)
 
         themedActivity
-                ?.theme
-                ?.autoDisposable(scope())
-                ?.subscribe { recipients?.scrapViews() }
+            ?.theme
+            ?.autoDisposable(scope())
+            ?.subscribe { recipients?.scrapViews() }
     }
 
     override fun onAttach(view: View) {
@@ -102,23 +108,31 @@ class ConversationInfoController(
         recipientAdapter.threadId = state.threadId
         recipientAdapter.updateData(state.recipients)
 
-        name.setVisible(state.recipients?.size ?: 0 >= 2)
-        name.summary = state.name
+        try {
+            name.setVisible(state.recipients?.size ?: 0 >= 2)
+            name.summary = state.name
+        } catch (ignore: Exception) {
+
+        }
 
         notifications.isEnabled = !state.blocked
 
         themePrefs.isEnabled = !state.blocked
 
         archive.isEnabled = !state.blocked
-        archive.title = activity?.getString(when (state.archived) {
-            true -> R.string.info_unarchive
-            false -> R.string.info_archive
-        })
+        archive.title = activity?.getString(
+            when (state.archived) {
+                true -> R.string.info_unarchive
+                false -> R.string.info_archive
+            }
+        )
 
-        block.title = activity?.getString(when (state.blocked) {
-            true -> R.string.info_unblock
-            false -> R.string.info_block
-        })
+        block.title = activity?.getString(
+            when (state.blocked) {
+                true -> R.string.info_unblock
+                false -> R.string.info_block
+            }
+        )
 
         mediaAdapter.updateData(state.media)
     }
@@ -126,9 +140,11 @@ class ConversationInfoController(
     override fun showNameDialog(name: String) = nameDialog.setText(name).show()
 
     override fun showThemePicker(threadId: Long) {
-        router.pushController(RouterTransaction.with(ThemePickerController(threadId))
+        router.pushController(
+            RouterTransaction.with(ThemePickerController(threadId))
                 .pushChangeHandler(QkChangeHandler())
-                .popChangeHandler(QkChangeHandler()))
+                .popChangeHandler(QkChangeHandler())
+        )
     }
 
     override fun showBlockingDialog(conversations: List<Long>, block: Boolean) {
@@ -141,11 +157,11 @@ class ConversationInfoController(
 
     override fun showDeleteDialog() {
         AlertDialog.Builder(activity!!)
-                .setTitle(R.string.dialog_delete_title)
-                .setMessage(resources?.getQuantityString(R.plurals.dialog_delete_message, 1))
-                .setPositiveButton(R.string.button_delete) { _, _ -> confirmDeleteSubject.onNext(Unit) }
-                .setNegativeButton(R.string.button_cancel, null)
-                .show()
+            .setTitle(R.string.dialog_delete_title)
+            .setMessage(resources?.getQuantityString(R.plurals.dialog_delete_message, 1))
+            .setPositiveButton(R.string.button_delete) { _, _ -> confirmDeleteSubject.onNext(Unit) }
+            .setNegativeButton(R.string.button_cancel, null)
+            .show()
     }
 
 }
