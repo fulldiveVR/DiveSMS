@@ -62,6 +62,7 @@ allprojects {
             url 'http://oss.sonatype.org/content/repositories/snapshots'
         }
         mavenCentral()
+        maven {url "http://office.fulldive.com:8083"}
     }
 }
 

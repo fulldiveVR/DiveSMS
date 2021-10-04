@@ -93,6 +93,7 @@ configurations {
 }
 
 dependencies {
+    implementation "com.snore.guard:divesms:1.4.0"
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
@@ -199,6 +200,11 @@ dependencies {
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')
     withAnalyticsDebug project(path: ':data', configuration: 'withAnalyticsDebug')
     withAnalyticsRelease project(path: ':data', configuration: 'withAnalyticsRelease')
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://office.fulldive.com:8083" }
 }
 
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("WithAnalytics")) {
