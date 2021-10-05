@@ -10,10 +10,22 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-    }
 
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+
+    }
+    
     lintOptions {
         abortOnError false
+        disable 'MissingTranslation'
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
     }
 
     useLibrary 'org.apache.http.legacy'
