@@ -53,6 +53,7 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
                 .compactOnLaunch()
                 .migration(QkRealmMigration())
                 .schemaVersion(QkRealmMigration.SCHEMA_VERSION)
+            .allowWritesOnUiThread(true)
                 .build())
 
         AppComponentManager.init(this)

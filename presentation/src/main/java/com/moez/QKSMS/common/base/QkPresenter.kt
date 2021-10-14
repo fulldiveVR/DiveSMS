@@ -1,6 +1,7 @@
 
 package com.moez.QKSMS.common.base
 
+import android.util.Log
 import androidx.annotation.CallSuper
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDisposable
@@ -32,7 +33,9 @@ abstract class QkPresenter<View : QkViewContract<State>, State>(initialState: St
         state
                 .observeOn(AndroidSchedulers.mainThread())
                 .autoDisposable(view.scope())
-                .subscribe(view::render)
+                .subscribe(view::render) {
+                    Log.d("crashTest", "bindIntents ${it.message}")
+                }
     }
 
     protected fun newState(reducer: State.() -> State) = stateReducer.onNext(reducer)
