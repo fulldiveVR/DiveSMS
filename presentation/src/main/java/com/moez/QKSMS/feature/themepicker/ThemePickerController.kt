@@ -87,8 +87,6 @@ class ThemePickerController(val threadId: Long = 0L) : QkController<ThemePickerV
 
     override fun applyHsvThemeClicks(): Observable<*> = apply.clicks()
 
-    override fun viewQksmsPlusClicks(): Observable<*> = viewQksmsPlusSubject
-
     override fun render(state: ThemePickerState) {
         tabs.setThreadId(state.threadId)
 

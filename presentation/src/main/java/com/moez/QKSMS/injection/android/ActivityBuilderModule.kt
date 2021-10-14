@@ -1,4 +1,3 @@
-
 package com.moez.QKSMS.injection.android
 
 import com.moez.QKSMS.feature.backup.BackupActivity
@@ -12,8 +11,6 @@ import com.moez.QKSMS.feature.main.MainActivity
 import com.moez.QKSMS.feature.main.MainActivityModule
 import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivity
 import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivityModule
-import com.moez.QKSMS.feature.plus.PlusActivity
-import com.moez.QKSMS.feature.plus.PlusActivityModule
 import com.moez.QKSMS.feature.qkreply.QkReplyActivity
 import com.moez.QKSMS.feature.qkreply.QkReplyActivityModule
 import com.moez.QKSMS.feature.scheduled.ScheduledActivity
@@ -29,10 +26,6 @@ abstract class ActivityBuilderModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     abstract fun bindMainActivity(): MainActivity
-
-    @ActivityScope
-    @ContributesAndroidInjector(modules = [PlusActivityModule::class])
-    abstract fun bindPlusActivity(): PlusActivity
 
     @ActivityScope
     @ContributesAndroidInjector(modules = [])

@@ -108,9 +108,8 @@ class BackupPresenter @Inject constructor(
                 .autoDisposable(view.scope())
                 .subscribe { upgraded ->
                     when {
-                        !upgraded -> navigator.showQksmsPlusActivity("backup_fab")
                         !permissionManager.hasStorage() -> view.requestStoragePermission()
-                        upgraded -> performBackup.execute(Unit)
+                        else -> performBackup.execute(Unit)
                     }
                 }
     }

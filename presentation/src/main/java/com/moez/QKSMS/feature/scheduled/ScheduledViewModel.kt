@@ -58,10 +58,6 @@ class ScheduledViewModel @Inject constructor(
         view.composeIntent
                 .autoDisposable(view.scope())
                 .subscribe { navigator.showCompose() }
-
-        view.upgradeIntent
-                .autoDisposable(view.scope())
-                .subscribe { navigator.showQksmsPlusActivity("schedule_fab") }
     }
 
 }

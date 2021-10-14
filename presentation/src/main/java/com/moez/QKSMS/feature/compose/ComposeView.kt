@@ -39,7 +39,6 @@ interface ComposeView : QkView<ComposeState> {
     val scheduleCancelIntent: Observable<*>
     val changeSimIntent: Observable<*>
     val sendIntent: Observable<Unit>
-    val viewQksmsPlusIntent: Subject<Unit>
     val backPressedIntent: Observable<Unit>
 
     fun clearSelection()
@@ -53,6 +52,4 @@ interface ComposeView : QkView<ComposeState> {
     fun requestContact()
     fun setDraft(draft: String)
     fun scrollToMessage(id: Long)
-    fun showQksmsPlusSnackbar(@StringRes message: Int)
-
 }

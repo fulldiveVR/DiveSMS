@@ -500,9 +500,6 @@ class ComposeViewModel @Inject constructor(
         view.scheduleIntent
                 .doOnNext { newState { copy(attaching = false) } }
                 .withLatestFrom(billingManager.upgradeStatus) { _, upgraded -> upgraded }
-                .filter { upgraded ->
-                    upgraded.also { if (!upgraded) view.showQksmsPlusSnackbar(R.string.compose_scheduled_plus) }
-                }
                 .autoDisposable(view.scope())
                 .subscribe { view.requestDatePicker() }
 
@@ -687,11 +684,6 @@ class ComposeViewModel @Inject constructor(
                 }
                 .autoDisposable(view.scope())
                 .subscribe()
-
-        // View QKSMS+
-        view.viewQksmsPlusIntent
-                .autoDisposable(view.scope())
-                .subscribe { navigator.showQksmsPlusActivity("compose_schedule") }
 
         // Navigate back
         view.optionsItemIntent

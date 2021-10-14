@@ -72,11 +72,6 @@ class ThemePickerPresenter @Inject constructor(
                 .autoDisposable(view.scope())
                 .subscribe()
 
-        // Show QKSMS+ activity
-        view.viewQksmsPlusClicks()
-                .autoDisposable(view.scope())
-                .subscribe { navigator.showQksmsPlusActivity("settings_theme") }
-
         // Reset the theme
         view.clearHsvThemeClicks()
                 .withLatestFrom(theme.asObservable()) { _, color -> color }

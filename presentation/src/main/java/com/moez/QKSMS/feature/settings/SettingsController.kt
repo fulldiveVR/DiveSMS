@@ -56,7 +56,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
         FieldDialog(activity!!, context.getString(R.string.settings_signature_title), signatureSubject::onNext)
     }
 
-    private val viewQksmsPlusSubject: Subject<Unit> = PublishSubject.create()
     private val startTimeSelectedSubject: Subject<Pair<Int, Int>> = PublishSubject.create()
     private val endTimeSelectedSubject: Subject<Pair<Int, Int>> = PublishSubject.create()
     private val signatureSubject: Subject<String> = PublishSubject.create()
@@ -103,8 +102,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
             .let { preferences -> Observable.merge(preferences) }
 
     override fun aboutLongClicks(): Observable<*> = about.longClicks()
-
-    override fun viewQksmsPlusClicks(): Observable<*> = viewQksmsPlusSubject
 
     override fun nightModeSelected(): Observable<Int> = nightModeDialog.adapter.menuItemClicks
 
@@ -167,7 +164,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
     override fun showQksmsPlusSnackbar() {
         view?.run {
             Snackbar.make(contentView, R.string.toast_qksms_plus, Snackbar.LENGTH_LONG).run {
-                setAction(R.string.button_more) { viewQksmsPlusSubject.onNext(Unit) }
                 setActionTextColor(colors.theme().theme)
                 show()
             }

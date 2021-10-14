@@ -210,10 +210,6 @@ class SettingsPresenter @Inject constructor(
             .autoDisposable(view.scope())
             .subscribe()
 
-        view.viewQksmsPlusClicks()
-            .autoDisposable(view.scope())
-            .subscribe { navigator.showQksmsPlusActivity("settings_night") }
-
         view.nightStartSelected()
             .autoDisposable(view.scope())
             .subscribe { nightModeManager.setNightStart(it.first, it.second) }
