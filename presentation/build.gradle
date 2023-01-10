@@ -1,21 +1,20 @@
 /*
- *  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+ * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
  *
- *  This file is part of QKSMS.
+ * This file is part of QKSMS.
  *
- *  QKSMS is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * QKSMS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  QKSMS is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * QKSMS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- *
+ * You should have received a copy of the GNU General Public License
+ * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
  */
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android' // Realm needs to be before Kotlin or the build will fail
@@ -25,22 +24,25 @@ apply plugin: 'kotlin-kapt'
 
 def versionMajor = 1
 def versionMinor = 0
-def versionPatch = 4
+def versionPatch = 5
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 31
     flavorDimensions "analytics"
 
     defaultConfig {
         applicationId "com.fulldive.extension.divesms"
         minSdkVersion 21
-        targetSdkVersion 30 // Don't upgrade to 29 until we support Scoped storage
+        targetSdkVersion 31
 
         versionCode versionMajor*10000+versionMinor*100+versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
+        setProperty("archivesBaseName", "DiveSms-v${versionName}")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        setProperty("archivesBaseName", "QKSMS-v${versionName}")
+        multiDexEnabled= true
     }
 
     signingConfigs {
@@ -161,7 +163,9 @@ dependencies {
     kapt "io.realm:realm-annotations:$realm_version"
     kapt "io.realm:realm-annotations-processor:$realm_version"
 
-    implementation "com.squareup.okhttp3:okhttp:4.9.1"
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.1"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 
     // rxjava
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
@@ -196,7 +200,7 @@ dependencies {
     implementation "com.google.android:flexbox:0.3.1"
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
-    implementation "me.leolin:ShortcutBadger:1.1.21"
+    implementation "me.leolin:ShortcutBadger:1.1.22"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(":android-smsmms")
     implementation project(":common")
@@ -204,7 +208,6 @@ dependencies {
     implementation project(':domain')
 
     withAnalyticsImplementation 'com.google.firebase:firebase-core:16.0.9'
-    withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')
@@ -214,7 +217,10 @@ dependencies {
 
 repositories {
     mavenCentral()
-    maven { url "http://office.fulldive.com:8083" }
+    maven {
+        url "http://office.fulldive.com:8083"
+        allowInsecureProtocol = true
+    }
 }
 
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("WithAnalytics")) {

@@ -26,6 +26,7 @@ import android.content.Context
 import android.provider.Telephony
 import com.moez.QKSMS.compat.TelephonyCompat
 import com.moez.QKSMS.extensions.anyOf
+import com.moez.QKSMS.extensions.asObservable
 import com.moez.QKSMS.extensions.map
 import com.moez.QKSMS.extensions.removeAccents
 import com.moez.QKSMS.filter.ConversationFilter
@@ -38,6 +39,9 @@ import com.moez.QKSMS.model.Recipient
 import com.moez.QKSMS.model.SearchResult
 import com.moez.QKSMS.util.PhoneNumberUtils
 import com.moez.QKSMS.util.tryOrNull
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import io.realm.Case
 import io.realm.Realm
 import io.realm.RealmResults
@@ -57,11 +61,18 @@ class ConversationRepositoryImpl @Inject constructor(
         return Realm.getDefaultInstance()
                 .where(Conversation::class.java)
                 .notEqualTo("id", 0L)
-                .isNotNull("lastMessage")
                 .equalTo("archived", archived)
                 .equalTo("blocked", false)
                 .isNotEmpty("recipients")
-                .sort("pinned", Sort.DESCENDING, "lastMessage.date", Sort.DESCENDING)
+                .beginGroup()
+                .isNotNull("lastMessage")
+                .or()
+                .isNotEmpty("draft")
+                .endGroup()
+                .sort(
+                        arrayOf("pinned", "draft", "lastMessage.date"),
+                        arrayOf(Sort.DESCENDING, Sort.DESCENDING, Sort.DESCENDING)
+                )
                 .findAllAsync()
     }
 
@@ -70,11 +81,18 @@ class ConversationRepositoryImpl @Inject constructor(
             realm.refresh()
             realm.copyFromRealm(realm.where(Conversation::class.java)
                     .notEqualTo("id", 0L)
-                    .isNotNull("lastMessage")
                     .equalTo("archived", false)
                     .equalTo("blocked", false)
                     .isNotEmpty("recipients")
-                    .sort("pinned", Sort.DESCENDING, "lastMessage.date", Sort.DESCENDING)
+                    .beginGroup()
+                    .isNotNull("lastMessage")
+                    .or()
+                    .isNotEmpty("draft")
+                    .endGroup()
+                    .sort(
+                            arrayOf("pinned", "draft", "lastMessage.date"),
+                            arrayOf(Sort.DESCENDING, Sort.DESCENDING, Sort.DESCENDING)
+                    )
                     .findAll())
         }
     }
@@ -115,17 +133,26 @@ class ConversationRepositoryImpl @Inject constructor(
     }
 
     override fun searchConversations(query: CharSequence): List<SearchResult> {
-        val normalizedQuery = query.removeAccents()
-        val conversations = getConversationsSnapshot()
+        val realm = Realm.getDefaultInstance()
 
-        val messagesByConversation = Realm.getDefaultInstance()
+        val normalizedQuery = query.removeAccents()
+        val conversations = realm.copyFromRealm(realm
+                .where(Conversation::class.java)
+                .notEqualTo("id", 0L)
+                .isNotNull("lastMessage")
+                .equalTo("blocked", false)
+                .isNotEmpty("recipients")
+                .sort("pinned", Sort.DESCENDING, "lastMessage.date", Sort.DESCENDING)
+                .findAll())
+
+        val messagesByConversation = realm.copyFromRealm(realm
                 .where(Message::class.java)
                 .beginGroup()
                 .contains("body", normalizedQuery, Case.INSENSITIVE)
                 .or()
                 .contains("parts.text", normalizedQuery, Case.INSENSITIVE)
                 .endGroup()
-                .findAll()
+                .findAll())
                 .asSequence()
                 .groupBy { message -> message.threadId }
                 .filter { (threadId, _) -> conversations.firstOrNull { it.id == threadId } != null }
@@ -134,10 +161,11 @@ class ConversationRepositoryImpl @Inject constructor(
                 .sortedByDescending { result -> result.messages }
                 .toList()
 
+        realm.close()
+
         return conversations
                 .filter { conversation -> conversationFilter.filter(conversation, normalizedQuery) }
-                .map { conversation -> SearchResult(normalizedQuery, conversation, 0) }
-                .plus(messagesByConversation)
+                .map { conversation -> SearchResult(normalizedQuery, conversation, 0) } + messagesByConversation
     }
 
     override fun getBlockedConversations(): RealmResults<Conversation> {
@@ -163,6 +191,7 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun getConversation(threadId: Long): Conversation? {
         return Realm.getDefaultInstance()
+                .apply { refresh() }
                 .where(Conversation::class.java)
                 .equalTo("id", threadId)
                 .findFirst()
@@ -173,6 +202,42 @@ class ConversationRepositoryImpl @Inject constructor(
                 .where(Conversation::class.java)
                 .anyOf("id", threadIds)
                 .findAll()
+    }
+
+    override fun getUnmanagedConversations(): Observable<List<Conversation>> {
+        val realm = Realm.getDefaultInstance()
+        return realm.where(Conversation::class.java)
+                .sort("lastMessage.date", Sort.DESCENDING)
+                .notEqualTo("id", 0L)
+                .isNotNull("lastMessage")
+                .equalTo("archived", false)
+                .equalTo("blocked", false)
+                .isNotEmpty("recipients")
+                .limit(5)
+                .findAllAsync()
+                .asObservable()
+                .filter { it.isLoaded }
+                .filter { it.isValid }
+                .map { realm.copyFromRealm(it) }
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.io())
+    }
+
+    override fun getRecipients(): RealmResults<Recipient> {
+        val realm = Realm.getDefaultInstance()
+        return realm.where(Recipient::class.java)
+                .findAll()
+    }
+
+    override fun getUnmanagedRecipients(): Observable<List<Recipient>> {
+        val realm = Realm.getDefaultInstance()
+        return realm.where(Recipient::class.java)
+                .isNotNull("contact")
+                .findAllAsync()
+                .asObservable()
+                .filter { it.isLoaded && it.isValid }
+                .map { realm.copyFromRealm(it) }
+                .subscribeOn(AndroidSchedulers.mainThread())
     }
 
     override fun getRecipient(recipientId: Long): Recipient? {
@@ -188,6 +253,7 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun getThreadId(recipients: Collection<String>): Long? {
         return Realm.getDefaultInstance().use { realm ->
+            realm.refresh()
             realm.where(Conversation::class.java)
                     .findAll()
                     .asSequence()

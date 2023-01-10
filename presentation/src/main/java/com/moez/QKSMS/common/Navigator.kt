@@ -1,27 +1,26 @@
 /*
- *  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+ * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
  *
- *  This file is part of QKSMS.
+ * This file is part of QKSMS.
  *
- *  QKSMS is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * QKSMS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  QKSMS is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * QKSMS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- *
+ * You should have received a copy of the GNU General Public License
+ * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package com.moez.QKSMS.common
 
 import android.app.Activity
 import android.app.role.RoleManager
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -32,17 +31,17 @@ import android.provider.Telephony
 import android.webkit.MimeTypeMap
 import androidx.core.content.FileProvider
 import com.moez.QKSMS.BuildConfig
-import com.moez.QKSMS.appextension.openAppInGooglePlay
-import com.moez.QKSMS.common.util.BillingManager
 import com.moez.QKSMS.feature.backup.BackupActivity
 import com.moez.QKSMS.feature.blocking.BlockingActivity
 import com.moez.QKSMS.feature.compose.ComposeActivity
 import com.moez.QKSMS.feature.conversationinfo.ConversationInfoActivity
 import com.moez.QKSMS.feature.gallery.GalleryActivity
 import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivity
+import com.moez.QKSMS.feature.plus.PlusActivity
 import com.moez.QKSMS.feature.scheduled.ScheduledActivity
 import com.moez.QKSMS.feature.settings.SettingsActivity
 import com.moez.QKSMS.manager.AnalyticsManager
+import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.manager.NotificationManager
 import com.moez.QKSMS.manager.PermissionManager
 import java.io.File
@@ -69,6 +68,16 @@ class Navigator @Inject constructor(
         } else {
             startActivity(Intent.createChooser(intent, null))
         }
+    }
+
+    /**
+     * @param source String to indicate where this QKSMS+ screen was launched from. This should be
+     * one of [main_menu, compose_schedule, settings_night, settings_theme]
+     */
+    fun showQksmsPlusActivity(source: String) {
+        analyticsManager.track("Viewed QKSMS+", Pair("source", source))
+        val intent = Intent(context, PlusActivity::class.java)
+        startActivity(intent)
     }
 
     /**
@@ -99,8 +108,8 @@ class Navigator @Inject constructor(
 
     fun showConversation(threadId: Long, query: String? = null) {
         val intent = Intent(context, ComposeActivity::class.java)
-            .putExtra("threadId", threadId)
-            .putExtra("query", query)
+                .putExtra("threadId", threadId)
+                .putExtra("query", query)
         startActivity(intent)
     }
 
@@ -133,7 +142,22 @@ class Navigator @Inject constructor(
     }
 
     fun showDeveloper() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://fulldive.com"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti"))
+        startActivityExternal(intent)
+    }
+
+    fun showSourceCode() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms"))
+        startActivityExternal(intent)
+    }
+
+    fun showChangelog() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms/releases"))
+        startActivityExternal(intent)
+    }
+
+    fun showLicense() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms/blob/master/LICENSE"))
         startActivityExternal(intent)
     }
 
@@ -148,16 +172,39 @@ class Navigator @Inject constructor(
         startActivityExternal(intent)
     }
 
+    fun showDonation() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/QKSMSDonation"))
+        startActivityExternal(intent)
+    }
+
     fun showRating() {
-        context.openAppInGooglePlay(BuildConfig.APPLICATION_ID)
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.moez.QKSMS"))
+                .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY
+                        or Intent.FLAG_ACTIVITY_NEW_DOCUMENT
+                        or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
+
+        try {
+            startActivityExternal(intent)
+        } catch (e: ActivityNotFoundException) {
+            val url = "http://play.google.com/store/apps/details?id=com.moez.QKSMS"
+            startActivityExternal(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+        }
+    }
+
+    /**
+     * Launch the Play Store and display the Call Blocker listing
+     */
+    fun installCallBlocker() {
+        val url = "https://play.google.com/store/apps/details?id=com.cuiet.blockCalls"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivityExternal(intent)
     }
 
     /**
      * Launch the Play Store and display the Call Control listing
      */
     fun installCallControl() {
-        val url =
-            "https://play.google.com/store/apps/details?id=com.flexaspect.android.everycallcontrol"
+        val url = "https://play.google.com/store/apps/details?id=com.flexaspect.android.everycallcontrol"
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivityExternal(intent)
     }
@@ -174,46 +221,41 @@ class Navigator @Inject constructor(
     fun showSupport() {
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:")
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("support@fulldive.com"))
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Dive SMS Support")
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("moez@qklabs.com"))
+        intent.putExtra(Intent.EXTRA_SUBJECT, "QKSMS Support")
         intent.putExtra(Intent.EXTRA_TEXT, StringBuilder("\n\n")
-            .append("\n\n--- Please write your message above this line ---\n\n")
-            .append("Package: ${context.packageName}\n")
-            .append("Version: ${BuildConfig.VERSION_NAME}\n")
-            .append("Device: ${Build.BRAND} ${Build.MODEL}\n")
-            .append("SDK: ${Build.VERSION.SDK_INT}\n")
-            .append("Upgraded"
-                .takeIf { BuildConfig.FLAVOR != "noAnalytics" }
-                .takeIf { billingManager.upgradeStatus.blockingFirst() } ?: "")
-            .toString())
+                .append("\n\n--- Please write your message above this line ---\n\n")
+                .append("Package: ${context.packageName}\n")
+                .append("Version: ${BuildConfig.VERSION_NAME}\n")
+                .append("Device: ${Build.BRAND} ${Build.MODEL}\n")
+                .append("SDK: ${Build.VERSION.SDK_INT}\n")
+                .append("Upgraded"
+                        .takeIf { BuildConfig.FLAVOR != "noAnalytics" }
+                        .takeIf { billingManager.upgradeStatus.blockingFirst() } ?: "")
+                .toString())
         startActivityExternal(intent)
     }
 
     fun showInvite() {
         analyticsManager.track("Clicked Invite")
         Intent(Intent.ACTION_SEND)
-            .setType("text/plain")
-            .putExtra(Intent.EXTRA_TEXT, "http://qklabs.com/download")
-            .let { Intent.createChooser(it, null) }
-            .let(::startActivityExternal)
+                .setType("text/plain")
+                .putExtra(Intent.EXTRA_TEXT, "http://qklabs.com/download")
+                .let { Intent.createChooser(it, null) }
+                .let(::startActivityExternal)
     }
 
     fun addContact(address: String) {
-        val uri = Uri.parse("tel: $address")
-        var intent = Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT, uri)
-
-        if (intent.resolveActivity(context.packageManager) == null) {
-            intent = Intent(Intent.ACTION_INSERT)
+        val intent = Intent(Intent.ACTION_INSERT)
                 .setType(ContactsContract.Contacts.CONTENT_TYPE)
                 .putExtra(ContactsContract.Intents.Insert.PHONE, address)
-        }
 
         startActivityExternal(intent)
     }
 
     fun showContact(lookupKey: String) {
         val intent = Intent(Intent.ACTION_VIEW)
-            .setData(Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_LOOKUP_URI, lookupKey))
+                .setData(Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_LOOKUP_URI, lookupKey))
 
         startActivityExternal(intent)
     }
@@ -222,8 +264,19 @@ class Navigator @Inject constructor(
         val data = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
         val type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.name.split(".").last())
         val intent = Intent(Intent.ACTION_VIEW)
-            .setDataAndType(data, type)
-            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                .setDataAndType(data, type)
+                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        startActivityExternal(intent)
+    }
+
+    fun shareFile(file: File) {
+        val data = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
+        val type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(file.name.split(".").last())
+        val intent = Intent(Intent.ACTION_SEND)
+                .setType(type)
+                .putExtra(Intent.EXTRA_STREAM, data)
+                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
         startActivityExternal(intent)
     }
@@ -242,8 +295,8 @@ class Navigator @Inject constructor(
 
             val channelId = notificationManager.buildNotificationChannelId(threadId)
             val intent = Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS)
-            intent.putExtra(Settings.EXTRA_CHANNEL_ID, channelId)
-            intent.putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+                    .putExtra(Settings.EXTRA_CHANNEL_ID, channelId)
+                    .putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
             startActivity(intent)
         }
     }

@@ -49,6 +49,7 @@ class NotificationPrefsViewModel @Inject constructor(
 
     private val notifications = prefs.notifications(threadId)
     private val previews = prefs.notificationPreviews(threadId)
+    private val wake = prefs.wakeScreen(threadId)
     private val vibration = prefs.vibration(threadId)
     private val ringtone = prefs.ringtone(threadId)
 
@@ -77,6 +78,9 @@ class NotificationPrefsViewModel @Inject constructor(
 
         disposables += prefs.notifAction3.asObservable()
                 .subscribe { previewId -> newState { copy(action3Summary = actionLabels[previewId]) } }
+
+        disposables += wake.asObservable()
+                .subscribe { enabled -> newState { copy(wakeEnabled = enabled) } }
 
         disposables += vibration.asObservable()
                 .subscribe { enabled -> newState { copy(vibrationEnabled = enabled) } }
@@ -109,6 +113,8 @@ class NotificationPrefsViewModel @Inject constructor(
                         R.id.notifications -> notifications.set(!notifications.get())
 
                         R.id.previews -> view.showPreviewModeDialog()
+
+                        R.id.wake -> wake.set(!wake.get())
 
                         R.id.vibration -> vibration.set(!vibration.get())
 

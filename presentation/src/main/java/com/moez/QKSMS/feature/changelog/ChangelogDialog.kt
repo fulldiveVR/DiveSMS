@@ -51,7 +51,7 @@ class ChangelogDialog(activity: MainActivity) {
         layout.dismiss.setOnClickListener { dialog.dismiss() }
     }
 
-    fun show(changelog: ChangelogManager.Changelog) {
+    fun show(changelog: ChangelogManager.CumulativeChangelog) {
         adapter.setChangelog(changelog)
         dialog.show()
     }

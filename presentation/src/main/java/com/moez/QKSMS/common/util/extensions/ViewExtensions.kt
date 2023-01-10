@@ -42,11 +42,16 @@ var ViewGroup.animateLayoutChanges: Boolean
         layoutTransition = if (value) LayoutTransition() else null
     }
 
-
 fun EditText.showKeyboard() {
     requestFocus()
     val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-    imm.showSoftInput(this, 0)
+    imm.showSoftInput(this, InputMethodManager.SHOW_IMPLICIT)
+}
+
+fun EditText.hideKeyboard() {
+    requestFocus()
+    val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(windowToken, 0)
 }
 
 fun ImageView.setTint(color: Int) {
@@ -62,7 +67,7 @@ fun View.setBackgroundTint(color: Int) {
 
     // API 21 doesn't support this
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP_MR1) {
-        background?.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
+        background?.setColorFilter(color, PorterDuff.Mode.SRC_IN)
     }
 
     backgroundTintList = ColorStateList.valueOf(color)
@@ -118,14 +123,6 @@ fun ViewPager.addOnPageChangeListener(listener: (Int) -> Unit) {
 }
 
 fun RecyclerView.scrapViews() {
-    val adapter = adapter
-    val layoutManager = layoutManager
-
-    this.adapter = null
-    this.layoutManager = null
-
-    this.adapter = adapter
-    this.layoutManager = layoutManager
-
+    recycledViewPool.clear()
     adapter?.notifyDataSetChanged()
 }

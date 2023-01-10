@@ -24,12 +24,14 @@ package com.moez.QKSMS.injection
 import android.app.Application
 import android.content.ContentResolver
 import android.content.Context
+import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import androidx.lifecycle.ViewModelProvider
 import com.f2prateek.rx.preferences2.RxSharedPreferences
 import com.moez.QKSMS.blocking.BlockingClient
 import com.moez.QKSMS.blocking.BlockingManager
 import com.moez.QKSMS.common.ViewModelFactory
+import com.moez.QKSMS.common.util.BillingManagerImpl
 import com.moez.QKSMS.common.util.NotificationManagerImpl
 import com.moez.QKSMS.common.util.ShortcutManagerImpl
 import com.moez.QKSMS.feature.conversationinfo.injection.ConversationInfoComponent
@@ -42,6 +44,7 @@ import com.moez.QKSMS.manager.AlarmManager
 import com.moez.QKSMS.manager.AlarmManagerImpl
 import com.moez.QKSMS.manager.AnalyticsManager
 import com.moez.QKSMS.manager.AnalyticsManagerImpl
+import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.manager.ChangelogManager
 import com.moez.QKSMS.manager.ChangelogManagerImpl
 import com.moez.QKSMS.manager.KeyManager
@@ -50,10 +53,16 @@ import com.moez.QKSMS.manager.NotificationManager
 import com.moez.QKSMS.manager.PermissionManager
 import com.moez.QKSMS.manager.PermissionManagerImpl
 import com.moez.QKSMS.manager.RatingManager
+import com.moez.QKSMS.manager.ReferralManager
+import com.moez.QKSMS.manager.ReferralManagerImpl
 import com.moez.QKSMS.manager.ShortcutManager
 import com.moez.QKSMS.manager.WidgetManager
 import com.moez.QKSMS.manager.WidgetManagerImpl
 import com.moez.QKSMS.mapper.CursorToContact
+import com.moez.QKSMS.mapper.CursorToContactGroup
+import com.moez.QKSMS.mapper.CursorToContactGroupImpl
+import com.moez.QKSMS.mapper.CursorToContactGroupMember
+import com.moez.QKSMS.mapper.CursorToContactGroupMemberImpl
 import com.moez.QKSMS.mapper.CursorToContactImpl
 import com.moez.QKSMS.mapper.CursorToConversation
 import com.moez.QKSMS.mapper.CursorToConversationImpl
@@ -72,8 +81,6 @@ import com.moez.QKSMS.repository.ContactRepository
 import com.moez.QKSMS.repository.ContactRepositoryImpl
 import com.moez.QKSMS.repository.ConversationRepository
 import com.moez.QKSMS.repository.ConversationRepositoryImpl
-import com.moez.QKSMS.repository.ImageRepository
-import com.moez.QKSMS.repository.ImageRepositoryImpl
 import com.moez.QKSMS.repository.MessageRepository
 import com.moez.QKSMS.repository.MessageRepositoryImpl
 import com.moez.QKSMS.repository.ScheduledMessageRepository
@@ -100,8 +107,13 @@ class AppModule(private var application: Application) {
 
     @Provides
     @Singleton
-    fun provideRxPreferences(context: Context): RxSharedPreferences {
-        val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+    fun provideSharedPreferences(context: Context): SharedPreferences {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRxPreferences(preferences: SharedPreferences): RxSharedPreferences {
         return RxSharedPreferences.create(preferences)
     }
 
@@ -122,6 +134,9 @@ class AppModule(private var application: Application) {
     fun provideContactAddedListener(listener: ContactAddedListenerImpl): ContactAddedListener = listener
 
     // Manager
+
+    @Provides
+    fun provideBillingManager(manager: BillingManagerImpl): BillingManager = manager
 
     @Provides
     fun provideActiveConversationManager(manager: ActiveConversationManagerImpl): ActiveConversationManager = manager
@@ -154,12 +169,21 @@ class AppModule(private var application: Application) {
     fun provideShortcutManager(manager: ShortcutManagerImpl): ShortcutManager = manager
 
     @Provides
+    fun provideReferralManager(manager: ReferralManagerImpl): ReferralManager = manager
+
+    @Provides
     fun provideWidgetManager(manager: WidgetManagerImpl): WidgetManager = manager
 
     // Mapper
 
     @Provides
     fun provideCursorToContact(mapper: CursorToContactImpl): CursorToContact = mapper
+
+    @Provides
+    fun provideCursorToContactGroup(mapper: CursorToContactGroupImpl): CursorToContactGroup = mapper
+
+    @Provides
+    fun provideCursorToContactGroupMember(mapper: CursorToContactGroupMemberImpl): CursorToContactGroupMember = mapper
 
     @Provides
     fun provideCursorToConversation(mapper: CursorToConversationImpl): CursorToConversation = mapper
@@ -186,9 +210,6 @@ class AppModule(private var application: Application) {
 
     @Provides
     fun provideConversationRepository(repository: ConversationRepositoryImpl): ConversationRepository = repository
-
-    @Provides
-    fun provideImageRepository(repository: ImageRepositoryImpl): ImageRepository = repository
 
     @Provides
     fun provideMessageRepository(repository: MessageRepositoryImpl): MessageRepository = repository

@@ -1,24 +1,21 @@
 /*
- *  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+ * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
  *
- *  This file is part of QKSMS.
+ * This file is part of QKSMS.
  *
- *  QKSMS is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * QKSMS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  QKSMS is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * QKSMS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- *
+ * You should have received a copy of the GNU General Public License
+ * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
 package com.moez.QKSMS.feature.compose
 
 import android.app.Activity
@@ -35,8 +32,12 @@ import android.view.Window
 import android.view.WindowManager
 import android.view.accessibility.AccessibilityEvent
 import androidx.annotation.RequiresApi
+import com.moez.QKSMS.feature.compose.editing.DetailedChipView
 
-class ComposeWindowCallback(private val localCallback: Window.Callback, private val activity: Activity) : Window.Callback {
+class ComposeWindowCallback(
+    private val localCallback: Window.Callback,
+    private val activity: Activity
+) : Window.Callback {
 
     override fun dispatchKeyEvent(keyEvent: KeyEvent): Boolean {
         return localCallback.dispatchKeyEvent(keyEvent)
@@ -82,8 +83,8 @@ class ComposeWindowCallback(private val localCallback: Window.Callback, private 
         return localCallback.onCreatePanelMenu(i, menu)
     }
 
-    override fun onPreparePanel(featureId: Int, view: View?, menu: Menu): Boolean {
-        return localCallback.onPreparePanel(featureId, view, menu)
+    override fun onPreparePanel(i: Int, view: View?, menu: Menu): Boolean {
+        return localCallback.onPreparePanel(i, view, menu)
     }
 
     override fun onMenuOpened(i: Int, menu: Menu): Boolean {
