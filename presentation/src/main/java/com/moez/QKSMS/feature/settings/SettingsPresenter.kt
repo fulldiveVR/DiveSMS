@@ -128,7 +128,7 @@ class SettingsPresenter @Inject constructor(
                 .subscribe { enabled -> newState { copy(longAsMms = enabled) } }
 
         val mmsSizeLabels = context.resources.getStringArray(R.array.mms_sizes)
-        val mmsSizeIds = context.resources.getIntArray(R.array.mms_sizes_ids)
+        val mmsSizeIds = context.resources.getStringArray(R.array.mms_sizes_ids).map { it.toInt() }
         disposables += prefs.mmsSize.asObservable()
                 .subscribe { maxMmsSize ->
                     val index = mmsSizeIds.indexOf(maxMmsSize)
