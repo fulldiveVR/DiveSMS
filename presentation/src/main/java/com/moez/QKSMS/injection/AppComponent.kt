@@ -36,7 +36,7 @@ import com.moez.QKSMS.feature.blocking.BlockingController
 import com.moez.QKSMS.feature.blocking.manager.BlockingManagerController
 import com.moez.QKSMS.feature.blocking.messages.BlockedMessagesController
 import com.moez.QKSMS.feature.blocking.numbers.BlockedNumbersController
-import com.moez.QKSMS.feature.compose.DetailedChipView
+import com.moez.QKSMS.feature.compose.editing.DetailedChipView
 import com.moez.QKSMS.feature.conversationinfo.injection.ConversationInfoComponent
 import com.moez.QKSMS.feature.settings.SettingsController
 import com.moez.QKSMS.feature.settings.about.AboutController
@@ -46,7 +46,6 @@ import com.moez.QKSMS.feature.widget.WidgetAdapter
 import com.moez.QKSMS.injection.android.ActivityBuilderModule
 import com.moez.QKSMS.injection.android.BroadcastReceiverBuilderModule
 import com.moez.QKSMS.injection.android.ServiceBuilderModule
-import com.moez.QKSMS.util.ContactImageLoader
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
@@ -75,8 +74,6 @@ interface AppComponent {
     fun inject(controller: SwipeActionsController)
 
     fun inject(dialog: QkDialog)
-
-    fun inject(fetcher: ContactImageLoader.ContactImageFetcher)
 
     fun inject(service: WidgetAdapter)
 

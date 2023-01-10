@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
-  ~  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+  ~ Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
   ~
-  ~  This file is part of QKSMS.
+  ~ This file is part of QKSMS.
   ~
-  ~  QKSMS is free software: you can redistribute it and/or modify
-  ~  it under the terms of the GNU General Public License as published by
-  ~  the Free Software Foundation, either version 3 of the License, or
-  ~  (at your option) any later version.
+  ~ QKSMS is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
   ~
-  ~  QKSMS is distributed in the hope that it will be useful,
-  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~  GNU General Public License for more details.
+  ~ QKSMS is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
   ~
-  ~  You should have received a copy of the GNU General Public License
-  ~  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
-  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
   -->
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moez.QKSMS">
 
@@ -35,24 +32,23 @@
     <uses-permission android:name="android.permission.RECEIVE_MMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
-
-    <permission
-        android:name="com.fulldive.extension.divesms.access.read"
-        android:protectionLevel="signature" />
 
     <application
         android:name=".common.QKApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppLaunchTheme">
 
         <activity
             android:name=".feature.main.MainActivity"
+            android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,17 +58,9 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
-        <activity
-            android:name=".appextension.StealthActivity"
-            android:exported="true"
-            android:theme="@style/stealthTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".feature.main.MainActivity" />
-        </activity>
         <activity
             android:name=".feature.compose.ComposeActivity"
+            android:exported="true"
             android:parentActivityName=".feature.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -104,12 +92,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="image/*" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/x-vcard" />
+            </intent-filter>
 
             <meta-data
                 android:name="android.service.chooser.chooser_target_service"
                 android:value=".common.util.QkChooserTargetService" />
         </activity>
         <activity android:name=".feature.settings.SettingsActivity" />
+        <activity android:name=".feature.plus.PlusActivity" />
         <activity
             android:name=".feature.gallery.GalleryActivity"
             android:theme="@style/AppTheme.Black" />
@@ -124,13 +118,16 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".feature.scheduled.ScheduledActivity" />
         <activity android:name=".feature.backup.BackupActivity" />
+        <activity android:name=".feature.contacts.ContactsActivity" />
 
-        <receiver android:name=".receiver.BootReceiver">
+        <receiver android:name=".receiver.BootReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.DefaultSmsChangedReceiver">
+        <receiver android:name=".receiver.DefaultSmsChangedReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.action.DEFAULT_SMS_PACKAGE_CHANGED" />
             </intent-filter>
@@ -138,6 +135,7 @@
         <receiver android:name=".receiver.DeleteMessagesReceiver" />
         <receiver
             android:name=".receiver.SmsReceiver"
+            android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_DELIVER" />
@@ -145,7 +143,8 @@
         </receiver>
         <receiver
             android:name=".receiver.MmsReceiver"
-            android:permission="android.permission.BROADCAST_WAP_PUSH">
+            android:permission="android.permission.BROADCAST_WAP_PUSH"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
                 <data android:mimeType="application/vnd.wap.mms-message" />
@@ -162,17 +161,30 @@
         <receiver
             android:name=".receiver.MmsReceivedReceiver"
             android:taskAffinity="com.klinker.android.messaging.MMS_RECEIVED" />
+        <receiver android:name=".receiver.MarkArchivedReceiver" />
+        <receiver android:name=".receiver.BlockThreadReceiver" />
         <receiver android:name=".receiver.MarkSeenReceiver" />
         <receiver android:name=".receiver.MarkReadReceiver" />
         <receiver android:name=".receiver.RemoteMessagingReceiver" />
         <receiver android:name=".receiver.NightModeReceiver" />
-        <receiver android:name=".receiver.SmsProviderChangedReceiver">
+        <receiver android:name=".receiver.SmsProviderChangedReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.action.EXTERNAL_PROVIDER_CHANGE" />
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.SendScheduledMessageReceiver" />
+        <receiver android:name=".feature.widget.WidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.moez.QKSMS.intent.action.ACTION_NOTIFY_DATASET_CHANGED" />
+            </intent-filter>
 
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
         <receiver android:name=".receiver.SendSmsReceiver" />
 
         <service android:name="com.android.mms.transaction.TransactionService" />
@@ -180,6 +192,9 @@
         <service
             android:name=".feature.widget.WidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".service.AutoDeleteService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
             android:name=".service.HeadlessSmsSendService"
             android:exported="true"
@@ -196,6 +211,7 @@
         </service>
         <service
             android:name=".common.util.QkChooserTargetService"
+            android:exported="true"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
@@ -220,22 +236,6 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <provider
-            android:name=".appextension.FulldiveContentProvider"
-            android:authorities="com.fulldive.extension.divesms.FulldiveContentProvider"
-            android:exported="true"
-            android:permission="com.fulldive.extension.divesms.access.read" />
-
-        <receiver android:name=".feature.widget.WidgetProvider">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="com.fulldive.extension.divesms.intent.action.ACTION_NOTIFY_DATASET_CHANGED" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_info" />
-        </receiver>
     </application>
 
 </manifest>

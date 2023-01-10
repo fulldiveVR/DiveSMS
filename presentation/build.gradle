@@ -1,21 +1,20 @@
 /*
- *  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+ * Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
  *
- *  This file is part of QKSMS.
+ * This file is part of QKSMS.
  *
- *  QKSMS is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
+ * QKSMS is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
- *  QKSMS is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
+ * QKSMS is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *  You should have received a copy of the GNU General Public License
- *  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
- *
+ * You should have received a copy of the GNU General Public License
+ * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
  */
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android' // Realm needs to be before Kotlin or the build will fail
@@ -23,33 +22,25 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-def versionMajor = 1
-def versionMinor = 0
-def versionPatch = 3
-
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 31
     flavorDimensions "analytics"
 
     defaultConfig {
-        applicationId "com.fulldive.extension.divesms"
+        applicationId "com.moez.QKSMS"
         minSdkVersion 21
-        targetSdkVersion 30 // Don't upgrade to 29 until we support Scoped storage
-
-        versionCode versionMajor*10000+versionMinor*100+versionPatch
-        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-
+        targetSdkVersion 31
+        versionCode 2218
+        versionName "3.9.4"
+        setProperty("archivesBaseName", "QKSMS-v${versionName}")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        setProperty("archivesBaseName", "QKSMS-v${versionName}")
+        multiDexEnabled= true
     }
 
     signingConfigs {
-        release {
-            storeFile file('../keys/keys.jks')
-            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
-            keyAlias System.getenv("FULLDIVE_ALIAS")
-            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
-        }
+        release
     }
 
     buildTypes {
@@ -58,18 +49,6 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    output.outputFileName = "DiveSMS-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
-                }
-            }
-        }
-        debug {
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    output.outputFileName = "DiveSMS-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
-                }
-            }
         }
     }
 
@@ -90,6 +69,13 @@ android {
         withAnalytics { dimension "analytics" }
         noAnalytics { dimension "analytics" }
     }
+
+    if (System.getenv("CI") == "true") {
+        signingConfigs.release.storeFile = file("../keystore")
+        signingConfigs.release.storePassword = System.getenv("keystore_password")
+        signingConfigs.release.keyAlias = System.getenv("key_alias")
+        signingConfigs.release.keyPassword = System.getenv("key_password")
+    }
 }
 
 androidExtensions {
@@ -104,7 +90,6 @@ configurations {
 }
 
 dependencies {
-    implementation "com.snore.guard:divesms:1.4.0"
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
@@ -161,8 +146,6 @@ dependencies {
     kapt "io.realm:realm-annotations:$realm_version"
     kapt "io.realm:realm-annotations-processor:$realm_version"
 
-    implementation "com.squareup.okhttp3:okhttp:4.9.1"
-
     // rxjava
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
@@ -196,28 +179,23 @@ dependencies {
     implementation "com.google.android:flexbox:0.3.1"
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
-    implementation "me.leolin:ShortcutBadger:1.1.21"
+    implementation "me.leolin:ShortcutBadger:1.1.22"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation project(":android-smsmms")
     implementation project(":common")
     implementation project(':data')
     implementation project(':domain')
 
-    withAnalyticsImplementation 'com.google.firebase:firebase-core:16.0.9'
-    withAnalyticsImplementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-
+    withAnalyticsImplementation 'com.google.firebase:firebase-crashlytics:17.3.0'
+    withAnalyticsImplementation "com.android.billingclient:billing:$billing_version"
+    withAnalyticsImplementation "com.android.billingclient:billing-ktx:$billing_version"
     noAnalyticsDebug project(path: ':data', configuration: 'noAnalyticsDebug')
     noAnalyticsRelease project(path: ':data', configuration: 'noAnalyticsRelease')
     withAnalyticsDebug project(path: ':data', configuration: 'withAnalyticsDebug')
     withAnalyticsRelease project(path: ':data', configuration: 'withAnalyticsRelease')
 }
 
-repositories {
-    mavenCentral()
-    maven { url "http://office.fulldive.com:8083" }
-}
-
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("WithAnalytics")) {
-    apply plugin: 'io.fabric'
     apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'com.google.firebase.crashlytics'
 }

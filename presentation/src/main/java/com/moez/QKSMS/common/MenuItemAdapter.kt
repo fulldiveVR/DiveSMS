@@ -35,6 +35,7 @@ import com.moez.QKSMS.common.util.extensions.setVisible
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
+import kotlinx.android.synthetic.main.menu_list_item.*
 import kotlinx.android.synthetic.main.menu_list_item.view.*
 import javax.inject.Inject
 
@@ -90,11 +91,10 @@ class MenuItemAdapter @Inject constructor(
 
     override fun onBindViewHolder(holder: QkViewHolder, position: Int) {
         val menuItem = getItem(position)
-        val view = holder.containerView
 
-        view.title.text = menuItem.title
-        view.check.isActivated = (menuItem.actionId == selectedItem)
-        view.check.setVisible(selectedItem != null)
+        holder.title.text = menuItem.title
+        holder.check.isActivated = (menuItem.actionId == selectedItem)
+        holder.check.setVisible(selectedItem != null)
     }
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {

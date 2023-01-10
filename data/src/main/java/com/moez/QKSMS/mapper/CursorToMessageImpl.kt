@@ -127,8 +127,6 @@ class CursorToMessageImpl @Inject constructor(
                             ?.let { EncodedStringValue(subjectCharset, it).string } ?: ""
                     textContentType = ""
                     attachmentType = Message.AttachmentType.NOT_LOADED
-
-                    parts.addAll(cursorToPart.getPartsCursor(contentId)?.map { cursorToPart.map(it) } ?: listOf())
                 }
             }
         }

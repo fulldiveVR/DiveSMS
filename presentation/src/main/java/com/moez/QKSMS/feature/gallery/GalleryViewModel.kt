@@ -23,6 +23,7 @@ package com.moez.QKSMS.feature.gallery
 
 import android.content.Context
 import com.moez.QKSMS.R
+import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkViewModel
 import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.extensions.mapNotNull
@@ -40,9 +41,10 @@ import javax.inject.Named
 
 class GalleryViewModel @Inject constructor(
     conversationRepo: ConversationRepository,
-    messageRepo: MessageRepository,
     @Named("partId") private val partId: Long,
     private val context: Context,
+    private val messageRepo: MessageRepository,
+    private val navigator: Navigator,
     private val saveImage: SaveImage,
     private val permissions: PermissionManager
 ) : QkViewModel<GalleryView, GalleryState>(GalleryState()) {
@@ -77,6 +79,14 @@ class GalleryViewModel @Inject constructor(
                 .withLatestFrom(view.pageChanged()) { _, part -> part.id }
                 .autoDisposable(view.scope())
                 .subscribe { partId -> saveImage.execute(partId) { context.makeToast(R.string.gallery_toast_saved) } }
+
+        // Share image externally
+        view.optionsItemSelected()
+                .filter { itemId -> itemId == R.id.share }
+                .filter { permissions.hasStorage().also { if (!it) view.requestStoragePermission() } }
+                .withLatestFrom(view.pageChanged()) { _, part -> part.id }
+                .autoDisposable(view.scope())
+                .subscribe { partId -> messageRepo.savePart(partId)?.let(navigator::shareFile) }
     }
 
 }

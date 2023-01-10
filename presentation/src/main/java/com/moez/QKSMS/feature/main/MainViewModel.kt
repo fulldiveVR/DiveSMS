@@ -25,7 +25,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import com.moez.QKSMS.R
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkViewModel
-import com.moez.QKSMS.common.util.BillingManager
 import com.moez.QKSMS.extensions.mapNotNull
 import com.moez.QKSMS.interactor.DeleteConversations
 import com.moez.QKSMS.interactor.MarkAllSeen
@@ -36,8 +35,10 @@ import com.moez.QKSMS.interactor.MarkUnarchived
 import com.moez.QKSMS.interactor.MarkUnpinned
 import com.moez.QKSMS.interactor.MarkUnread
 import com.moez.QKSMS.interactor.MigratePreferences
+import com.moez.QKSMS.interactor.SyncContacts
 import com.moez.QKSMS.interactor.SyncMessages
 import com.moez.QKSMS.listener.ContactAddedListener
+import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.manager.ChangelogManager
 import com.moez.QKSMS.manager.PermissionManager
 import com.moez.QKSMS.manager.RatingManager
@@ -52,16 +53,19 @@ import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.withLatestFrom
 import io.reactivex.schedulers.Schedulers
 import io.realm.Realm
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
     billingManager: BillingManager,
+    contactAddedListener: ContactAddedListener,
     markAllSeen: MarkAllSeen,
     migratePreferences: MigratePreferences,
     syncRepository: SyncRepository,
-    private val contactAddedListener: ContactAddedListener,
     private val changelogManager: ChangelogManager,
     private val conversationRepo: ConversationRepository,
     private val deleteConversations: DeleteConversations,
@@ -75,6 +79,7 @@ class MainViewModel @Inject constructor(
     private val permissionManager: PermissionManager,
     private val prefs: Preferences,
     private val ratingManager: RatingManager,
+    private val syncContacts: SyncContacts,
     private val syncMessages: SyncMessages
 ) : QkViewModel<MainView, MainState>(MainState(page = Inbox(data = conversationRepo.getConversations()))) {
 
@@ -84,6 +89,7 @@ class MainViewModel @Inject constructor(
         disposables += markArchived
         disposables += markUnarchived
         disposables += migratePreferences
+        disposables += syncContacts
         disposables += syncMessages
 
         // Show the syncing UI
@@ -112,6 +118,14 @@ class MainViewModel @Inject constructor(
             syncMessages.execute(Unit)
         }
 
+        // Sync contacts when we detect a change
+        if (permissionManager.hasContacts()) {
+            disposables += contactAddedListener.listen()
+                    .debounce(1, TimeUnit.SECONDS)
+                    .subscribeOn(Schedulers.io())
+                    .subscribe { syncContacts.execute(Unit) }
+        }
+
         ratingManager.addSession()
         markAllSeen.execute(Unit)
     }
@@ -125,6 +139,7 @@ class MainViewModel @Inject constructor(
         }
 
         val permissions = view.activityResumedIntent
+                .filter { resumed -> resumed }
                 .observeOn(Schedulers.io())
                 .map { Triple(permissionManager.isDefaultSms(), permissionManager.hasReadSms(), permissionManager.hasContacts()) }
                 .distinctUntilChanged()
@@ -151,6 +166,7 @@ class MainViewModel @Inject constructor(
                 .autoDisposable(view.scope())
                 .subscribe { intent ->
                     when (intent.getStringExtra("screen")) {
+                        "compose" -> navigator.showConversation(intent.getLongExtra("threadId", 0))
                         "blocking" -> navigator.showBlockedConversations()
                     }
                 }
@@ -158,12 +174,11 @@ class MainViewModel @Inject constructor(
         // Show changelog
         if (changelogManager.didUpdate()) {
             if (Locale.getDefault().language.startsWith("en")) {
-                disposables += changelogManager.getChangelog()
-                        .timeout(3, TimeUnit.SECONDS) // If it takes long than 3s, we'll just try again next time
-                        .subscribe({ changelog ->
-                            changelogManager.markChangelogSeen()
-                            view.showChangelog(changelog)
-                        }, {}) // Ignore error
+                GlobalScope.launch(Dispatchers.Main) {
+                    val changelog = changelogManager.getChangelog()
+                    changelogManager.markChangelogSeen()
+                    view.showChangelog(changelog)
+                }
             } else {
                 changelogManager.markChangelogSeen()
             }
@@ -181,6 +196,8 @@ class MainViewModel @Inject constructor(
                     query
                 }
                 .filter { query -> query.length >= 2 }
+                .map { query -> query.trim() }
+                .distinctUntilChanged()
                 .doOnNext {
                     newState {
                         val page = (page as? Searching) ?: Searching()
@@ -191,6 +208,20 @@ class MainViewModel @Inject constructor(
                 .map(conversationRepo::searchConversations)
                 .autoDisposable(view.scope())
                 .subscribe { data -> newState { copy(page = Searching(loading = false, data = data)) } }
+
+        view.activityResumedIntent
+                .filter { resumed -> !resumed }
+                .switchMap {
+                    // Take until the activity is resumed
+                    prefs.keyChanges
+                            .filter { key -> key.contains("theme") }
+                            .map { true }
+                            .mergeWith(prefs.autoColor.asObservable().skip(1))
+                            .doOnNext { view.themeChanged() }
+                            .takeUntil(view.activityResumedIntent.filter { resumed -> resumed })
+                }
+                .autoDisposable(view.scope())
+                .subscribe()
 
         view.composeIntent
                 .autoDisposable(view.scope())
@@ -285,7 +316,6 @@ class MainViewModel @Inject constructor(
                 .map { conversation -> conversation.recipients }
                 .mapNotNull { recipients -> recipients[0]?.address?.takeIf { recipients.size == 1 } }
                 .doOnNext(navigator::addContact)
-                .flatMap(contactAddedListener::listen)
                 .autoDisposable(view.scope())
                 .subscribe()
 
@@ -389,6 +419,7 @@ class MainViewModel @Inject constructor(
                     when (action) {
                         Preferences.SWIPE_ACTION_ARCHIVE -> markArchived.execute(listOf(threadId)) { view.showArchivedSnackbar() }
                         Preferences.SWIPE_ACTION_DELETE -> view.showDeleteDialog(listOf(threadId))
+                        Preferences.SWIPE_ACTION_BLOCK -> view.showBlockingDialog(listOf(threadId), true)
                         Preferences.SWIPE_ACTION_CALL -> conversationRepo.getConversation(threadId)?.recipients?.firstOrNull()?.address?.let(navigator::makePhoneCall)
                         Preferences.SWIPE_ACTION_READ -> markRead.execute(listOf(threadId))
                         Preferences.SWIPE_ACTION_UNREAD -> markUnread.execute(listOf(threadId))
