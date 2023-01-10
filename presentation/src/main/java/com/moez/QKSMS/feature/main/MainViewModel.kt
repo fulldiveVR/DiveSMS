@@ -366,17 +366,6 @@ class MainViewModel @Inject constructor(
                 .autoDisposable(view.scope())
                 .subscribe()
 
-        view.rateIntent
-                .autoDisposable(view.scope())
-                .subscribe {
-                    navigator.showRating()
-                    ratingManager.rate()
-                }
-
-        view.dismissRatingIntent
-                .autoDisposable(view.scope())
-                .subscribe { ratingManager.dismiss() }
-
         view.conversationsSelectedIntent
                 .withLatestFrom(state) { selection, state ->
                     val conversations = selection.mapNotNull(conversationRepo::getConversation)

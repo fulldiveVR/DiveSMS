@@ -42,6 +42,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.jakewharton.rxbinding2.view.clicks
 import com.jakewharton.rxbinding2.widget.textChanges
 import com.moez.QKSMS.R
+import com.moez.QKSMS.appextension.PopupManager
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.androidxcompat.drawerOpen
 import com.moez.QKSMS.common.base.QkThemedActivity
@@ -108,22 +109,15 @@ class MainActivity : QkThemedActivity(), MainView {
             backup.clicks().map { NavItem.BACKUP },
             scheduled.clicks().map { NavItem.SCHEDULED },
             blocking.clicks().map { NavItem.BLOCKING },
-            settings.clicks().map { NavItem.SETTINGS },
-            // plus.clicks().map { NavItem.PLUS },
-            help.clicks().map { NavItem.HELP }
-            // invite.clicks().map { NavItem.INVITE }
+            settings.clicks().map { NavItem.SETTINGS }
         ))
     }
     override val optionsItemIntent: Subject<Int> = PublishSubject.create()
 
-    // override val plusBannerIntent by lazy { plusBanner.clicks() }
-    override val dismissRatingIntent by lazy { rateDismiss.clicks() }
-    override val rateIntent by lazy { rateOkay.clicks() }
     override val conversationsSelectedIntent by lazy { conversationsAdapter.selectionChanges }
     override val confirmDeleteIntent: Subject<List<Long>> = PublishSubject.create()
     override val swipeConversationIntent by lazy { itemTouchCallback.swipes }
 
-    //  override val changelogMoreIntent by lazy { changelogDialog.moreClicks }
     override val undoArchiveIntent: Subject<Unit> = PublishSubject.create()
     override val snackbarButtonIntent: Subject<Unit> = PublishSubject.create()
 
@@ -209,8 +203,6 @@ class MainActivity : QkThemedActivity(), MainView {
                 }
                 syncingProgress?.progressTintList = ColorStateList.valueOf(theme.theme)
                 syncingProgress?.indeterminateTintList = ColorStateList.valueOf(theme.theme)
-                //  plusIcon.setTint(theme.theme)
-                rateIcon.setTint(theme.theme)
                 compose.setBackgroundTint(theme.theme)
 
                 // Set the FAB compose icon color
@@ -221,6 +213,7 @@ class MainActivity : QkThemedActivity(), MainView {
         if (Build.VERSION.SDK_INT <= 22) {
             toolbarSearch.setBackgroundTint(resolveThemeColor(R.attr.bubbleColor))
         }
+        PopupManager().onAppStarted(this)
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -278,7 +271,6 @@ class MainActivity : QkThemedActivity(), MainView {
         }
         // plus.isVisible = state.upgraded
         //  plusBanner.isVisible = !state.upgraded
-        rateLayout.setVisible(state.showRating)
 
         compose.setVisible(state.page is Inbox || state.page is Archived)
         conversationsAdapter.emptyView =
