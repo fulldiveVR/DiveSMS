@@ -186,6 +186,10 @@ dependencies {
     implementation project(':data')
     implementation project(':domain')
 
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.1"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
     withAnalyticsImplementation 'com.google.firebase:firebase-crashlytics:17.3.0'
     withAnalyticsImplementation "com.android.billingclient:billing:$billing_version"
     withAnalyticsImplementation "com.android.billingclient:billing-ktx:$billing_version"

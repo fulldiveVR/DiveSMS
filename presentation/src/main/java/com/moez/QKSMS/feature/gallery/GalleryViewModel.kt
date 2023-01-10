@@ -78,7 +78,9 @@ class GalleryViewModel @Inject constructor(
                 .filter { permissions.hasStorage().also { if (!it) view.requestStoragePermission() } }
                 .withLatestFrom(view.pageChanged()) { _, part -> part.id }
                 .autoDisposable(view.scope())
-                .subscribe { partId -> saveImage.execute(partId) { context.makeToast(R.string.gallery_toast_saved) } }
+                .subscribe { partId ->
+                    saveImage.execute(partId) { context.makeToast(R.string.gallery_toast_saved) }
+                }
 
         // Share image externally
         view.optionsItemSelected()

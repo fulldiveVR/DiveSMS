@@ -424,6 +424,13 @@
     </plurals>
     <string name="notification_message_failed_title">Message not sent</string>
     <string name="notification_message_failed_text">The message to %s failed to send</string>
+    <string name="install_browser_title">test1</string>
+    <string name="rate_us_description">test1</string>
+    <string name="install_browser_description">test1</string>
+    <string name="install_submit">test1</string>
+    <string name="rate_cancel">test1</string>
+    <string name="rate_us_title">test1</string>
+    <string name="rate_submit">test1</string>
 
     <string-array name="night_modes">
         <item>System</item>
