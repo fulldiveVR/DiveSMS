@@ -336,15 +336,6 @@
     <string name="theme_material">উপকরণ</string>
     <string name="theme_hex">হেক্স</string>
     <string name="theme_apply">প্রয়োগ করুন</string>
-    <string-array name="notification_actions">
-        <item>কোনোটা না</item>
-        <item>আর্কাইভ</item>
-        <item>মুছুন</item>
-        <item>অবরুদ্ধ</item>
-        <item>কল</item>
-        <item>পড়া হয়েছে</item>
-        <item>প্রতুত্তর</item>
-    </string-array>
     <string name="button_yes">হ্যাঁ</string>
     <string name="button_continue">এগিয়ে যানও</string>
     <string name="button_cancel">বাতিল করুন</string>

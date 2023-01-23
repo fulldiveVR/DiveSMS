@@ -357,15 +357,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">تطبيق</string>
-    <string-array name="notification_actions">
-        <item>لا شيء</item>
-        <item>ارشيف</item>
-        <item>مسح</item>
-        <item>منع</item>
-        <item>اتصال</item>
-        <item>مقروء</item>
-        <item>اجابه</item>
-    </string-array>
     <string name="button_yes">نعم</string>
     <string name="button_continue">الاستمرار</string>
     <string name="button_cancel">إلغاء</string>

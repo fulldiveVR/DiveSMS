@@ -346,15 +346,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">הקסה</string>
     <string name="theme_apply">החלה</string>
-    <string-array name="notification_actions">
-        <item>ללא</item>
-        <item>לארכיון</item>
-        <item>מחיקה</item>
-        <item>חסימה</item>
-        <item>להתקשר</item>
-        <item>סימון כהודעה שנקראה</item>
-        <item>להשיב</item>
-    </string-array>
     <string name="button_yes">כן</string>
     <string name="button_continue">המשך</string>
     <string name="button_cancel">ביטול</string>

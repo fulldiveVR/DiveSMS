@@ -346,15 +346,6 @@
     <string name="theme_material">Materiál</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Použiť</string>
-    <string-array name="notification_actions">
-        <item>Žiadny</item>
-        <item>Archivovať</item>
-        <item>Odstrániť</item>
-        <item>Zablokovať</item>
-        <item>Volať</item>
-        <item>Označiť ako prečítané</item>
-        <item>Odpovedať</item>
-    </string-array>
     <string name="button_yes">Áno</string>
     <string name="button_continue">Pokračovať</string>
     <string name="button_cancel">Zrušiť</string>

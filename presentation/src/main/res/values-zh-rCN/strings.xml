@@ -331,15 +331,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">应用</string>
-    <string-array name="notification_actions">
-        <item>无</item>
-        <item>存档</item>
-        <item>删除</item>
-        <item>拦截</item>
-        <item>呼叫</item>
-        <item>标记为已读</item>
-        <item>回复</item>
-    </string-array>
     <string name="button_yes">是</string>
     <string name="button_continue">继续</string>
     <string name="button_cancel">取消</string>

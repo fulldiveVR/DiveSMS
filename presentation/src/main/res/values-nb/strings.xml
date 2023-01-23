@@ -336,15 +336,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Bruk</string>
-    <string-array name="notification_actions">
-        <item>Ingen</item>
-        <item>Archive</item>
-        <item>Delete</item>
-        <item>Block</item>
-        <item>Call</item>
-        <item>Mark read</item>
-        <item>Reply</item>
-    </string-array>
     <string name="button_yes">Ja</string>
     <string name="button_continue">Continue</string>
     <string name="button_cancel">Avbryt</string>

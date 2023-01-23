@@ -336,15 +336,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Käytä</string>
-    <string-array name="notification_actions">
-        <item>Ei mitään</item>
-        <item>Arkistoi</item>
-        <item>Poista</item>
-        <item>Estä</item>
-        <item>Soita</item>
-        <item>Merkitse luetuksi</item>
-        <item>Vastaa</item>
-    </string-array>
     <string name="button_yes">Kyllä</string>
     <string name="button_continue">Jatka</string>
     <string name="button_cancel">Peruuta</string>
