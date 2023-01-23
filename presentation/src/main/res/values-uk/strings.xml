@@ -346,15 +346,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Застосувати</string>
-    <string-array name="notification_actions">
-        <item>Немає</item>
-        <item>Архів</item>
-        <item>Видалити</item>
-        <item>Заблокувати</item>
-        <item>Виклик</item>
-        <item>Позначити як прочитане</item>
-        <item>Відповісти</item>
-    </string-array>
     <string name="button_yes">Так</string>
     <string name="button_continue">Продовжити</string>
     <string name="button_cancel">Скасувати</string>

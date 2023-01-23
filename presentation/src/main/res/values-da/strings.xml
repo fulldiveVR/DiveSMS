@@ -336,15 +336,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Anvend</string>
-    <string-array name="notification_actions">
-        <item>Ingen</item>
-        <item>Arkivér</item>
-        <item>Slet</item>
-        <item>Blokér</item>
-        <item>Ring op</item>
-        <item>Markér som læst</item>
-        <item>Svar</item>
-    </string-array>
     <string name="button_yes">Ja</string>
     <string name="button_continue">Fortsæt</string>
     <string name="button_cancel">Annullér</string>

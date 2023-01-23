@@ -331,15 +331,6 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">Hệ 16</string>
     <string name="theme_apply">Áp dụng</string>
-    <string-array name="notification_actions">
-        <item>Không dùng</item>
-        <item>Lưu trữ</item>
-        <item>Xoá</item>
-        <item>Chặn</item>
-        <item>Gọi</item>
-        <item>Đánh dấu đã đọc</item>
-        <item>Trả lời</item>
-    </string-array>
     <string name="button_yes">Đồng ý</string>
     <string name="button_continue">Tiếp tục</string>
     <string name="button_cancel">Hủy</string>

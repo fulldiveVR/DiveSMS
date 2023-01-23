@@ -27,6 +27,7 @@ import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -63,6 +64,7 @@ class NotificationPrefsActivity : QkThemedActivity(), NotificationPrefsView {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d("TestB","NotificationPrefsActivity onCreate")
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.notification_prefs_activity)

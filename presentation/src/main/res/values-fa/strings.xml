@@ -336,15 +336,6 @@
     <string name="theme_material">متریال</string>
     <string name="theme_hex">هگز</string>
     <string name="theme_apply">اعمال کردن</string>
-    <string-array name="notification_actions">
-        <item>هیچ</item>
-        <item>بایگانی کن</item>
-        <item>حذف</item>
-        <item>مسدود کردن</item>
-        <item>تماس</item>
-        <item>نشان به‌عنوان خوانده شده</item>
-        <item>پاسخ</item>
-    </string-array>
     <string name="button_yes">بله</string>
     <string name="button_continue">ادامه</string>
     <string name="button_cancel">لغو</string>

@@ -338,15 +338,6 @@ BAĞLAM İSTEĞİ</string>
     <string name="theme_material">Malzeme</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Uygula</string>
-    <string-array name="notification_actions">
-        <item>Hiçbiri</item>
-        <item>Arşivle</item>
-        <item>Sil</item>
-        <item>Engelle</item>
-        <item>Ara</item>
-        <item>Okundu olarak işaretle</item>
-        <item>Cevapla</item>
-    </string-array>
     <string name="button_yes">Evet</string>
     <string name="button_continue">Devam</string>
     <string name="button_cancel">İptal</string>

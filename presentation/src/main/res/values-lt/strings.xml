@@ -346,15 +346,6 @@
     <string name="theme_material">„Material“ dizainas</string>
     <string name="theme_hex">HEX kodas</string>
     <string name="theme_apply">Pritaikyti</string>
-    <string-array name="notification_actions">
-        <item>None</item>
-        <item>Archive</item>
-        <item>Delete</item>
-        <item>Block</item>
-        <item>Call</item>
-        <item>Mark read</item>
-        <item>Reply</item>
-    </string-array>
     <string name="button_yes">Yes</string>
     <string name="button_continue">Continue</string>
     <string name="button_cancel">Atšaukti</string>

@@ -21,6 +21,7 @@
 
 package com.moez.QKSMS.common.base
 
+import android.util.Log
 import androidx.annotation.CallSuper
 import androidx.lifecycle.ViewModel
 import com.uber.autodispose.android.lifecycle.scope
@@ -44,8 +45,11 @@ abstract class QkViewModel<in View : QkView<State>, State>(initialState: State) 
         // to mainThread right here should immediately alert us of the issue
         disposables += stateReducer
                 .observeOn(AndroidSchedulers.mainThread())
-                .scan(initialState) { state, reducer -> reducer(state) }
-                .subscribe(state::onNext)
+                .scan(initialState) { state, reducer ->
+                    Log.d("TestB","state: $state")
+                   reducer(state)
+                }
+               .subscribe(state::onNext)
     }
 
     @CallSuper
