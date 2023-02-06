@@ -33,6 +33,7 @@ import android.os.Bundle
 import android.widget.RemoteViews
 import com.moez.QKSMS.R
 import com.moez.QKSMS.common.util.Colors
+import com.moez.QKSMS.common.util.extensions.PENDING_INTENT_FLAG
 import com.moez.QKSMS.common.util.extensions.getColorCompat
 import com.moez.QKSMS.feature.compose.ComposeActivity
 import com.moez.QKSMS.feature.main.MainActivity
@@ -44,8 +45,10 @@ import javax.inject.Inject
 
 class WidgetProvider : AppWidgetProvider() {
 
-    @Inject lateinit var colors: Colors
-    @Inject lateinit var prefs: Preferences
+    @Inject
+    lateinit var colors: Colors
+    @Inject
+    lateinit var prefs: Preferences
 
     override fun onReceive(context: Context, intent: Intent) {
         AndroidInjection.inject(this, context)
@@ -59,7 +62,11 @@ class WidgetProvider : AppWidgetProvider() {
     /**
      * Update all widgets in the list
      */
-    override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
+    override fun onUpdate(
+        context: Context,
+        appWidgetManager: AppWidgetManager,
+        appWidgetIds: IntArray
+    ) {
         super.onUpdate(context, appWidgetManager, appWidgetIds)
 
         updateData(context)
@@ -73,7 +80,8 @@ class WidgetProvider : AppWidgetProvider() {
      */
     private fun updateData(context: Context) {
         val appWidgetManager = AppWidgetManager.getInstance(context)
-        val appWidgetIds = appWidgetManager.getAppWidgetIds(ComponentName(context, WidgetProvider::class.java))
+        val appWidgetIds =
+            appWidgetManager.getAppWidgetIds(ComponentName(context, WidgetProvider::class.java))
 
         // We need to update all Mms appwidgets on the home screen.
         appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.conversations)
@@ -82,7 +90,12 @@ class WidgetProvider : AppWidgetProvider() {
     /**
      * Update widget when widget size changes
      */
-    override fun onAppWidgetOptionsChanged(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, newOptions: Bundle) {
+    override fun onAppWidgetOptionsChanged(
+        context: Context,
+        appWidgetManager: AppWidgetManager,
+        appWidgetId: Int,
+        newOptions: Bundle
+    ) {
         updateWidget(context, appWidgetId, isSmallWidget(appWidgetManager, appWidgetId))
         super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions)
     }
@@ -115,45 +128,58 @@ class WidgetProvider : AppWidgetProvider() {
         val night = prefs.night.get()
         val black = prefs.black.get()
 
-        remoteViews.setInt(R.id.background, "setColorFilter", context.getColorCompat(when {
-            night && black -> R.color.black
-            night && !black -> R.color.backgroundDark
-            else -> R.color.white
-        }))
+        remoteViews.setInt(
+            R.id.background, "setColorFilter", context.getColorCompat(
+                when {
+                    night && black -> R.color.black
+                    night && !black -> R.color.backgroundDark
+                    else -> R.color.white
+                }
+            )
+        )
 
-        remoteViews.setInt(R.id.toolbar, "setColorFilter", context.getColorCompat(when {
-            night && black -> R.color.black
-            night && !black -> R.color.backgroundDark
-            else -> R.color.backgroundLight
-        }))
+        remoteViews.setInt(
+            R.id.toolbar, "setColorFilter", context.getColorCompat(
+                when {
+                    night && black -> R.color.black
+                    night && !black -> R.color.backgroundDark
+                    else -> R.color.backgroundLight
+                }
+            )
+        )
 
-        remoteViews.setTextColor(R.id.title, context.getColorCompat(when (night) {
-            true -> R.color.textPrimaryDark
-            false -> R.color.textPrimary
-        }))
+        remoteViews.setTextColor(
+            R.id.title, context.getColorCompat(
+                when (night) {
+                    true -> R.color.textPrimaryDark
+                    false -> R.color.textPrimary
+                }
+            )
+        )
 
         remoteViews.setInt(R.id.compose, "setColorFilter", colors.theme().theme)
 
         // Set adapter for conversations
         val intent = Intent(context, WidgetService::class.java)
-                .putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
-                .putExtra("small_widget", smallWidget)
+            .putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+            .putExtra("small_widget", smallWidget)
         intent.data = Uri.parse(intent.toUri(Intent.URI_INTENT_SCHEME))
         remoteViews.setRemoteAdapter(R.id.conversations, intent)
 
         // Main intent
         val mainIntent = Intent(context, MainActivity::class.java)
-        val mainPI = PendingIntent.getActivity(context, 0, mainIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val mainPI = PendingIntent.getActivity(context, 0, mainIntent, PENDING_INTENT_FLAG)
         remoteViews.setOnClickPendingIntent(R.id.title, mainPI)
 
         // Compose intent
         val composeIntent = Intent(context, ComposeActivity::class.java)
-        val composePI = PendingIntent.getActivity(context, 0, composeIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val composePI = PendingIntent.getActivity(context, 0, composeIntent, PENDING_INTENT_FLAG)
         remoteViews.setOnClickPendingIntent(R.id.compose, composePI)
 
         // Conversation intent
         val startActivityIntent = Intent(context, MainActivity::class.java)
-        val startActivityPendingIntent = PendingIntent.getActivity(context, 0, startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val startActivityPendingIntent =
+            PendingIntent.getActivity(context, 0, startActivityIntent, PENDING_INTENT_FLAG)
         remoteViews.setPendingIntentTemplate(R.id.conversations, startActivityPendingIntent)
 
         AppWidgetManager.getInstance(context).updateAppWidget(appWidgetId, remoteViews)

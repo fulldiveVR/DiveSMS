@@ -388,11 +388,11 @@
     <string-array name="notification_actions">
         <item>None</item>
         <item>Archive</item>
-        <item>Block</item>
-        <item>Mark as read</item>
-        <item>Reply</item>
-        <item>Call</item>
         <item>Delete</item>
+        <item>Block</item>
+        <item>Call</item>
+        <item>Mark read</item>
+        <item>Reply</item>
     </string-array>
     <plurals name="blocking_block_external">
         <item quantity="one">Continue to %s and block this number</item>

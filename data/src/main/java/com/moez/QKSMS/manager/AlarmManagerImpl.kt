@@ -28,17 +28,24 @@ import android.os.Build
 import com.moez.QKSMS.receiver.SendScheduledMessageReceiver
 import javax.inject.Inject
 
+import com.moez.QKSMS.repository.PENDING_INTENT_FLAG
+
 class AlarmManagerImpl @Inject constructor(private val context: Context) : AlarmManager {
 
     override fun getScheduledMessageIntent(id: Long): PendingIntent {
         val intent = Intent(context, SendScheduledMessageReceiver::class.java).putExtra("id", id)
-        return PendingIntent.getBroadcast(context, id.toInt(), intent, PendingIntent.FLAG_UPDATE_CURRENT)
+        return PendingIntent.getBroadcast(context, id.toInt(), intent, PENDING_INTENT_FLAG)
     }
 
     override fun setAlarm(date: Long, intent: PendingIntent) {
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as android.app.AlarmManager
+        val alarmManager = context
+            .getSystemService(Context.ALARM_SERVICE) as android.app.AlarmManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            alarmManager.setExactAndAllowWhileIdle(android.app.AlarmManager.RTC_WAKEUP, date, intent)
+            alarmManager.setExactAndAllowWhileIdle(
+                android.app.AlarmManager.RTC_WAKEUP,
+                date,
+                intent
+            )
         } else {
             alarmManager.setExact(android.app.AlarmManager.RTC_WAKEUP, date, intent)
         }
