@@ -21,6 +21,8 @@
 
 package com.moez.QKSMS.repository
 
+import android.app.PendingIntent
+import android.os.Build
 import com.moez.QKSMS.model.ScheduledMessage
 import io.realm.Realm
 import io.realm.RealmList
@@ -42,8 +44,10 @@ class ScheduledMessageRepositoryImpl @Inject constructor() : ScheduledMessageRep
             val recipientsRealmList = RealmList(*recipients.toTypedArray())
             val attachmentsRealmList = RealmList(*attachments.toTypedArray())
 
-            val message = ScheduledMessage(id, date, subId, recipientsRealmList, sendAsGroup, body,
-                    attachmentsRealmList)
+            val message = ScheduledMessage(
+                id, date, subId, recipientsRealmList, sendAsGroup, body,
+                attachmentsRealmList
+            )
 
             realm.executeTransaction { realm.insertOrUpdate(message) }
         }
@@ -51,29 +55,34 @@ class ScheduledMessageRepositoryImpl @Inject constructor() : ScheduledMessageRep
 
     override fun getScheduledMessages(): RealmResults<ScheduledMessage> {
         return Realm.getDefaultInstance()
-                .where(ScheduledMessage::class.java)
-                .sort("date")
-                .findAll()
+            .where(ScheduledMessage::class.java)
+            .sort("date")
+            .findAll()
     }
 
     override fun getScheduledMessage(id: Long): ScheduledMessage? {
         return Realm.getDefaultInstance()
-                .apply { refresh() }
-                .where(ScheduledMessage::class.java)
-                .equalTo("id", id)
-                .findFirst()
+            .apply { refresh() }
+            .where(ScheduledMessage::class.java)
+            .equalTo("id", id)
+            .findFirst()
     }
 
     override fun deleteScheduledMessage(id: Long) {
         Realm.getDefaultInstance()
-                .apply { refresh() }
-                .use { realm ->
-                    val message = realm.where(ScheduledMessage::class.java)
-                            .equalTo("id", id)
-                            .findFirst()
+            .apply { refresh() }
+            .use { realm ->
+                val message = realm.where(ScheduledMessage::class.java)
+                    .equalTo("id", id)
+                    .findFirst()
 
-                    realm.executeTransaction { message?.deleteFromRealm() }
-                }
+                realm.executeTransaction { message?.deleteFromRealm() }
+            }
     }
+}
 
+val PENDING_INTENT_FLAG = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
+} else {
+    PendingIntent.FLAG_UPDATE_CURRENT
 }

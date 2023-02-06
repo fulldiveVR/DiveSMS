@@ -58,7 +58,5 @@ class ActiveSubscriptionObservable(
             disposed = true
             subscriptionManager.removeOnSubscriptionsChangedListener(this)
         }
-
     }
-
 }

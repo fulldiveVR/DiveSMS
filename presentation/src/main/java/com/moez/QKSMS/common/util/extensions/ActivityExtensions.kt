@@ -19,7 +19,9 @@
 package com.moez.QKSMS.common.util.extensions
 
 import android.app.Activity
+import android.app.PendingIntent
 import android.content.Context
+import android.os.Build
 import android.view.inputmethod.InputMethodManager
 
 fun Activity.dismissKeyboard() {
@@ -29,4 +31,10 @@ fun Activity.dismissKeyboard() {
 
         focus.clearFocus()
     }
+}
+
+val PENDING_INTENT_FLAG = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
+} else {
+    PendingIntent.FLAG_UPDATE_CURRENT
 }

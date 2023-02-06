@@ -28,6 +28,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatDelegate
 import com.moez.QKSMS.manager.WidgetManager
 import com.moez.QKSMS.receiver.NightModeReceiver
+import com.moez.QKSMS.repository.PENDING_INTENT_FLAG
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -102,11 +103,11 @@ class NightModeManager @Inject constructor(
     private fun updateAlarms() {
         val dayCalendar = createCalendar(prefs.nightEnd.get())
         val day = Intent(context, NightModeReceiver::class.java)
-        val dayIntent = PendingIntent.getBroadcast(context, 0, day, 0)
+        val dayIntent = PendingIntent.getBroadcast(context, 0, day, PENDING_INTENT_FLAG)
 
         val nightCalendar = createCalendar(prefs.nightStart.get())
         val night = Intent(context, NightModeReceiver::class.java)
-        val nightIntent = PendingIntent.getBroadcast(context, 1, night, 0)
+        val nightIntent = PendingIntent.getBroadcast(context, 1, night, PENDING_INTENT_FLAG)
 
         context.sendBroadcast(day)
         context.sendBroadcast(night)

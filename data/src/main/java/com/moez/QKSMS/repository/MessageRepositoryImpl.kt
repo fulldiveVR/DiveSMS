@@ -459,7 +459,7 @@ class MessageRepositoryImpl @Inject constructor(
                 context,
                 message.id.toInt(),
                 intent,
-                PendingIntent.FLAG_UPDATE_CURRENT
+                PENDING_INTENT_FLAG
             )
         }
 
@@ -471,7 +471,7 @@ class MessageRepositoryImpl @Inject constructor(
                     context,
                     message.id.toInt(),
                     intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT
+                    PENDING_INTENT_FLAG
                 )
             if (prefs.delivery.get()) pendingIntent else null
         }
@@ -528,7 +528,7 @@ class MessageRepositoryImpl @Inject constructor(
             context,
             id.toInt(),
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PENDING_INTENT_FLAG
         )
     }
 
