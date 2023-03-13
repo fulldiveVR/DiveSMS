@@ -177,7 +177,7 @@ class MainViewModel @Inject constructor(
                 GlobalScope.launch(Dispatchers.Main) {
                     val changelog = changelogManager.getChangelog()
                     changelogManager.markChangelogSeen()
-                    view.showChangelog(changelog)
+                  //  view.showChangelog(changelog)
                 }
             } else {
                 changelogManager.markChangelogSeen()
