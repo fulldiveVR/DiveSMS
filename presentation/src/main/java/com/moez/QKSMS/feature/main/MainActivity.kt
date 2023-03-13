@@ -138,7 +138,7 @@ class MainActivity : QkThemedActivity(), MainView {
     }
     private val itemTouchHelper by lazy { ItemTouchHelper(itemTouchCallback) }
     private val progressAnimator by lazy { ObjectAnimator.ofInt(syncingProgress, "progress", 0, 0) }
-    private val changelogDialog by lazy { ChangelogDialog(this) }
+    //private val changelogDialog by lazy { ChangelogDialog(this) }
     private val snackbar by lazy { findViewById<View>(R.id.snackbar) }
     private val syncing by lazy { findViewById<View>(R.id.syncing) }
     private val backPressedSubject: Subject<NavItem> = PublishSubject.create()
@@ -430,7 +430,7 @@ class MainActivity : QkThemedActivity(), MainView {
     }
 
     override fun showChangelog(changelog: ChangelogManager.CumulativeChangelog) {
-        changelogDialog.show(changelog)
+        //changelogDialog.show(changelog)
     }
 
     override fun showArchivedSnackbar() {
