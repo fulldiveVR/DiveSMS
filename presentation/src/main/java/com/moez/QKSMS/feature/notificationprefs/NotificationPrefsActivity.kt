@@ -64,7 +64,6 @@ class NotificationPrefsActivity : QkThemedActivity(), NotificationPrefsView {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("TestB","NotificationPrefsActivity onCreate")
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.notification_prefs_activity)

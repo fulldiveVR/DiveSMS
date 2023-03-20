@@ -162,7 +162,6 @@ class MessageRepositoryImpl @Inject constructor(
             .findAllAsync()
     }
 
-    //todo mms
     override fun savePart(id: Long): File? {
         val part = getPart(id) ?: return null
         val extension =
@@ -172,10 +171,15 @@ class MessageRepositoryImpl @Inject constructor(
             ?: "${part.type.split("/").last()}_$date.$extension"
         var file: File? = null
         try {
-            file = File(
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM),
-                fileName
-            )
+            file = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                File(
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
+                        .toString() + "/" + fileName
+                )
+            } else {
+                File(Environment.getExternalStorageDirectory().toString() + "/" + fileName)
+            }
+
             context.contentResolver.openInputStream(part.getUri())?.let { inputStream ->
                 FileOutputStream(file).use { out ->
                     out.write(inputStream.readBytes())

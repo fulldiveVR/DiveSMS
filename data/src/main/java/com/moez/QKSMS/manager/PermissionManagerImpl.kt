@@ -61,7 +61,7 @@ class PermissionManagerImpl @Inject constructor(private val context: Context) : 
     }
 
     override fun hasStorage(): Boolean {
-        return hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        return true//hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
 
     private fun hasPermission(permission: String): Boolean {
