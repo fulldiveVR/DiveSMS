@@ -46,7 +46,6 @@ abstract class QkViewModel<in View : QkView<State>, State>(initialState: State) 
         disposables += stateReducer
                 .observeOn(AndroidSchedulers.mainThread())
                 .scan(initialState) { state, reducer ->
-                    Log.d("TestB","state: $state")
                    reducer(state)
                 }
                .subscribe(state::onNext)
