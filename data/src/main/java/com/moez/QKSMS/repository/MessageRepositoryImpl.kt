@@ -23,7 +23,10 @@ package com.moez.QKSMS.repository
 
 import android.app.AlarmManager
 import android.app.PendingIntent
-import android.content.*
+import android.content.ContentUris
+import android.content.ContentValues
+import android.content.Context
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Environment
@@ -61,8 +64,10 @@ import io.realm.Realm
 import io.realm.RealmResults
 import io.realm.Sort
 import timber.log.Timber
-import java.io.*
-import java.util.*
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -171,14 +176,10 @@ class MessageRepositoryImpl @Inject constructor(
             ?: "${part.type.split("/").last()}_$date.$extension"
         var file: File? = null
         try {
-            file = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                File(
-                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
-                        .toString() + "/" + fileName
-                )
-            } else {
-                File(Environment.getExternalStorageDirectory().toString() + "/" + fileName)
-            }
+            file = File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                fileName
+            )
 
             context.contentResolver.openInputStream(part.getUri())?.let { inputStream ->
                 FileOutputStream(file).use { out ->
