@@ -34,7 +34,8 @@ class PermissionManagerImpl @Inject constructor(private val context: Context) : 
 
     override fun isDefaultSms(): Boolean {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            context.getSystemService(RoleManager::class.java)?.isRoleHeld(RoleManager.ROLE_SMS) == true
+            context.getSystemService(RoleManager::class.java)
+                ?.isRoleHeld(RoleManager.ROLE_SMS) == true
         } else {
             Telephony.Sms.getDefaultSmsPackage(context) == context.packageName
         }
@@ -61,11 +62,17 @@ class PermissionManagerImpl @Inject constructor(private val context: Context) : 
     }
 
     override fun hasStorage(): Boolean {
-        return true//hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            true
+        } else {
+            hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
     }
 
     private fun hasPermission(permission: String): Boolean {
-        return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED
+        return ContextCompat.checkSelfPermission(
+            context,
+            permission
+        ) == PackageManager.PERMISSION_GRANTED
     }
-
 }

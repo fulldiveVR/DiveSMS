@@ -27,13 +27,13 @@ def versionMinor = 1
 def versionPatch = 1
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     flavorDimensions "analytics"
 
     defaultConfig {
         applicationId "com.fulldive.extension.divesms"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 33
 
         versionCode versionMajor*10000+versionMinor*100+versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
@@ -41,7 +41,7 @@ android {
         setProperty("archivesBaseName", "DiveSms-v${versionName}")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        setProperty("archivesBaseName", "QKSMS-v${versionName}")
+        setProperty("archivesBaseName", "DiveSms-v${versionName}")
         multiDexEnabled= true
     }
 
