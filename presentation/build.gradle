@@ -23,7 +23,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 def versionMajor = 1
-def versionMinor = 1
+def versionMinor = 2
 def versionPatch = 2
 
 android {
@@ -107,6 +107,7 @@ configurations {
 
 dependencies {
     implementation "com.snore.guard:divesms:1.4.0"
+    implementation project(path: ':startapppopups')
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
