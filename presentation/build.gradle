@@ -24,11 +24,12 @@ apply plugin: 'kotlin-kapt'
 
 def versionMajor = 1
 def versionMinor = 2
-def versionPatch = 2
+def versionPatch = 3
 
 android {
     compileSdkVersion 33
     flavorDimensions "analytics"
+    ndkVersion "24.0.8215888"
 
     defaultConfig {
         applicationId "com.fulldive.extension.divesms"
@@ -43,6 +44,8 @@ android {
 
         setProperty("archivesBaseName", "DiveSms-v${versionName}")
         multiDexEnabled= true
+
+        ndk { debugSymbolLevel 'FULL' }
     }
 
     signingConfigs {
