@@ -107,7 +107,7 @@ class MainActivity : QkThemedActivity(), MainView {
             backPressedSubject,
             inbox.clicks().map { NavItem.INBOX },
             archived.clicks().map { NavItem.ARCHIVED },
-            backup.clicks().map { NavItem.BACKUP },
+           // backup.clicks().map { NavItem.BACKUP },
             scheduled.clicks().map { NavItem.SCHEDULED },
             blocking.clicks().map { NavItem.BLOCKING },
             settings.clicks().map { NavItem.SETTINGS }
@@ -198,7 +198,7 @@ class MainActivity : QkThemedActivity(), MainView {
                     }
 
                 // Miscellaneous views
-                listOf(plusBadge1, plusBadge2).forEach { badge ->
+                listOf( plusBadge2).forEach { badge ->
                     badge.setBackgroundTint(theme.theme)
                     badge.setTextColor(theme.textPrimary)
                 }
@@ -267,7 +267,7 @@ class MainActivity : QkThemedActivity(), MainView {
         toolbar.menu.findItem(R.id.unread)?.isVisible = !markRead && selectedConversations != 0
         toolbar.menu.findItem(R.id.block)?.isVisible = selectedConversations != 0
 
-        listOf(plusBadge1, plusBadge2).forEach { badge ->
+        listOf( plusBadge2).forEach { badge ->
             badge.isVisible = drawerBadgesExperiment.variant && !state.upgraded
         }
         // plus.isVisible = state.upgraded

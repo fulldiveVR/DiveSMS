@@ -71,7 +71,6 @@ class PopupManager {
             .getProperty(KEY_IS_PROMO_POPUP_CLOSED_START_COUNTER, 0)
 
         val diff = startCounter - isPromoPopupCloseCounter
-        Log.d("TestB", "getShowingPopup: " + startCounter + "- " + popupsFlow.lastIndex + " isPromoPopupCloseCounter: $isPromoPopupCloseCounter diff $diff")
 
         sharedPreferences.setProperty(KEY_START_APP_COUNTER, startCounter + 1)
 
@@ -106,7 +105,6 @@ class PopupManager {
                 }
             }
         }
-        Log.d("TestB","diff $diff repeatPopupCounts $repeatPopupCounts")
 
         if (
             isShowDonationPopup && ((!isPromoPopupClosed || isPromoPopupClosed && repeatPopupCounts.any { it == diff })
@@ -236,7 +234,6 @@ class PopupManager {
     }
 
     private fun getShowingPopup(startCounter: Int): StartAppDialog {
-        Log.d("TestB", "getShowingPopup: " + startCounter + "- " + popupsFlow.lastIndex)
         return if (popupsFlow.lastIndex >= startCounter) {
             popupsFlow[startCounter]
         } else {

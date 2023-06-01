@@ -1,59 +1,45 @@
-<!--
-  ~  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
-  ~
-  ~  This file is part of QKSMS.
-  ~
-  ~  QKSMS is free software: you can redistribute it and/or modify
-  ~  it under the terms of the GNU General Public License as published by
-  ~  the Free Software Foundation, either version 3 of the License, or
-  ~  (at your option) any later version.
-  ~
-  ~  QKSMS is distributed in the hope that it will be useful,
-  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ~  GNU General Public License for more details.
-  ~
-  ~  You should have received a copy of the GNU General Public License
-  ~  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
-  ~
-  -->
-
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-  <group android:scaleX="1.161"
-      android:scaleY="1.161"
-      android:translateX="30.78"
-      android:translateY="30.78">
+    android:viewportWidth="680"
+    android:viewportHeight="688">
+  <group android:scaleX="0.4348837"
+      android:scaleY="0.44"
+      android:translateX="192.13954"
+      android:translateY="192.64">
     <path
-        android:pathData="M34.0855,32.8807C33.7412,32.9674 33.5214,33.3044 33.5807,33.6545L34.469,39.1793C34.525,39.48 34.3763,39.7817 34.1037,39.9204C33.8311,40.0591 32.4997,40.0017 32.2897,39.7793L26.509,33.3324C26.3782,33.1867 26.1916,33.1035 25.9959,33.1034H7.5862C5.5742,33.1034 3.6446,32.3042 2.222,30.8815C0.7993,29.4588 0,27.5292 0,25.5172V7.5862C0,3.3965 3.3965,0 7.5862,0H32.4138C36.6035,0 40,3.3965 40,7.5862V25.5172C39.9565,29.0398 37.5158,32.0784 34.0855,32.8807Z">
+        android:pathData="M579.45,564.83C573.6,566.32 569.86,572.11 570.87,578.13L585.97,673.03C586.93,678.2 584.4,683.38 579.76,685.76C575.13,688.15 552.49,687.16 548.92,683.34L450.65,572.59C448.43,570.09 445.26,568.66 441.93,568.66H128.97C94.76,568.66 61.96,554.93 37.77,530.49C13.59,506.05 0,472.9 0,438.34V130.32C0,58.35 57.74,0 128.97,0H551.03C622.26,0 680,58.35 680,130.32V438.34C679.26,498.85 637.77,551.05 579.45,564.83Z">
       <aapt:attr name="android:fillColor">
         <gradient 
-            android:startY="34.5"
-            android:startX="30"
-            android:endY="-0.999998"
-            android:endX="24.5"
+            android:startX="510"
+            android:startY="592.65"
+            android:endX="414.58"
+            android:endY="-16.88"
             android:type="linear">
-          <item android:offset="0" android:color="#FFFFB93A"/>
-          <item android:offset="1" android:color="#FFFFE349"/>
+          <item android:offset="0" android:color="#FF5B60E5"/>
+          <item android:offset="1" android:color="#FF9E52EC"/>
         </gradient>
       </aapt:attr>
     </path>
     <path
-        android:pathData="M34.8138,0.3862C24.8345,1.6138 3.6759,6.7241 0.4207,28.0138C0.1395,27.2116 -0.0028,26.3673 0,25.5172V7.5862C-0.0011,5.5739 0.7978,3.6437 2.2208,2.2207C3.6437,0.7978 5.5739,-0.0011 7.5862,0H32.4138C33.2293,-0.0002 34.0396,0.1302 34.8138,0.3862Z"
-        android:fillColor="#FFEC4C"
-        android:fillAlpha="0.3"/>
+        android:pathData="M591.84,6.63C422.19,27.72 62.49,115.51 7.15,481.23C2.37,467.45 -0.05,452.95 0,438.34V130.32C-0.02,95.75 13.56,62.59 37.75,38.15C61.94,13.7 94.76,-0.02 128.97,0H551.03C564.9,-0 578.67,2.24 591.84,6.63Z"
+        android:fillColor="#ffffff"
+        android:fillAlpha="0.1"/>
     <path
-        android:pathData="M8.9656,19.3102C10.4892,19.3102 11.7243,18.0751 11.7243,16.5516C11.7243,15.028 10.4892,13.793 8.9656,13.793C7.4421,13.793 6.207,15.028 6.207,16.5516C6.207,18.0751 7.4421,19.3102 8.9656,19.3102Z"
-        android:fillColor="#ECF0F1"/>
-    <path
-        android:pathData="M20.0001,19.3102C21.5236,19.3102 22.7587,18.0751 22.7587,16.5516C22.7587,15.028 21.5236,13.793 20.0001,13.793C18.4765,13.793 17.2415,15.028 17.2415,16.5516C17.2415,18.0751 18.4765,19.3102 20.0001,19.3102Z"
-        android:fillColor="#F4F6F7"/>
-    <path
-        android:pathData="M31.0347,19.3102C32.5583,19.3102 33.7934,18.0751 33.7934,16.5516C33.7934,15.028 32.5583,13.793 31.0347,13.793C29.5112,13.793 28.2761,15.028 28.2761,16.5516C28.2761,18.0751 29.5112,19.3102 31.0347,19.3102Z"
-        android:fillColor="#ffffff"/>
+        android:pathData="M340,331.72C365.9,331.72 386.9,310.5 386.9,284.33C386.9,258.16 365.9,236.94 340,236.94C314.1,236.94 293.11,258.16 293.11,284.33C293.11,310.5 314.1,331.72 340,331.72ZM152.42,331.72C178.32,331.72 199.31,310.5 199.31,284.33C199.31,258.16 178.32,236.94 152.42,236.94C126.52,236.94 105.52,258.16 105.52,284.33C105.52,310.5 126.52,331.72 152.42,331.72ZM574.49,284.33C574.49,310.5 553.49,331.72 527.59,331.72C501.69,331.72 480.69,310.5 480.69,284.33C480.69,258.16 501.69,236.94 527.59,236.94C553.49,236.94 574.49,258.16 574.49,284.33Z"
+        android:fillType="evenOdd">
+      <aapt:attr name="android:fillColor">
+        <gradient 
+            android:startX="539.24"
+            android:startY="284.47"
+            android:endX="106.08"
+            android:endY="284.47"
+            android:type="linear">
+          <item android:offset="0" android:color="#FFEFEFFF"/>
+          <item android:offset="1" android:color="#FFFFFFFF"/>
+        </gradient>
+      </aapt:attr>
+    </path>
   </group>
 </vector>
