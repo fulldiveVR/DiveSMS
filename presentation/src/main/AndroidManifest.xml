@@ -46,6 +46,9 @@
 
     <uses-permission android:name="com.android.vending.BILLING" />
 
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
     <application
         android:name=".common.QKApplication"
         android:allowBackup="true"

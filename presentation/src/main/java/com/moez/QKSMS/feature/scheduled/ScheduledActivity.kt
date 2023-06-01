@@ -84,12 +84,10 @@ class ScheduledActivity : QkThemedActivity(), ScheduledView {
 
     override fun render(state: ScheduledState) {
         messageAdapter.updateData(state.scheduledMessages)
-
         compose.isVisible = state.upgraded
     }
 
     override fun showMessageOptions() {
         dialog.show(this)
     }
-
 }
