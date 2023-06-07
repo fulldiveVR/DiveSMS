@@ -37,13 +37,6 @@
         android:paddingBottom="16dp">
 
         <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/blockingManager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="@string/blocking_manager_title"
-            tools:summary="@string/blocking_manager_qksms_title" />
-
-        <com.moez.QKSMS.common.widget.PreferenceView
             android:id="@+id/blockedNumbers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
