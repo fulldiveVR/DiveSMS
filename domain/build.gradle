@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-
+    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
     // dagger
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"

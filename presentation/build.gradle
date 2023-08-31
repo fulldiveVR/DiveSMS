@@ -109,6 +109,7 @@ configurations {
 }
 
 dependencies {
+    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
     implementation "com.snore.guard:divesms:1.4.0"
     implementation project(path: ':startapppopups')
     // lifecycle

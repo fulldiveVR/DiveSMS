@@ -48,7 +48,7 @@ android {
 }
 
 dependencies {
-
+    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
     // androidx
     implementation "androidx.appcompat:appcompat:$androidx_appcompat_version"
     implementation "androidx.core:core-ktx:$androidx_core_version"
