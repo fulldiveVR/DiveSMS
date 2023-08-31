@@ -21,6 +21,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
+    android {
+        namespace 'com.fulldive.extension.divesms'
+    }
     compileSdkVersion 33
     publishNonDefault true
     flavorDimensions "analytics"

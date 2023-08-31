@@ -27,6 +27,9 @@ def versionMinor = 2
 def versionPatch = 5
 
 android {
+    android {
+        namespace 'com.fulldive.extension.divesms'
+    }
     compileSdkVersion 33
     flavorDimensions "analytics"
     ndkVersion "24.0.8215888"

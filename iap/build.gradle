@@ -6,6 +6,9 @@ plugins {
 }
 
 android {
+    android {
+        namespace 'com.fulldive.extension.divesms'
+    }
     compileSdk 33
 
     defaultConfig {

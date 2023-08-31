@@ -20,6 +20,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    android {
+        namespace 'com.fulldive.extension.divesms'
+    }
     compileSdkVersion 33
 
     defaultConfig {
