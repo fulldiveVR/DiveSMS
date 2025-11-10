@@ -118,7 +118,6 @@ configurations {
 dependencies {
     implementation "com.snore.guard:divesms:1.4.0"
     implementation 'com.fulldive:popups:1.0.16'
-    implementation project(path: ':startapppopups')
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
