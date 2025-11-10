@@ -24,7 +24,7 @@ package com.moez.QKSMS.common.util
 import android.content.Context
 import android.graphics.Typeface
 import androidx.core.content.res.ResourcesCompat
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton

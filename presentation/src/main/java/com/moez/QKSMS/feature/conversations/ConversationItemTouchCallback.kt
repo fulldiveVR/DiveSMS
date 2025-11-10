@@ -29,7 +29,7 @@ import android.graphics.Rect
 import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.dpToPx
 import com.moez.QKSMS.util.Preferences

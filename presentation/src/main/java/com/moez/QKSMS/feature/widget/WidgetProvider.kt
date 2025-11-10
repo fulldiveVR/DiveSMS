@@ -31,7 +31,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.RemoteViews
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.PENDING_INTENT_FLAG
 import com.moez.QKSMS.common.util.extensions.getColorCompat

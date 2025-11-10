@@ -24,18 +24,44 @@ package com.moez.QKSMS.feature.plus
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkViewModel
 import com.moez.QKSMS.manager.AnalyticsManager
-import com.moez.QKSMS.manager.BillingManager
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.Observable
 import io.reactivex.rxkotlin.plusAssign
 import javax.inject.Inject
 
 class PlusViewModel @Inject constructor(
     private val analyticsManager: AnalyticsManager,
-    private val billingManager: BillingManager,
     private val navigator: Navigator
-) : QkViewModel<PlusView, PlusState>(PlusState()) {
+) : QkViewModel<PlusView, PlusState>(PlusState(
+    upgraded = true, // All users now have access to premium features
+    upgradePrice = "Free",
+    upgradeDonatePrice = "Free",
+    currency = ""
+)) {
 
+    override fun bindView(view: PlusView) {
+        super.bindView(view)
 
+        // All feature clicks now navigate directly to their respective screens
+        view.themeClicks
+            .autoDispose(view.scope())
+            .subscribe { navigator.showSettings() }
+
+        view.scheduleClicks
+            .autoDispose(view.scope())
+            .subscribe { navigator.showScheduled() }
+
+        view.backupClicks
+            .autoDispose(view.scope())
+            .subscribe { navigator.showBackup() }
+
+        view.delayedClicks
+            .autoDispose(view.scope())
+            .subscribe { navigator.showSettings() }
+
+        view.nightClicks
+            .autoDispose(view.scope())
+            .subscribe { navigator.showSettings() }
+    }
 }

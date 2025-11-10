@@ -23,7 +23,7 @@ package com.moez.QKSMS.feature.plus.experiment
 
 import android.content.Context
 import androidx.annotation.StringRes
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.experiment.Experiment
 import com.moez.QKSMS.experiment.Variant
 import com.moez.QKSMS.manager.AnalyticsManager

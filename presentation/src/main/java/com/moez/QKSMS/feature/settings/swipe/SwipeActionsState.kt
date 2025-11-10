@@ -22,7 +22,7 @@
 package com.moez.QKSMS.feature.settings.swipe
 
 import androidx.annotation.DrawableRes
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 
 data class SwipeActionsState(
     @DrawableRes val rightIcon: Int = R.drawable.ic_archive_white_24dp,

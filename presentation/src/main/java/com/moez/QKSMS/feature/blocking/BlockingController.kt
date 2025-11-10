@@ -22,9 +22,10 @@
 package com.moez.QKSMS.feature.blocking
 
 import android.view.View
+import android.widget.CheckBox
 import com.bluelinelabs.conductor.RouterTransaction
 import com.jakewharton.rxbinding2.view.clicks
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.QkChangeHandler
 import com.moez.QKSMS.common.base.QkController
 import com.moez.QKSMS.common.util.Colors
@@ -33,15 +34,16 @@ import com.moez.QKSMS.feature.blocking.manager.BlockingManagerController
 import com.moez.QKSMS.feature.blocking.messages.BlockedMessagesController
 import com.moez.QKSMS.feature.blocking.numbers.BlockedNumbersController
 import com.moez.QKSMS.injection.appComponent
-import kotlinx.android.synthetic.main.blocking_controller.*
-import kotlinx.android.synthetic.main.settings_switch_widget.view.*
+import com.fulldive.extension.divesms.databinding.BlockingControllerBinding
 import javax.inject.Inject
 
 class BlockingController : QkController<BlockingView, BlockingState, BlockingPresenter>(), BlockingView {
 
-    override val blockedNumbersIntent by lazy { blockedNumbers.clicks() }
-    override val blockedMessagesIntent by lazy { blockedMessages.clicks() }
-    override val dropClickedIntent by lazy { drop.clicks() }
+    private lateinit var binding: BlockingControllerBinding
+
+    override val blockedNumbersIntent by lazy { binding.blockedNumbers.clicks() }
+    override val blockedMessagesIntent by lazy { binding.blockedMessages.clicks() }
+    override val dropClickedIntent by lazy { binding.drop.clicks() }
 
     @Inject lateinit var colors: Colors
     @Inject override lateinit var presenter: BlockingPresenter
@@ -54,7 +56,8 @@ class BlockingController : QkController<BlockingView, BlockingState, BlockingPre
 
     override fun onViewCreated() {
         super.onViewCreated()
-        parent.postDelayed({ parent?.animateLayoutChanges = true }, 100)
+        binding = BlockingControllerBinding.bind(containerView!!)
+        binding.parent.postDelayed({ binding.parent?.animateLayoutChanges = true }, 100)
     }
 
     override fun onAttach(view: View) {
@@ -65,8 +68,8 @@ class BlockingController : QkController<BlockingView, BlockingState, BlockingPre
     }
 
     override fun render(state: BlockingState) {
-        drop.checkbox.isChecked = state.dropEnabled
-        blockedMessages.isEnabled = !state.dropEnabled
+        binding.drop.findViewById<com.moez.QKSMS.common.widget.QkSwitch>(R.id.checkbox).isChecked = state.dropEnabled
+        binding.blockedMessages.isEnabled = !state.dropEnabled
     }
 
     override fun openBlockedNumbers() {

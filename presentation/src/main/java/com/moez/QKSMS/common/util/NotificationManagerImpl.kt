@@ -41,7 +41,7 @@ import androidx.core.app.RemoteInput
 import androidx.core.app.TaskStackBuilder
 import androidx.core.content.getSystemService
 import androidx.core.graphics.drawable.IconCompat
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.extensions.PENDING_INTENT_FLAG
 import com.moez.QKSMS.common.util.extensions.dpToPx
 import com.moez.QKSMS.extensions.isImage

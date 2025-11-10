@@ -19,7 +19,7 @@
 package com.moez.QKSMS.feature.settings
 
 import android.content.Context
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkPresenter
 import com.moez.QKSMS.common.util.Colors
@@ -28,14 +28,13 @@ import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.interactor.DeleteOldMessages
 import com.moez.QKSMS.interactor.SyncMessages
 import com.moez.QKSMS.manager.AnalyticsManager
-import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.repository.MessageRepository
 import com.moez.QKSMS.repository.SyncRepository
 import com.moez.QKSMS.service.AutoDeleteService
 import com.moez.QKSMS.util.NightModeManager
 import com.moez.QKSMS.util.Preferences
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.withLatestFrom
 import io.reactivex.schedulers.Schedulers
@@ -50,7 +49,6 @@ class SettingsPresenter @Inject constructor(
     syncRepo: SyncRepository,
     private val analytics: AnalyticsManager,
     private val context: Context,
-    private val billingManager: BillingManager,
     private val dateFormatter: DateFormatter,
     private val deleteOldMessages: DeleteOldMessages,
     private val messageRepo: MessageRepository,
@@ -147,7 +145,7 @@ class SettingsPresenter @Inject constructor(
         super.bindIntents(view)
 
         view.preferenceClicks()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe {
                     Timber.v("Preference click: ${context.resources.getResourceName(it.id)}")
 
@@ -208,7 +206,7 @@ class SettingsPresenter @Inject constructor(
         view.aboutLongClicks()
                 .map { !prefs.logging.get() }
                 .doOnNext { enabled -> prefs.logging.set(enabled) }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { enabled ->
                     context.makeToast(when (enabled) {
                         true -> R.string.settings_logging_enabled
@@ -217,46 +215,36 @@ class SettingsPresenter @Inject constructor(
                 }
 
         view.nightModeSelected()
-                .withLatestFrom(billingManager.upgradeStatus) { mode, upgraded ->
-                    if (!upgraded && mode == Preferences.NIGHT_MODE_AUTO) {
-                        view.showQksmsPlusSnackbar()
-                    } else {
-                        nightModeManager.updateNightMode(mode)
-                    }
+                .autoDispose(view.scope())
+                .subscribe { mode ->
+                    nightModeManager.updateNightMode(mode)
                 }
-                .autoDisposable(view.scope())
-                .subscribe()
 
 //        view.viewQksmsPlusClicks()
-//                .autoDisposable(view.scope())
+//                .autoDispose(view.scope())
 //                .subscribe { navigator.showQksmsPlusActivity("settings_night") }
 
         view.nightStartSelected()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { nightModeManager.setNightStart(it.first, it.second) }
 
         view.nightEndSelected()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { nightModeManager.setNightEnd(it.first, it.second) }
 
         view.textSizeSelected()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe(prefs.textSize::set)
 
         view.sendDelaySelected()
-                .withLatestFrom(billingManager.upgradeStatus) { duration, upgraded ->
-                    if (!upgraded && duration != 0) {
-                        view.showQksmsPlusSnackbar()
-                    } else {
-                        prefs.sendDelay.set(duration)
-                    }
+                .autoDispose(view.scope())
+                .subscribe { duration ->
+                    prefs.sendDelay.set(duration)
                 }
-                .autoDisposable(view.scope())
-                .subscribe()
 
         view.signatureChanged()
                 .doOnNext(prefs.signature::set)
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
 
         view.autoDeleteChanged()
@@ -283,11 +271,11 @@ class SettingsPresenter @Inject constructor(
                     }
                 }
                 .doOnNext(prefs.autoDelete::set)
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
 
         view.mmsSizeSelected()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe(prefs.mmsSize::set)
     }
 

@@ -16,8 +16,7 @@
   ~ You should have received a copy of the GNU General Public License
   ~ along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
   -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.moez.QKSMS">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -50,7 +49,7 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
     <application
-        android:name=".common.QKApplication"
+        android:name="com.moez.QKSMS.common.QKApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -59,7 +58,7 @@
         android:theme="@style/AppLaunchTheme">
 
         <activity
-            android:name=".feature.main.MainActivity"
+            android:name="com.moez.QKSMS.feature.main.MainActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
@@ -71,9 +70,9 @@
                 android:resource="@xml/shortcuts" />
         </activity>
         <activity
-            android:name=".feature.compose.ComposeActivity"
+            android:name="com.moez.QKSMS.feature.compose.ComposeActivity"
             android:exported="true"
-            android:parentActivityName=".feature.main.MainActivity">
+            android:parentActivityName="com.moez.QKSMS.feature.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
@@ -114,41 +113,41 @@
                 android:name="android.service.chooser.chooser_target_service"
                 android:value=".common.util.QkChooserTargetService" />
         </activity>
-        <activity android:name=".feature.settings.SettingsActivity" />
-        <activity android:name=".feature.plus.PlusActivity" />
+        <activity android:name="com.moez.QKSMS.feature.settings.SettingsActivity" />
+        <activity android:name="com.moez.QKSMS.feature.plus.PlusActivity" />
         <activity
-            android:name=".feature.gallery.GalleryActivity"
+            android:name="com.moez.QKSMS.feature.gallery.GalleryActivity"
             android:theme="@style/AppTheme.Black" />
-        <activity android:name=".feature.conversationinfo.ConversationInfoActivity" />
-        <activity android:name=".feature.notificationprefs.NotificationPrefsActivity" />
-        <activity android:name=".feature.blocking.BlockingActivity" />
+        <activity android:name="com.moez.QKSMS.feature.conversationinfo.ConversationInfoActivity" />
+        <activity android:name="com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivity" />
+        <activity android:name="com.moez.QKSMS.feature.blocking.BlockingActivity" />
         <activity
-            android:name=".feature.qkreply.QkReplyActivity"
+            android:name="com.moez.QKSMS.feature.qkreply.QkReplyActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=""
             android:theme="@style/AppThemeDialog"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".feature.scheduled.ScheduledActivity" />
-        <activity android:name=".feature.backup.BackupActivity" />
-        <activity android:name=".feature.contacts.ContactsActivity" />
+        <activity android:name="com.moez.QKSMS.feature.scheduled.ScheduledActivity" />
+        <activity android:name="com.moez.QKSMS.feature.backup.BackupActivity" />
+        <activity android:name="com.moez.QKSMS.feature.contacts.ContactsActivity" />
 
         <receiver
-            android:name=".receiver.BootReceiver"
+            android:name="com.moez.QKSMS.receiver.BootReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".receiver.DefaultSmsChangedReceiver"
+            android:name="com.moez.QKSMS.receiver.DefaultSmsChangedReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.action.DEFAULT_SMS_PACKAGE_CHANGED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.DeleteMessagesReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.DeleteMessagesReceiver" />
         <receiver
-            android:name=".receiver.SmsReceiver"
+            android:name="com.moez.QKSMS.receiver.SmsReceiver"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">
             <intent-filter>
@@ -156,7 +155,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".receiver.MmsReceiver"
+            android:name="com.moez.QKSMS.receiver.MmsReceiver"
             android:exported="true"
             android:permission="android.permission.BROADCAST_WAP_PUSH">
             <intent-filter>
@@ -164,37 +163,37 @@
                 <data android:mimeType="application/vnd.wap.mms-message" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.SmsSentReceiver" />
-        <receiver android:name=".receiver.SmsDeliveredReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.SmsSentReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.SmsDeliveredReceiver" />
         <receiver
-            android:name=".receiver.MmsSentReceiver"
+            android:name="com.moez.QKSMS.receiver.MmsSentReceiver"
             android:taskAffinity="com.moez.QKSMS.MMS_SENT" />
         <receiver
-            android:name=".receiver.MmsUpdatedReceiver"
+            android:name="com.moez.QKSMS.receiver.MmsUpdatedReceiver"
             android:taskAffinity="com.moez.QKSMS.MMS_UPDATED" />
         <receiver
-            android:name=".receiver.MmsReceivedReceiver"
+            android:name="com.moez.QKSMS.receiver.MmsReceivedReceiver"
             android:taskAffinity="com.klinker.android.messaging.MMS_RECEIVED" />
-        <receiver android:name=".receiver.MarkArchivedReceiver" />
-        <receiver android:name=".receiver.BlockThreadReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.MarkArchivedReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.BlockThreadReceiver" />
         <receiver
-            android:name=".receiver.MarkSeenReceiver"
+            android:name="com.moez.QKSMS.receiver.MarkSeenReceiver"
             android:exported="true" />
         <receiver
-            android:name=".receiver.MarkReadReceiver"
+            android:name="com.moez.QKSMS.receiver.MarkReadReceiver"
             android:exported="true" />
-        <receiver android:name=".receiver.RemoteMessagingReceiver" />
-        <receiver android:name=".receiver.NightModeReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.RemoteMessagingReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.NightModeReceiver" />
         <receiver
-            android:name=".receiver.SmsProviderChangedReceiver"
+            android:name="com.moez.QKSMS.receiver.SmsProviderChangedReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.provider.action.EXTERNAL_PROVIDER_CHANGE" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.SendScheduledMessageReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.SendScheduledMessageReceiver" />
         <receiver
-            android:name=".feature.widget.WidgetProvider"
+            android:name="com.moez.QKSMS.feature.widget.WidgetProvider"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -205,18 +204,18 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_info" />
         </receiver>
-        <receiver android:name=".receiver.SendSmsReceiver" />
+        <receiver android:name="com.moez.QKSMS.receiver.SendSmsReceiver" />
 
         <service android:name="com.android.mms.transaction.TransactionService" />
-        <service android:name=".feature.backup.RestoreBackupService" />
+        <service android:name="com.moez.QKSMS.feature.backup.RestoreBackupService" />
         <service
-            android:name=".feature.widget.WidgetService"
+            android:name="com.moez.QKSMS.feature.widget.WidgetService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
         <service
-            android:name=".service.AutoDeleteService"
+            android:name="com.moez.QKSMS.service.AutoDeleteService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
-            android:name=".service.HeadlessSmsSendService"
+            android:name="com.moez.QKSMS.service.HeadlessSmsSendService"
             android:exported="true"
             android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE">
             <intent-filter>
@@ -230,7 +229,7 @@
             </intent-filter>
         </service>
         <service
-            android:name=".common.util.QkChooserTargetService"
+            android:name="com.moez.QKSMS.common.util.QkChooserTargetService"
             android:exported="true"
             android:label="@string/app_name"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">

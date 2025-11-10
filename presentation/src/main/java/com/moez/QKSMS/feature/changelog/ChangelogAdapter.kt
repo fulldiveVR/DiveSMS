@@ -25,11 +25,11 @@ import android.content.Context
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.manager.ChangelogManager
-import kotlinx.android.synthetic.main.changelog_list_item.*
+import com.fulldive.extension.divesms.databinding.ChangelogListItemBinding
 
 class ChangelogAdapter(private val context: Context) : QkAdapter<ChangelogAdapter.ChangelogItem>() {
 
@@ -56,18 +56,19 @@ class ChangelogAdapter(private val context: Context) : QkAdapter<ChangelogAdapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.changelog_list_item, parent, false)
-        return QkViewHolder(view).apply {
+        val binding = ChangelogListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return QkViewHolder(binding.root).apply {
             if (viewType == 0) {
-                changelogItem.setTypeface(changelogItem.typeface, Typeface.BOLD)
+                binding.changelogItem.setTypeface(binding.changelogItem.typeface, Typeface.BOLD)
             }
         }
     }
 
     override fun onBindViewHolder(holder: QkViewHolder, position: Int) {
         val item = getItem(position)
+        val binding = ChangelogListItemBinding.bind(holder.itemView)
 
-        holder.changelogItem.text = item.label
+        binding.changelogItem.text = item.label
     }
 
     override fun getItemViewType(position: Int): Int {

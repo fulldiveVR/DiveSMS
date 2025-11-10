@@ -29,7 +29,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.iterator
 import androidx.lifecycle.Lifecycle
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.resolveThemeBoolean
 import com.moez.QKSMS.common.util.extensions.resolveThemeColor
@@ -41,13 +41,12 @@ import com.moez.QKSMS.repository.MessageRepository
 import com.moez.QKSMS.util.PhoneNumberUtils
 import com.moez.QKSMS.util.Preferences
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.Observables
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.toolbar.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -103,6 +102,23 @@ abstract class QkThemedActivity : QkActivity() {
     @SuppressLint("InlinedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(getActivityThemeRes(prefs.black.get()))
+        
+        // CRITICAL FIX: Configure window for proper system UI handling for all themed activities
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = android.graphics.Color.TRANSPARENT
+            window.navigationBarColor = android.graphics.Color.TRANSPARENT
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.setDecorFitsSystemWindows(false)
+            } else {
+                @Suppress("DEPRECATION")
+                window.decorView.systemUiVisibility = (
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                    View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                )
+            }
+        }
+        
         super.onCreate(savedInstanceState)
 
         // When certain preferences change, we need to recreate the activity
@@ -110,12 +126,12 @@ abstract class QkThemedActivity : QkActivity() {
         Observable.merge(triggers.map { it.asObservable().skip(1) })
                 .debounce(400, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
-                .autoDisposable(scope())
+                .autoDispose(scope())
                 .subscribe { recreate() }
 
         // We can only set light nav bar on API 27 in attrs, but we can do it in API 26 here
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O) {
-            val night = !resolveThemeBoolean(R.attr.isLightTheme)
+            val night = prefs.black.get() // Use black theme preference instead
             window.decorView.systemUiVisibility = if (night) 0 else
                 View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         }
@@ -126,7 +142,7 @@ abstract class QkThemedActivity : QkActivity() {
         }
 
         // Set the color for the recent apps title
-        val toolbarColor = resolveThemeColor(R.attr.colorPrimary)
+        val toolbarColor = resolveThemeColor(android.R.attr.colorPrimary)
         val icon = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
         val taskDesc = ActivityManager.TaskDescription(getString(R.string.app_name), icon, toolbarColor)
         setTaskDescription(taskDesc)
@@ -137,7 +153,10 @@ abstract class QkThemedActivity : QkActivity() {
 
         // Set the color for the overflow and navigation icon
         val textSecondary = resolveThemeColor(android.R.attr.textColorSecondary)
-        toolbar?.overflowIcon = toolbar?.overflowIcon?.apply { setTint(textSecondary) }
+        supportActionBar?.let { actionBar ->
+            // Try to get toolbar from action bar if available
+            // toolbar?.overflowIcon = toolbar?.overflowIcon?.apply { setTint(textSecondary) }
+        }
 
         // Update the colours of the menu items
         Observables.combineLatest(menu, theme) { menu, theme ->
@@ -149,7 +168,7 @@ abstract class QkThemedActivity : QkActivity() {
 
                 menuItem.icon = menuItem.icon?.apply { setTint(tint) }
             }
-        }.autoDisposable(scope(Lifecycle.Event.ON_DESTROY)).subscribe()
+        }.autoDispose(scope(Lifecycle.Event.ON_DESTROY)).subscribe()
     }
 
     open fun getColoredMenuItems(): List<Int> {

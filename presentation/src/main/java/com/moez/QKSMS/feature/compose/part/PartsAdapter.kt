@@ -34,7 +34,7 @@ import com.moez.QKSMS.feature.compose.BubbleUtils.canGroup
 import com.moez.QKSMS.model.Message
 import com.moez.QKSMS.model.MmsPart
 import io.reactivex.Observable
-import kotlinx.android.synthetic.main.message_list_item_in.*
+import com.fulldive.extension.divesms.databinding.MessageListItemInBinding
 import javax.inject.Inject
 
 class PartsAdapter @Inject constructor(
@@ -65,7 +65,8 @@ class PartsAdapter @Inject constructor(
         this.previous = previous
         this.next = next
         this.holder = holder
-        this.bodyVisible = holder.body.visibility == View.VISIBLE
+        val binding = MessageListItemInBinding.bind(holder.itemView)
+        this.bodyVisible = binding.body.visibility == View.VISIBLE
         this.data = message.parts.filter { !it.isSmil() && !it.isText() }
     }
 

@@ -24,19 +24,22 @@ package com.moez.QKSMS.common.widget
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.extensions.resolveThemeAttribute
 import com.moez.QKSMS.common.util.extensions.resolveThemeColorStateList
 import com.moez.QKSMS.common.util.extensions.setVisible
 import com.moez.QKSMS.injection.appComponent
-import kotlinx.android.synthetic.main.preference_view.view.*
+import com.fulldive.extension.divesms.databinding.PreferenceViewBinding
 
 class PreferenceView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : LinearLayoutCompat(context, attrs) {
+
+    lateinit var binding: PreferenceViewBinding
 
     var title: String? = null
         set(value) {
@@ -45,7 +48,7 @@ class PreferenceView @JvmOverloads constructor(
             if (isInEditMode) {
                 findViewById<TextView>(R.id.titleView).text = value
             } else {
-                titleView.text = value
+                binding.titleView.text = value
             }
         }
 
@@ -53,15 +56,14 @@ class PreferenceView @JvmOverloads constructor(
         set(value) {
             field = value
 
-
             if (isInEditMode) {
                 findViewById<TextView>(R.id.summaryView).run {
                     text = value
                     setVisible(value?.isNotEmpty() == true)
                 }
             } else {
-                summaryView.text = value
-                summaryView.setVisible(value?.isNotEmpty() == true)
+                binding.summaryView.text = value
+                binding.summaryView.setVisible(value?.isNotEmpty() == true)
             }
         }
 
@@ -70,12 +72,12 @@ class PreferenceView @JvmOverloads constructor(
             appComponent.inject(this)
         }
 
-        View.inflate(context, R.layout.preference_view, this)
-        setBackgroundResource(context.resolveThemeAttribute(R.attr.selectableItemBackground))
+        binding = PreferenceViewBinding.inflate(LayoutInflater.from(context), this)
+        setBackgroundResource(context.resolveThemeAttribute(android.R.attr.selectableItemBackground))
         orientation = HORIZONTAL
         gravity = Gravity.CENTER_VERTICAL
 
-        icon.imageTintList = context.resolveThemeColorStateList(android.R.attr.textColorSecondary)
+        binding.icon.imageTintList = context.resolveThemeColorStateList(android.R.attr.textColorSecondary)
 
         context.obtainStyledAttributes(attrs, R.styleable.PreferenceView).run {
             title = getString(R.styleable.PreferenceView_title)
@@ -83,13 +85,13 @@ class PreferenceView @JvmOverloads constructor(
 
             // If there's a custom view used for the preference's widget, inflate it
             getResourceId(R.styleable.PreferenceView_widget, -1).takeIf { it != -1 }?.let { id ->
-                View.inflate(context, id, widgetFrame)
+                View.inflate(context, id, binding.widgetFrame)
             }
 
             // If an icon is being used, set up the icon view
             getResourceId(R.styleable.PreferenceView_icon, -1).takeIf { it != -1 }?.let { id ->
-                icon.setVisible(true)
-                icon.setImageResource(id)
+                binding.icon.setVisible(true)
+                binding.icon.setImageResource(id)
             }
 
             recycle()

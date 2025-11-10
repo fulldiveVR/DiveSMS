@@ -21,6 +21,7 @@
 
 package com.moez.QKSMS.common.base
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,11 +29,10 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.bluelinelabs.conductor.archlifecycle.LifecycleController
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.toolbar.view.*
+import com.fulldive.extension.divesms.R
+import com.fulldive.extension.divesms.databinding.ToolbarBinding
 
-abstract class QkController<ViewContract : QkViewContract<State>, State, Presenter : QkPresenter<ViewContract, State>> : LifecycleController(), LayoutContainer {
+abstract class QkController<ViewContract : QkViewContract<State>, State : Any, Presenter : QkPresenter<ViewContract, State>> : LifecycleController() {
 
     abstract var presenter: Presenter
 
@@ -42,14 +42,20 @@ abstract class QkController<ViewContract : QkViewContract<State>, State, Present
     protected val themedActivity: QkThemedActivity?
         get() = activity as? QkThemedActivity
 
-    override var containerView: View? = null
+    protected var containerView: View? = null
+    private var toolbarBinding: ToolbarBinding? = null
 
     @LayoutRes
     var layoutRes: Int = 0
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup, savedViewState: Bundle?): View {
         return inflater.inflate(layoutRes, container, false).also {
             containerView = it
+            // Try to find toolbar in the view
+            val toolbar = it.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+            if (toolbar != null) {
+                toolbarBinding = ToolbarBinding.bind(toolbar)
+            }
             onViewCreated()
         }
     }
@@ -63,7 +69,7 @@ abstract class QkController<ViewContract : QkViewContract<State>, State, Present
 
     fun setTitle(title: CharSequence?) {
         activity?.title = title
-        view?.toolbarTitle?.text = title
+        toolbarBinding?.toolbarTitle?.text = title
     }
 
     fun showBackButton(show: Boolean) {
@@ -72,7 +78,7 @@ abstract class QkController<ViewContract : QkViewContract<State>, State, Present
 
     override fun onDestroyView(view: View) {
         containerView = null
-        clearFindViewByIdCache()
+        toolbarBinding = null
     }
 
     override fun onDestroy() {

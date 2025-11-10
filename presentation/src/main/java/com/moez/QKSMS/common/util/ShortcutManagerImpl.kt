@@ -28,7 +28,7 @@ import android.content.pm.ShortcutInfo
 import android.content.pm.ShortcutManager
 import android.graphics.drawable.Icon
 import android.os.Build
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.feature.compose.ComposeActivity
 import com.moez.QKSMS.model.Conversation
 import com.moez.QKSMS.repository.ConversationRepository

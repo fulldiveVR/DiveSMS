@@ -25,13 +25,10 @@ import android.content.BroadcastReceiver
 import androidx.core.provider.FontRequest
 import androidx.emoji.text.EmojiCompat
 import androidx.emoji.text.FontRequestEmojiCompatConfig
-import com.moez.QKSMS.R
-import com.moez.QKSMS.common.util.CrashlyticsTree
-import com.moez.QKSMS.common.util.FileLoggingTree
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.injection.AppComponentManager
 import com.moez.QKSMS.injection.appComponent
 import com.moez.QKSMS.manager.AnalyticsManager
-import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.manager.ReferralManager
 import com.moez.QKSMS.migration.QkMigration
 import com.moez.QKSMS.migration.QkRealmMigration
@@ -66,8 +63,6 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
     @Inject
     lateinit var qkMigration: QkMigration
 
-    @Inject
-    lateinit var billingManager: BillingManager
     @Inject
     lateinit var dispatchingActivityInjector: DispatchingAndroidInjector<Activity>
     @Inject
@@ -104,8 +99,6 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
 
         GlobalScope.launch(Dispatchers.IO) {
             referralManager.trackReferrer()
-            billingManager.checkForPurchases()
-            billingManager.queryProducts()
         }
 
         nightModeManager.updateCurrentTheme()
@@ -118,8 +111,6 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
         )
 
         EmojiCompat.init(FontRequestEmojiCompatConfig(this, fontRequest))
-
-        // Timber.plant(Timber.DebugTree(), CrashlyticsTree(), fileLoggingTree)
 
         RxDogTag.builder()
             .configureWith(AutoDisposeConfigurer::configure)

@@ -28,11 +28,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.toolbar.*
+import com.fulldive.extension.divesms.R
+import com.fulldive.extension.divesms.databinding.ToolbarBinding
 
 abstract class QkActivity : AppCompatActivity() {
 
     protected val menu: Subject<Menu> = BehaviorSubject.create()
+    var toolbarBinding: ToolbarBinding? = null
 
     @SuppressLint("InlinedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +54,12 @@ abstract class QkActivity : AppCompatActivity() {
 
     override fun setContentView(layoutResID: Int) {
         super.setContentView(layoutResID)
-        setSupportActionBar(toolbar)
+        // Find toolbar in the layout and set it up
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        if (toolbar != null) {
+            setSupportActionBar(toolbar)
+            toolbarBinding = ToolbarBinding.bind(toolbar)
+        }
         title = title // The title may have been set before layout inflation
     }
 
@@ -62,7 +69,7 @@ abstract class QkActivity : AppCompatActivity() {
 
     override fun setTitle(title: CharSequence?) {
         super.setTitle(title)
-        toolbarTitle?.text = title
+        toolbarBinding?.toolbarTitle?.text = title
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

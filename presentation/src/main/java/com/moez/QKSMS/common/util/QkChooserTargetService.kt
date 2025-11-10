@@ -29,7 +29,7 @@ import android.service.chooser.ChooserTarget
 import android.service.chooser.ChooserTargetService
 import androidx.annotation.RequiresApi
 import androidx.core.os.bundleOf
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.feature.compose.ComposeActivity
 import com.moez.QKSMS.injection.appComponent
 import com.moez.QKSMS.model.Conversation

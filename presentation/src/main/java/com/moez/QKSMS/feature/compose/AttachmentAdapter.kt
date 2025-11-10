@@ -26,7 +26,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.extensions.getDisplayName
@@ -38,9 +38,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.attachment_contact_list_item.*
-import kotlinx.android.synthetic.main.attachment_image_list_item.*
-import kotlinx.android.synthetic.main.attachment_image_list_item.view.*
+import com.fulldive.extension.divesms.databinding.AttachmentContactListItemBinding
+import com.fulldive.extension.divesms.databinding.AttachmentImageListItemBinding
 import javax.inject.Inject
 
 class AttachmentAdapter @Inject constructor(
@@ -57,10 +56,16 @@ class AttachmentAdapter @Inject constructor(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = when (viewType) {
-            VIEW_TYPE_IMAGE -> inflater.inflate(R.layout.attachment_image_list_item, parent, false)
-                    .apply { thumbnailBounds.clipToOutline = true }
+            VIEW_TYPE_IMAGE -> {
+                val binding = AttachmentImageListItemBinding.inflate(inflater, parent, false)
+                binding.thumbnailBounds.clipToOutline = true
+                binding.root
+            }
 
-            VIEW_TYPE_CONTACT -> inflater.inflate(R.layout.attachment_contact_list_item, parent, false)
+            VIEW_TYPE_CONTACT -> {
+                val binding = AttachmentContactListItemBinding.inflate(inflater, parent, false)
+                binding.root
+            }
 
             else -> null!! // Impossible
         }
@@ -77,19 +82,25 @@ class AttachmentAdapter @Inject constructor(
         val attachment = getItem(position)
 
         when (attachment) {
-            is Attachment.Image -> Glide.with(context)
-                    .load(attachment.getUri())
-                    .into(holder.thumbnail)
+            is Attachment.Image -> {
+                val binding = AttachmentImageListItemBinding.bind(holder.containerView)
+                Glide.with(context)
+                        .load(attachment.getUri())
+                        .into(binding.thumbnail)
+            }
 
-            is Attachment.Contact -> Observable.just(attachment.vCard)
-                    .mapNotNull { vCard -> Ezvcard.parse(vCard).first() }
-                    .map { vcard -> vcard.getDisplayName() ?: "" }
-                    .subscribeOn(Schedulers.computation())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe { displayName ->
-                        holder.name?.text = displayName
-                        holder.name?.isVisible = displayName.isNotEmpty()
-                    }
+            is Attachment.Contact -> {
+                val binding = AttachmentContactListItemBinding.bind(holder.containerView)
+                Observable.just(attachment.vCard)
+                        .mapNotNull { vCard -> Ezvcard.parse(vCard).first() }
+                        .map { vcard -> vcard.getDisplayName() ?: "" }
+                        .subscribeOn(Schedulers.computation())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe { displayName ->
+                            binding.name.text = displayName
+                            binding.name.isVisible = displayName.isNotEmpty()
+                        }
+            }
         }
     }
 

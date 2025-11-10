@@ -22,17 +22,16 @@
 package com.moez.QKSMS.feature.backup
 
 import android.content.Context
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkPresenter
 import com.moez.QKSMS.common.util.DateFormatter
 import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.interactor.PerformBackup
-import com.moez.QKSMS.manager.BillingManager
 import com.moez.QKSMS.manager.PermissionManager
 import com.moez.QKSMS.repository.BackupRepository
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.rxkotlin.plusAssign
 import io.reactivex.rxkotlin.withLatestFrom
 import io.reactivex.subjects.BehaviorSubject
@@ -42,7 +41,6 @@ import javax.inject.Inject
 
 class BackupPresenter @Inject constructor(
     private val backupRepo: BackupRepository,
-    private val billingManager: BillingManager,
     private val context: Context,
     private val dateFormatter: DateFormatter,
     private val navigator: Navigator,
@@ -77,8 +75,8 @@ class BackupPresenter @Inject constructor(
                 .startWith(context.getString(R.string.backup_loading))
                 .subscribe { lastBackup -> newState { copy(lastBackup = lastBackup) } }
 
-        disposables += billingManager.upgradeStatus
-                .subscribe { upgraded -> newState { copy(upgraded = upgraded) } }
+        // All users now have access to backup functionality
+        newState { copy(upgraded = true) }
     }
 
     override fun bindIntents(view: BackupView) {
@@ -86,47 +84,44 @@ class BackupPresenter @Inject constructor(
 
         view.activityVisible()
                 .map { permissionManager.hasStorage() }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe(storagePermissionSubject)
 
         view.restoreClicks()
                 .withLatestFrom(
                         backupRepo.getBackupProgress(),
-                        backupRepo.getRestoreProgress(),
-                        billingManager.upgradeStatus)
-                { _, backupProgress, restoreProgress, upgraded ->
+                        backupRepo.getRestoreProgress())
+                { _, backupProgress, restoreProgress ->
                     when {
-                        !upgraded -> context.makeToast(R.string.backup_restore_error_plus)
                         backupProgress.running -> context.makeToast(R.string.backup_restore_error_backup)
                         restoreProgress.running -> context.makeToast(R.string.backup_restore_error_restore)
                         !permissionManager.hasStorage() -> view.requestStoragePermission()
                         else -> view.selectFile()
                     }
                 }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
 
         view.restoreFileSelected()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { view.confirmRestore() }
 
         view.restoreConfirmed()
                 .withLatestFrom(view.restoreFileSelected()) { _, backup -> backup }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { backup -> RestoreBackupService.start(context, backup.path) }
 
         view.stopRestoreClicks()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { view.stopRestore() }
 
         view.stopRestoreConfirmed()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { backupRepo.stopRestore() }
 
         view.fabClicks()
-                .withLatestFrom(billingManager.upgradeStatus) { _, upgraded -> upgraded }
-                .autoDisposable(view.scope())
-                .subscribe { upgraded ->
+                .autoDispose(view.scope())
+                .subscribe {
                     when {
                         !permissionManager.hasStorage() -> view.requestStoragePermission()
                         else -> performBackup.execute(Unit)

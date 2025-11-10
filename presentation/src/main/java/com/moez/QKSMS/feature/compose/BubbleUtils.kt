@@ -21,7 +21,7 @@
 
 package com.moez.QKSMS.feature.compose
 
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.model.Message
 import java.util.concurrent.TimeUnit
 

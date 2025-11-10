@@ -27,7 +27,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkRealmAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.DateFormatter
@@ -38,8 +38,7 @@ import com.moez.QKSMS.repository.ContactRepository
 import com.moez.QKSMS.util.PhoneNumberUtils
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.scheduled_message_list_item.*
-import kotlinx.android.synthetic.main.scheduled_message_list_item.view.*
+import com.fulldive.extension.divesms.databinding.ScheduledMessageListItemBinding
 import javax.inject.Inject
 
 class ScheduledMessageAdapter @Inject constructor(
@@ -56,13 +55,13 @@ class ScheduledMessageAdapter @Inject constructor(
     val clicks: Subject<Long> = PublishSubject.create()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.scheduled_message_list_item, parent, false)
+        val binding = ScheduledMessageListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
-        view.attachments.adapter = ScheduledMessageAttachmentAdapter(context)
-        view.attachments.setRecycledViewPool(imagesViewPool)
+        binding.attachments.adapter = ScheduledMessageAttachmentAdapter(context)
+        binding.attachments.setRecycledViewPool(imagesViewPool)
 
-        return QkViewHolder(view).apply {
-            view.setOnClickListener {
+        return QkViewHolder(binding.root).apply {
+            itemView.setOnClickListener {
                 val message = getItem(adapterPosition) ?: return@setOnClickListener
                 clicks.onNext(message.id)
             }
@@ -71,20 +70,21 @@ class ScheduledMessageAdapter @Inject constructor(
 
     override fun onBindViewHolder(holder: QkViewHolder, position: Int) {
         val message = getItem(position) ?: return
+        val binding = ScheduledMessageListItemBinding.bind(holder.itemView)
 
         // GroupAvatarView only accepts recipients, so map the phone numbers to recipients
-        holder.avatars.recipients = message.recipients.map { address -> Recipient(address = address) }
+        binding.avatars.recipients = message.recipients.map { address -> Recipient(address = address) }
 
-        holder.recipients.text = message.recipients.joinToString(",") { address ->
+        binding.recipients.text = message.recipients.joinToString(",") { address ->
             contactCache[address]?.name?.takeIf { it.isNotBlank() } ?: address
         }
 
-        holder.date.text = dateFormatter.getScheduledTimestamp(message.date)
-        holder.body.text = message.body
+        binding.date.text = dateFormatter.getScheduledTimestamp(message.date)
+        binding.body.text = message.body
 
-        val adapter = holder.attachments.adapter as ScheduledMessageAttachmentAdapter
+        val adapter = binding.attachments.adapter as ScheduledMessageAttachmentAdapter
         adapter.data = message.attachments.map(Uri::parse)
-        holder.attachments.isVisible = message.attachments.isNotEmpty()
+        binding.attachments.isVisible = message.attachments.isNotEmpty()
     }
 
     /**

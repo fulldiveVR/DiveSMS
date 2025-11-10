@@ -26,7 +26,7 @@ import com.moez.QKSMS.interactor.MarkUnblocked
 import com.moez.QKSMS.repository.BlockingRepository
 import com.moez.QKSMS.repository.ConversationRepository
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
@@ -49,16 +49,16 @@ class BlockedNumbersPresenter @Inject constructor(
                 }
                 .doOnNext(blockingRepo::unblockNumber)
                 .subscribeOn(Schedulers.io())
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
 
         view.addAddress()
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { view.showAddDialog() }
 
         view.saveAddress()
                 .subscribeOn(Schedulers.io())
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { address -> blockingRepo.blockNumber(address) }
     }
 

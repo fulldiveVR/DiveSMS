@@ -26,7 +26,7 @@ import android.os.Build
 import android.util.AttributeSet
 import android.widget.EditText
 import android.widget.TextView
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.TextViewStyler.Companion.SIZE_PRIMARY
 import com.moez.QKSMS.common.util.TextViewStyler.Companion.SIZE_SECONDARY
 import com.moez.QKSMS.common.util.TextViewStyler.Companion.SIZE_TERTIARY

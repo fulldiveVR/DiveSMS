@@ -22,24 +22,28 @@
 package com.moez.QKSMS.feature.settings
 
 import android.os.Bundle
+import androidx.core.view.isGone
 import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
 import com.bluelinelabs.conductor.RouterTransaction
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkThemedActivity
 import dagger.android.AndroidInjection
-import kotlinx.android.synthetic.main.container_activity.*
+import com.fulldive.extension.divesms.databinding.ContainerActivityBinding
 
 class SettingsActivity : QkThemedActivity() {
 
     private lateinit var router: Router
+    private lateinit var binding: ContainerActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.container_activity)
+        binding = ContainerActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.toolbar.isGone = true
 
-        router = Conductor.attachRouter(this, container, savedInstanceState)
+        router = Conductor.attachRouter(this, binding.container, savedInstanceState)
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(SettingsController()))
         }

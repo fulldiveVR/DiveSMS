@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~  Copyright (C) 2017 Moez Bhatti <moez.bhatti@gmail.com>
+  ~
+  ~  This file is part of QKSMS.
+  ~
+  ~  QKSMS is free software: you can redistribute it and/or modify
+  ~  it under the terms of the GNU General Public License as published by
+  ~  the Free Software Foundation, either version 3 of the License, or
+  ~  (at your option) any later version.
+  ~
+  ~  QKSMS is distributed in the hope that it will be useful,
+  ~  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~  GNU General Public License for more details.
+  ~
+  ~  You should have received a copy of the GNU General Public License
+  ~  along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <!-- Material Design FAB Shape -->
+    <style name="ShapeAppearanceOverlay.App.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Enhanced Header Text Style -->
+    <style name="HeaderTitleText" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!-- Enhanced Search Field Style -->
+    <style name="SearchFieldText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textColorHint">?android:attr/textColorTertiary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Material Card Style for Search -->
+    <style name="SearchCardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">24dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">?attr/bubbleColor</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
+    <!-- Enhanced Toolbar Style -->
+    <style name="EnhancedToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:elevation">8dp</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleTextAppearance">@style/HeaderTitleText</item>
+        <item name="navigationIconTint">?android:attr/textColorPrimary</item>
+    </style>
+</resources>

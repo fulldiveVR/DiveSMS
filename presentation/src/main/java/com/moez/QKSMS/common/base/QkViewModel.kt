@@ -21,11 +21,10 @@
 
 package com.moez.QKSMS.common.base
 
-import android.util.Log
 import androidx.annotation.CallSuper
 import androidx.lifecycle.ViewModel
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
@@ -33,7 +32,7 @@ import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
 
-abstract class QkViewModel<in View : QkView<State>, State>(initialState: State) : ViewModel() {
+abstract class QkViewModel<in View : QkView<State>, State : Any>(initialState: State) : ViewModel() {
 
     protected val disposables = CompositeDisposable()
     protected val state: Subject<State> = BehaviorSubject.createDefault(initialState)
@@ -43,23 +42,47 @@ abstract class QkViewModel<in View : QkView<State>, State>(initialState: State) 
     init {
         // If we accidentally push a realm object into the state on the wrong thread, switching
         // to mainThread right here should immediately alert us of the issue
-        disposables += stateReducer
+        disposables.add(stateReducer
                 .observeOn(AndroidSchedulers.mainThread())
                 .scan(initialState) { state, reducer ->
                    reducer(state)
                 }
-               .subscribe(state::onNext)
+               .subscribe { newState ->
+                   state.onNext(newState)
+               })
     }
 
     @CallSuper
     open fun bindView(view: View) {
-        state
+        disposables.add(state
                 .observeOn(AndroidSchedulers.mainThread())
-                .autoDisposable(view.scope())
-                .subscribe(view::render)
+                .subscribe { newState ->
+                    val renderTimestamp = System.currentTimeMillis()
+                    try {
+                        view.render(newState)
+                    } catch (e: Exception) {
+                    }
+                })
+        
+        // Immediately render current state if available
+        if (state is BehaviorSubject) {
+            (state as BehaviorSubject<State>).value?.let { currentState ->
+                val initialRenderTimestamp = System.currentTimeMillis()
+                try {
+                    view.render(currentState)
+                } catch (e: Exception) {
+                }
+            }
+        }
     }
 
-    protected fun newState(reducer: State.() -> State) = stateReducer.onNext(reducer)
+    protected fun newState(reducer: State.() -> State) {
+        val updateTimestamp = System.currentTimeMillis()
+        try {
+            stateReducer.onNext(reducer)
+        } catch (e: Exception) {
+        }
+    }
 
     override fun onCleared() = disposables.dispose()
 

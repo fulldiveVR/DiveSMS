@@ -21,6 +21,8 @@
 
 package com.moez.QKSMS.common.base
 
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.moez.QKSMS.common.util.extensions.setVisible
@@ -93,37 +95,130 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
     }
 
     override fun updateData(data: OrderedRealmCollection<T>?) {
-        if (getData() === data) return
+        val updateTimestamp = System.currentTimeMillis()
+        
+        if (getData() === data) {
+            return
+        }
 
+        val oldData = getData()
+        
         removeListener(getData())
         addListener(data)
 
-        data?.run(emptyListener)
+        data?.run {
+            emptyListener(this)
+        }
 
-        super.updateData(data)
+        // CRITICAL FIX: Handle frozen collections specially to avoid IllegalStateException
+        if (data != null && (data as? RealmResults<T>)?.isFrozen == true) {
+            
+            // Manually update the adapter data without calling super.updateData() which tries to add listeners
+            try {
+                // Get the current data to compare
+                val oldData = getData()
+                val oldSize = oldData?.size ?: 0
+                val newSize = data.size
+                
+                // Set the new data using reflection
+                val field = RealmRecyclerViewAdapter::class.java.getDeclaredField("adapterData")
+                field.isAccessible = true
+                field.set(this, data)
+                
+                // Notify adapter with proper change notifications for better UI updates
+                if (oldData == null) {
+                    // First time setting data
+                    notifyItemRangeInserted(0, newSize)
+                } else if (oldSize != newSize) {
+                    // Size changed
+                    notifyDataSetChanged()
+                } else {
+                    // Same size, just content might have changed
+                    notifyItemRangeChanged(0, newSize)
+                }
+                
+                
+                // CRITICAL FIX: Additional fallback - force complete refresh for frozen data
+                Handler(Looper.getMainLooper()).post {
+                    notifyDataSetChanged()
+                    
+                    // EXTREME FIX: Force RecyclerView to completely refresh
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        notifyDataSetChanged()
+                    }, 100)
+                }
+            } catch (e: Exception) {
+                // If reflection fails, try super but catch the exception
+                try {
+                    super.updateData(data)
+                } catch (frozenException: IllegalStateException) {
+                    // Force a complete refresh as fallback
+                    notifyDataSetChanged()
+                }
+            }
+        } else {
+            super.updateData(data)
+        }
+        
     }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        val attachTimestamp = System.currentTimeMillis()
+        
         super.onAttachedToRecyclerView(recyclerView)
         addListener(data)
+        
     }
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
+        val detachTimestamp = System.currentTimeMillis()
+        
         super.onDetachedFromRecyclerView(recyclerView)
         removeListener(data)
+        
     }
 
     private fun addListener(data: OrderedRealmCollection<T>?) {
+        val addListenerTimestamp = System.currentTimeMillis()
         when (data) {
-            is RealmResults<T> -> data.addChangeListener(emptyListener)
-            is RealmList<T> -> data.addChangeListener(emptyListener)
+            is RealmResults<T> -> {
+                // CRITICAL FIX: Don't add listeners to frozen collections
+                if (data.isFrozen) {
+                } else {
+                    data.addChangeListener(emptyListener)
+                }
+            }
+            is RealmList<T> -> {
+                // CRITICAL FIX: Don't add listeners to frozen collections
+                if (data.isFrozen) {
+                } else {
+                    data.addChangeListener(emptyListener)
+                }
+            }
+            null -> {
+            }
         }
     }
 
     private fun removeListener(data: OrderedRealmCollection<T>?) {
+        val removeListenerTimestamp = System.currentTimeMillis()
         when (data) {
-            is RealmResults<T> -> data.removeChangeListener(emptyListener)
-            is RealmList<T> -> data.removeChangeListener(emptyListener)
+            is RealmResults<T> -> {
+                // CRITICAL FIX: Don't try to remove listeners from frozen collections
+                if (data.isFrozen) {
+                } else {
+                    data.removeChangeListener(emptyListener)
+                }
+            }
+            is RealmList<T> -> {
+                // CRITICAL FIX: Don't try to remove listeners from frozen collections
+                if (data.isFrozen) {
+                } else {
+                    data.removeChangeListener(emptyListener)
+                }
+            }
+            null -> {
+            }
         }
     }
 

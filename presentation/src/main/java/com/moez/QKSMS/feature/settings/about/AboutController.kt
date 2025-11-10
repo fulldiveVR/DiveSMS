@@ -23,18 +23,19 @@ package com.moez.QKSMS.feature.settings.about
 
 import android.view.View
 import com.jakewharton.rxbinding2.view.clicks
-import com.moez.QKSMS.BuildConfig
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.BuildConfig
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkController
 import com.moez.QKSMS.common.widget.PreferenceView
 import com.moez.QKSMS.injection.appComponent
 import io.reactivex.Observable
-import kotlinx.android.synthetic.main.about_controller.*
+import com.fulldive.extension.divesms.databinding.AboutControllerBinding
 import javax.inject.Inject
 
 class AboutController : QkController<AboutView, Unit, AboutPresenter>(), AboutView {
 
     @Inject override lateinit var presenter: AboutPresenter
+    private lateinit var binding: AboutControllerBinding
 
     init {
         appComponent.inject(this)
@@ -42,7 +43,9 @@ class AboutController : QkController<AboutView, Unit, AboutPresenter>(), AboutVi
     }
 
     override fun onViewCreated() {
-        version.summary = BuildConfig.VERSION_NAME
+        super.onViewCreated()
+        binding = AboutControllerBinding.bind(containerView!!)
+        binding.version.summary = BuildConfig.VERSION_NAME
     }
 
     override fun onAttach(view: View) {
@@ -52,8 +55,8 @@ class AboutController : QkController<AboutView, Unit, AboutPresenter>(), AboutVi
         showBackButton(true)
     }
 
-    override fun preferenceClicks(): Observable<PreferenceView> = (0 until preferences.childCount)
-            .map { index -> preferences.getChildAt(index) }
+    override fun preferenceClicks(): Observable<PreferenceView> = (0 until binding.preferences.childCount)
+            .map { index -> binding.preferences.getChildAt(index) }
             .mapNotNull { view -> view as? PreferenceView }
             .map { preference -> preference.clicks().map { preference } }
             .let { preferences -> Observable.merge(preferences) }

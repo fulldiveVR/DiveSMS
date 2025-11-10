@@ -26,7 +26,7 @@ import android.content.res.ColorStateList
 import android.view.View
 import androidx.core.view.isInvisible
 import com.jakewharton.rxbinding2.view.clicks
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkController
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.resolveThemeColor
@@ -35,8 +35,7 @@ import com.moez.QKSMS.util.Preferences
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.subjects.PublishSubject
-import kotlinx.android.synthetic.main.blocking_manager_controller.*
-import kotlinx.android.synthetic.main.blocking_manager_list_option.view.*
+import com.fulldive.extension.divesms.databinding.BlockingManagerControllerBinding
 import javax.inject.Inject
 
 class BlockingManagerController : QkController<BlockingManagerView, BlockingManagerState, BlockingManagerPresenter>(),
@@ -45,6 +44,7 @@ class BlockingManagerController : QkController<BlockingManagerView, BlockingMana
     @Inject lateinit var colors: Colors
     @Inject override lateinit var presenter: BlockingManagerPresenter
 
+    private lateinit var binding: BlockingManagerControllerBinding
     private val activityResumedSubject: PublishSubject<Unit> = PublishSubject.create()
 
     init {
@@ -55,6 +55,7 @@ class BlockingManagerController : QkController<BlockingManagerView, BlockingMana
 
     override fun onAttach(view: View) {
         super.onAttach(view)
+        binding = BlockingManagerControllerBinding.bind(view)
         presenter.bindIntents(this)
         setTitle(R.string.blocking_manager_title)
         showBackButton(true)
@@ -66,10 +67,10 @@ class BlockingManagerController : QkController<BlockingManagerView, BlockingMana
         val textTertiary = view.context.resolveThemeColor(android.R.attr.textColorTertiary)
         val imageTintList = ColorStateList(states, intArrayOf(colors.theme().theme, textTertiary))
 
-        qksms.action.imageTintList = imageTintList
-        callBlocker.action.imageTintList = imageTintList
-        callControl.action.imageTintList = imageTintList
-        shouldIAnswer.action.imageTintList = imageTintList
+        binding.qksms.findViewById<View>(R.id.action)?.let { it as? android.widget.ImageView }?.imageTintList = imageTintList
+        binding.callBlocker.findViewById<View>(R.id.action)?.let { it as? android.widget.ImageView }?.imageTintList = imageTintList
+        binding.callControl.findViewById<View>(R.id.action)?.let { it as? android.widget.ImageView }?.imageTintList = imageTintList
+        binding.shouldIAnswer.findViewById<View>(R.id.action)?.let { it as? android.widget.ImageView }?.imageTintList = imageTintList
     }
 
     override fun onActivityResumed(activity: Activity) {
@@ -77,24 +78,29 @@ class BlockingManagerController : QkController<BlockingManagerView, BlockingMana
     }
 
     override fun render(state: BlockingManagerState) {
-        qksms.action.setImageResource(getActionIcon(true))
-        qksms.action.isActivated = true
-        qksms.action.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_QKSMS
+        binding.qksms.findViewById<View>(R.id.action)?.let { actionView ->
+            (actionView as? android.widget.ImageView)?.setImageResource(getActionIcon(true))
+            actionView.isActivated = true
+            actionView.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_QKSMS
+        }
 
-        callBlocker.action.setImageResource(getActionIcon(state.callBlockerInstalled))
-        callBlocker.action.isActivated = state.callBlockerInstalled
-        callBlocker.action.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_CB
-                && state.callBlockerInstalled
+        binding.callBlocker.findViewById<View>(R.id.action)?.let { actionView ->
+            (actionView as? android.widget.ImageView)?.setImageResource(getActionIcon(state.callBlockerInstalled))
+            actionView.isActivated = state.callBlockerInstalled
+            actionView.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_CB && state.callBlockerInstalled
+        }
 
-        callControl.action.setImageResource(getActionIcon(state.callControlInstalled))
-        callControl.action.isActivated = state.callControlInstalled
-        callControl.action.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_CC
-                && state.callControlInstalled
+        binding.callControl.findViewById<View>(R.id.action)?.let { actionView ->
+            (actionView as? android.widget.ImageView)?.setImageResource(getActionIcon(state.callControlInstalled))
+            actionView.isActivated = state.callControlInstalled
+            actionView.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_CC && state.callControlInstalled
+        }
 
-        shouldIAnswer.action.setImageResource(getActionIcon(state.siaInstalled))
-        shouldIAnswer.action.isActivated = state.siaInstalled
-        shouldIAnswer.action.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_SIA
-                && state.siaInstalled
+        binding.shouldIAnswer.findViewById<View>(R.id.action)?.let { actionView ->
+            (actionView as? android.widget.ImageView)?.setImageResource(getActionIcon(state.siaInstalled))
+            actionView.isActivated = state.siaInstalled
+            actionView.isInvisible = state.blockingManager != Preferences.BLOCKING_MANAGER_SIA && state.siaInstalled
+        }
     }
 
     private fun getActionIcon(installed: Boolean): Int = when {
@@ -103,10 +109,10 @@ class BlockingManagerController : QkController<BlockingManagerView, BlockingMana
     }
 
     override fun activityResumed(): Observable<*> = activityResumedSubject
-    override fun qksmsClicked(): Observable<*> = qksms.clicks()
-    override fun callBlockerClicked(): Observable<*> = callBlocker.clicks()
-    override fun callControlClicked(): Observable<*> = callControl.clicks()
-    override fun siaClicked(): Observable<*> = shouldIAnswer.clicks()
+    override fun qksmsClicked(): Observable<*> = binding.qksms.clicks()
+    override fun callBlockerClicked(): Observable<*> = binding.callBlocker.clicks()
+    override fun callControlClicked(): Observable<*> = binding.callControl.clicks()
+    override fun siaClicked(): Observable<*> = binding.shouldIAnswer.clicks()
 
     override fun showCopyDialog(manager: String): Single<Boolean> = Single.create { emitter ->
         AlertDialog.Builder(activity)

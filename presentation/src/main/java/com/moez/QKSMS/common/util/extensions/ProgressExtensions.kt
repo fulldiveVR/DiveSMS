@@ -22,7 +22,7 @@
 package com.moez.QKSMS.common.util.extensions
 
 import android.content.Context
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.repository.BackupRepository
 
 fun BackupRepository.Progress.getLabel(context: Context): String? {

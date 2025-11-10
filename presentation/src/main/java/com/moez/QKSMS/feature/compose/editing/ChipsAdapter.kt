@@ -24,7 +24,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.extensions.dpToPx
@@ -32,7 +32,7 @@ import com.moez.QKSMS.common.util.extensions.resolveThemeColor
 import com.moez.QKSMS.common.util.extensions.setBackgroundTint
 import com.moez.QKSMS.model.Recipient
 import io.reactivex.subjects.PublishSubject
-import kotlinx.android.synthetic.main.contact_chip.*
+import com.fulldive.extension.divesms.databinding.ContactChipBinding
 import javax.inject.Inject
 
 class ChipsAdapter @Inject constructor() : QkAdapter<Recipient>() {
@@ -41,26 +41,26 @@ class ChipsAdapter @Inject constructor() : QkAdapter<Recipient>() {
     val chipDeleted: PublishSubject<Recipient> = PublishSubject.create<Recipient>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.contact_chip, parent, false)
-        return QkViewHolder(view).apply {
+        val binding = ContactChipBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return QkViewHolder(binding.root).apply {
             // These theme attributes don't apply themselves on API 21
             if (Build.VERSION.SDK_INT <= 22) {
-                content.setBackgroundTint(view.context.resolveThemeColor(R.attr.bubbleColor))
+                binding.content.setBackgroundTint(binding.root.context.resolveThemeColor(R.attr.bubbleColor))
             }
 
-            view.setOnClickListener {
+            binding.root.setOnClickListener {
                 val chip = getItem(adapterPosition)
-                showDetailedChip(view.context, chip)
+                showDetailedChip(binding.root.context, chip)
             }
         }
     }
 
     override fun onBindViewHolder(holder: QkViewHolder, position: Int) {
         val recipient = getItem(position)
+        val binding = ContactChipBinding.bind(holder.itemView)
 
-        holder.avatar.setRecipient(recipient)
-        holder.name.text = recipient.contact?.name?.takeIf { it.isNotBlank() } ?: recipient.address
+        binding.avatar.setRecipient(recipient)
+        binding.name.text = recipient.contact?.name?.takeIf { it.isNotBlank() } ?: recipient.address
     }
 
     /**

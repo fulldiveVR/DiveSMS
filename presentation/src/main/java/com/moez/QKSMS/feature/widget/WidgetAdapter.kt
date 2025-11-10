@@ -32,7 +32,7 @@ import android.widget.RemoteViewsService
 import androidx.core.text.bold
 import androidx.core.text.buildSpannedString
 import androidx.core.text.color
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.DateFormatter
 import com.moez.QKSMS.common.util.extensions.dpToPx

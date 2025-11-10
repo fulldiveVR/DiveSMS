@@ -18,4 +18,4 @@
  *
  */
 
-include ':presentation', ':android-smsmms', ':domain', ':data', ':common', ':iap',':startapppopups'
+include ':presentation', ':android-smsmms', ':domain', ':data', ':common',':startapppopups'

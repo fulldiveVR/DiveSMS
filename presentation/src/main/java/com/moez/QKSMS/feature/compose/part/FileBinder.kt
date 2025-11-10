@@ -22,7 +22,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.Gravity
 import android.widget.FrameLayout
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.resolveThemeColor
@@ -34,7 +34,7 @@ import com.moez.QKSMS.model.MmsPart
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.mms_file_list_item.*
+import com.fulldive.extension.divesms.databinding.MmsFileListItemBinding
 import javax.inject.Inject
 
 class FileBinder @Inject constructor(colors: Colors, private val context: Context) : PartBinder() {
@@ -53,8 +53,10 @@ class FileBinder @Inject constructor(colors: Colors, private val context: Contex
         canGroupWithPrevious: Boolean,
         canGroupWithNext: Boolean
     ) {
+        val binding = MmsFileListItemBinding.bind(holder.itemView)
+        
         BubbleUtils.getBubble(false, canGroupWithPrevious, canGroupWithNext, message.isMe())
-                .let(holder.fileBackground::setBackgroundResource)
+                .let(binding.fileBackground::setBackgroundResource)
 
         holder.containerView.setOnClickListener { clicks.onNext(part.id) }
 
@@ -71,23 +73,23 @@ class FileBinder @Inject constructor(colors: Colors, private val context: Contex
                 }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { size -> holder.size.text = size }
+                .subscribe { size -> binding.size.text = size }
 
-        holder.filename.text = part.name
+        binding.filename.text = part.name
 
-        val params = holder.fileBackground.layoutParams as FrameLayout.LayoutParams
+        val params = binding.fileBackground.layoutParams as FrameLayout.LayoutParams
         if (!message.isMe()) {
-            holder.fileBackground.layoutParams = params.apply { gravity = Gravity.START }
-            holder.fileBackground.setBackgroundTint(theme.theme)
-            holder.icon.setTint(theme.textPrimary)
-            holder.filename.setTextColor(theme.textPrimary)
-            holder.size.setTextColor(theme.textTertiary)
+            binding.fileBackground.layoutParams = params.apply { gravity = Gravity.START }
+            binding.fileBackground.setBackgroundTint(theme.theme)
+            binding.icon.setTint(theme.textPrimary)
+            binding.filename.setTextColor(theme.textPrimary)
+            binding.size.setTextColor(theme.textTertiary)
         } else {
-            holder.fileBackground.layoutParams = params.apply { gravity = Gravity.END }
-            holder.fileBackground.setBackgroundTint(holder.containerView.context.resolveThemeColor(R.attr.bubbleColor))
-            holder.icon.setTint(holder.containerView.context.resolveThemeColor(android.R.attr.textColorSecondary))
-            holder.filename.setTextColor(holder.containerView.context.resolveThemeColor(android.R.attr.textColorPrimary))
-            holder.size.setTextColor(holder.containerView.context.resolveThemeColor(android.R.attr.textColorTertiary))
+            binding.fileBackground.layoutParams = params.apply { gravity = Gravity.END }
+            binding.fileBackground.setBackgroundTint(holder.containerView.context.resolveThemeColor(R.attr.bubbleColor))
+            binding.icon.setTint(holder.containerView.context.resolveThemeColor(android.R.attr.textColorSecondary))
+            binding.filename.setTextColor(holder.containerView.context.resolveThemeColor(android.R.attr.textColorPrimary))
+            binding.size.setTextColor(holder.containerView.context.resolveThemeColor(android.R.attr.textColorTertiary))
         }
     }
 

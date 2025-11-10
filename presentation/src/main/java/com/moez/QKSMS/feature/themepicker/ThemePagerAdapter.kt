@@ -24,7 +24,7 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import javax.inject.Inject
 
 class ThemePagerAdapter @Inject constructor(private val context: Context) : PagerAdapter() {

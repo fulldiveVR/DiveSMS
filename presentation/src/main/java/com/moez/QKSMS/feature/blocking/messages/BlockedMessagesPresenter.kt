@@ -18,14 +18,14 @@
  */
 package com.moez.QKSMS.feature.blocking.messages
 
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.blocking.BlockingClient
 import com.moez.QKSMS.common.Navigator
 import com.moez.QKSMS.common.base.QkPresenter
 import com.moez.QKSMS.interactor.DeleteConversations
 import com.moez.QKSMS.repository.ConversationRepository
 import com.uber.autodispose.android.lifecycle.scope
-import com.uber.autodispose.autoDisposable
+import com.uber.autodispose.autoDispose
 import io.reactivex.rxkotlin.withLatestFrom
 import javax.inject.Inject
 
@@ -42,7 +42,7 @@ class BlockedMessagesPresenter @Inject constructor(
         super.bindIntents(view)
 
         view.menuReadyIntent
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { newState { copy() } }
 
         view.optionsItemIntent
@@ -58,22 +58,22 @@ class BlockedMessagesPresenter @Inject constructor(
                     }
 
                 }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
 
         view.confirmDeleteIntent
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { conversations ->
                     deleteConversations.execute(conversations)
                     view.clearSelection()
                 }
 
         view.conversationClicks
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { threadId -> navigator.showConversation(threadId) }
 
         view.selectionChanges
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe { selection -> newState { copy(selected = selection.size) } }
 
         view.backClicked
@@ -83,7 +83,7 @@ class BlockedMessagesPresenter @Inject constructor(
                         else -> view.clearSelection()
                     }
                 }
-                .autoDisposable(view.scope())
+                .autoDispose(view.scope())
                 .subscribe()
     }
 

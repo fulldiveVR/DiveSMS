@@ -24,7 +24,7 @@ package com.moez.QKSMS.feature.blocking
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.blocking.BlockingClient
 import com.moez.QKSMS.interactor.MarkBlocked
 import com.moez.QKSMS.interactor.MarkUnblocked

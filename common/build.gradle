@@ -20,11 +20,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.moez.QKSMS.common'
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdkVersion 23
+        targetSdkVersion 36
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }

@@ -25,7 +25,7 @@ import android.content.Context
 import com.google.android.mms.pdu_alt.EncodedStringValue
 import com.google.android.mms.pdu_alt.MultimediaMessagePdu
 import com.google.android.mms.pdu_alt.PduPersister
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.model.Message
 import com.moez.QKSMS.util.tryOrNull
 import javax.inject.Inject

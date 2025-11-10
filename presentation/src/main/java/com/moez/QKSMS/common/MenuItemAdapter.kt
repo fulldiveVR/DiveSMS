@@ -26,7 +26,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.ArrayRes
 import androidx.recyclerview.widget.RecyclerView
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.databinding.MenuListItemBinding
 import com.moez.QKSMS.common.base.QkAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.Colors
@@ -35,8 +35,6 @@ import com.moez.QKSMS.common.util.extensions.setVisible
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.Subject
-import kotlinx.android.synthetic.main.menu_list_item.*
-import kotlinx.android.synthetic.main.menu_list_item.view.*
 import javax.inject.Inject
 
 data class MenuItem(val title: String, val actionId: Int)
@@ -70,8 +68,7 @@ class MenuItemAdapter @Inject constructor(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QkViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        val view = layoutInflater.inflate(R.layout.menu_list_item, parent, false)
+        val binding = MenuListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         val states = arrayOf(
             intArrayOf(android.R.attr.state_activated),
@@ -79,10 +76,10 @@ class MenuItemAdapter @Inject constructor(
         )
 
         val text = parent.context.resolveThemeColor(android.R.attr.textColorTertiary)
-        view.check.imageTintList = ColorStateList(states, intArrayOf(colors.theme().theme, text))
+        binding.check.imageTintList = ColorStateList(states, intArrayOf(colors.theme().theme, text))
 
-        return QkViewHolder(view).apply {
-            view.setOnClickListener {
+        return QkViewHolder(binding.root).apply {
+            binding.root.setOnClickListener {
                 val menuItem = getItem(adapterPosition)
                 menuItemClicks.onNext(menuItem.actionId)
             }
@@ -91,10 +88,11 @@ class MenuItemAdapter @Inject constructor(
 
     override fun onBindViewHolder(holder: QkViewHolder, position: Int) {
         val menuItem = getItem(position)
+        val binding = MenuListItemBinding.bind(holder.itemView)
 
-        holder.title.text = menuItem.title
-        holder.check.isActivated = (menuItem.actionId == selectedItem)
-        holder.check.setVisible(selectedItem != null)
+        binding.title.text = menuItem.title
+        binding.check.isActivated = (menuItem.actionId == selectedItem)
+        binding.check.setVisible(selectedItem != null)
     }
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {

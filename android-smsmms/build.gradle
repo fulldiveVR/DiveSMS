@@ -20,16 +20,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.klinker.android.send_message'
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdkVersion 23
+        targetSdkVersion 36
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     useLibrary 'org.apache.http.legacy'
     compileOptions {
@@ -38,6 +36,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    lint {
+        abortOnError false
     }
 }
 

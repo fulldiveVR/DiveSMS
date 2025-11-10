@@ -39,12 +39,17 @@
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:divider">@color/separatorLight</item>
         <item name="android:queryBackground">@color/bubbleLight</item>
-        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="android:textColorTertiary">@color/text_tertiary</item>
         <item name="android:windowBackground">@color/backgroundLight</item>
         <item name="android:windowContentTransitions">true</item>
+        <!-- CRITICAL FIX: Proper system window handling -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
         <item name="actionBarPopupTheme">@style/PopupTheme</item>
         <item name="bubbleColor">@color/bubbleLight</item>
         <item name="colorPrimary">@color/backgroundLight</item>

@@ -24,7 +24,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -120,7 +121,7 @@
         android:visibility="gone"
         tools:backgroundTint="@color/tools_theme" />
 
-    <include layout="@layout/collapsing_toolbar" />
+    <include layout="@layout/collapsing_toolbar" android:id="@+id/collapsingToolbar"/>
 
     <View
         android:layout_width="match_parent"

@@ -27,15 +27,14 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.jakewharton.rxbinding2.view.clicks
-import com.moez.QKSMS.R
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.QkDialog
 import com.moez.QKSMS.common.base.QkThemedActivity
 import com.moez.QKSMS.common.util.FontProvider
 import com.moez.QKSMS.common.util.extensions.setBackgroundTint
 import com.moez.QKSMS.common.util.extensions.setTint
 import dagger.android.AndroidInjection
-import kotlinx.android.synthetic.main.collapsing_toolbar.*
-import kotlinx.android.synthetic.main.scheduled_activity.*
+import com.fulldive.extension.divesms.databinding.ScheduledActivityBinding
 import javax.inject.Inject
 
 
@@ -46,16 +45,19 @@ class ScheduledActivity : QkThemedActivity(), ScheduledView {
     @Inject lateinit var messageAdapter: ScheduledMessageAdapter
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
 
+    private lateinit var binding: ScheduledActivityBinding
+
     override val messageClickIntent by lazy { messageAdapter.clicks }
     override val messageMenuIntent by lazy { dialog.adapter.menuItemClicks }
-    override val composeIntent by lazy { compose.clicks() }
+    override val composeIntent by lazy { binding.compose.clicks() }
 
     private val viewModel by lazy { ViewModelProviders.of(this, viewModelFactory)[ScheduledViewModel::class.java] }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.scheduled_activity)
+        binding = ScheduledActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setTitle(R.string.scheduled_title)
         showBackButton(true)
         viewModel.bindView(this)
@@ -63,28 +65,28 @@ class ScheduledActivity : QkThemedActivity(), ScheduledView {
         if (!prefs.systemFont.get()) {
             fontProvider.getLato { lato ->
                 val typeface = Typeface.create(lato, Typeface.BOLD)
-                collapsingToolbar.setCollapsedTitleTypeface(typeface)
-                collapsingToolbar.setExpandedTitleTypeface(typeface)
+                binding.collapsingToolbar.collapsingToolbar.setCollapsedTitleTypeface(typeface)
+                binding.collapsingToolbar.collapsingToolbar.setExpandedTitleTypeface(typeface)
             }
         }
 
         dialog.title = getString(R.string.scheduled_options_title)
         dialog.adapter.setData(R.array.scheduled_options)
 
-        messageAdapter.emptyView = empty
-        messages.adapter = messageAdapter
+        messageAdapter.emptyView = binding.empty
+        binding.messages.adapter = messageAdapter
 
         colors.theme().let { theme ->
-            sampleMessage.setBackgroundTint(theme.theme)
-            sampleMessage.setTextColor(theme.textPrimary)
-            compose.setTint(theme.textPrimary)
-            compose.setBackgroundTint(theme.theme)
+            binding.sampleMessage.setBackgroundTint(theme.theme)
+            binding.sampleMessage.setTextColor(theme.textPrimary)
+            binding.compose.setTint(theme.textPrimary)
+            binding.compose.setBackgroundTint(theme.theme)
         }
     }
 
     override fun render(state: ScheduledState) {
         messageAdapter.updateData(state.scheduledMessages)
-        compose.isVisible = state.upgraded
+        binding.compose.isVisible = state.upgraded
     }
 
     override fun showMessageOptions() {
