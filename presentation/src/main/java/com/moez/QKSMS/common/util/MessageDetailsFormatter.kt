@@ -40,20 +40,20 @@ class MessageDetailsFormatter @Inject constructor(
 
         message.type
                 .takeIf { it.isNotBlank() }
-                ?.toUpperCase()
+                ?.uppercase()
                 ?.let { context.getString(R.string.compose_details_type, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         if (message.isSms()) {
             message.address
                     .takeIf { it.isNotBlank() && !message.isMe() }
                     ?.let { context.getString(R.string.compose_details_from, it) }
-                    ?.let(builder::appendln)
+                    ?.let(builder::appendLine)
 
             message.address
                     .takeIf { it.isNotBlank() && message.isMe() }
                     ?.let { context.getString(R.string.compose_details_to, it) }
-                    ?.let(builder::appendln)
+                    ?.let(builder::appendLine)
         } else {
             val pdu = tryOrNull {
                 PduPersister.getPduPersister(context)
@@ -64,43 +64,43 @@ class MessageDetailsFormatter @Inject constructor(
             pdu?.from?.string
                     ?.takeIf { it.isNotBlank() }
                     ?.let { context.getString(R.string.compose_details_from, it) }
-                    ?.let(builder::appendln)
+                    ?.let(builder::appendLine)
 
             pdu?.to
                     ?.let(EncodedStringValue::concat)
                     ?.takeIf { it.isNotBlank() }
                     ?.let { context.getString(R.string.compose_details_to, it) }
-                    ?.let(builder::appendln)
+                    ?.let(builder::appendLine)
         }
 
         message.date
                 .takeIf { it > 0 && message.isMe() }
                 ?.let(dateFormatter::getDetailedTimestamp)
                 ?.let { context.getString(R.string.compose_details_sent, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         message.dateSent
                 .takeIf { it > 0 && !message.isMe() }
                 ?.let(dateFormatter::getDetailedTimestamp)
                 ?.let { context.getString(R.string.compose_details_sent, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         message.date
                 .takeIf { it > 0 && !message.isMe() }
                 ?.let(dateFormatter::getDetailedTimestamp)
                 ?.let { context.getString(R.string.compose_details_received, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         message.dateSent
                 .takeIf { it > 0 && message.isMe() }
                 ?.let(dateFormatter::getDetailedTimestamp)
                 ?.let { context.getString(R.string.compose_details_delivered, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         message.errorCode
                 .takeIf { it != 0 && message.isSms() }
                 ?.let { context.getString(R.string.compose_details_error_code, it) }
-                ?.let(builder::appendln)
+                ?.let(builder::appendLine)
 
         return builder.toString().trim()
     }

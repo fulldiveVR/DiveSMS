@@ -39,7 +39,7 @@ import javax.inject.Singleton
 @Singleton
 class FileLoggingTree @Inject constructor(private val prefs: Preferences) : Timber.DebugTree() {
 
-    private val fileLock: Boolean = false
+    private val fileLock =  Any()
 
     override fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
         if (!prefs.logging.get()) return
