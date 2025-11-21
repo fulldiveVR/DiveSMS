@@ -54,6 +54,7 @@ import com.moez.QKSMS.receiver.SendSmsReceiver
 import com.moez.QKSMS.receiver.SmsDeliveredReceiver
 import com.moez.QKSMS.receiver.SmsSentReceiver
 import com.moez.QKSMS.util.ImageUtils
+import com.moez.QKSMS.util.MmsErrorHandler
 import com.moez.QKSMS.util.PhoneNumberUtils
 import com.moez.QKSMS.util.Preferences
 import com.moez.QKSMS.util.tryOrNull
@@ -78,6 +79,7 @@ class MessageRepositoryImpl @Inject constructor(
     private val activeConversationManager: ActiveConversationManager,
     private val context: Context,
     private val messageIds: KeyManager,
+    private val mmsErrorHandler: MmsErrorHandler,
     private val phoneNumberUtils: PhoneNumberUtils,
     private val prefs: Preferences,
     private val syncRepository: SyncRepository
@@ -338,6 +340,18 @@ class MessageRepositoryImpl @Inject constructor(
                 sendSms(message)
             }
         } else { // MMS
+            // Pre-flight checks for MMS
+            mmsErrorHandler.checkNetworkForMms()?.let { networkError ->
+                mmsErrorHandler.logError(networkError)
+                Timber.w("MMS pre-flight failed: ${networkError.userMessage}")
+                // Continue anyway - let the Transaction library handle the actual failure
+            }
+
+            mmsErrorHandler.checkStorageForMms()?.let { storageError ->
+                mmsErrorHandler.logError(storageError)
+                Timber.w("MMS storage check: ${storageError.userMessage}")
+            }
+
             val parts = arrayListOf<MMSPart>()
 
             val maxWidth = smsManager.carrierConfigValues.getInt(SmsManager.MMS_CONFIG_MAX_IMAGE_WIDTH)
