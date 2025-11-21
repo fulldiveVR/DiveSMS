@@ -84,6 +84,11 @@ import com.moez.QKSMS.repository.ScheduledMessageRepository
 import com.moez.QKSMS.repository.ScheduledMessageRepositoryImpl
 import com.moez.QKSMS.repository.SyncRepository
 import com.moez.QKSMS.repository.SyncRepositoryImpl
+import com.moez.QKSMS.util.DefaultSmsHelper
+import com.moez.QKSMS.util.GroupMessageHelper
+import com.moez.QKSMS.util.MmsErrorHandler
+import com.moez.QKSMS.util.PhoneNumberUtils
+import com.moez.QKSMS.util.SmsReceptionLogger
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -216,5 +221,24 @@ class AppModule(private var application: Application) {
 
     @Provides
     fun provideSyncRepository(repository: SyncRepositoryImpl): SyncRepository = repository
+
+    // Utilities
+
+    @Provides
+    @Singleton
+    fun provideSmsReceptionLogger(context: Context): SmsReceptionLogger = SmsReceptionLogger(context)
+
+    @Provides
+    @Singleton
+    fun provideMmsErrorHandler(context: Context): MmsErrorHandler = MmsErrorHandler(context)
+
+    @Provides
+    @Singleton
+    fun provideDefaultSmsHelper(context: Context): DefaultSmsHelper = DefaultSmsHelper(context)
+
+    @Provides
+    @Singleton
+    fun provideGroupMessageHelper(context: Context, phoneNumberUtils: PhoneNumberUtils): GroupMessageHelper =
+        GroupMessageHelper(context, phoneNumberUtils)
 
 }
