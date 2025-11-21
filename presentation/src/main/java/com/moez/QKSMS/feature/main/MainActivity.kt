@@ -328,7 +328,8 @@ class MainActivity : QkThemedActivity(), MainView {
                     conversationsAdapter
                 conversationsAdapter.updateData(state.page.data)
                 itemTouchHelper.attachToRecyclerView(binding.recyclerView)
-                binding.empty.setText(R.string.inbox_empty_text)
+                binding.empty.findViewById<com.moez.QKSMS.common.widget.QkTextView>(R.id.emptyText)
+                    ?.setText(R.string.inbox_empty_text)
             }
 
             is Searching -> {
@@ -337,7 +338,8 @@ class MainActivity : QkThemedActivity(), MainView {
                     searchAdapter
                 searchAdapter.data = state.page.data ?: listOf()
                 itemTouchHelper.attachToRecyclerView(null)
-                binding.empty.setText(R.string.inbox_search_empty_text)
+                binding.empty.findViewById<com.moez.QKSMS.common.widget.QkTextView>(R.id.emptyText)
+                    ?.setText(R.string.inbox_search_empty_text)
             }
 
             is Archived -> {
@@ -350,7 +352,8 @@ class MainActivity : QkThemedActivity(), MainView {
                     conversationsAdapter
                 conversationsAdapter.updateData(state.page.data)
                 itemTouchHelper.attachToRecyclerView(null)
-                binding.empty.setText(R.string.archived_empty_text)
+                binding.empty.findViewById<com.moez.QKSMS.common.widget.QkTextView>(R.id.emptyText)
+                    ?.setText(R.string.archived_empty_text)
             }
         }
 

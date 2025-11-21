@@ -24,7 +24,7 @@ apply plugin: 'kotlin-kapt'
 
 def versionMajor = 1
 def versionMinor = 3
-def versionPatch = 0
+def versionPatch = 1
 
 android {
     namespace 'com.fulldive.extension.divesms'
@@ -117,7 +117,7 @@ configurations {
 
 dependencies {
     implementation "com.snore.guard:divesms:1.4.0"
-    implementation 'com.fulldive:popups:1.0.16'
+    implementation 'com.fulldive:popups:1.0.18'
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
