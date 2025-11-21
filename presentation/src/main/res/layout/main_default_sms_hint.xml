@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2019 Moez Bhatti <moez.bhatti@gmail.com>
+  ~
+  ~ This file is part of QKSMS.
+  ~
+  ~ QKSMS is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ QKSMS is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/defaultSmsHint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/bubbleColor">
+
+    <ImageView
+        android:id="@+id/defaultSmsIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_info_black_24dp"
+        android:tint="?attr/textTertiary"
+        android:contentDescription="@string/main_default_sms_icon_cd"
+        app:layout_constraintBottom_toBottomOf="@id/defaultSmsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/defaultSmsTitle" />
+
+    <com.moez.QKSMS.common.widget.QkTextView
+        android:id="@+id/defaultSmsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/main_default_sms_title"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/defaultSmsMessage"
+        app:layout_constraintEnd_toStartOf="@id/defaultSmsButton"
+        app:layout_constraintStart_toEndOf="@id/defaultSmsIcon"
+        app:textSize="primary"
+        tools:text="Set as Default SMS App" />
+
+    <com.moez.QKSMS.common.widget.QkTextView
+        android:id="@+id/defaultSmsMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="16dp"
+        android:text="@string/main_default_sms_message"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/defaultSmsButton"
+        app:layout_constraintStart_toEndOf="@id/defaultSmsIcon"
+        app:textSize="secondary"
+        tools:text="Wize SMS needs to be your default messaging app to receive messages" />
+
+    <com.moez.QKSMS.common.widget.QkTextView
+        android:id="@+id/defaultSmsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="16dp"
+        android:text="@string/main_default_sms_button"
+        android:textAllCaps="true"
+        android:textColor="@color/tools_theme"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/defaultSmsMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/defaultSmsTitle"
+        app:textColor="theme"
+        app:textSize="secondary"
+        tools:text="SET AS DEFAULT" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

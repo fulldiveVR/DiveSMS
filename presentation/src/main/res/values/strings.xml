@@ -65,6 +65,8 @@
     <string name="main_default_sms_title">Love texting again</string>
     <string name="main_default_sms_message">Make QKSMS your default SMS app</string>
     <string name="main_default_sms_change">Change</string>
+    <string name="main_default_sms_icon_cd">Default SMS app warning</string>
+    <string name="main_default_sms_button">SET AS DEFAULT</string>
     <string name="main_permission_required">Permission required</string>
     <string name="main_permission_sms">QKSMS needs permission to send and view SMS messages</string>
     <string name="main_permission_contacts">QKSMS needs permission to view your contacts</string>

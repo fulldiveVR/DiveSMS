@@ -65,6 +65,16 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+        <ViewStub
+            android:id="@+id/defaultSmsHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inflatedId="@id/defaultSmsHint"
+            android:layout="@layout/main_default_sms_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
         <com.moez.QKSMS.common.widget.QkTextView
             android:id="@+id/empty"
             style="@style/TextSecondary"

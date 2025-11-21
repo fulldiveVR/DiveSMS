@@ -58,6 +58,7 @@ import com.moez.QKSMS.feature.conversations.ConversationItemTouchCallback
 import com.moez.QKSMS.feature.conversations.ConversationsAdapter
 import com.moez.QKSMS.manager.ChangelogManager
 import com.moez.QKSMS.repository.SyncRepository
+import com.moez.QKSMS.util.DefaultSmsHelper
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDisposable
 import dagger.android.AndroidInjection
@@ -74,6 +75,7 @@ import javax.inject.Inject
 class MainActivity : QkThemedActivity(), MainView {
 
     @Inject lateinit var blockingDialog: BlockingDialog
+    @Inject lateinit var defaultSmsHelper: DefaultSmsHelper
     @Inject lateinit var disposables: CompositeDisposable
     @Inject lateinit var navigator: Navigator
     @Inject lateinit var conversationsAdapter: ConversationsAdapter
@@ -123,6 +125,7 @@ class MainActivity : QkThemedActivity(), MainView {
     private val changelogDialog by lazy { ChangelogDialog(this) }
     private val snackbar by lazy { findViewById<View>(R.id.snackbar) }
     private val syncing by lazy { findViewById<View>(R.id.syncing) }
+    private val defaultSmsHintView by lazy { findViewById<View>(R.id.defaultSmsHint) }
     private val backPressedSubject: Subject<NavItem> = PublishSubject.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -141,6 +144,14 @@ class MainActivity : QkThemedActivity(), MainView {
         (syncing as? ViewStub)?.setOnInflateListener { _, _ ->
             syncingProgress?.progressTintList = ColorStateList.valueOf(theme.blockingFirst().theme)
             syncingProgress?.indeterminateTintList = ColorStateList.valueOf(theme.blockingFirst().theme)
+        }
+
+        (defaultSmsHintView as? ViewStub)?.setOnInflateListener { _, inflated ->
+            inflated.findViewById<View>(R.id.defaultSmsButton)?.clicks()
+                    ?.autoDisposable(scope(Lifecycle.Event.ON_DESTROY))
+                    ?.subscribe {
+                        defaultSmsHelper.requestSetAsDefault(this)
+                    }
         }
 
         toggle.syncState()
@@ -330,6 +341,28 @@ class MainActivity : QkThemedActivity(), MainView {
     override fun onResume() {
         super.onResume()
         activityResumedIntent.onNext(true)
+
+        // Check if app is default SMS app and show/hide warning banner
+        checkAndShowDefaultSmsHint()
+    }
+
+    private fun checkAndShowDefaultSmsHint() {
+        val isDefault = defaultSmsHelper.isDefaultSmsApp()
+
+        if (!isDefault) {
+            // Not default - show warning banner
+            if (defaultSmsHintView is ViewStub) {
+                (defaultSmsHintView as ViewStub).inflate()
+            } else {
+                defaultSmsHintView?.visibility = View.VISIBLE
+            }
+            defaultSmsHelper.logDefaultSmsStatus()
+        } else {
+            // Is default - hide warning banner
+            if (defaultSmsHintView !is ViewStub) {
+                defaultSmsHintView?.visibility = View.GONE
+            }
+        }
     }
 
     override fun onPause() {
