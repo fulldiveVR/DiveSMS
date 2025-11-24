@@ -135,7 +135,6 @@ class MainViewModel @Inject constructor(
         */
 
         // Disabled: Monitor permissions on resume and auto-sync after permissions granted
-        /*
         val permissions = view.activityResumedIntent
                 .filter { resumed -> resumed }
                 .observeOn(Schedulers.io())
@@ -158,7 +157,6 @@ class MainViewModel @Inject constructor(
                 .take(1)
                 .autoDispose(view.scope())
                 .subscribe { syncMessages.execute(Unit) }
-        */
 
         // Launch screen from intent
         view.onNewIntentIntent

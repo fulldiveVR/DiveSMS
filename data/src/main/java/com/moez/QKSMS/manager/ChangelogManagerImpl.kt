@@ -25,7 +25,6 @@ import android.content.Context
 import com.moez.QKSMS.common.util.extensions.versionCode
 import com.moez.QKSMS.util.Preferences
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import io.reactivex.Single
@@ -71,7 +70,6 @@ class ChangelogManagerImpl @Inject constructor(
         prefs.changelogVersion.set(context.versionCode)
     }
 
-    @JsonClass(generateAdapter = true)
     data class Changeset(
         @Json(name = "added") val added: List<String>?,
         @Json(name = "improved") val improved: List<String>?,

@@ -24,6 +24,7 @@ package com.moez.QKSMS.feature.compose.part
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.fulldive.extension.divesms.R
 import com.moez.QKSMS.common.base.QkAdapter
 import com.moez.QKSMS.common.base.QkViewHolder
 import com.moez.QKSMS.common.util.Colors
@@ -34,7 +35,6 @@ import com.moez.QKSMS.feature.compose.BubbleUtils.canGroup
 import com.moez.QKSMS.model.Message
 import com.moez.QKSMS.model.MmsPart
 import io.reactivex.Observable
-import com.fulldive.extension.divesms.databinding.MessageListItemInBinding
 import javax.inject.Inject
 
 class PartsAdapter @Inject constructor(
@@ -65,8 +65,8 @@ class PartsAdapter @Inject constructor(
         this.previous = previous
         this.next = next
         this.holder = holder
-        val binding = MessageListItemInBinding.bind(holder.itemView)
-        this.bodyVisible = binding.body.visibility == View.VISIBLE
+        val bodyView = holder.itemView.findViewById<View>(R.id.body)
+        this.bodyVisible = bodyView?.visibility == View.VISIBLE
         this.data = message.parts.filter { !it.isSmil() && !it.isText() }
     }
 
