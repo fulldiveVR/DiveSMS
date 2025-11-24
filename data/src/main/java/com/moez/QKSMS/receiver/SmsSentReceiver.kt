@@ -25,9 +25,11 @@ import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.telephony.SmsManager
 import com.moez.QKSMS.interactor.MarkFailed
 import com.moez.QKSMS.interactor.MarkSent
 import dagger.android.AndroidInjection
+import timber.log.Timber
 import javax.inject.Inject
 
 class SmsSentReceiver : BroadcastReceiver() {
@@ -42,11 +44,20 @@ class SmsSentReceiver : BroadcastReceiver() {
 
         when (resultCode) {
             Activity.RESULT_OK -> {
+                Timber.i("SMS_SENT: Message $id sent successfully")
                 val pendingResult = goAsync()
                 markSent.execute(id) { pendingResult.finish() }
             }
 
             else -> {
+                val errorMessage = when (resultCode) {
+                    SmsManager.RESULT_ERROR_GENERIC_FAILURE -> "Generic failure"
+                    SmsManager.RESULT_ERROR_NO_SERVICE -> "No service"
+                    SmsManager.RESULT_ERROR_NULL_PDU -> "Null PDU"
+                    SmsManager.RESULT_ERROR_RADIO_OFF -> "Radio off"
+                    else -> "Unknown error ($resultCode)"
+                }
+                Timber.w("SMS_SENT: Message $id failed: $errorMessage")
                 val pendingResult = goAsync()
                 markFailed.execute(MarkFailed.Params(id, resultCode)) { pendingResult.finish() }
             }

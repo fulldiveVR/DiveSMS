@@ -45,20 +45,20 @@ class MmsSentReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         AndroidInjection.inject(this, context)
 
-        Timber.v("MMS sending result: $resultCode")
+        Timber.i("MMS_SENT: Result code: $resultCode")
         val uri = Uri.parse(intent.getStringExtra(Transaction.EXTRA_CONTENT_URI))
-        Timber.v(uri.toString())
+        Timber.d("MMS_SENT: URI: $uri")
 
         when (resultCode) {
             Activity.RESULT_OK -> {
-                Timber.v("MMS has finished sending, marking it as so in the database")
+                Timber.i("MMS_SENT: MMS sent successfully, updating database")
                 val values = ContentValues(1)
                 values.put(Telephony.Mms.MESSAGE_BOX, Telephony.Mms.MESSAGE_BOX_SENT)
                 SqliteWrapper.update(context, context.contentResolver, uri, values, null, null)
             }
 
             else -> {
-                Timber.v("MMS has failed to send, marking it as so in the database")
+                Timber.w("MMS_SENT: MMS failed to send (result=$resultCode), marking as failed in database")
                 try {
                     val messageId = ContentUris.parseId(uri)
 

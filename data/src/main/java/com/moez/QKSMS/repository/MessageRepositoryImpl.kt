@@ -341,6 +341,7 @@ class MessageRepositoryImpl @Inject constructor(
                 sendSms(message)
             }
         } else { // MMS
+            Timber.i("MMS_SEND: Preparing MMS with ${attachments.size} attachment(s) to ${addresses.size} recipient(s)")
             val parts = arrayListOf<MMSPart>()
 
             val maxWidth =
@@ -356,6 +357,8 @@ class MessageRepositoryImpl @Inject constructor(
                 0 -> Int.MAX_VALUE
                 else -> prefs.mmsSize.get() * 1024
             } * 0.9 // Ugly, but buys us a bit of wiggle room
+
+            Timber.d("MMS_SEND: Max dimensions: ${maxWidth}x${maxHeight}, Max size: ${remainingBytes.toInt() / 1024}KB")
 
             signedBody.takeIf { it.isNotEmpty() }?.toByteArray()?.let { bytes ->
                 remainingBytes -= bytes.size
@@ -374,16 +377,32 @@ class MessageRepositoryImpl @Inject constructor(
             val imageBytesByAttachment = attachments
                 .mapNotNull { attachment -> attachment as? Attachment.Image }
                 .associateWith { attachment ->
-                    val uri = attachment.getUri() ?: return@associateWith byteArrayOf()
-                    when (attachment.isGif(context)) {
-                        true -> ImageUtils.getScaledGif(context, uri, maxWidth, maxHeight)
-                        false -> ImageUtils.getScaledImage(context, uri, maxWidth, maxHeight)
+                    val uri = attachment.getUri()
+                    if (uri == null) {
+                        Timber.w("MMS_SEND: Image attachment has null URI")
+                        return@associateWith byteArrayOf()
+                    }
+
+                    try {
+                        val isGif = attachment.isGif(context)
+                        Timber.d("MMS_SEND: Processing image: URI=$uri, isGif=$isGif")
+                        val bytes = when (isGif) {
+                            true -> ImageUtils.getScaledGif(context, uri, maxWidth, maxHeight)
+                            false -> ImageUtils.getScaledImage(context, uri, maxWidth, maxHeight)
+                        }
+                        Timber.d("MMS_SEND: Image scaled to ${bytes.size / 1024}KB")
+                        bytes
+                    } catch (e: Exception) {
+                        Timber.e(e, "MMS_SEND: Failed to process image: URI=$uri")
+                        byteArrayOf()
                     }
                 }
                 .toMutableMap()
 
             val imageByteCount = imageBytesByAttachment.values.sumBy { byteArray -> byteArray.size }
+            Timber.d("MMS_SEND: Total image size: ${imageByteCount / 1024}KB, Remaining: ${remainingBytes.toInt() / 1024}KB")
             if (imageByteCount > remainingBytes) {
+                Timber.i("MMS_SEND: Images exceed size limit, compressing further")
                 imageBytesByAttachment.forEach { (attachment, originalBytes) ->
                     val uri = attachment.getUri() ?: return@forEach
                     val maxBytes = originalBytes.size / imageByteCount.toFloat() * remainingBytes
@@ -443,9 +462,16 @@ class MessageRepositoryImpl @Inject constructor(
             }
 
             // We need to strip the separators from outgoing MMS, or else they'll appear to have sent and not go through
-            val transaction = Transaction(context)
-            val recipients = addresses.map(phoneNumberUtils::normalizeNumber)
-            transaction.sendNewMessage(subId, threadId, recipients, parts, null, null)
+            try {
+                val transaction = Transaction(context)
+                val recipients = addresses.map(phoneNumberUtils::normalizeNumber)
+                Timber.i("MMS_SEND: Sending MMS with ${parts.size} part(s) to ${recipients.size} recipient(s)")
+                transaction.sendNewMessage(subId, threadId, recipients, parts, null, null)
+                Timber.d("MMS_SEND: Transaction initiated successfully")
+            } catch (e: Exception) {
+                Timber.e(e, "MMS_SEND: Failed to send MMS")
+                throw e
+            }
         }
     }
 

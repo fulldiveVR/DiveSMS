@@ -35,14 +35,30 @@ class SmsReceiver : BroadcastReceiver() {
     @Inject lateinit var receiveMessage: ReceiveSms
 
     override fun onReceive(context: Context, intent: Intent) {
-        AndroidInjection.inject(this, context)
-        Timber.v("onReceive")
+        try {
+            AndroidInjection.inject(this, context)
+            Timber.d("SMS_RECEIVED: Action=${intent.action}, Extras=${intent.extras?.keySet()?.joinToString()}")
 
-        Sms.Intents.getMessagesFromIntent(intent)?.let { messages ->
-            val subId = intent.extras?.getInt("subscription", -1) ?: -1
+            Sms.Intents.getMessagesFromIntent(intent)?.let { messages ->
+                val subId = intent.extras?.getInt("subscription", -1) ?: -1
 
-            val pendingResult = goAsync()
-            receiveMessage.execute(ReceiveSms.Params(subId, messages)) { pendingResult.finish() }
+                Timber.i("SMS_RECEIVED: ${messages.size} message(s), subId=$subId")
+                messages.forEachIndexed { index, smsMessage ->
+                    Timber.d("SMS_RECEIVED[$index]: From=${smsMessage.displayOriginatingAddress}, " +
+                            "Length=${smsMessage.displayMessageBody?.length ?: 0}, " +
+                            "Timestamp=${smsMessage.timestampMillis}")
+                }
+
+                val pendingResult = goAsync()
+                receiveMessage.execute(ReceiveSms.Params(subId, messages)) {
+                    Timber.d("SMS_RECEIVED: Processing completed")
+                    pendingResult.finish()
+                }
+            } ?: run {
+                Timber.w("SMS_RECEIVED: No messages found in intent")
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "SMS_RECEIVED: Error processing SMS")
         }
     }
 

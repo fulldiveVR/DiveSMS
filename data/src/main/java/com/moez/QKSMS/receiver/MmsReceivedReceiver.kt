@@ -27,6 +27,7 @@ import android.net.Uri
 import com.klinker.android.send_message.MmsReceivedReceiver
 import com.moez.QKSMS.interactor.ReceiveMms
 import dagger.android.AndroidInjection
+import timber.log.Timber
 import javax.inject.Inject
 
 class MmsReceivedReceiver : MmsReceivedReceiver() {
@@ -34,14 +35,29 @@ class MmsReceivedReceiver : MmsReceivedReceiver() {
     @Inject lateinit var receiveMms: ReceiveMms
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        AndroidInjection.inject(this, context)
-        super.onReceive(context, intent)
+        try {
+            AndroidInjection.inject(this, context)
+            Timber.d("MMS_RECEIVED: Action=${intent?.action}, Data=${intent?.data}")
+            super.onReceive(context, intent)
+        } catch (e: Exception) {
+            Timber.e(e, "MMS_RECEIVED: Error in onReceive")
+        }
     }
 
     override fun onMessageReceived(messageUri: Uri?) {
-        messageUri?.let { uri ->
-            val pendingResult = goAsync()
-            receiveMms.execute(uri) { pendingResult.finish() }
+        try {
+            Timber.i("MMS_RECEIVED: Message URI=$messageUri")
+            messageUri?.let { uri ->
+                val pendingResult = goAsync()
+                receiveMms.execute(uri) {
+                    Timber.d("MMS_RECEIVED: Processing completed for URI=$uri")
+                    pendingResult.finish()
+                }
+            } ?: run {
+                Timber.w("MMS_RECEIVED: Message URI is null")
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "MMS_RECEIVED: Error processing MMS")
         }
     }
 
