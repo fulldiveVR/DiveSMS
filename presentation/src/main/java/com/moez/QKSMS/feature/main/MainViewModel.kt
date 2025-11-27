@@ -38,7 +38,6 @@ import com.moez.QKSMS.interactor.MigratePreferences
 import com.moez.QKSMS.interactor.SyncContacts
 import com.moez.QKSMS.interactor.SyncMessages
 import com.moez.QKSMS.listener.ContactAddedListener
-import com.moez.QKSMS.manager.ChangelogManager
 import com.moez.QKSMS.manager.PermissionManager
 import com.moez.QKSMS.manager.RatingManager
 import com.moez.QKSMS.model.SyncLog
@@ -63,7 +62,6 @@ class MainViewModel @Inject constructor(
     markAllSeen: MarkAllSeen,
     migratePreferences: MigratePreferences,
     syncRepository: SyncRepository,
-    private val changelogManager: ChangelogManager,
     private val conversationRepo: ConversationRepository,
     private val deleteConversations: DeleteConversations,
     private val markArchived: MarkArchived,
@@ -167,21 +165,6 @@ class MainViewModel @Inject constructor(
                         "blocking" -> navigator.showBlockedConversations()
                     }
                 }
-
-        // Show changelog
-        if (changelogManager.didUpdate()) {
-            if (Locale.getDefault().language.startsWith("en")) {
-                GlobalScope.launch(Dispatchers.Main) {
-                    val changelog = changelogManager.getChangelog()
-                    changelogManager.markChangelogSeen()
-                  //  view.showChangelog(changelog)
-                }
-            } else {
-                changelogManager.markChangelogSeen()
-            }
-        } else {
-            changelogManager.markChangelogSeen()
-        }
 
         view.queryChangedIntent
                 .debounce(200, TimeUnit.MILLISECONDS)

@@ -43,8 +43,6 @@ import com.moez.QKSMS.manager.AlarmManager
 import com.moez.QKSMS.manager.AlarmManagerImpl
 import com.moez.QKSMS.manager.AnalyticsManager
 import com.moez.QKSMS.manager.AnalyticsManagerImpl
-import com.moez.QKSMS.manager.ChangelogManager
-import com.moez.QKSMS.manager.ChangelogManagerImpl
 import com.moez.QKSMS.manager.KeyManager
 import com.moez.QKSMS.manager.KeyManagerImpl
 import com.moez.QKSMS.manager.NotificationManager
@@ -144,9 +142,6 @@ class AppModule(private var application: Application) {
 
     @Provides
     fun blockingClient(manager: BlockingManager): BlockingClient = manager
-
-    @Provides
-    fun changelogManager(manager: ChangelogManagerImpl): ChangelogManager = manager
 
     @Provides
     fun provideKeyManager(manager: KeyManagerImpl): KeyManager = manager

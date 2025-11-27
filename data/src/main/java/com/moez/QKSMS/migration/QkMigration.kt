@@ -47,9 +47,6 @@ class QkMigration @Inject constructor(
     }
 
     private fun upgradeTo370() {
-        // Migrate changelog version
-        prefs.changelogVersion.set(prefs.version.get())
-
         // Migrate from old SIA preference to blocking manager preference
         if (prefs.sia.get()) {
             prefs.blockingManager.set(Preferences.BLOCKING_MANAGER_SIA)

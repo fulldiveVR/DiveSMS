@@ -145,12 +145,7 @@ class Navigator @Inject constructor(
     }
 
     fun showSourceCode() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms"))
-        startActivityExternal(intent)
-    }
-
-    fun showChangelog() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms/releases"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/fulldiveVR/DiveSMS"))
         startActivityExternal(intent)
     }
 

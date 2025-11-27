@@ -59,7 +59,6 @@ import com.moez.QKSMS.common.util.extensions.setVisible
 import com.moez.QKSMS.feature.blocking.BlockingDialog
 import com.moez.QKSMS.feature.conversations.ConversationItemTouchCallback
 import com.moez.QKSMS.feature.conversations.ConversationsAdapter
-import com.moez.QKSMS.manager.ChangelogManager
 import com.moez.QKSMS.repository.SyncRepository
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDispose
@@ -156,7 +155,6 @@ class MainActivity : QkThemedActivity(), MainView {
         )
     }
 
-    //private val changelogDialog by lazy { ChangelogDialog(this) }
     private val backPressedSubject: Subject<NavItem> = PublishSubject.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -474,10 +472,6 @@ class MainActivity : QkThemedActivity(), MainView {
             }
             .setNegativeButton(R.string.button_cancel, null)
             .show()
-    }
-
-    override fun showChangelog(changelog: ChangelogManager.CumulativeChangelog) {
-        //changelogDialog.show(changelog)
     }
 
     override fun showArchivedSnackbar() {
