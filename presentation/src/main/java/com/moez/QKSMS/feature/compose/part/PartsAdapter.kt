@@ -93,4 +93,24 @@ class PartsAdapter @Inject constructor(
         return partBinders.indexOfFirst { it.canBindPart(part) }
     }
 
+    override fun areItemsTheSame(old: MmsPart, new: MmsPart): Boolean {
+        return try {
+            // Use ID comparison to avoid accessing invalid Realm objects
+            old.id == new.id
+        } catch (e: IllegalStateException) {
+            // If objects are invalid, treat them as different
+            false
+        }
+    }
+
+    override fun areContentsTheSame(old: MmsPart, new: MmsPart): Boolean {
+        return try {
+            // Compare by ID - if IDs are same, contents are likely same
+            old.id == new.id
+        } catch (e: IllegalStateException) {
+            // If objects are invalid, treat them as different
+            false
+        }
+    }
+
 }

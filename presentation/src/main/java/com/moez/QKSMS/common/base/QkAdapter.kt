@@ -105,11 +105,23 @@ abstract class QkAdapter<T> : RecyclerView.Adapter<QkViewHolder>() {
      */
     private fun getDiffUtilCallback(oldData: List<T>, newData: List<T>): DiffUtil.Callback {
         return object : DiffUtil.Callback() {
-            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int) =
+            override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return try {
                     areItemsTheSame(oldData[oldItemPosition], newData[newItemPosition])
+                } catch (e: IllegalStateException) {
+                    // Handle Realm "Object is no longer valid" errors
+                    false
+                }
+            }
 
-            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int) =
+            override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+                return try {
                     areContentsTheSame(oldData[oldItemPosition], newData[newItemPosition])
+                } catch (e: IllegalStateException) {
+                    // Handle Realm "Object is no longer valid" errors
+                    false
+                }
+            }
 
             override fun getOldListSize() = oldData.size
 
@@ -118,11 +130,21 @@ abstract class QkAdapter<T> : RecyclerView.Adapter<QkViewHolder>() {
     }
 
     protected open fun areItemsTheSame(old: T, new: T): Boolean {
-        return old == new
+        return try {
+            old == new
+        } catch (e: IllegalStateException) {
+            // Handle Realm "Object is no longer valid" errors
+            false
+        }
     }
 
     protected open fun areContentsTheSame(old: T, new: T): Boolean {
-        return old == new
+        return try {
+            old == new
+        } catch (e: IllegalStateException) {
+            // Handle Realm "Object is no longer valid" errors
+            false
+        }
     }
 
 }

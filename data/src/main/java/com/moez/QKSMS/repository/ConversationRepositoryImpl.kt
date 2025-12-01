@@ -78,7 +78,9 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun getConversationsSnapshot(): List<Conversation> {
         return Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
             realm.copyFromRealm(realm.where(Conversation::class.java)
                     .notEqualTo("id", 0L)
                     .equalTo("archived", false)
@@ -191,7 +193,7 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun getConversation(threadId: Long): Conversation? {
         return Realm.getDefaultInstance()
-                .apply { refresh() }
+                .apply { if (!isInTransaction) refresh() }
                 .where(Conversation::class.java)
                 .equalTo("id", threadId)
                 .findFirst()
@@ -253,7 +255,9 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun getThreadId(recipients: Collection<String>): Long? {
         return Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
             realm.where(Conversation::class.java)
                     .findAll()
                     .asSequence()
@@ -290,7 +294,10 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun saveDraft(threadId: Long, draft: String) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            // Only refresh if not in a transaction
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val conversation = realm.where(Conversation::class.java)
                     .equalTo("id", threadId)
@@ -304,7 +311,9 @@ class ConversationRepositoryImpl @Inject constructor(
 
     override fun updateConversations(vararg threadIds: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             threadIds.forEach { threadId ->
                 val conversation = realm

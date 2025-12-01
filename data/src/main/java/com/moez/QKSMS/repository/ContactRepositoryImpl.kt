@@ -151,7 +151,9 @@ class ContactRepositoryImpl @Inject constructor(
 
     override fun setDefaultPhoneNumber(lookupKey: String, phoneNumberId: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
             val contact = realm.where(Contact::class.java)
                     .equalTo("lookupKey", lookupKey)
                     .findFirst()

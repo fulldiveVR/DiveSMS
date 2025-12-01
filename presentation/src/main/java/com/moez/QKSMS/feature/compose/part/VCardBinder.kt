@@ -71,10 +71,16 @@ class VCardBinder @Inject constructor(colors: Colors, private val context: Conte
                 .map { vcard -> vcard.getDisplayName() ?: "" }
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { displayName ->
-                    binding.name?.text = displayName
-                    binding.name.isVisible = displayName.isNotEmpty()
-                }
+                .subscribe(
+                    { displayName ->
+                        binding.name?.text = displayName
+                        binding.name.isVisible = displayName.isNotEmpty()
+                    },
+                    { error ->
+                        // Handle permission denial or other errors gracefully
+                        binding.name.isVisible = false
+                    }
+                )
 
         val params = binding.vCardBackground.layoutParams as FrameLayout.LayoutParams
         if (!message.isMe()) {

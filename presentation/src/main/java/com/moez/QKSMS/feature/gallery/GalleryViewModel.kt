@@ -59,7 +59,7 @@ class GalleryViewModel @Inject constructor(
                         copy(title = conversationRepo.getConversation(threadId)?.getTitle())
                     }
                 }
-                .subscribe()
+                .subscribe({}, { /* Handle error silently */ })
     }
 
     override fun bindView(view: GalleryView) {

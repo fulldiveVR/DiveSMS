@@ -45,7 +45,6 @@ class FileBinder @Inject constructor(colors: Colors, private val context: Contex
     // This is the last binder we check. If we're here, we can bind the part
     override fun canBindPart(part: MmsPart) = true
 
-    @SuppressLint("CheckResult")
     override fun bindPart(
         holder: QkViewHolder,
         part: MmsPart,
@@ -54,7 +53,7 @@ class FileBinder @Inject constructor(colors: Colors, private val context: Contex
         canGroupWithNext: Boolean
     ) {
         val binding = MmsFileListItemBinding.bind(holder.itemView)
-        
+
         BubbleUtils.getBubble(false, canGroupWithPrevious, canGroupWithNext, message.isMe())
                 .let(binding.fileBackground::setBackgroundResource)
 
@@ -73,7 +72,13 @@ class FileBinder @Inject constructor(colors: Colors, private val context: Contex
                 }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { size -> binding.size.text = size }
+                .subscribe(
+                    { size -> binding.size.text = size },
+                    { error ->
+                        // Handle permission denial or other errors gracefully
+                        binding.size.text = ""
+                    }
+                )
 
         binding.filename.text = part.name
 

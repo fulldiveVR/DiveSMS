@@ -486,7 +486,7 @@ class ComposeViewModel @Inject constructor(
                     conversationRepo.saveDraft(threadId, draft.toString())
                 }
                 .autoDispose(view.scope())
-                .subscribe()
+                .subscribe({}, { /* Handle errors silently when saving draft */ })
 
         // Open the attachment options
         view.attachIntent

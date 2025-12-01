@@ -58,7 +58,10 @@ class NotificationPrefsViewModel @Inject constructor(
                 .mapNotNull { threadId -> conversationRepo.getConversation(threadId) }
                 .map { conversation -> conversation.getTitle() }
                 .subscribeOn(Schedulers.io())
-                .subscribe { title -> newState { copy(conversationTitle = title) } }
+                .subscribe(
+                    { title -> newState { copy(conversationTitle = title) } },
+                    { /* Handle error silently */ }
+                )
 
         disposables += notifications.asObservable()
                 .subscribe { enabled -> newState { copy(notificationsEnabled = enabled) } }

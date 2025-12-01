@@ -34,7 +34,9 @@ class BlockingRepositoryImpl @Inject constructor(
 
     override fun blockNumber(vararg addresses: String) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val blockedNumbers = realm.where(BlockedNumber::class.java).findAll()
             val newAddresses = addresses.filter { address ->

@@ -104,7 +104,7 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun getMessage(id: Long): Message? {
         return Realm.getDefaultInstance()
-            .also { realm -> realm.refresh() }
+            .also { realm -> if (!realm.isInTransaction) realm.refresh() }
             .where(Message::class.java)
             .equalTo("id", id)
             .findFirst()
@@ -138,7 +138,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun getUnreadCount(): Long {
         return Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
             realm.where(Conversation::class.java)
                 .equalTo("archived", false)
                 .equalTo("blocked", false)
@@ -652,7 +654,9 @@ class MessageRepositoryImpl @Inject constructor(
      */
     override fun markSending(id: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val message = realm.where(Message::class.java).equalTo("id", id).findFirst()
             message?.let {
@@ -676,7 +680,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun markSent(id: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val message = realm.where(Message::class.java).equalTo("id", id).findFirst()
             message?.let {
@@ -695,7 +701,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun markFailed(id: Long, resultCode: Int) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val message = realm.where(Message::class.java).equalTo("id", id).findFirst()
             message?.let {
@@ -716,7 +724,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun markDelivered(id: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val message = realm.where(Message::class.java).equalTo("id", id).findFirst()
             message?.let {
@@ -739,7 +749,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun markDeliveryFailed(id: Long, resultCode: Int) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val message = realm.where(Message::class.java).equalTo("id", id).findFirst()
             message?.let {
@@ -764,7 +776,9 @@ class MessageRepositoryImpl @Inject constructor(
 
     override fun deleteMessages(vararg messageIds: Long) {
         Realm.getDefaultInstance().use { realm ->
-            realm.refresh()
+            if (!realm.isInTransaction) {
+                realm.refresh()
+            }
 
             val messages = realm.where(Message::class.java)
                 .anyOf("id", messageIds)
