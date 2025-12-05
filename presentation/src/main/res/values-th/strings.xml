@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">บันทึกการเปลี่ยนแปลง</string>
+  <string name="about_changelog_title">บันทึกการเปลี่ยนแปลง</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">ติดต่อ</string>
+  <string name="about_controller">เกี่ยวกับตัวควบคุม</string>
+  <string name="about_copyright">ลิขสิทธิ์</string>
+  <string name="about_copyright_title">ลิขสิทธิ์</string>
+  <string name="about_developer">เบราว์เซอร์ WizeUp</string>
+  <string name="about_developer_title">นักพัฒนา</string>
+  <string name="about_license">ใบอนุญาต</string>
+  <string name="about_license_title">ใบอนุญาต</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">เกี่ยวกับแหล่งที่มา</string>
+  <string name="about_title">เกี่ยวกับ</string>
+  <string name="about_version_title">เวอร์ชัน</string>
+  <string name="app_name">Wize SMS</string>
+  <string name="archived_empty_text">การสนทนาที่เก็บถาวรจะปรากฏที่นี่</string>
+  <string name="backup_backing_up">กำลังสำรองข้อความ</string>
+  <string name="backup_disclaimer">ปัจจุบัน Backup และ Restore รองรับเฉพาะ SMS เท่านั้น การสนับสนุน MMS และการสำรองข้อมูลตามกำหนดจะมาเร็วๆ นี้!</string>
+  <string name="backup_last">สำรองล่าสุด</string>
+  <string name="backup_loading">กำลังโหลด…</string>
+  <string name="backup_never">ไม่เคย</string>
+  <string name="backup_notification_channel_name">สำรองและกู้คืน</string>
+  <string name="backup_now">สำรองข้อมูลตอนนี้</string>
+  <string name="backup_progress_finished">เสร็จสิ้น!</string>
+  <string name="backup_progress_parsing">กำลังแยกวิเคราะห์ข้อมูลสำรอง…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d ข้อความ</string>
+  <string name="backup_progress_saving">กำลังบันทึกสำรอง…</string>
+  <string name="backup_progress_syncing">กำลังซิงค์ข้อความ…</string>
+  <string name="backup_restore_confirm_message">คุณแน่ใจหรือว่าต้องการกู้คืนข้อความของคุณจากการสำรองข้อมูลนี้?</string>
+  <string name="backup_restore_confirm_title">กู้คืนจากการสำรองข้อมูล</string>
+  <string name="backup_restore_dialog_empty">ไม่พบการสำรองข้อมูล</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/การสำรองข้อมูล</string>
+  <string name="backup_restore_dialog_title">สำรองข้อมูล</string>
+  <string name="backup_restore_error_backup">กำลังสำรองข้อมูล…</string>
+  <string name="backup_restore_error_plus">โปรดปลดล็อก Wize SMS+ เพื่อใช้การสำรองและกู้คืน</string>
+  <string name="backup_restore_error_restore">กำลังคืนค่า…</string>
+  <string name="backup_restore_stop_message">ข้อความที่กู้คืนแล้วจะยังคงอยู่ในอุปกรณ์ของคุณ</string>
+  <string name="backup_restore_stop_title">หยุดการคืนค่า</string>
+  <string name="backup_restore_summary">เลือกการสำรองข้อมูล</string>
+  <string name="backup_restore_title">กู้คืน</string>
+  <string name="backup_restoring">กำลังคืนค่าจากการสำรองข้อมูล</string>
+  <string name="backup_title">สำรองข้อมูลและกู้คืน</string>
+  <string name="blocked_messages_empty">ข้อความที่ถูกบล็อกของคุณจะแสดงที่นี่</string>
+  <string name="blocked_messages_title">ข้อความที่ถูกบล็อก</string>
+  <string name="blocked_numbers_add_cd">บล็อกหมายเลขใหม่</string>
+  <string name="blocked_numbers_dialog_block">บล็อก</string>
+  <string name="blocked_numbers_dialog_hint">หมายเลขโทรศัพท์</string>
+  <string name="blocked_numbers_dialog_title">บล็อกข้อความจาก</string>
+  <string name="blocked_numbers_empty">หมายเลขที่บล็อกจะแสดงที่นี่</string>
+  <string name="blocked_numbers_title">หมายเลขที่ถูกบล็อก</string>
+  <string name="blocking_block_title">บล็อก</string>
+  <string name="blocking_conversations">การสนทนาที่ถูกบล็อก</string>
+  <string name="blocking_drop_summary">ลบข้อความที่เข้ามาจากผู้ส่งที่ถูกบล็อกแทนที่จะซ่อน</string>
+  <string name="blocking_drop_title">ลบข้อความ</string>
+  <string name="blocking_manager_call_blocker_summary">บล็อกข้อความสแปม หมายเลข &amp; สายที่ไม่รู้จักด้วยบัญชีดำ &amp; กำหนดการ</string>
+  <string name="blocking_manager_call_blocker_title">ตัวบล็อกการโทร - ขาเข้า/ขาออก</string>
+  <string name="blocking_manager_call_control_summary">กรองสายเรียกเข้าและข้อความของคุณโดยอัตโนมัติในที่เดียวที่สะดวก! Community IQ™ ช่วยให้คุณป้องกันข้อความที่ไม่ต้องการจากผู้ส่งสแปมที่เป็นที่รู้จักในชุมชน</string>
+  <string name="blocking_manager_call_control_title">ควบคุมการโทร</string>
+  <string name="blocking_manager_copy_summary" formatted="false">ไปที่ %s และคัดลอกหมายเลขที่ถูกบล็อกที่มีอยู่ของคุณ</string>
+  <string name="blocking_manager_copy_title">คัดลอกหมายเลขที่บล็อก</string>
+  <string name="blocking_manager_qksms_summary">ฟังก์ชันการบล็อกในตัวใน Wize SMS</string>
+  <string name="blocking_manager_qksms_title">ไวซ์ SMS</string>
+  <string name="blocking_manager_sia_summary">กรองข้อความจากหมายเลขที่ไม่ต้องการโดยอัตโนมัติด้วยแอป \"Should I Answer\"</string>
+  <string name="blocking_manager_sia_title">ควรตอบหรือไม่?</string>
+  <string name="blocking_manager_title">ตัวจัดการการบล็อก</string>
+  <string name="blocking_title">บล็อก</string>
+  <string name="blocking_unblock_title">ปลดบล็อก</string>
+  <string name="button_cancel">ยกเลิก</string>
+  <string name="button_continue">ดำเนินการต่อ</string>
+  <string name="button_delete">ลบ</string>
+  <string name="button_more">เพิ่มเติม</string>
+  <string name="button_save">บันทึก</string>
+  <string name="button_set">ตั้งค่า</string>
+  <string name="button_stop">หยุด</string>
+  <string name="button_undo">เลิกทำ</string>
+  <string name="button_yes">ใช่</string>
+  <string name="changelog_added">เพิ่มแล้ว</string>
+  <string name="changelog_dismiss">ปิด</string>
+  <string name="changelog_fixed">แก้ไขแล้ว</string>
+  <string name="changelog_improved">ปรับปรุง</string>
+  <string name="changelog_more">เพิ่มเติม</string>
+  <string name="changelog_title">ใหม่ใน Wize SMS</string>
+  <string name="changelog_version" formatted="false">เวอร์ชัน %s</string>
+  <string name="compose_attach_cd">เพิ่มไฟล์แนบ</string>
+  <string name="compose_camera_cd">ถ่ายภาพ</string>
+  <string name="compose_contact_cd">แนบผู้ติดต่อ</string>
+  <string name="compose_contact_error">ข้อผิดพลาดในการอ่านผู้ติดต่อ</string>
+  <string name="compose_details_delivered" formatted="false">ส่งแล้ว: %s</string>
+  <string name="compose_details_error_code" formatted="false">รหัสข้อผิดพลาด: %d</string>
+  <string name="compose_details_from" formatted="false">จาก: %s</string>
+  <string name="compose_details_priority" formatted="false">ลำดับความสำคัญ: %s</string>
+  <string name="compose_details_received" formatted="false">ได้รับ: %s</string>
+  <string name="compose_details_sent" formatted="false">ส่งแล้ว: %s</string>
+  <string name="compose_details_size" formatted="false">ขนาด: %s</string>
+  <string name="compose_details_subject" formatted="false">เรื่อง: %s</string>
+  <string name="compose_details_title">รายละเอียดข้อความ</string>
+  <string name="compose_details_to" formatted="false">ถึง: %s</string>
+  <string name="compose_details_type" formatted="false">ประเภท: %s</string>
+  <string name="compose_gallery_cd">แนบรูปภาพ</string>
+  <string name="compose_hint">เขียนข้อความ…</string>
+  <string name="compose_menu_clear">ล้าง</string>
+  <string name="compose_menu_copy">คัดลอกข้อความ</string>
+  <string name="compose_menu_delete">ลบ</string>
+  <string name="compose_menu_forward">ส่งต่อ</string>
+  <string name="compose_menu_next">ถัดไป</string>
+  <string name="compose_menu_previous">ก่อนหน้า</string>
+  <string name="compose_messages_empty">นี่คือจุดเริ่มต้นของการสนทนาของคุณ พูดอะไรดีๆ สักอย่าง!</string>
+  <string name="compose_number_picker_always">เสมอ</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ ค่าเริ่มต้น</string>
+  <string name="compose_number_picker_once">เพียงครั้งเดียว</string>
+  <string name="compose_number_picker_title">เลือกหมายเลขโทรศัพท์</string>
+  <string name="compose_schedule_cd">ตั้งเวลาข้อความ</string>
+  <string name="compose_scheduled_for">กำหนดเวลา</string>
+  <string name="compose_scheduled_future">เวลาที่เลือกต้องอยู่ในอนาคต!</string>
+  <string name="compose_scheduled_plus">คุณต้องปลดล็อก Wize SMS+ เพื่อใช้การส่งข้อความตามกำหนดเวลา</string>
+  <string name="compose_scheduled_toast">เพิ่มในข้อความที่กำหนดเวลาไว้</string>
+  <string name="compose_send_cd">ส่งข้อความ</string>
+  <string name="compose_send_group_summary">ผู้รับและการตอบกลับจะมองเห็นได้สำหรับทุกคน</string>
+  <string name="compose_send_group_title">ส่งเป็นข้อความกลุ่ม</string>
+  <string name="compose_sim_cd" formatted="false">เลือก %s แล้ว, เปลี่ยนซิมการ์ด</string>
+  <string name="compose_sim_changed_toast" formatted="false">เลือก SIM %1$d (%2$s) แล้ว</string>
+  <string name="compose_subtitle_results" formatted="false">ผลลัพธ์ %1$d จาก %2$d</string>
+  <string name="compose_title_selected" formatted="false">เลือกแล้ว %d รายการ</string>
+  <string name="compose_vcard_label">บัตรติดต่อ</string>
+  <string name="dialog_delete_title">ลบ</string>
+  <string name="drawer_archived">ที่เก็บถาวร</string>
+  <string name="drawer_blocking">การบล็อก</string>
+  <string name="drawer_help">ความช่วยเหลือ &amp; ข้อเสนอแนะ</string>
+  <string name="drawer_inbox">กล่องจดหมาย</string>
+  <string name="drawer_invite">เชิญเพื่อน</string>
+  <string name="drawer_more">เพิ่มเติม</string>
+  <string name="drawer_plus">ไวซ์ SMS+</string>
+  <string name="drawer_plus_banner_summary">ปลดล็อกคุณสมบัติใหม่ที่น่าทึ่งและสนับสนุนการพัฒนา</string>
+  <string name="drawer_scheduled">กำหนดเวลา</string>
+  <string name="drawer_settings">การตั้งค่า</string>
+  <string name="gallery_error">ไม่สามารถโหลดสื่อได้</string>
+  <string name="gallery_toast_saved">บันทึกในดาวน์โหลด</string>
+  <string name="inbox_empty_text">การสนทนาของคุณจะปรากฏที่นี่</string>
+  <string name="inbox_search_empty_text">ไม่มีผลลัพธ์</string>
+  <string name="info_archive">คลังข้อมูล</string>
+  <string name="info_block">บล็อก</string>
+  <string name="info_copied_address">คัดลอกที่อยู่แล้ว</string>
+  <string name="info_delete">ลบการสนทนา</string>
+  <string name="info_name">ชื่อเรื่องการสนทนา</string>
+  <string name="info_notifications">การแจ้งเตือน</string>
+  <string name="info_theme">ธีม</string>
+  <string name="info_title">รายละเอียด</string>
+  <string name="info_unarchive">ยกเลิกการเก็บถาวร</string>
+  <string name="info_unblock">ปลดบล็อก</string>
+  <string name="install_browser_description">ขอบคุณที่ลองใช้แอป Wize ของเรา เรายังมีแอปดีๆ อีกมากมาย เช่น เบราว์เซอร์ที่มีฟีเจอร์ AI ลองดูสิ!</string>
+  <string name="install_browser_title">ซิงค์กับ WizeUp Browser</string>
+  <string name="install_submit">เรียนรู้เพิ่มเติม</string>
+  <string name="main_default_sms_change">เปลี่ยน</string>
+  <string name="main_default_sms_message">ตั้งค่า Wize SMS เป็นแอป SMS เริ่มต้นของคุณ</string>
+  <string name="main_default_sms_title">กลับมารักการส่งข้อความอีกครั้ง</string>
+  <string name="main_draft">ร่าง</string>
+  <string name="main_drawer_open_cd">เปิดลิ้นชักนำทาง</string>
+  <string name="main_fab_cd">เริ่มการสนทนาใหม่</string>
+  <string name="main_menu_add_contact">เพิ่มในรายชื่อ</string>
+  <string name="main_menu_archive">คลังเก็บ</string>
+  <string name="main_menu_block">บล็อก</string>
+  <string name="main_menu_clear">ล้าง</string>
+  <string name="main_menu_delete">ลบ</string>
+  <string name="main_menu_pin">ปักหมุดด้านบน</string>
+  <string name="main_menu_read">ทำเครื่องหมายว่าอ่านแล้ว</string>
+  <string name="main_menu_unarchive">ยกเลิกการเก็บถาวร</string>
+  <string name="main_menu_unpin">เลิกปักหมุด</string>
+  <string name="main_menu_unread">ทำเครื่องหมายว่ายังไม่ได้อ่าน</string>
+  <string name="main_message_results" formatted="false">%d ข้อความ</string>
+  <string name="main_message_results_title">ผลลัพธ์ในข้อความ</string>
+  <string name="main_permission_allow">อนุญาต</string>
+  <string name="main_permission_contacts">Wize SMS ต้องการสิทธิ์ในการดูรายชื่อผู้ติดต่อของคุณ</string>
+  <string name="main_permission_required">ต้องการสิทธิ์</string>
+  <string name="main_permission_sms">Wize SMS ต้องการสิทธิ์ในการส่งและดูข้อความ SMS</string>
+  <string name="main_sender_you" formatted="false">คุณ: %s</string>
+  <string name="main_syncing">กำลังซิงค์ข้อความ…</string>
+  <string name="main_title_selected" formatted="false">เลือกแล้ว %d รายการ</string>
+  <string name="maybe_later">อาจจะทีหลัง</string>
+  <string name="menu_add_person">เพิ่มบุคคล</string>
+  <string name="menu_call">โทร</string>
+  <string name="menu_info">รายละเอียด</string>
+  <string name="menu_save">บันทึกไปที่ดาวน์โหลด</string>
+  <string name="menu_share">แชร์</string>
+  <string name="message_status_delivered" formatted="false">ส่งแล้ว %s</string>
+  <string name="message_status_failed">ส่งไม่สำเร็จ แตะเพื่อพยายามอีกครั้ง</string>
+  <string name="message_status_sending">กำลังส่ง…</string>
+  <string name="notification_message_failed_text" formatted="false">ข้อความถึง %s ส่งไม่สำเร็จ</string>
+  <string name="notification_message_failed_title">ข้อความไม่ได้ส่ง</string>
+  <string name="qkreply_menu_call">โทร</string>
+  <string name="qkreply_menu_collapse">แสดงน้อยลง</string>
+  <string name="qkreply_menu_delete">ลบ</string>
+  <string name="qkreply_menu_expand">แสดงเพิ่มเติม</string>
+  <string name="qkreply_menu_read">ทำเครื่องหมายว่าอ่านแล้ว</string>
+  <string name="qkreply_menu_view">เปิดการสนทนา</string>
+  <string name="qksms_plus_backup_summary">สำรองข้อความของคุณโดยอัตโนมัติ ไม่ต้องกังวลอีกต่อไปเกี่ยวกับการสูญเสียประวัติของคุณหากคุณเปลี่ยนโทรศัพท์หรือโทรศัพท์ของคุณสูญหาย</string>
+  <string name="qksms_plus_backup_title">สำรองข้อความ</string>
+  <string name="qksms_plus_blacklist_summary">บล็อกข้อความที่มีคำสำคัญหรือรูปแบบที่ตรงกัน</string>
+  <string name="qksms_plus_blacklist_title">การบล็อกขั้นสูง</string>
+  <string name="qksms_plus_coming_soon">เร็วๆ นี้</string>
+  <string name="qksms_plus_delayed_summary">รอสักครู่ก่อนส่งข้อความของคุณ</string>
+  <string name="qksms_plus_delayed_title">ส่งล่าช้า</string>
+  <string name="qksms_plus_description_summary" formatted="false">คุณสามารถช่วยนักพัฒนาที่หิวโหยได้ในราคาเพียง %s</string>
+  <string name="qksms_plus_description_title">สนับสนุนการพัฒนา ปลดล็อกทุกอย่าง</string>
+  <string name="qksms_plus_donate">บริจาคผ่าน PayPal</string>
+  <string name="qksms_plus_emoji_summary">สร้างทางลัดอีโมจิอัตโนมัติแบบกำหนดเอง</string>
+  <string name="qksms_plus_emoji_title">อีโมจิอัตโนมัติแบบกำหนดเอง</string>
+  <string name="qksms_plus_error">เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง</string>
+  <string name="qksms_plus_forward_summary">ส่งต่อข้อความจากผู้ส่งบางรายโดยอัตโนมัติ</string>
+  <string name="qksms_plus_forward_title">ส่งต่ออัตโนมัติ</string>
+  <string name="qksms_plus_free_title">Wize SMS+ ฟรีสำหรับผู้ใช้ F-Droid! สนับสนุนเราด้วยการบริจาค</string>
+  <string name="qksms_plus_more_summary">Wize SMS กำลังอยู่ในระหว่างการพัฒนาอย่างต่อเนื่อง และการซื้อของคุณจะรวมถึงฟีเจอร์ Wize SMS+ ในอนาคตทั้งหมด!</string>
+  <string name="qksms_plus_more_title">เพิ่มเติม</string>
+  <string name="qksms_plus_night_summary">เปิดใช้งานโหมดกลางคืนตามเวลาของวัน</string>
+  <string name="qksms_plus_night_title">โหมดกลางคืนอัตโนมัติ</string>
+  <string name="qksms_plus_respond_summary">ตอบกลับข้อความที่เข้ามาโดยอัตโนมัติด้วยการตอบกลับที่ตั้งไว้ล่วงหน้า</string>
+  <string name="qksms_plus_respond_title">ตอบกลับอัตโนมัติ</string>
+  <string name="qksms_plus_scheduled_summary">กำหนดเวลาข้อความให้ส่งโดยอัตโนมัติในวันและเวลาที่กำหนด</string>
+  <string name="qksms_plus_scheduled_title">ข้อความที่กำหนดเวลาไว้</string>
+  <string name="qksms_plus_thanks_summary">ตอนนี้คุณสามารถเข้าถึงคุณสมบัติทั้งหมดของ Wize SMS+ ได้แล้ว</string>
+  <string name="qksms_plus_thanks_title">ขอบคุณที่สนับสนุน Wize SMS!</string>
+  <string name="qksms_plus_themes_summary">ปลดล็อกสีธีมสวยงามที่ไม่มีในพาเลต Material Design</string>
+  <string name="qksms_plus_themes_title">ธีมพรีเมียม</string>
+  <string name="qksms_plus_upgrade" formatted="false">อัปเกรดตลอดชีพสำหรับ %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">ปลดล็อกในราคา %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">ปลดล็อกตลอดไปในราคา %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">ซื้อครั้งเดียว %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">ปลดล็อก + บริจาคให้ %1$s %2$s</string>
+  <string name="rate_cancel">ไม่ใช่ตอนนี้</string>
+  <string name="rate_dismiss">ปิด</string>
+  <string name="rate_okay">ตกลง!</string>
+  <string name="rate_submit">ให้คะแนน</string>
+  <string name="rate_summary">แบ่งปันความรักและให้คะแนนเราใน Google Play!</string>
+  <string name="rate_title">สนุกกับ Wize SMS อยู่ไหม?</string>
+  <string name="rate_us_description">คุณชอบ Wize SMS ไหม? เราต้องการความคิดเห็นของคุณเพื่อปรับปรุงแอป</string>
+  <string name="rate_us_title">ให้คะแนน</string>
+  <string name="scheduled_compose_cd">ตั้งเวลาข้อความ</string>
+  <string name="scheduled_empty_description">ส่งข้อความอัตโนมัติในเวลาที่คุณต้องการ</string>
+  <string name="scheduled_empty_message_1">เฮ้! วันเกิดของคุณคือเมื่อไหร่?</string>
+  <string name="scheduled_empty_message_2">ในวันที่ 23 ธันวาคม</string>
+  <string name="scheduled_empty_message_3">สุขสันต์วันเกิด! ดูสิว่าฉันเป็นเพื่อนที่ดีแค่ไหน จำวันเกิดของคุณได้</string>
+  <string name="scheduled_empty_message_3_timestamp">ส่งในวันที่ 23 ธันวาคม</string>
+  <string name="scheduled_options_title">ข้อความที่กำหนดเวลาไว้</string>
+  <string name="scheduled_title">กำหนดเวลา</string>
+  <string name="settings_about_title">เกี่ยวกับ Wize SMS</string>
+  <string name="settings_auto_delete">ลบข้อความเก่าอัตโนมัติ</string>
+  <string name="settings_auto_delete_dialog_hint">จำนวนวัน</string>
+  <string name="settings_auto_delete_dialog_message">ข้อความจะถูกลบหลังจากจำนวนวันที่ระบุ</string>
+  <string name="settings_auto_delete_never">ไม่เคย</string>
+  <string name="settings_auto_delete_warning">ลบข้อความเก่าโดยอัตโนมัติ?</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">หากคุณดำเนินการต่อ ข้อความ %1$d ข้อความจะถูกลบ</string>
+  <string name="settings_auto_emoji_title">อิโมจิอัตโนมัติ</string>
+  <string name="settings_automatic_colors_title">สีผู้ติดต่ออัตโนมัติ</string>
+  <string name="settings_black_title">โหมดกลางคืนสีดำสนิท</string>
+  <string name="settings_category_appearance">ลักษณะ</string>
+  <string name="settings_category_general">ทั่วไป</string>
+  <string name="settings_category_qkreply">ตอบกลับด่วน</string>
+  <string name="settings_delay_duration_hint">ป้อนระยะเวลา (วินาที)</string>
+  <string name="settings_delayed_title">การส่งล่าช้า</string>
+  <string name="settings_delivery_summary">ยืนยันว่าข้อความถูกส่งสำเร็จ</string>
+  <string name="settings_delivery_title">การยืนยันการจัดส่ง</string>
+  <string name="settings_logging_disabled">ปิดการบันทึกดีบัก</string>
+  <string name="settings_logging_enabled">เปิดการบันทึกดีบัก</string>
+  <string name="settings_long_as_mms_summary">หากข้อความยาวของคุณส่งไม่สำเร็จหรือส่งผิดลำดับ คุณสามารถส่งเป็นข้อความ MMS แทนได้ อาจมีค่าบริการเพิ่มเติม</string>
+  <string name="settings_long_as_mms_title">ส่งข้อความยาวเป็น MMS</string>
+  <string name="settings_mms_size_title">บีบอัดไฟล์แนบ MMS อัตโนมัติ</string>
+  <string name="settings_mobile_summary">เมื่อเขียนข้อความ ให้แสดงเฉพาะหมายเลขมือถือ</string>
+  <string name="settings_mobile_title">เฉพาะหมายเลขมือถือ</string>
+  <string name="settings_night_end_title">เวลาสิ้นสุด</string>
+  <string name="settings_night_start_title">เวลาเริ่มต้น</string>
+  <string name="settings_night_title">โหมดกลางคืน</string>
+  <string name="settings_notification_action_1">ปุ่ม 1</string>
+  <string name="settings_notification_action_2">ปุ่ม 2</string>
+  <string name="settings_notification_action_3">ปุ่ม 3</string>
+  <string name="settings_notification_actions_title">การกระทำ</string>
+  <string name="settings_notification_previews_title">ตัวอย่างการแจ้งเตือน</string>
+  <string name="settings_notification_wake_title">ปลุกหน้าจอ</string>
+  <string name="settings_notifications_o_summary">แตะเพื่อปรับแต่ง</string>
+  <string name="settings_notifications_title">การแจ้งเตือน</string>
+  <string name="settings_qkreply_summary">ป๊อปอัพสำหรับข้อความใหม่</string>
+  <string name="settings_qkreply_tap_dismiss_summary">แตะนอกป๊อปอัปเพื่อปิด</string>
+  <string name="settings_qkreply_tap_dismiss_title">แตะเพื่อปิด</string>
+  <string name="settings_qkreply_title">ตอบด่วน</string>
+  <string name="settings_ringtone_none">ไม่มี</string>
+  <string name="settings_ringtone_title">เสียง</string>
+  <string name="settings_signature_summary">เพิ่มลายเซ็นท้ายข้อความของคุณ</string>
+  <string name="settings_signature_title">ลายเซ็น</string>
+  <string name="settings_swipe_actions">การปัด</string>
+  <string name="settings_swipe_actions_change">เปลี่ยน</string>
+  <string name="settings_swipe_actions_left">ปัดไปทางซ้าย</string>
+  <string name="settings_swipe_actions_right">ปัดไปทางขวา</string>
+  <string name="settings_swipe_actions_summary">กำหนดการกระทำการปัดสำหรับการสนทนา</string>
+  <string name="settings_sync_summary">ซิงค์ข้อความของคุณกับฐานข้อมูล SMS ของ Android อีกครั้ง</string>
+  <string name="settings_sync_title">ซิงค์ข้อความ</string>
+  <string name="settings_system_font_title">ใช้ฟอนต์ระบบ</string>
+  <string name="settings_text_size_title">ขนาดตัวอักษร</string>
+  <string name="settings_theme_title">ธีม</string>
+  <string name="settings_unicode_summary">ลบเครื่องหมายเน้นเสียงออกจากอักขระในข้อความ SMS ที่ส่งออก</string>
+  <string name="settings_unicode_title">ลบสำเนียง</string>
+  <string name="settings_version" formatted="false">เวอร์ชัน %s</string>
+  <string name="settings_vibration_title">การสั่น</string>
+  <string name="setup_next">ดำเนินการต่อ</string>
+  <string name="setup_skip">ข้าม</string>
+  <string name="shortcut_compose_disabled_message">ปิดใช้งานทางลัด</string>
+  <string name="shortcut_compose_long_label">การสนทนาใหม่</string>
+  <string name="shortcut_compose_short_label">เขียน</string>
+  <string name="theme_apply">ใช้</string>
+  <string name="theme_hex">ฐานสิบหก</string>
+  <string name="theme_material">วัสดุ</string>
+  <string name="title_archived">ที่เก็บถาวร</string>
+  <string name="title_compose">พิมพ์ชื่อหรือหมายเลข</string>
+  <string name="title_conversations">ค้นหากล่องจดหมาย…</string>
+  <string name="title_notification_prefs">การแจ้งเตือน</string>
+  <string name="title_settings">การตั้งค่า</string>
+  <string name="title_theme">ธีม</string>
+  <string name="toast_archived">การสนทนาที่เก็บถาวร</string>
+  <string name="toast_copied">คัดลอกแล้ว</string>
+  <string name="toast_qksms_plus">คุณต้องปลดล็อก Wize SMS+ เพื่อใช้งาน</string>
+  <string name="widget_loading">กำลังโหลด…</string>
+  <string name="widget_more">ดูการสนทนาเพิ่มเติม</string>
+</resources>

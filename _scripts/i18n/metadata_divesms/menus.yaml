@@ -1,0 +1,209 @@
+menu_add_person:
+  category: menus
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Add person
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+menu_call:
+  category: menus
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Call
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+menu_info:
+  category: menus
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Details
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+menu_save:
+  category: menus
+  constraints:
+    max_length: 32
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Save to Downloads
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+menu_share:
+  category: menus
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Share
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_call:
+  category: menus
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Call
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_collapse:
+  category: menus
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Show less
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_delete:
+  category: menus
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_expand:
+  category: menus
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Show more
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_read:
+  category: menus
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Mark as read
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+qkreply_menu_view:
+  category: menus
+  constraints:
+    max_length: 32
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Open conversation
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

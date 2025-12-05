@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">سجل التغييرات</string>
+  <string name="about_changelog_title">سجل التغييرات</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">اتصال</string>
+  <string name="about_controller">حول وحدة التحكم</string>
+  <string name="about_copyright">حقوق النشر</string>
+  <string name="about_copyright_title">حقوق النشر</string>
+  <string name="about_developer">متصفح WizeUp</string>
+  <string name="about_developer_title">المطور</string>
+  <string name="about_license">ترخيص</string>
+  <string name="about_license_title">ترخيص</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">حول المصدر</string>
+  <string name="about_title">حول</string>
+  <string name="about_version_title">الإصدار</string>
+  <string name="app_name">وايز إس إم إس</string>
+  <string name="archived_empty_text">ستظهر محادثاتك المؤرشفة هنا</string>
+  <string name="backup_backing_up">جاري نسخ الرسائل</string>
+  <string name="backup_disclaimer">حاليًا، يدعم النسخ الاحتياطي والاستعادة الرسائل القصيرة فقط. دعم MMS والنسخ الاحتياطية المجدولة قادم قريبًا!</string>
+  <string name="backup_last">آخر نسخ احتياطي</string>
+  <string name="backup_loading">جارٍ التحميل…</string>
+  <string name="backup_never">أبداً</string>
+  <string name="backup_notification_channel_name">نسخ احتياطي واستعادة</string>
+  <string name="backup_now">نسخ احتياطي الآن</string>
+  <string name="backup_progress_finished">انتهى!</string>
+  <string name="backup_progress_parsing">جارٍ تحليل النسخة…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d رسائل</string>
+  <string name="backup_progress_saving">جارٍ حفظ النسخة…</string>
+  <string name="backup_progress_syncing">مزامنة الرسائل…</string>
+  <string name="backup_restore_confirm_message">هل أنت متأكد أنك تريد استعادة رسائلك من هذه النسخة الاحتياطية؟</string>
+  <string name="backup_restore_confirm_title">استعادة من النسخة الاحتياطية</string>
+  <string name="backup_restore_dialog_empty">لا توجد نسخ احتياطية</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/النسخ الاحتياطية</string>
+  <string name="backup_restore_dialog_title">نسخ احتياطية</string>
+  <string name="backup_restore_error_backup">النسخ الاحتياطي جارٍ…</string>
+  <string name="backup_restore_error_plus">يرجى فتح Wize SMS+ لاستخدام النسخ الاحتياطي والاستعادة</string>
+  <string name="backup_restore_error_restore">استعادة جارية…</string>
+  <string name="backup_restore_stop_message">الرسائل التي تمت استعادتها بالفعل ستبقى على جهازك</string>
+  <string name="backup_restore_stop_title">إيقاف الاستعادة</string>
+  <string name="backup_restore_summary">اختر نسخة احتياطية</string>
+  <string name="backup_restore_title">استعادة</string>
+  <string name="backup_restoring">استعادة من النسخة الاحتياطية</string>
+  <string name="backup_title">نسخ احتياطي واستعادة</string>
+  <string name="blocked_messages_empty">ستظهر رسائلك المحظورة هنا</string>
+  <string name="blocked_messages_title">الرسائل المحظورة</string>
+  <string name="blocked_numbers_add_cd">حظر رقم جديد</string>
+  <string name="blocked_numbers_dialog_block">حظر</string>
+  <string name="blocked_numbers_dialog_hint">رقم الهاتف</string>
+  <string name="blocked_numbers_dialog_title">حظر الرسائل من</string>
+  <string name="blocked_numbers_empty">ستظهر الأرقام المحظورة هنا</string>
+  <string name="blocked_numbers_title">الأرقام المحظورة</string>
+  <string name="blocking_block_title">حظر</string>
+  <string name="blocking_conversations">المحادثات المحظورة</string>
+  <string name="blocking_drop_summary">حذف الرسائل الواردة من المرسلين المحظورين بدلاً من إخفائها</string>
+  <string name="blocking_drop_title">حذف الرسائل</string>
+  <string name="blocking_manager_call_blocker_summary">حظر الرسائل غير المرغوب فيها والأرقام والمكالمات غير المعروفة باستخدام القائمة السوداء والجدولة</string>
+  <string name="blocking_manager_call_blocker_title">حظر المكالمات - واردة/صادرة</string>
+  <string name="blocking_manager_call_control_summary">قم بتصفية مكالماتك ورسائلك تلقائيًا في مكان واحد مناسب! يتيح لك Community IQ™ منع الرسائل غير المرغوب فيها من مرسلي الرسائل غير المرغوب فيها المعروفين في المجتمع.</string>
+  <string name="blocking_manager_call_control_title">التحكم في المكالمات</string>
+  <string name="blocking_manager_copy_summary" formatted="false">تابع إلى %s وانسخ الأرقام المحظورة الحالية لديك</string>
+  <string name="blocking_manager_copy_title">نسخ الأرقام المحظورة</string>
+  <string name="blocking_manager_qksms_summary">وظيفة الحظر المدمجة في Wize SMS</string>
+  <string name="blocking_manager_qksms_title">وايز SMS</string>
+  <string name="blocking_manager_sia_summary">قم بتصفية الرسائل تلقائيًا من الأرقام غير المرغوب فيها باستخدام تطبيق \"Should I Answer\"</string>
+  <string name="blocking_manager_sia_title">هل يجب أن أجيب؟</string>
+  <string name="blocking_manager_title">مدير الحظر</string>
+  <string name="blocking_title">حظر</string>
+  <string name="blocking_unblock_title">إلغاء الحظر</string>
+  <string name="button_cancel">إلغاء</string>
+  <string name="button_continue">متابعة</string>
+  <string name="button_delete">حذف</string>
+  <string name="button_more">المزيد</string>
+  <string name="button_save">حفظ</string>
+  <string name="button_set">تعيين</string>
+  <string name="button_stop">إيقاف</string>
+  <string name="button_undo">تراجع</string>
+  <string name="button_yes">نعم</string>
+  <string name="changelog_added">مضاف</string>
+  <string name="changelog_dismiss">تجاهل</string>
+  <string name="changelog_fixed">تم الإصلاح</string>
+  <string name="changelog_improved">تحسين</string>
+  <string name="changelog_more">المزيد</string>
+  <string name="changelog_title">الجديد في Wize SMS</string>
+  <string name="changelog_version" formatted="false">الإصدار %s</string>
+  <string name="compose_attach_cd">أضف مرفقًا</string>
+  <string name="compose_camera_cd">التقط صورة</string>
+  <string name="compose_contact_cd">إرفاق جهة اتصال</string>
+  <string name="compose_contact_error">خطأ في قراءة جهة الاتصال</string>
+  <string name="compose_details_delivered" formatted="false">تم التسليم: %s</string>
+  <string name="compose_details_error_code" formatted="false">رمز الخطأ: %d</string>
+  <string name="compose_details_from" formatted="false">من: %s</string>
+  <string name="compose_details_priority" formatted="false">الأولوية: %s</string>
+  <string name="compose_details_received" formatted="false">تم الاستلام: %s</string>
+  <string name="compose_details_sent" formatted="false">تم الإرسال: %s</string>
+  <string name="compose_details_size" formatted="false">الحجم: %s</string>
+  <string name="compose_details_subject" formatted="false">الموضوع: %s</string>
+  <string name="compose_details_title">تفاصيل الرسالة</string>
+  <string name="compose_details_to" formatted="false">إلى: %s</string>
+  <string name="compose_details_type" formatted="false">النوع: %s</string>
+  <string name="compose_gallery_cd">إرفاق صورة</string>
+  <string name="compose_hint">اكتب رسالة…</string>
+  <string name="compose_menu_clear">مسح</string>
+  <string name="compose_menu_copy">نسخ النص</string>
+  <string name="compose_menu_delete">حذف</string>
+  <string name="compose_menu_forward">إعادة توجيه</string>
+  <string name="compose_menu_next">التالي</string>
+  <string name="compose_menu_previous">السابق</string>
+  <string name="compose_messages_empty">هذه بداية محادثتك. قل شيئًا لطيفًا!</string>
+  <string name="compose_number_picker_always">دائمًا</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ افتراضي</string>
+  <string name="compose_number_picker_once">مرة واحدة فقط</string>
+  <string name="compose_number_picker_title">اختر رقم هاتف</string>
+  <string name="compose_schedule_cd">جدولة الرسالة</string>
+  <string name="compose_scheduled_for">مجدول لـ</string>
+  <string name="compose_scheduled_future">يجب أن يكون الوقت المحدد في المستقبل!</string>
+  <string name="compose_scheduled_plus">يجب فتح Wize SMS+ لاستخدام الرسائل المجدولة</string>
+  <string name="compose_scheduled_toast">تمت الإضافة إلى الرسائل المجدولة</string>
+  <string name="compose_send_cd">إرسال رسالة</string>
+  <string name="compose_send_group_summary">سيكون المستلمون والردود مرئيين للجميع</string>
+  <string name="compose_send_group_title">إرسال كرسالة جماعية</string>
+  <string name="compose_sim_cd" formatted="false">%s محدد، غيّر بطاقة SIM</string>
+  <string name="compose_sim_changed_toast" formatted="false">تم اختيار SIM %1$d (%2$s)</string>
+  <string name="compose_subtitle_results" formatted="false">%1$d من %2$d نتيجة</string>
+  <string name="compose_title_selected" formatted="false">%d محدد</string>
+  <string name="compose_vcard_label">بطاقة الاتصال</string>
+  <string name="dialog_delete_title">حذف</string>
+  <string name="drawer_archived">مؤرشف</string>
+  <string name="drawer_blocking">حظر</string>
+  <string name="drawer_help">المساعدة والتعليقات</string>
+  <string name="drawer_inbox">الوارد</string>
+  <string name="drawer_invite">دعوة الأصدقاء</string>
+  <string name="drawer_more">المزيد</string>
+  <string name="drawer_plus">وايز SMS+</string>
+  <string name="drawer_plus_banner_summary">افتح ميزات جديدة مذهلة وادعم التطوير</string>
+  <string name="drawer_scheduled">مجدول</string>
+  <string name="drawer_settings">الإعدادات</string>
+  <string name="gallery_error">تعذّر تحميل الوسائط</string>
+  <string name="gallery_toast_saved">تم الحفظ في التنزيلات</string>
+  <string name="inbox_empty_text">ستظهر محادثاتك هنا</string>
+  <string name="inbox_search_empty_text">لا نتائج</string>
+  <string name="info_archive">أرشيف</string>
+  <string name="info_block">حظر</string>
+  <string name="info_copied_address">تم نسخ العنوان</string>
+  <string name="info_delete">حذف المحادثة</string>
+  <string name="info_name">عنوان المحادثة</string>
+  <string name="info_notifications">الإشعارات</string>
+  <string name="info_theme">السمة</string>
+  <string name="info_title">تفاصيل</string>
+  <string name="info_unarchive">إلغاء الأرشفة</string>
+  <string name="info_unblock">إلغاء الحظر</string>
+  <string name="install_browser_description">شكرًا لتجربة تطبيقات Wize. نقدم المزيد من التطبيقات الرائعة مثل متصفح بميزات AI. تحقق منها!</string>
+  <string name="install_browser_title">تزامن مع متصفح WizeUp</string>
+  <string name="install_submit">اعرف المزيد</string>
+  <string name="main_default_sms_change">تغيير</string>
+  <string name="main_default_sms_message">اجعل Wize SMS تطبيق الرسائل القصيرة الافتراضي لديك</string>
+  <string name="main_default_sms_title">أحب الرسائل النصية مرة أخرى</string>
+  <string name="main_draft">مسودة</string>
+  <string name="main_drawer_open_cd">افتح درج التنقل</string>
+  <string name="main_fab_cd">ابدأ محادثة جديدة</string>
+  <string name="main_menu_add_contact">أضف إلى جهات الاتصال</string>
+  <string name="main_menu_archive">الأرشيف</string>
+  <string name="main_menu_block">حظر</string>
+  <string name="main_menu_clear">مسح</string>
+  <string name="main_menu_delete">حذف</string>
+  <string name="main_menu_pin">تثبيت في الأعلى</string>
+  <string name="main_menu_read">وضع علامة كمقروء</string>
+  <string name="main_menu_unarchive">إلغاء الأرشفة</string>
+  <string name="main_menu_unpin">إلغاء التثبيت</string>
+  <string name="main_menu_unread">وضع علامة كغير مقروء</string>
+  <string name="main_message_results" formatted="false">%d رسائل</string>
+  <string name="main_message_results_title">نتائج في الرسائل</string>
+  <string name="main_permission_allow">السماح</string>
+  <string name="main_permission_contacts">يحتاج Wize SMS إلى إذن لعرض جهات الاتصال الخاصة بك</string>
+  <string name="main_permission_required">التصريح مطلوب</string>
+  <string name="main_permission_sms">يحتاج Wize SMS إلى إذن لإرسال وعرض الرسائل القصيرة</string>
+  <string name="main_sender_you" formatted="false">أنت: %s</string>
+  <string name="main_syncing">جارٍ مزامنة الرسائل…</string>
+  <string name="main_title_selected" formatted="false">%d محدد</string>
+  <string name="maybe_later">ربما لاحقًا</string>
+  <string name="menu_add_person">إضافة شخص</string>
+  <string name="menu_call">اتصال</string>
+  <string name="menu_info">تفاصيل</string>
+  <string name="menu_save">حفظ في التنزيلات</string>
+  <string name="menu_share">مشاركة</string>
+  <string name="message_status_delivered" formatted="false">تم التسليم %s</string>
+  <string name="message_status_failed">فشل في الإرسال. اضغط للمحاولة مرة أخرى</string>
+  <string name="message_status_sending">جارٍ الإرسال…</string>
+  <string name="notification_message_failed_text" formatted="false">فشل إرسال الرسالة إلى %s</string>
+  <string name="notification_message_failed_title">لم يتم إرسال الرسالة</string>
+  <string name="qkreply_menu_call">اتصال</string>
+  <string name="qkreply_menu_collapse">إظهار أقل</string>
+  <string name="qkreply_menu_delete">حذف</string>
+  <string name="qkreply_menu_expand">عرض المزيد</string>
+  <string name="qkreply_menu_read">وضع علامة كمقروء</string>
+  <string name="qkreply_menu_view">افتح المحادثة</string>
+  <string name="qksms_plus_backup_summary">قم بعمل نسخة احتياطية تلقائية لرسائلك. لا تقلق أبدًا بشأن فقدان تاريخك إذا قمت بتغيير الهواتف أو فقد هاتفك.</string>
+  <string name="qksms_plus_backup_title">نسخ الرسائل احتياطيًا</string>
+  <string name="qksms_plus_blacklist_summary">حظر الرسائل التي تحتوي على كلمات رئيسية أو تطابق الأنماط</string>
+  <string name="qksms_plus_blacklist_title">حظر متقدم</string>
+  <string name="qksms_plus_coming_soon">قريبًا</string>
+  <string name="qksms_plus_delayed_summary">انتظر بضع ثوانٍ قبل إرسال رسالتك</string>
+  <string name="qksms_plus_delayed_title">إرسال مؤجل</string>
+  <string name="qksms_plus_description_summary" formatted="false">يمكنك إنقاذ مطور جائع مقابل %s فقط</string>
+  <string name="qksms_plus_description_title">ادعم التطوير، افتح كل الميزات</string>
+  <string name="qksms_plus_donate">تبرع عبر PayPal</string>
+  <string name="qksms_plus_emoji_summary">أنشئ اختصارات رموز تعبيرية تلقائية مخصصة</string>
+  <string name="qksms_plus_emoji_title">إيموجي تلقائي مخصص</string>
+  <string name="qksms_plus_error">حدث خطأ، يرجى المحاولة مرة أخرى</string>
+  <string name="qksms_plus_forward_summary">إعادة توجيه الرسائل تلقائيًا من مرسلين معينين</string>
+  <string name="qksms_plus_forward_title">إعادة التوجيه التلقائي</string>
+  <string name="qksms_plus_free_title">Wize SMS+ مجاني لمستخدمي F-Droid! دعمنا بتبرع.</string>
+  <string name="qksms_plus_more_summary">Wize SMS قيد التطوير النشط، وستشمل عملية الشراء الخاصة بك جميع ميزات Wize SMS+ المستقبلية!</string>
+  <string name="qksms_plus_more_title">المزيد</string>
+  <string name="qksms_plus_night_summary">تمكين الوضع الليلي بناءً على الوقت من اليوم</string>
+  <string name="qksms_plus_night_title">الوضع الليلي التلقائي</string>
+  <string name="qksms_plus_respond_summary">الرد تلقائيًا على الرسائل الواردة برد مُعد مسبقًا</string>
+  <string name="qksms_plus_respond_title">الرد التلقائي</string>
+  <string name="qksms_plus_scheduled_summary">جدولة الرسائل لإرسالها تلقائيًا في وقت وتاريخ محددين</string>
+  <string name="qksms_plus_scheduled_title">الرسائل المجدولة</string>
+  <string name="qksms_plus_thanks_summary">لديك الآن وصول إلى جميع ميزات Wize SMS+</string>
+  <string name="qksms_plus_thanks_title">شكرًا لدعمك Wize SMS!</string>
+  <string name="qksms_plus_themes_summary">افتح ألوان السمات الجميلة غير المتوفرة في لوحة تصميم المواد</string>
+  <string name="qksms_plus_themes_title">ثيمات مميزة</string>
+  <string name="qksms_plus_upgrade" formatted="false">ترقية مدى الحياة لـ %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">افتح مقابل %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">افتح للأبد مقابل %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">شراء لمرة واحدة %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">افتح + تبرع لـ %1$s %2$s</string>
+  <string name="rate_cancel">ليس الآن</string>
+  <string name="rate_dismiss">تجاهل</string>
+  <string name="rate_okay">حسنًا!</string>
+  <string name="rate_submit">قيّم</string>
+  <string name="rate_summary">شاركنا الحب وقيمنا على Google Play!</string>
+  <string name="rate_title">هل تستمتع بـ Wize SMS؟</string>
+  <string name="rate_us_description">هل تحب Wize SMS؟ نود سماع ملاحظاتك لتحسين التطبيق.</string>
+  <string name="rate_us_title">قيّمنا</string>
+  <string name="scheduled_compose_cd">جدولة رسالة</string>
+  <string name="scheduled_empty_description">أرسل رسالة تلقائيًا في اللحظة التي تريدها بالضبط</string>
+  <string name="scheduled_empty_message_1">مرحبًا! متى كان عيد ميلادك مرة أخرى؟</string>
+  <string name="scheduled_empty_message_2">إنه في 23 ديسمبر</string>
+  <string name="scheduled_empty_message_3">عيد ميلاد سعيد! انظر إلى أي صديق رائع أنا، أتذكر عيد ميلادك</string>
+  <string name="scheduled_empty_message_3_timestamp">الإرسال في 23 ديسمبر</string>
+  <string name="scheduled_options_title">رسالة مجدولة</string>
+  <string name="scheduled_title">مجدول</string>
+  <string name="settings_about_title">حول Wize SMS</string>
+  <string name="settings_auto_delete">حذف الرسائل القديمة تلقائيًا</string>
+  <string name="settings_auto_delete_dialog_hint">عدد الأيام</string>
+  <string name="settings_auto_delete_dialog_message">سيتم حذف الرسائل بعد عدد الأيام المحدد</string>
+  <string name="settings_auto_delete_never">أبداً</string>
+  <string name="settings_auto_delete_warning">حذف الرسائل القديمة تلقائيًا؟</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">إذا تابعت، سيتم حذف %1$d رسالة الآن</string>
+  <string name="settings_auto_emoji_title">رمز تعبيري تلقائي</string>
+  <string name="settings_automatic_colors_title">ألوان جهات الاتصال التلقائية</string>
+  <string name="settings_black_title">وضع الليل باللون الأسود النقي</string>
+  <string name="settings_category_appearance">المظهر</string>
+  <string name="settings_category_general">عام</string>
+  <string name="settings_category_qkreply">رد سريع</string>
+  <string name="settings_delay_duration_hint">أدخل المدة (بالثواني)</string>
+  <string name="settings_delayed_title">إرسال مؤجل</string>
+  <string name="settings_delivery_summary">تأكيد أن الرسائل أُرسلت بنجاح</string>
+  <string name="settings_delivery_title">تأكيدات التسليم</string>
+  <string name="settings_logging_disabled">تم تعطيل تسجيل التصحيح</string>
+  <string name="settings_logging_enabled">تسجيل التصحيح مفعل</string>
+  <string name="settings_long_as_mms_summary">إذا كانت رسائلك النصية الطويلة تفشل في الإرسال أو تُرسل بترتيب خاطئ، يمكنك إرسالها كرسائل MMS بدلاً من ذلك. قد تُطبق رسوم إضافية</string>
+  <string name="settings_long_as_mms_title">إرسال الرسائل الطويلة كرسائل MMS</string>
+  <string name="settings_mms_size_title">ضغط مرفقات MMS تلقائيًا</string>
+  <string name="settings_mobile_summary">عند كتابة رسالة، اعرض أرقام الهواتف المحمولة فقط</string>
+  <string name="settings_mobile_title">أرقام الجوال فقط</string>
+  <string name="settings_night_end_title">وقت الانتهاء</string>
+  <string name="settings_night_start_title">وقت البدء</string>
+  <string name="settings_night_title">الوضع الليلي</string>
+  <string name="settings_notification_action_1">زر 1</string>
+  <string name="settings_notification_action_2">زر 2</string>
+  <string name="settings_notification_action_3">زر 3</string>
+  <string name="settings_notification_actions_title">إجراءات</string>
+  <string name="settings_notification_previews_title">معاينات الإشعارات</string>
+  <string name="settings_notification_wake_title">تنبيه الشاشة</string>
+  <string name="settings_notifications_o_summary">اضغط للتخصيص</string>
+  <string name="settings_notifications_title">الإشعارات</string>
+  <string name="settings_qkreply_summary">نافذة منبثقة للرسائل الجديدة</string>
+  <string name="settings_qkreply_tap_dismiss_summary">اضغط خارج النافذة المنبثقة لإغلاقها</string>
+  <string name="settings_qkreply_tap_dismiss_title">اضغط للإغلاق</string>
+  <string name="settings_qkreply_title">رد سريع</string>
+  <string name="settings_ringtone_none">لا شيء</string>
+  <string name="settings_ringtone_title">الصوت</string>
+  <string name="settings_signature_summary">أضف توقيعًا إلى نهاية رسائلك</string>
+  <string name="settings_signature_title">توقيع</string>
+  <string name="settings_swipe_actions">إجراءات السحب</string>
+  <string name="settings_swipe_actions_change">تغيير</string>
+  <string name="settings_swipe_actions_left">سحب لليسار</string>
+  <string name="settings_swipe_actions_right">سحب لليمين</string>
+  <string name="settings_swipe_actions_summary">تكوين إجراءات السحب للمحادثات</string>
+  <string name="settings_sync_summary">أعد مزامنة رسائلك مع قاعدة بيانات الرسائل القصيرة الأصلية لنظام Android</string>
+  <string name="settings_sync_title">مزامنة الرسائل</string>
+  <string name="settings_system_font_title">استخدام خط النظام</string>
+  <string name="settings_text_size_title">حجم الخط</string>
+  <string name="settings_theme_title">السمة</string>
+  <string name="settings_unicode_summary">إزالة التشكيل من الأحرف في الرسائل النصية الصادرة</string>
+  <string name="settings_unicode_title">إزالة التشكيل</string>
+  <string name="settings_version" formatted="false">الإصدار %s</string>
+  <string name="settings_vibration_title">اهتزاز</string>
+  <string name="setup_next">متابعة</string>
+  <string name="setup_skip">تخطي</string>
+  <string name="shortcut_compose_disabled_message">الاختصار معطل</string>
+  <string name="shortcut_compose_long_label">محادثة جديدة</string>
+  <string name="shortcut_compose_short_label">إنشاء</string>
+  <string name="theme_apply">تطبيق</string>
+  <string name="theme_hex">سداسي</string>
+  <string name="theme_material">مادة</string>
+  <string name="title_archived">مؤرشف</string>
+  <string name="title_compose">اكتب اسمًا أو رقمًا</string>
+  <string name="title_conversations">ابحث في الوارد…</string>
+  <string name="title_notification_prefs">الإشعارات</string>
+  <string name="title_settings">الإعدادات</string>
+  <string name="title_theme">السمة</string>
+  <string name="toast_archived">محادثة مؤرشفة</string>
+  <string name="toast_copied">تم النسخ</string>
+  <string name="toast_qksms_plus">يجب فتح Wize SMS+ لاستخدام هذا</string>
+  <string name="widget_loading">جارٍ التحميل…</string>
+  <string name="widget_more">عرض المزيد من المحادثات</string>
+</resources>

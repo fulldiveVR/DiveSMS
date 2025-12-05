@@ -1,0 +1,38 @@
+widget_loading:
+  category: widgets
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Loading…
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+widget_more:
+  category: widgets
+  constraints:
+    max_length: 29
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: View more conversations
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">変更履歴</string>
+  <string name="about_changelog_title">変更履歴</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">連絡先</string>
+  <string name="about_controller">コントローラーについて</string>
+  <string name="about_copyright">著作権</string>
+  <string name="about_copyright_title">著作権</string>
+  <string name="about_developer">WizeUp ブラウザ</string>
+  <string name="about_developer_title">開発者</string>
+  <string name="about_license">ライセンス</string>
+  <string name="about_license_title">ライセンス</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">ソースについて</string>
+  <string name="about_title">概要</string>
+  <string name="about_version_title">バージョン</string>
+  <string name="app_name">Wize SMS</string>
+  <string name="archived_empty_text">アーカイブした会話がここに表示されます</string>
+  <string name="backup_backing_up">メッセージをバックアップ</string>
+  <string name="backup_disclaimer">現在、バックアップと復元ではSMSのみがサポートされています。MMSサポートとスケジュールバックアップは近日中に対応予定です！</string>
+  <string name="backup_last">最後のバックアップ</string>
+  <string name="backup_loading">読み込み中…</string>
+  <string name="backup_never">決してない</string>
+  <string name="backup_notification_channel_name">バックアップと復元</string>
+  <string name="backup_now">今すぐバックアップ</string>
+  <string name="backup_progress_finished">完了！</string>
+  <string name="backup_progress_parsing">バックアップ解析中…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d 件のメッセージ</string>
+  <string name="backup_progress_saving">バックアップを保存中…</string>
+  <string name="backup_progress_syncing">メッセージを同期中…</string>
+  <string name="backup_restore_confirm_message">このバックアップからメッセージを復元してもよろしいですか？</string>
+  <string name="backup_restore_confirm_title">バックアップから復元</string>
+  <string name="backup_restore_dialog_empty">バックアップが見つかりません</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/バックアップ</string>
+  <string name="backup_restore_dialog_title">バックアップ</string>
+  <string name="backup_restore_error_backup">バックアップ中…</string>
+  <string name="backup_restore_error_plus">バックアップと復元を使用するにはWize SMS+をアンロックしてください</string>
+  <string name="backup_restore_error_restore">復元中…</string>
+  <string name="backup_restore_stop_message">すでに復元されたメッセージはデバイスに残ります</string>
+  <string name="backup_restore_stop_title">復元を停止</string>
+  <string name="backup_restore_summary">バックアップを選択</string>
+  <string name="backup_restore_title">復元</string>
+  <string name="backup_restoring">バックアップから復元</string>
+  <string name="backup_title">バックアップと復元</string>
+  <string name="blocked_messages_empty">ブロックされたメッセージはここに表示されます</string>
+  <string name="blocked_messages_title">ブロックされたメッセージ</string>
+  <string name="blocked_numbers_add_cd">新しい番号をブロック</string>
+  <string name="blocked_numbers_dialog_block">ブロック</string>
+  <string name="blocked_numbers_dialog_hint">電話番号</string>
+  <string name="blocked_numbers_dialog_title">からのメッセージをブロック</string>
+  <string name="blocked_numbers_empty">ブロックした番号がここに表示されます</string>
+  <string name="blocked_numbers_title">ブロックされた番号</string>
+  <string name="blocking_block_title">ブロック</string>
+  <string name="blocking_conversations">ブロックされた会話</string>
+  <string name="blocking_drop_summary">ブロックされた送信者からのメッセージを隠すのではなく削除します</string>
+  <string name="blocking_drop_title">メッセージを削除</string>
+  <string name="blocking_manager_call_blocker_summary">ブラックリストとスケジュールで迷惑メッセージ、番号、未知の通話をブロック</string>
+  <string name="blocking_manager_call_blocker_title">通話ブロッカー - 着信/発信</string>
+  <string name="blocking_manager_call_control_summary">便利な場所で通話とメッセージを自動的にフィルタリング！Community IQ™ は、コミュニティで知られているスパマーからの不要なメッセージを防ぐことができます。</string>
+  <string name="blocking_manager_call_control_title">通話制御</string>
+  <string name="blocking_manager_copy_summary" formatted="false">%s に進んで、既存のブロックされた番号をコピーしてください</string>
+  <string name="blocking_manager_copy_title">ブロックされた番号をコピー</string>
+  <string name="blocking_manager_qksms_summary">Wize SMSの内蔵ブロック機能</string>
+  <string name="blocking_manager_qksms_title">ワイズSMS</string>
+  <string name="blocking_manager_sia_summary">\"Should I Answer\"アプリを使用して、迷惑な番号からのメッセージを自動的にフィルタリングします</string>
+  <string name="blocking_manager_sia_title">応答すべきですか？</string>
+  <string name="blocking_manager_title">ブロッキングマネージャー</string>
+  <string name="blocking_title">ブロック</string>
+  <string name="blocking_unblock_title">ブロック解除</string>
+  <string name="button_cancel">キャンセル</string>
+  <string name="button_continue">続行</string>
+  <string name="button_delete">削除</string>
+  <string name="button_more">もっと</string>
+  <string name="button_save">保存</string>
+  <string name="button_set">設定</string>
+  <string name="button_stop">停止</string>
+  <string name="button_undo">元に戻す</string>
+  <string name="button_yes">はい</string>
+  <string name="changelog_added">追加済み</string>
+  <string name="changelog_dismiss">閉じる</string>
+  <string name="changelog_fixed">修正済み</string>
+  <string name="changelog_improved">改善</string>
+  <string name="changelog_more">もっと</string>
+  <string name="changelog_title">Wize SMSの新機能</string>
+  <string name="changelog_version" formatted="false">バージョン %s</string>
+  <string name="compose_attach_cd">添付ファイルを追加</string>
+  <string name="compose_camera_cd">写真を撮る</string>
+  <string name="compose_contact_cd">連絡先を添付</string>
+  <string name="compose_contact_error">連絡先の読み取りエラー</string>
+  <string name="compose_details_delivered" formatted="false">配信済み: %s</string>
+  <string name="compose_details_error_code" formatted="false">エラーコード: %d</string>
+  <string name="compose_details_from" formatted="false">送信者: %s</string>
+  <string name="compose_details_priority" formatted="false">優先度: %s</string>
+  <string name="compose_details_received" formatted="false">受信済み: %s</string>
+  <string name="compose_details_sent" formatted="false">送信済み: %s</string>
+  <string name="compose_details_size" formatted="false">サイズ: %s</string>
+  <string name="compose_details_subject" formatted="false">件名: %s</string>
+  <string name="compose_details_title">メッセージ詳細</string>
+  <string name="compose_details_to" formatted="false">宛先: %s</string>
+  <string name="compose_details_type" formatted="false">タイプ: %s</string>
+  <string name="compose_gallery_cd">写真を添付</string>
+  <string name="compose_hint">メッセージを書く…</string>
+  <string name="compose_menu_clear">クリア</string>
+  <string name="compose_menu_copy">テキストをコピー</string>
+  <string name="compose_menu_delete">削除</string>
+  <string name="compose_menu_forward">転送</string>
+  <string name="compose_menu_next">次へ</string>
+  <string name="compose_menu_previous">前へ</string>
+  <string name="compose_messages_empty">これは会話の始まりです。何か素敵なことを言ってみて！</string>
+  <string name="compose_number_picker_always">常に</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ デフォルト</string>
+  <string name="compose_number_picker_once">一度だけ</string>
+  <string name="compose_number_picker_title">電話番号を選択</string>
+  <string name="compose_schedule_cd">メッセージを予約</string>
+  <string name="compose_scheduled_for">予定日時</string>
+  <string name="compose_scheduled_future">選択した時間は未来に設定してください！</string>
+  <string name="compose_scheduled_plus">スケジュールメッセージを使うにはWize SMS+を解除してください</string>
+  <string name="compose_scheduled_toast">スケジュールされたメッセージに追加</string>
+  <string name="compose_send_cd">メッセージ送信</string>
+  <string name="compose_send_group_summary">受信者と返信は全員に表示されます</string>
+  <string name="compose_send_group_title">グループメッセージとして送信</string>
+  <string name="compose_sim_cd" formatted="false">%s が選択されました、SIMカードを変更</string>
+  <string name="compose_sim_changed_toast" formatted="false">SIM %1$d (%2$s) を選択</string>
+  <string name="compose_subtitle_results" formatted="false">%2$d 件中 %1$d 件の結果</string>
+  <string name="compose_title_selected" formatted="false">%d 件選択済み</string>
+  <string name="compose_vcard_label">連絡先カード</string>
+  <string name="dialog_delete_title">削除</string>
+  <string name="drawer_archived">アーカイブ済み</string>
+  <string name="drawer_blocking">ブロック</string>
+  <string name="drawer_help">ヘルプとフィードバック</string>
+  <string name="drawer_inbox">受信トレイ</string>
+  <string name="drawer_invite">友達を招待</string>
+  <string name="drawer_more">もっと</string>
+  <string name="drawer_plus">ワイズSMS+</string>
+  <string name="drawer_plus_banner_summary">素晴らしい新機能をアンロックして開発をサポート</string>
+  <string name="drawer_scheduled">予定済み</string>
+  <string name="drawer_settings">設定</string>
+  <string name="gallery_error">メディアを読み込めません</string>
+  <string name="gallery_toast_saved">ダウンロードに保存</string>
+  <string name="inbox_empty_text">会話はここに表示されます</string>
+  <string name="inbox_search_empty_text">結果なし</string>
+  <string name="info_archive">アーカイブ</string>
+  <string name="info_block">ブロック</string>
+  <string name="info_copied_address">住所をコピーしました</string>
+  <string name="info_delete">会話を削除</string>
+  <string name="info_name">会話のタイトル</string>
+  <string name="info_notifications">通知</string>
+  <string name="info_theme">テーマ</string>
+  <string name="info_title">詳細</string>
+  <string name="info_unarchive">アーカイブ解除</string>
+  <string name="info_unblock">ブロック解除</string>
+  <string name="install_browser_description">Wizeアプリをお試しいただきありがとうございます。AI機能を備えたブラウザなど、他にも素晴らしいアプリがあります。ぜひご覧ください！</string>
+  <string name="install_browser_title">WizeUpブラウザと同期</string>
+  <string name="install_submit">詳細を確認</string>
+  <string name="main_default_sms_change">変更</string>
+  <string name="main_default_sms_message">Wize SMSをデフォルトのSMSアプリに設定する</string>
+  <string name="main_default_sms_title">再びメッセージを楽しむ</string>
+  <string name="main_draft">下書き</string>
+  <string name="main_drawer_open_cd">ナビゲーションドロワーを開く</string>
+  <string name="main_fab_cd">新しい会話を始める</string>
+  <string name="main_menu_add_contact">連絡先に追加</string>
+  <string name="main_menu_archive">アーカイブ</string>
+  <string name="main_menu_block">ブロック</string>
+  <string name="main_menu_clear">クリア</string>
+  <string name="main_menu_delete">削除</string>
+  <string name="main_menu_pin">トップに固定</string>
+  <string name="main_menu_read">既読にする</string>
+  <string name="main_menu_unarchive">アーカイブ解除</string>
+  <string name="main_menu_unpin">ピン留め解除</string>
+  <string name="main_menu_unread">未読にする</string>
+  <string name="main_message_results" formatted="false">%d 件のメッセージ</string>
+  <string name="main_message_results_title">メッセージの結果</string>
+  <string name="main_permission_allow">許可</string>
+  <string name="main_permission_contacts">Wize SMSは連絡先を見る許可が必要です</string>
+  <string name="main_permission_required">許可が必要です</string>
+  <string name="main_permission_sms">Wize SMSはSMSを送信および表示する許可が必要です</string>
+  <string name="main_sender_you" formatted="false">あなた: %s</string>
+  <string name="main_syncing">メッセージを同期中…</string>
+  <string name="main_title_selected" formatted="false">%d 件選択中</string>
+  <string name="maybe_later">あとで</string>
+  <string name="menu_add_person">人を追加</string>
+  <string name="menu_call">通話</string>
+  <string name="menu_info">詳細</string>
+  <string name="menu_save">ダウンロードに保存</string>
+  <string name="menu_share">共有</string>
+  <string name="message_status_delivered" formatted="false">配信済み %s</string>
+  <string name="message_status_failed">送信に失敗しました。タップして再試行</string>
+  <string name="message_status_sending">送信中…</string>
+  <string name="notification_message_failed_text" formatted="false">%sへのメッセージの送信に失敗しました</string>
+  <string name="notification_message_failed_title">メッセージが送信されませんでした</string>
+  <string name="qkreply_menu_call">通話</string>
+  <string name="qkreply_menu_collapse">表示を減らす</string>
+  <string name="qkreply_menu_delete">削除</string>
+  <string name="qkreply_menu_expand">もっと見る</string>
+  <string name="qkreply_menu_read">既読にする</string>
+  <string name="qkreply_menu_view">会話を開く</string>
+  <string name="qksms_plus_backup_summary">メッセージを自動的にバックアップします。電話を変えたり、電話を紛失した場合でも履歴を失う心配はありません。</string>
+  <string name="qksms_plus_backup_title">メッセージのバックアップ</string>
+  <string name="qksms_plus_blacklist_summary">キーワードを含むメッセージやパターンに一致するメッセージをブロック</string>
+  <string name="qksms_plus_blacklist_title">高度なブロック</string>
+  <string name="qksms_plus_coming_soon">近日公開</string>
+  <string name="qksms_plus_delayed_summary">メッセージを送信する前に数秒待ちます</string>
+  <string name="qksms_plus_delayed_title">送信遅延</string>
+  <string name="qksms_plus_description_summary" formatted="false">たった%sで飢えた開発者を救えます</string>
+  <string name="qksms_plus_description_title">開発を支援し、すべてをアンロック</string>
+  <string name="qksms_plus_donate">PayPalで寄付</string>
+  <string name="qksms_plus_emoji_summary">カスタム自動絵文字ショートカットを作成</string>
+  <string name="qksms_plus_emoji_title">カスタム自動絵文字</string>
+  <string name="qksms_plus_error">エラーが発生しました。再試行してください</string>
+  <string name="qksms_plus_forward_summary">特定の送信者からのメッセージを自動転送</string>
+  <string name="qksms_plus_forward_title">自動転送</string>
+  <string name="qksms_plus_free_title">Wize SMS+はF-Droidユーザーに無料！寄付でサポートをお願いします。</string>
+  <string name="qksms_plus_more_summary">Wize SMSは積極的に開発中で、ご購入いただくと将来のWize SMS+のすべての機能が含まれます！</string>
+  <string name="qksms_plus_more_title">もっと</string>
+  <string name="qksms_plus_night_summary">時間に応じてナイトモードを有効にする</string>
+  <string name="qksms_plus_night_title">自動夜間モード</string>
+  <string name="qksms_plus_respond_summary">受信メッセージに自動で定型文で返信</string>
+  <string name="qksms_plus_respond_title">自動応答</string>
+  <string name="qksms_plus_scheduled_summary">特定の日時に自動で送信されるようメッセージをスケジュールします</string>
+  <string name="qksms_plus_scheduled_title">予約メッセージ</string>
+  <string name="qksms_plus_thanks_summary">Wize SMS+ のすべての機能にアクセスできます</string>
+  <string name="qksms_plus_thanks_title">Wize SMSをサポートしていただきありがとうございます！</string>
+  <string name="qksms_plus_themes_summary">マテリアルデザインのパレットにない美しいテーマカラーをアンロック</string>
+  <string name="qksms_plus_themes_title">プレミアムテーマ</string>
+  <string name="qksms_plus_upgrade" formatted="false">%1$s %2$s の生涯アップグレード</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">%1$s %2$sで解除</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">%1$s %2$sで永久にアンロック</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">%1$s %2$s の一度きりの購入</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">アンロック + 寄付 %1$s %2$s</string>
+  <string name="rate_cancel">今はしない</string>
+  <string name="rate_dismiss">閉じる</string>
+  <string name="rate_okay">OK!</string>
+  <string name="rate_submit">評価</string>
+  <string name="rate_summary">愛を込めて、Google Playで評価してください！</string>
+  <string name="rate_title">Wize SMSを楽しんでいますか？</string>
+  <string name="rate_us_description">Wize SMSはお好きですか？アプリ改善のためにご意見をお聞かせください。</string>
+  <string name="rate_us_title">評価する</string>
+  <string name="scheduled_compose_cd">メッセージを予約</string>
+  <string name="scheduled_empty_description">希望する瞬間に自動でメッセージを送信</string>
+  <string name="scheduled_empty_message_1">ねえ！あなたの誕生日はいつだったっけ？</string>
+  <string name="scheduled_empty_message_2">12月23日です</string>
+  <string name="scheduled_empty_message_3">お誕生日おめでとう！あなたの誕生日を覚えているなんて、私はなんて素晴らしい友達でしょう</string>
+  <string name="scheduled_empty_message_3_timestamp">12月23日に送信</string>
+  <string name="scheduled_options_title">スケジュールされたメッセージ</string>
+  <string name="scheduled_title">予定済み</string>
+  <string name="settings_about_title">Wize SMSについて</string>
+  <string name="settings_auto_delete">古いメッセージを自動削除</string>
+  <string name="settings_auto_delete_dialog_hint">日数</string>
+  <string name="settings_auto_delete_dialog_message">メッセージは指定された日数後に削除されます</string>
+  <string name="settings_auto_delete_never">決してない</string>
+  <string name="settings_auto_delete_warning">古いメッセージを自動削除しますか？</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">続行すると、%1$d 件のメッセージが削除されます</string>
+  <string name="settings_auto_emoji_title">自動絵文字</string>
+  <string name="settings_automatic_colors_title">自動連絡先カラー</string>
+  <string name="settings_black_title">純黒のナイトモード</string>
+  <string name="settings_category_appearance">外観</string>
+  <string name="settings_category_general">一般</string>
+  <string name="settings_category_qkreply">クイック返信</string>
+  <string name="settings_delay_duration_hint">時間を入力（秒）</string>
+  <string name="settings_delayed_title">送信の遅延</string>
+  <string name="settings_delivery_summary">メッセージが正常に送信されたことを確認してください</string>
+  <string name="settings_delivery_title">配達確認</string>
+  <string name="settings_logging_disabled">デバッグログ無効</string>
+  <string name="settings_logging_enabled">デバッグログ有効</string>
+  <string name="settings_long_as_mms_summary">長いテキストメッセージが送信に失敗するか、順序が間違って送信される場合、MMSメッセージとして送信できます。追加料金がかかる場合があります</string>
+  <string name="settings_long_as_mms_title">長文メッセージをMMSで送信</string>
+  <string name="settings_mms_size_title">MMS添付ファイルを自動圧縮</string>
+  <string name="settings_mobile_summary">メッセージ作成時、携帯番号のみを表示</string>
+  <string name="settings_mobile_title">携帯番号のみ</string>
+  <string name="settings_night_end_title">終了時間</string>
+  <string name="settings_night_start_title">開始時間</string>
+  <string name="settings_night_title">ナイトモード</string>
+  <string name="settings_notification_action_1">ボタン 1</string>
+  <string name="settings_notification_action_2">ボタン2</string>
+  <string name="settings_notification_action_3">ボタン3</string>
+  <string name="settings_notification_actions_title">アクション</string>
+  <string name="settings_notification_previews_title">通知プレビュー</string>
+  <string name="settings_notification_wake_title">画面を起動</string>
+  <string name="settings_notifications_o_summary">タップしてカスタマイズ</string>
+  <string name="settings_notifications_title">通知</string>
+  <string name="settings_qkreply_summary">新しいメッセージのポップアップ</string>
+  <string name="settings_qkreply_tap_dismiss_summary">ポップアップの外側をタップして閉じてください</string>
+  <string name="settings_qkreply_tap_dismiss_title">タップして閉じる</string>
+  <string name="settings_qkreply_title">QK返信</string>
+  <string name="settings_ringtone_none">なし</string>
+  <string name="settings_ringtone_title">サウンド</string>
+  <string name="settings_signature_summary">メッセージの最後に署名を追加</string>
+  <string name="settings_signature_title">署名</string>
+  <string name="settings_swipe_actions">スワイプ操作</string>
+  <string name="settings_swipe_actions_change">変更</string>
+  <string name="settings_swipe_actions_left">左スワイプ</string>
+  <string name="settings_swipe_actions_right">右にスワイプ</string>
+  <string name="settings_swipe_actions_summary">会話のスワイプアクションを設定</string>
+  <string name="settings_sync_summary">メッセージをネイティブのAndroid SMSデータベースと再同期します</string>
+  <string name="settings_sync_title">メッセージを同期</string>
+  <string name="settings_system_font_title">システムフォントを使用</string>
+  <string name="settings_text_size_title">フォントサイズ</string>
+  <string name="settings_theme_title">テーマ</string>
+  <string name="settings_unicode_summary">送信するSMSメッセージの文字からアクセントを削除する</string>
+  <string name="settings_unicode_title">アクセント除去</string>
+  <string name="settings_version" formatted="false">バージョン %s</string>
+  <string name="settings_vibration_title">バイブレーション</string>
+  <string name="setup_next">続行</string>
+  <string name="setup_skip">スキップ</string>
+  <string name="shortcut_compose_disabled_message">ショートカットが無効です</string>
+  <string name="shortcut_compose_long_label">新規会話</string>
+  <string name="shortcut_compose_short_label">作成</string>
+  <string name="theme_apply">適用</string>
+  <string name="theme_hex">16進数</string>
+  <string name="theme_material">マテリアル</string>
+  <string name="title_archived">アーカイブ済み</string>
+  <string name="title_compose">名前または番号を入力</string>
+  <string name="title_conversations">受信箱を検索…</string>
+  <string name="title_notification_prefs">通知</string>
+  <string name="title_settings">設定</string>
+  <string name="title_theme">テーマ</string>
+  <string name="toast_archived">アーカイブ済み会話</string>
+  <string name="toast_copied">コピー済み</string>
+  <string name="toast_qksms_plus">使用するにはWize SMS+を解除してください</string>
+  <string name="widget_loading">読み込み中…</string>
+  <string name="widget_more">会話をもっと見る</string>
+</resources>

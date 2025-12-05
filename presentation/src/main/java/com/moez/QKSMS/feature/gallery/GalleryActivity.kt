@@ -63,6 +63,10 @@ class GalleryActivity : QkActivity(), GalleryView {
         super.onCreate(savedInstanceState)
         binding = GalleryActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // CRITICAL FIX: Manually set toolbar as ActionBar since we're using ViewBinding
+        setSupportActionBar(binding.toolbar)
+
         showBackButton(true)
         viewModel.bindView(this)
 

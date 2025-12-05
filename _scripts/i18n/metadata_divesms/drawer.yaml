@@ -1,0 +1,189 @@
+drawer_archived:
+  category: drawer
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Archived
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_blocking:
+  category: drawer
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocking
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_help:
+  category: drawer
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Help & feedback
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_inbox:
+  category: drawer
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Inbox
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_invite:
+  category: drawer
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Invite friends
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_more:
+  category: drawer
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: More
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_plus:
+  category: drawer
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS+
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_plus_banner_summary:
+  category: drawer
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Unlock amazing new features, and support development
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: description
+    screen: Unknown
+drawer_scheduled:
+  category: drawer
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Scheduled
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+drawer_settings:
+  category: drawer
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Settings
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

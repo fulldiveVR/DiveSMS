@@ -1,0 +1,357 @@
+button_cancel:
+  category: buttons
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Cancel
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_continue:
+  category: buttons
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Continue
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_delete:
+  category: buttons
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_more:
+  category: buttons
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: More
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_save:
+  category: buttons
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Save
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_set:
+  category: buttons
+  constraints:
+    max_length: 13
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Set
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_stop:
+  category: buttons
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Stop
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_undo:
+  category: buttons
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Undo
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+button_yes:
+  category: buttons
+  constraints:
+    max_length: 13
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Yes'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: button
+    screen: Unknown
+rate_cancel:
+  category: buttons
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Not now
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: text
+    screen: Unknown
+rate_dismiss:
+  category: buttons
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: DISMISS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: text
+    screen: Unknown
+rate_okay:
+  category: buttons
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: OKAY!
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: text
+    screen: Unknown
+rate_submit:
+  category: buttons
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Rate
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: text
+    screen: Unknown
+rate_summary:
+  category: buttons
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Share some love and rate us on Google Play!
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: description
+    screen: Unknown
+rate_title:
+  category: buttons
+  constraints:
+    max_length: 38
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Enjoying Wize SMS?
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: title
+    screen: Unknown
+rate_us_description:
+  category: buttons
+  constraints:
+    max_length: 117
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Do you like Wize SMS? We would love to hear your feedback and make the
+    app bette...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: text
+    screen: Unknown
+rate_us_title:
+  category: buttons
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Rate us
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: imperative, brief
+    terminology:
+      domain: actions
+    tone: action-oriented
+  ui:
+    element: title
+    screen: Unknown

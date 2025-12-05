@@ -1,0 +1,39 @@
+install_browser_description:
+  category: cross_promotion
+  constraints:
+    max_length: 159
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Thank you for trying our Wize apps, we feature many more great apps such
+    as a br...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+install_browser_title:
+  category: cross_promotion
+  constraints:
+    max_length: 44
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Sync with WizeUp Browser
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown

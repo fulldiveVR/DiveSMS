@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">Änderungsprotokoll</string>
+  <string name="about_changelog_title">Änderungsprotokoll</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">Kontakt</string>
+  <string name="about_controller">Über den Controller</string>
+  <string name="about_copyright">Urheberrecht</string>
+  <string name="about_copyright_title">Urheberrecht</string>
+  <string name="about_developer">WizeUp Browser</string>
+  <string name="about_developer_title">Entwickler</string>
+  <string name="about_license">Lizenz</string>
+  <string name="about_license_title">Lizenz</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">Über die Quelle</string>
+  <string name="about_title">Über</string>
+  <string name="about_version_title">Version</string>
+  <string name="app_name">Wize SMS</string>
+  <string name="archived_empty_text">Ihre archivierten Unterhaltungen erscheinen hier</string>
+  <string name="backup_backing_up">Nachrichten sichern</string>
+  <string name="backup_disclaimer">Derzeit wird nur SMS von Backup und Wiederherstellung unterstützt. MMS-Unterstützung und geplante Backups kommen bald!</string>
+  <string name="backup_last">Letzte Sicherung</string>
+  <string name="backup_loading">Laden…</string>
+  <string name="backup_never">Nie</string>
+  <string name="backup_notification_channel_name">Backup und Wiederherstellung</string>
+  <string name="backup_now">Jetzt sichern</string>
+  <string name="backup_progress_finished">Fertig!</string>
+  <string name="backup_progress_parsing">Backup wird analysiert…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d Nachrichten</string>
+  <string name="backup_progress_saving">Backup wird gespeichert…</string>
+  <string name="backup_progress_syncing">Nachrichten synchronisieren…</string>
+  <string name="backup_restore_confirm_message">Sind Sie sicher, dass Sie Ihre Nachrichten aus diesem Backup wiederherstellen möchten?</string>
+  <string name="backup_restore_confirm_title">Aus Backup wiederherstellen</string>
+  <string name="backup_restore_dialog_empty">Keine Backups gefunden</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/Sicherungen</string>
+  <string name="backup_restore_dialog_title">Backups</string>
+  <string name="backup_restore_error_backup">Sicherung läuft…</string>
+  <string name="backup_restore_error_plus">Bitte Wize SMS+ entsperren, um Backup und Wiederherstellung zu nutzen</string>
+  <string name="backup_restore_error_restore">Wiederherstellung läuft…</string>
+  <string name="backup_restore_stop_message">Bereits wiederhergestellte Nachrichten bleiben auf Ihrem Gerät</string>
+  <string name="backup_restore_stop_title">Wiederherstellung stoppen</string>
+  <string name="backup_restore_summary">Backup auswählen</string>
+  <string name="backup_restore_title">Wiederherstellen</string>
+  <string name="backup_restoring">Wiederherstellung aus Backup</string>
+  <string name="backup_title">Sichern und wiederherstellen</string>
+  <string name="blocked_messages_empty">Ihre blockierten Nachrichten werden hier angezeigt</string>
+  <string name="blocked_messages_title">Blockierte Nachrichten</string>
+  <string name="blocked_numbers_add_cd">Neue Nummer blockieren</string>
+  <string name="blocked_numbers_dialog_block">Blocken</string>
+  <string name="blocked_numbers_dialog_hint">Telefonnummer</string>
+  <string name="blocked_numbers_dialog_title">Nachrichten blockieren von</string>
+  <string name="blocked_numbers_empty">Ihre blockierten Nummern erscheinen hier</string>
+  <string name="blocked_numbers_title">Blockierte Nummern</string>
+  <string name="blocking_block_title">Blockieren</string>
+  <string name="blocking_conversations">Blockierte Unterhaltungen</string>
+  <string name="blocking_drop_summary">Eingehende Nachrichten von blockierten Absendern löschen, anstatt sie zu verbergen</string>
+  <string name="blocking_drop_title">Nachrichten löschen</string>
+  <string name="blocking_manager_call_blocker_summary">Blockieren Sie Spam-Nachrichten, Nummern und unbekannte Anrufe mit der schwarzen Liste und Zeitplan</string>
+  <string name="blocking_manager_call_blocker_title">Anrufblocker - Eingehend/Ausgehend</string>
+  <string name="blocking_manager_call_control_summary">Filtern Sie Ihre Anrufe und Nachrichten automatisch an einem praktischen Ort! Community IQ™ ermöglicht es Ihnen, unerwünschte Nachrichten von in der Community bekannten Spammern zu verhindern.</string>
+  <string name="blocking_manager_call_control_title">Anrufkontrolle</string>
+  <string name="blocking_manager_copy_summary" formatted="false">Weiter zu %s und kopiere deine bestehenden blockierten Nummern</string>
+  <string name="blocking_manager_copy_title">Blockierte Nummern kopieren</string>
+  <string name="blocking_manager_qksms_summary">Integrierte Blockierfunktion in Wize SMS</string>
+  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_sia_summary">Filtern Sie automatisch Nachrichten von unerwünschten Nummern mit der App \"Should I Answer\"</string>
+  <string name="blocking_manager_sia_title">Soll ich antworten?</string>
+  <string name="blocking_manager_title">Blockierungsmanager</string>
+  <string name="blocking_title">Blockieren</string>
+  <string name="blocking_unblock_title">Entsperren</string>
+  <string name="button_cancel">Abbrechen</string>
+  <string name="button_continue">Weiter</string>
+  <string name="button_delete">Löschen</string>
+  <string name="button_more">Mehr</string>
+  <string name="button_save">Speichern</string>
+  <string name="button_set">Setzen</string>
+  <string name="button_stop">Stopp</string>
+  <string name="button_undo">Rückgängig</string>
+  <string name="button_yes">Ja</string>
+  <string name="changelog_added">Hinzugefügt</string>
+  <string name="changelog_dismiss">Schließen</string>
+  <string name="changelog_fixed">Behoben</string>
+  <string name="changelog_improved">Verbessert</string>
+  <string name="changelog_more">Mehr</string>
+  <string name="changelog_title">Neu in Wize SMS</string>
+  <string name="changelog_version" formatted="false">Version %s</string>
+  <string name="compose_attach_cd">Anhang hinzufügen</string>
+  <string name="compose_camera_cd">Foto aufnehmen</string>
+  <string name="compose_contact_cd">Kontakt anhängen</string>
+  <string name="compose_contact_error">Fehler beim Lesen des Kontakts</string>
+  <string name="compose_details_delivered" formatted="false">Zugestellt: %s</string>
+  <string name="compose_details_error_code" formatted="false">Fehlercode: %d</string>
+  <string name="compose_details_from" formatted="false">Von: %s</string>
+  <string name="compose_details_priority" formatted="false">Priorität: %s</string>
+  <string name="compose_details_received" formatted="false">Empfangen: %s</string>
+  <string name="compose_details_sent" formatted="false">Gesendet: %s</string>
+  <string name="compose_details_size" formatted="false">Größe: %s</string>
+  <string name="compose_details_subject" formatted="false">Betreff: %s</string>
+  <string name="compose_details_title">Nachrichtendetails</string>
+  <string name="compose_details_to" formatted="false">An: %s</string>
+  <string name="compose_details_type" formatted="false">Typ: %s</string>
+  <string name="compose_gallery_cd">Foto anhängen</string>
+  <string name="compose_hint">Nachricht schreiben…</string>
+  <string name="compose_menu_clear">Löschen</string>
+  <string name="compose_menu_copy">Text kopieren</string>
+  <string name="compose_menu_delete">Löschen</string>
+  <string name="compose_menu_forward">Weiterleiten</string>
+  <string name="compose_menu_next">Weiter</string>
+  <string name="compose_menu_previous">Zurück</string>
+  <string name="compose_messages_empty">Dies ist der Beginn Ihres Gesprächs. Sagen Sie etwas Nettes!</string>
+  <string name="compose_number_picker_always">Immer</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ Standard</string>
+  <string name="compose_number_picker_once">Nur einmal</string>
+  <string name="compose_number_picker_title">Wählen Sie eine Telefonnummer</string>
+  <string name="compose_schedule_cd">Nachricht planen</string>
+  <string name="compose_scheduled_for">Geplant für</string>
+  <string name="compose_scheduled_future">Die gewählte Zeit muss in der Zukunft liegen!</string>
+  <string name="compose_scheduled_plus">Sie müssen Wize SMS+ entsperren, um geplante Nachrichten zu nutzen</string>
+  <string name="compose_scheduled_toast">Zu geplanten Nachrichten hinzugefügt</string>
+  <string name="compose_send_cd">Nachricht senden</string>
+  <string name="compose_send_group_summary">Empfänger und Antworten sind für alle sichtbar</string>
+  <string name="compose_send_group_title">Als Gruppen-Nachricht senden</string>
+  <string name="compose_sim_cd" formatted="false">%s ausgewählt, SIM-Karte wechseln</string>
+  <string name="compose_sim_changed_toast" formatted="false">SIM %1$d (%2$s) ausgewählt</string>
+  <string name="compose_subtitle_results" formatted="false">%1$d von %2$d Ergebnissen</string>
+  <string name="compose_title_selected" formatted="false">%d ausgewählt</string>
+  <string name="compose_vcard_label">Kontaktkarte</string>
+  <string name="dialog_delete_title">Löschen</string>
+  <string name="drawer_archived">Archiviert</string>
+  <string name="drawer_blocking">Blockieren</string>
+  <string name="drawer_help">Hilfe &amp; Feedback</string>
+  <string name="drawer_inbox">Posteingang</string>
+  <string name="drawer_invite">Freunde einladen</string>
+  <string name="drawer_more">Mehr</string>
+  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus_banner_summary">Schalte erstaunliche neue Funktionen frei und unterstütze die Entwicklung</string>
+  <string name="drawer_scheduled">Geplant</string>
+  <string name="drawer_settings">Einstellungen</string>
+  <string name="gallery_error">Medien konnten nicht geladen werden</string>
+  <string name="gallery_toast_saved">Gespeichert in Downloads</string>
+  <string name="inbox_empty_text">Ihre Unterhaltungen erscheinen hier</string>
+  <string name="inbox_search_empty_text">Keine Ergebnisse</string>
+  <string name="info_archive">Archiv</string>
+  <string name="info_block">Blockieren</string>
+  <string name="info_copied_address">Adresse kopiert</string>
+  <string name="info_delete">Unterhaltung löschen</string>
+  <string name="info_name">Gesprächstitel</string>
+  <string name="info_notifications">Benachrichtigungen</string>
+  <string name="info_theme">Thema</string>
+  <string name="info_title">Details</string>
+  <string name="info_unarchive">Entarchivieren</string>
+  <string name="info_unblock">Entsperren</string>
+  <string name="install_browser_description">Danke, dass Sie unsere Wize-Apps ausprobiert haben. Wir bieten weitere großartige Apps wie einen Browser mit KI-Funktionen. Schauen Sie rein!</string>
+  <string name="install_browser_title">Mit WizeUp Browser synchronisieren</string>
+  <string name="install_submit">Mehr erfahren</string>
+  <string name="main_default_sms_change">Ändern</string>
+  <string name="main_default_sms_message">Machen Sie Wize SMS zu Ihrer Standard-SMS-App</string>
+  <string name="main_default_sms_title">Wieder Freude am Texten</string>
+  <string name="main_draft">Entwurf</string>
+  <string name="main_drawer_open_cd">Navigationsleiste öffnen</string>
+  <string name="main_fab_cd">Neue Unterhaltung starten</string>
+  <string name="main_menu_add_contact">Zu Kontakten hinzufügen</string>
+  <string name="main_menu_archive">Archiv</string>
+  <string name="main_menu_block">Blockieren</string>
+  <string name="main_menu_clear">Löschen</string>
+  <string name="main_menu_delete">Löschen</string>
+  <string name="main_menu_pin">Oben anheften</string>
+  <string name="main_menu_read">Als gelesen markieren</string>
+  <string name="main_menu_unarchive">Entarchivieren</string>
+  <string name="main_menu_unpin">Lösen</string>
+  <string name="main_menu_unread">Als ungelesen markieren</string>
+  <string name="main_message_results" formatted="false">%d Nachrichten</string>
+  <string name="main_message_results_title">Ergebnisse in Nachrichten</string>
+  <string name="main_permission_allow">Erlauben</string>
+  <string name="main_permission_contacts">Wize SMS benötigt die Erlaubnis, Ihre Kontakte zu sehen</string>
+  <string name="main_permission_required">Berechtigung erforderlich</string>
+  <string name="main_permission_sms">Wize SMS benötigt die Erlaubnis, SMS zu senden und anzusehen</string>
+  <string name="main_sender_you" formatted="false">Du: %s</string>
+  <string name="main_syncing">Nachrichten synchronisieren…</string>
+  <string name="main_title_selected" formatted="false">%d ausgewählt</string>
+  <string name="maybe_later">Vielleicht später</string>
+  <string name="menu_add_person">Person hinzufügen</string>
+  <string name="menu_call">Anruf</string>
+  <string name="menu_info">Details</string>
+  <string name="menu_save">In Downloads speichern</string>
+  <string name="menu_share">Teilen</string>
+  <string name="message_status_delivered" formatted="false">Zugestellt %s</string>
+  <string name="message_status_failed">Senden fehlgeschlagen. Tippen, um es erneut zu versuchen</string>
+  <string name="message_status_sending">Senden…</string>
+  <string name="notification_message_failed_text" formatted="false">Die Nachricht an %s konnte nicht gesendet werden</string>
+  <string name="notification_message_failed_title">Nachricht nicht gesendet</string>
+  <string name="qkreply_menu_call">Anruf</string>
+  <string name="qkreply_menu_collapse">Weniger anzeigen</string>
+  <string name="qkreply_menu_delete">Löschen</string>
+  <string name="qkreply_menu_expand">Mehr anzeigen</string>
+  <string name="qkreply_menu_read">Als gelesen markieren</string>
+  <string name="qkreply_menu_view">Unterhaltung öffnen</string>
+  <string name="qksms_plus_backup_summary">Sichern Sie Ihre Nachrichten automatisch. Machen Sie sich keine Sorgen mehr über den Verlust Ihres Verlaufs, wenn Sie das Telefon wechseln oder Ihr Telefon verloren geht.</string>
+  <string name="qksms_plus_backup_title">Nachrichtensicherung</string>
+  <string name="qksms_plus_blacklist_summary">Blockiere Nachrichten, die Schlüsselwörter enthalten oder Mustern entsprechen</string>
+  <string name="qksms_plus_blacklist_title">Erweiterte Sperrung</string>
+  <string name="qksms_plus_coming_soon">Bald verfügbar</string>
+  <string name="qksms_plus_delayed_summary">Warten Sie ein paar Sekunden, bevor Sie Ihre Nachricht senden</string>
+  <string name="qksms_plus_delayed_title">Verzögertes Senden</string>
+  <string name="qksms_plus_description_summary" formatted="false">Sie können einen hungernden Entwickler schon für %s retten</string>
+  <string name="qksms_plus_description_title">Entwicklung unterstützen, alles freischalten</string>
+  <string name="qksms_plus_donate">Spenden via PayPal</string>
+  <string name="qksms_plus_emoji_summary">Erstellen Sie benutzerdefinierte Auto-Emoji-Verknüpfungen</string>
+  <string name="qksms_plus_emoji_title">Benutzerdefiniertes Auto-Emoji</string>
+  <string name="qksms_plus_error">Ein Fehler ist aufgetreten, bitte erneut versuchen</string>
+  <string name="qksms_plus_forward_summary">Nachrichten von bestimmten Absendern automatisch weiterleiten</string>
+  <string name="qksms_plus_forward_title">Automatisch weiterleiten</string>
+  <string name="qksms_plus_free_title">Wize SMS+ ist kostenlos für F-Droid-Nutzer! Unterstützen Sie uns mit einer Spende.</string>
+  <string name="qksms_plus_more_summary">Wize SMS befindet sich in aktiver Entwicklung, und Ihr Kauf wird alle zukünftigen Funktionen von Wize SMS+ beinhalten!</string>
+  <string name="qksms_plus_more_title">Mehr</string>
+  <string name="qksms_plus_night_summary">Aktivieren Sie den Nachtmodus basierend auf der Tageszeit</string>
+  <string name="qksms_plus_night_title">Automatischer Nachtmodus</string>
+  <string name="qksms_plus_respond_summary">Automatisch auf eingehende Nachrichten mit einer voreingestellten Antwort antworten</string>
+  <string name="qksms_plus_respond_title">Automatisch antworten</string>
+  <string name="qksms_plus_scheduled_summary">Nachrichten planen, um sie automatisch zu einem bestimmten Zeitpunkt und Datum zu senden</string>
+  <string name="qksms_plus_scheduled_title">Geplante Nachrichten</string>
+  <string name="qksms_plus_thanks_summary">Sie haben jetzt Zugriff auf alle Funktionen von Wize SMS+</string>
+  <string name="qksms_plus_thanks_title">Danke für Ihre Unterstützung von Wize SMS!</string>
+  <string name="qksms_plus_themes_summary">Schalte wunderschöne Themenfarben frei, die nicht in der Material Design-Palette verfügbar sind</string>
+  <string name="qksms_plus_themes_title">Premium-Themen</string>
+  <string name="qksms_plus_upgrade" formatted="false">Lebenslanges Upgrade für %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">Freischalten für %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">Für %1$s %2$s dauerhaft freischalten</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">Einmalkauf von %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">Freischalten + spenden für %1$s %2$s</string>
+  <string name="rate_cancel">Nicht jetzt</string>
+  <string name="rate_dismiss">Schließen</string>
+  <string name="rate_okay">OK!</string>
+  <string name="rate_submit">Bewerten</string>
+  <string name="rate_summary">Teile etwas Liebe und bewerte uns auf Google Play!</string>
+  <string name="rate_title">Genießen Sie Wize SMS?</string>
+  <string name="rate_us_description">Gefällt dir Wize SMS? Wir freuen uns auf dein Feedback, um die App zu verbessern.</string>
+  <string name="rate_us_title">Bewerten</string>
+  <string name="scheduled_compose_cd">Nachricht planen</string>
+  <string name="scheduled_empty_description">Senden Sie automatisch eine Nachricht zum gewünschten Zeitpunkt</string>
+  <string name="scheduled_empty_message_1">Hey! Wann war nochmal dein Geburtstag?</string>
+  <string name="scheduled_empty_message_2">Es ist am 23. Dezember</string>
+  <string name="scheduled_empty_message_3">Alles Gute zum Geburtstag! Schau mal, was für ein toller Freund ich bin, dass ich an deinen Geburtstag denke</string>
+  <string name="scheduled_empty_message_3_timestamp">Versand am 23. Dezember</string>
+  <string name="scheduled_options_title">Geplante Nachricht</string>
+  <string name="scheduled_title">Geplant</string>
+  <string name="settings_about_title">Über Wize SMS</string>
+  <string name="settings_auto_delete">Alte Nachrichten automatisch löschen</string>
+  <string name="settings_auto_delete_dialog_hint">Anzahl der Tage</string>
+  <string name="settings_auto_delete_dialog_message">Nach der angegebenen Anzahl von Tagen werden Nachrichten gelöscht</string>
+  <string name="settings_auto_delete_never">Nie</string>
+  <string name="settings_auto_delete_warning">Alte Nachrichten automatisch löschen?</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">Wenn Sie fortfahren, werden %1$d Nachrichten jetzt gelöscht</string>
+  <string name="settings_auto_emoji_title">Automatisches Emoji</string>
+  <string name="settings_automatic_colors_title">Automatische Kontaktfarben</string>
+  <string name="settings_black_title">Reiner schwarzer Nachtmodus</string>
+  <string name="settings_category_appearance">Erscheinung</string>
+  <string name="settings_category_general">Allgemein</string>
+  <string name="settings_category_qkreply">Schnell-Antw.</string>
+  <string name="settings_delay_duration_hint">Dauer eingeben (Sekunden)</string>
+  <string name="settings_delayed_title">Verzögertes Senden</string>
+  <string name="settings_delivery_summary">Bestätigen Sie, dass die Nachrichten erfolgreich gesendet wurden</string>
+  <string name="settings_delivery_title">Lieferbestätigungen</string>
+  <string name="settings_logging_disabled">Debug-Logging deaktiviert</string>
+  <string name="settings_logging_enabled">Debug-Logging aktiviert</string>
+  <string name="settings_long_as_mms_summary">Wenn Ihre längeren Textnachrichten nicht gesendet werden oder in der falschen Reihenfolge gesendet werden, können Sie sie stattdessen als MMS-Nachrichten senden. Zusätzliche Gebühren können anfallen</string>
+  <string name="settings_long_as_mms_title">Lange Nachrichten als MMS senden</string>
+  <string name="settings_mms_size_title">MMS-Anhänge automatisch komprimieren</string>
+  <string name="settings_mobile_summary">Beim Verfassen einer Nachricht nur Mobilnummern anzeigen</string>
+  <string name="settings_mobile_title">Nur Mobilnummern</string>
+  <string name="settings_night_end_title">Endzeit</string>
+  <string name="settings_night_start_title">Startzeit</string>
+  <string name="settings_night_title">Nachtmodus</string>
+  <string name="settings_notification_action_1">Taste 1</string>
+  <string name="settings_notification_action_2">Taste 2</string>
+  <string name="settings_notification_action_3">Taste 3</string>
+  <string name="settings_notification_actions_title">Aktionen</string>
+  <string name="settings_notification_previews_title">Benachrichtigungsvorschauen</string>
+  <string name="settings_notification_wake_title">Bildschirm aktivieren</string>
+  <string name="settings_notifications_o_summary">Tippen zum Anpassen</string>
+  <string name="settings_notifications_title">Benachrichtigungen</string>
+  <string name="settings_qkreply_summary">Popup für neue Nachrichten</string>
+  <string name="settings_qkreply_tap_dismiss_summary">Tippen Sie außerhalb des Pop-ups, um es zu schließen</string>
+  <string name="settings_qkreply_tap_dismiss_title">Zum Schließen tippen</string>
+  <string name="settings_qkreply_title">Schnell-Antw.</string>
+  <string name="settings_ringtone_none">Keine</string>
+  <string name="settings_ringtone_title">Ton</string>
+  <string name="settings_signature_summary">Fügen Sie eine Signatur am Ende Ihrer Nachrichten hinzu</string>
+  <string name="settings_signature_title">Signatur</string>
+  <string name="settings_swipe_actions">Wischaktionen</string>
+  <string name="settings_swipe_actions_change">Ändern</string>
+  <string name="settings_swipe_actions_left">Nach links wischen</string>
+  <string name="settings_swipe_actions_right">Nach rechts wischen</string>
+  <string name="settings_swipe_actions_summary">Wischaktionen für Unterhaltungen konfigurieren</string>
+  <string name="settings_sync_summary">Synchronisieren Sie Ihre Nachrichten erneut mit der nativen Android-SMS-Datenbank</string>
+  <string name="settings_sync_title">Nachrichten synchronisieren</string>
+  <string name="settings_system_font_title">Systemschriftart verwenden</string>
+  <string name="settings_text_size_title">Schriftgröße</string>
+  <string name="settings_theme_title">Thema</string>
+  <string name="settings_unicode_summary">Akzente von Zeichen in ausgehenden SMS-Nachrichten entfernen</string>
+  <string name="settings_unicode_title">Akzente entfernen</string>
+  <string name="settings_version" formatted="false">Version %s</string>
+  <string name="settings_vibration_title">Vibration</string>
+  <string name="setup_next">Weiter</string>
+  <string name="setup_skip">Überspringen</string>
+  <string name="shortcut_compose_disabled_message">Verknüpfung deaktiviert</string>
+  <string name="shortcut_compose_long_label">Neue Unterhaltung</string>
+  <string name="shortcut_compose_short_label">Verfassen</string>
+  <string name="theme_apply">Anwenden</string>
+  <string name="theme_hex">HEX</string>
+  <string name="theme_material">Material</string>
+  <string name="title_archived">Archiviert</string>
+  <string name="title_compose">Name oder Nummer eingeben</string>
+  <string name="title_conversations">Postfach durchsuchen…</string>
+  <string name="title_notification_prefs">Benachrichtigungen</string>
+  <string name="title_settings">Einstellungen</string>
+  <string name="title_theme">Thema</string>
+  <string name="toast_archived">Archiviertes Gespräch</string>
+  <string name="toast_copied">Kopiert</string>
+  <string name="toast_qksms_plus">Sie müssen Wize SMS+ entsperren, um dies zu nutzen</string>
+  <string name="widget_loading">Laden…</string>
+  <string name="widget_more">Mehr Unterhaltungen ansehen</string>
+</resources>

@@ -1,0 +1,155 @@
+about_changelog_title:
+  category: changelog
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Changelog
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+changelog_added:
+  category: changelog
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Added
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+changelog_dismiss:
+  category: changelog
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Dismiss
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+changelog_fixed:
+  category: changelog
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Fixed
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+changelog_improved:
+  category: changelog
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Improved
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+changelog_more:
+  category: changelog
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: More
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+changelog_title:
+  category: changelog
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: New in Wize SMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+changelog_version:
+  category: changelog
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Version %s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

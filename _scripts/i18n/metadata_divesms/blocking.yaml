@@ -1,0 +1,502 @@
+blocked_messages_empty:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Your blocked messages will appear here
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: text
+    screen: Unknown
+blocked_messages_title:
+  category: blocking
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocked messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocked_numbers_add_cd:
+  category: blocking
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Block a new number
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: text
+    screen: Unknown
+blocked_numbers_dialog_block:
+  category: blocking
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Block
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: text
+    screen: Unknown
+blocked_numbers_dialog_hint:
+  category: blocking
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Phone number
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: hint
+    screen: Unknown
+blocked_numbers_dialog_title:
+  category: blocking
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Block texts from
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocked_numbers_empty:
+  category: blocking
+  constraints:
+    max_length: 48
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Your blocked numbers will appear here
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: text
+    screen: Unknown
+blocked_numbers_title:
+  category: blocking
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocked numbers
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_block_title:
+  category: blocking
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Block
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_drop_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Drop incoming messages from blocked senders instead of hiding them
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_drop_title:
+  category: blocking
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Drop messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_call_blocker_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Block spam messages, numbers &amp; unknown calls with blacklist &amp; Schedule
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_manager_call_blocker_title:
+  category: blocking
+  constraints:
+    max_length: 52
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Call Blocker - Incoming/Outgoing
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_call_control_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Automatically filter your calls and messages in one convenient place! Community
+    ...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_manager_call_control_title:
+  category: blocking
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Call Control
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_copy_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Continue to %s and copy over your existing blocked numbers
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_manager_copy_title:
+  category: blocking
+  constraints:
+    max_length: 40
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Copy blocked numbers
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_qksms_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Built-in blocking functionality in Wize SMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_manager_qksms_title:
+  category: blocking
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_sia_summary:
+  category: blocking
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Automatically filter messages from unsolicited numbers by using the \"Should
+    I A...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: description
+    screen: Unknown
+blocking_manager_sia_title:
+  category: blocking
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Should I Answer?
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_manager_title:
+  category: blocking
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocking Manager
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_title:
+  category: blocking
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocking
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown
+blocking_unblock_title:
+  category: blocking
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unblock
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, protective
+    terminology:
+      domain: privacy
+    tone: neutral, security-focused
+  ui:
+    element: title
+    screen: Unknown

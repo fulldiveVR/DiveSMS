@@ -1,0 +1,190 @@
+about_changelog:
+  category: other
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Changelog
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+about_controller:
+  category: other
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: About controller
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+about_copyright:
+  category: other
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Copyright
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+about_copyright_title:
+  category: other
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Copyright
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+about_license:
+  category: other
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: License
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+about_license_title:
+  category: other
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: License
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+about_title:
+  category: other
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: About
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+about_version_title:
+  category: other
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Version
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+install_submit:
+  category: other
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Learn more
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+maybe_later:
+  category: other
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Maybe Later
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

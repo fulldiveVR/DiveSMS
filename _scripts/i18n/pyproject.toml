@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "divesms-i18n"
+version = "1.0.0"
+description = "Wize SMS (DiveSMS) Translation System - AI-powered internationalization with context-aware translations"
+authors = ["Fulldive Team"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^1.57.4"
+anthropic = "^0.42.0"
+pyyaml = "^6.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+ruff = "^0.8.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"

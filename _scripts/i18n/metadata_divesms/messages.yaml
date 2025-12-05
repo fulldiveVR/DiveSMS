@@ -1,0 +1,171 @@
+message_status_delivered:
+  category: messages
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delivered %s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+message_status_failed:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Failed to send. Tap to try again
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+message_status_sending:
+  category: messages
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Sending…
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+notification_message_failed_text:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: The message to %s failed to send
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+notification_message_failed_title:
+  category: messages
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Message not sent
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+scheduled_empty_message_1:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Hey! When was your birthday again?
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+scheduled_empty_message_2:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: It\'s on December 23rd
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+scheduled_empty_message_3:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Happy birthday! Look at what a great friend I am, remembering your birthday
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+scheduled_empty_message_3_timestamp:
+  category: messages
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Sending on December 23rd
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

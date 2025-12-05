@@ -1,0 +1,1192 @@
+settings_about_title:
+  category: settings
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: About Wize SMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_auto_delete:
+  category: settings
+  constraints:
+    max_length: 42
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete old messages automatically
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_auto_delete_dialog_hint:
+  category: settings
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Number of days
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: hint
+    screen: Unknown
+settings_auto_delete_dialog_message:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Messages will be deleted after the specified number of days
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_auto_delete_never:
+  category: settings
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Never
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_auto_delete_warning:
+  category: settings
+  constraints:
+    max_length: 44
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete old messages automatically?
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_auto_delete_warning_message:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: If you proceed, %1$d messages will be deleted now
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$d'
+      position: 1
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_auto_emoji_title:
+  category: settings
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Automatic emoji
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_automatic_colors_title:
+  category: settings
+  constraints:
+    max_length: 44
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Automatic contact colors
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_black_title:
+  category: settings
+  constraints:
+    max_length: 41
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Pure black night mode
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_category_appearance:
+  category: settings
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Appearance
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_category_general:
+  category: settings
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: General
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_category_qkreply:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: QK Reply
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_delay_duration_hint:
+  category: settings
+  constraints:
+    max_length: 49
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Enter duration (seconds)
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: hint
+    screen: Unknown
+settings_delayed_title:
+  category: settings
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delayed sending
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_delivery_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Confirm that messages were sent successfully
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_delivery_title:
+  category: settings
+  constraints:
+    max_length: 42
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delivery confirmations
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_logging_disabled:
+  category: settings
+  constraints:
+    max_length: 28
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Debug logging disabled
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_logging_enabled:
+  category: settings
+  constraints:
+    max_length: 27
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Debug logging enabled
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_long_as_mms_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: If your longer text messages are failing to send, or sending in the wrong
+    order,...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_long_as_mms_title:
+  category: settings
+  constraints:
+    max_length: 45
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Send long messages as MMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_mms_size_title:
+  category: settings
+  constraints:
+    max_length: 49
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Auto-compress MMS attachments
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_mobile_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: When composing a message, only show mobile numbers
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_mobile_title:
+  category: settings
+  constraints:
+    max_length: 39
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Mobile numbers only
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_night_end_title:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: End time
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_night_start_title:
+  category: settings
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Start time
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_night_title:
+  category: settings
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Night mode
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_notification_action_1:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Button 1
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_notification_action_2:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Button 2
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_notification_action_3:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Button 3
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_notification_actions_title:
+  category: settings
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Actions
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_notification_previews_title:
+  category: settings
+  constraints:
+    max_length: 41
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Notification previews
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_notification_wake_title:
+  category: settings
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wake screen
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_notifications_o_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Tap to customize
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_notifications_title:
+  category: settings
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Notifications
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_qkreply_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Popup for new messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_qkreply_tap_dismiss_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Tap outside of the popup to close it
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_qkreply_tap_dismiss_title:
+  category: settings
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Tap to dismiss
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_qkreply_title:
+  category: settings
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: QK Reply
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_ringtone_none:
+  category: settings
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: None
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_ringtone_title:
+  category: settings
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Sound
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_signature_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Add a signature to the end of your messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_signature_title:
+  category: settings
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Signature
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_swipe_actions:
+  category: settings
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Swipe actions
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_swipe_actions_change:
+  category: settings
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: CHANGE
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_swipe_actions_left:
+  category: settings
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Left swipe
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_swipe_actions_right:
+  category: settings
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Right swipe
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_swipe_actions_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Configure swipe actions for conversations
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_sync_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Re-sync your messages with the native Android SMS database
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_sync_title:
+  category: settings
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Sync messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_system_font_title:
+  category: settings
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Use system font
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_text_size_title:
+  category: settings
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Font size
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_theme_title:
+  category: settings
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Theme
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_unicode_summary:
+  category: settings
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Remove accents from characters in outgoing SMS messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: description
+    screen: Unknown
+settings_unicode_title:
+  category: settings
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Strip accents
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown
+settings_version:
+  category: settings
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Version %s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: text
+    screen: Unknown
+settings_vibration_title:
+  category: settings
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Vibration
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: clear, instructional
+    terminology:
+      domain: settings
+    tone: neutral, functional
+  ui:
+    element: title
+    screen: Unknown

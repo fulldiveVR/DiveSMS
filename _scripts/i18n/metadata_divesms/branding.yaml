@@ -1,0 +1,147 @@
+about_contact:
+  category: branding
+  constraints:
+    max_length: 26
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: https://fulldive.com
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: text
+    screen: Unknown
+about_contact_title:
+  category: branding
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Contact
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: title
+    screen: Unknown
+about_developer:
+  category: branding
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: WizeUp Browser
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: text
+    screen: Unknown
+about_developer_title:
+  category: branding
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Developer
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: title
+    screen: Unknown
+about_source:
+  category: branding
+  constraints:
+    max_length: 45
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: https://fulldive.com/privacy-policy
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: text
+    screen: Unknown
+about_source_title:
+  category: branding
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: About source
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: title
+    screen: Unknown
+app_name:
+  category: branding
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: proper noun
+    terminology:
+      domain: branding
+    tone: professional, branded
+  ui:
+    element: text
+    screen: Unknown

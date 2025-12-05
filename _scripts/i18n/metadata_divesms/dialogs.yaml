@@ -1,0 +1,21 @@
+dialog_delete_title:
+  category: dialogs
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: questioning, confirmatory
+    terminology:
+      domain: dialogs
+    tone: clear, direct
+  ui:
+    element: title
+    screen: Unknown

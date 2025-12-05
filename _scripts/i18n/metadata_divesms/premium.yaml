@@ -1,0 +1,629 @@
+qksms_plus_blacklist_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Block messages that contain keywords or match patterns
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_blacklist_title:
+  category: premium
+  constraints:
+    max_length: 37
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Advanced blocking
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_coming_soon:
+  category: premium
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Coming soon
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_delayed_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Wait a few seconds before sending your message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_delayed_title:
+  category: premium
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delayed sending
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_description_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: You can save a starving developer for just %s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_description_title:
+  category: premium
+  constraints:
+    max_length: 58
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Support development, unlock everything
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_donate:
+  category: premium
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Donate via PayPal
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_emoji_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Create custom auto-emoji shortcuts
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_emoji_title:
+  category: premium
+  constraints:
+    max_length: 37
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Custom auto-emoji
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_error:
+  category: premium
+  constraints:
+    max_length: 50
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: An error has occurred, please try again
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: error_message
+    screen: Unknown
+qksms_plus_forward_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Automatically forward messages from certain senders
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_forward_title:
+  category: premium
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Auto-forward
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_free_title:
+  category: premium
+  constraints:
+    max_length: 135
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS+ is free for F-Droid users! If you\'d like to support development,
+    a do...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_more_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Wize SMS is under active development, and your purchase will include all
+    future ...
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_more_title:
+  category: premium
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: More
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_night_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Enable night mode based on the time of day
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_night_title:
+  category: premium
+  constraints:
+    max_length: 40
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Automatic night mode
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_respond_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Automatically respond to incoming messages with a preset response
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_respond_title:
+  category: premium
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Auto-respond
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_thanks_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: You now have access to all Wize SMS+ features
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_thanks_title:
+  category: premium
+  constraints:
+    max_length: 54
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Thank you for supporting Wize SMS!
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_themes_summary:
+  category: premium
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Unlock beautiful theme colors not available on the Material Design palette
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_themes_title:
+  category: premium
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Premium themes
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: title
+    screen: Unknown
+qksms_plus_upgrade:
+  category: premium
+  constraints:
+    max_length: 39
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Lifetime upgrade for %1$s %2$s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$s'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_upgrade_b:
+  category: premium
+  constraints:
+    max_length: 26
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unlock for %1$s %2$s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$s'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_upgrade_c:
+  category: premium
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unlock forever for %1$s %2$s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$s'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_upgrade_d:
+  category: premium
+  constraints:
+    max_length: 39
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: One-time purchase of %1$s %2$s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$s'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown
+qksms_plus_upgrade_donate:
+  category: premium
+  constraints:
+    max_length: 37
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unlock + donate for %1$s %2$s
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$s'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: marketing, features
+    terminology:
+      domain: subscription
+    tone: positive, value-focused
+  ui:
+    element: text
+    screen: Unknown

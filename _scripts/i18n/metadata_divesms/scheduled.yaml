@@ -1,0 +1,94 @@
+qksms_plus_scheduled_summary:
+  category: scheduled
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Schedule messages to automatically be sent at a specific time and date
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: description
+    screen: Unknown
+qksms_plus_scheduled_title:
+  category: scheduled
+  constraints:
+    max_length: 38
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Scheduled messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+scheduled_empty_description:
+  category: scheduled
+  constraints:
+    max_length: 79
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Automatically send a message, at the exact moment you\'d like
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+scheduled_options_title:
+  category: scheduled
+  constraints:
+    max_length: 37
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Scheduled message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown
+scheduled_title:
+  category: scheduled
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Scheduled
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: title
+    screen: Unknown

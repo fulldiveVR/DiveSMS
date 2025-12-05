@@ -1,0 +1,57 @@
+toast_archived:
+  category: toasts
+  constraints:
+    max_length: 27
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Archived conversation
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+toast_copied:
+  category: toasts
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Copied
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown
+toast_qksms_plus:
+  category: toasts
+  constraints:
+    max_length: 48
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: You must unlock Wize SMS+ to use this
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

@@ -1,0 +1,105 @@
+archived_empty_text:
+  category: conversations
+  constraints:
+    max_length: 57
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Your archived conversations will appear here
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: conversational
+    terminology:
+      domain: messaging
+    tone: friendly, welcoming
+  ui:
+    element: text
+    screen: Unknown
+blocking_conversations:
+  category: conversations
+  constraints:
+    max_length: 27
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Blocked conversations
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: conversational
+    terminology:
+      domain: messaging
+    tone: friendly, welcoming
+  ui:
+    element: text
+    screen: Unknown
+inbox_empty_text:
+  category: conversations
+  constraints:
+    max_length: 45
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Your conversations will appear here
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: conversational
+    terminology:
+      domain: messaging
+    tone: friendly, welcoming
+  ui:
+    element: text
+    screen: Unknown
+inbox_search_empty_text:
+  category: conversations
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: No results
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: conversational
+    terminology:
+      domain: messaging
+    tone: friendly, welcoming
+  ui:
+    element: text
+    screen: Unknown
+title_conversations:
+  category: conversations
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Search inbox…
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: conversational
+    terminology:
+      domain: messaging
+    tone: friendly, welcoming
+  ui:
+    element: title
+    screen: Unknown

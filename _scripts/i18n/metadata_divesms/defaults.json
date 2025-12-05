@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Default values for string metadata. These values are applied unless overridden in category YAML files.",
+  "version": "1.0",
+  "defaults": {
+    "technical": {
+      "format_specifiers": false,
+      "html_formatting": false,
+      "plurals": false,
+      "contains_emoji": false
+    },
+    "constraints": {
+      "max_length": null
+    }
+  },
+  "notes": {
+    "usage": "Category YAML files only need to specify fields that differ from these defaults",
+    "token_savings": "Reduces redundancy by ~30-40% in category files",
+    "override_behavior": "Category-specific values always override defaults"
+  }
+}

@@ -163,6 +163,10 @@ class MainActivity : QkThemedActivity(), MainView {
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // CRITICAL FIX: Manually set toolbar as ActionBar since we're using ViewBinding
+        // QkActivity.setContentView(int) does this automatically, but setContentView(View) doesn't
+        setSupportActionBar(binding.toolbar)
+
         // Initialize drawer binding
         drawerBinding = DrawerViewBinding.bind(binding.drawer.root)
 

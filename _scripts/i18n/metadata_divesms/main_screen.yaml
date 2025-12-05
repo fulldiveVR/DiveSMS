@@ -1,0 +1,533 @@
+main_default_sms_change:
+  category: main_screen
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Change
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_default_sms_message:
+  category: main_screen
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Make Wize SMS your default SMS app
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_default_sms_title:
+  category: main_screen
+  constraints:
+    max_length: 38
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Love texting again
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: title
+    screen: Unknown
+main_draft:
+  category: main_screen
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Draft
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_drawer_open_cd:
+  category: main_screen
+  constraints:
+    max_length: 28
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Open navigation drawer
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_fab_cd:
+  category: main_screen
+  constraints:
+    max_length: 28
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Start new conversation
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_add_contact:
+  category: main_screen
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Add to contacts
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_archive:
+  category: main_screen
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Archive
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_block:
+  category: main_screen
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Block
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_clear:
+  category: main_screen
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Clear
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_delete:
+  category: main_screen
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_pin:
+  category: main_screen
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Pin to top
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_read:
+  category: main_screen
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Mark as read
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_unarchive:
+  category: main_screen
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unarchive
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_unpin:
+  category: main_screen
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Unpin
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_menu_unread:
+  category: main_screen
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Mark as unread
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_message_results:
+  category: main_screen
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%d messages'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%d'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_message_results_title:
+  category: main_screen
+  constraints:
+    max_length: 39
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Results in messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: title
+    screen: Unknown
+main_permission_allow:
+  category: main_screen
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Allow
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_permission_contacts:
+  category: main_screen
+  constraints:
+    max_length: 61
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS needs permission to view your contacts
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_permission_required:
+  category: main_screen
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Permission required
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_permission_sms:
+  category: main_screen
+  constraints:
+    max_length: 71
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Wize SMS needs permission to send and view SMS messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_sender_you:
+  category: main_screen
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'You: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_syncing:
+  category: main_screen
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Syncing messages…
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: text
+    screen: Unknown
+main_title_selected:
+  category: main_screen
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%d selected'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%d'
+      position: 1
+  translation_guidance:
+    style: descriptive
+    terminology:
+      domain: messaging
+    tone: friendly, neutral
+  ui:
+    element: title
+    screen: Unknown

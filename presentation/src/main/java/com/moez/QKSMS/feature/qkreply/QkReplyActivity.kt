@@ -68,6 +68,10 @@ class QkReplyActivity : QkThemedActivity(), QkReplyView {
         setFinishOnTouchOutside(prefs.qkreplyTapDismiss.get())
         binding = QkreplyActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // CRITICAL FIX: Manually set toolbar as ActionBar since we're using ViewBinding
+        setSupportActionBar(binding.toolbar)
+
         window.setBackgroundDrawable(null)
         window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND)
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)

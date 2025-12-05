@@ -1,0 +1,21 @@
+backup_notification_channel_name:
+  category: notifications
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Backup and restore
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: brief, actionable
+    terminology:
+      domain: notifications
+    tone: informative, timely
+  ui:
+    element: text
+    screen: Unknown

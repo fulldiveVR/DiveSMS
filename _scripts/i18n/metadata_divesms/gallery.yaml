@@ -1,0 +1,38 @@
+gallery_error:
+  category: gallery
+  constraints:
+    max_length: 26
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Couldn\'t load media
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: error_message
+    screen: Unknown
+gallery_toast_saved:
+  category: gallery
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Saved to Downloads
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: descriptive
+    tone: neutral
+  ui:
+    element: text
+    screen: Unknown

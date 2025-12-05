@@ -1,0 +1,991 @@
+compose_attach_cd:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Add an attachment
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_camera_cd:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Take a photo
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_contact_cd:
+  category: compose
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Attach a contact
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_contact_error:
+  category: compose
+  constraints:
+    max_length: 27
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Error reading contact
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: error_message
+    screen: Unknown
+compose_details_delivered:
+  category: compose
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Delivered: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_error_code:
+  category: compose
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Error code: %d'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%d'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: error_message
+    screen: Unknown
+compose_details_from:
+  category: compose
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'From: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_priority:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Priority: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_received:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Received: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_sent:
+  category: compose
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Sent: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_size:
+  category: compose
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Size: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_subject:
+  category: compose
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Subject: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_title:
+  category: compose
+  constraints:
+    max_length: 25
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Message details
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: title
+    screen: Unknown
+compose_details_to:
+  category: compose
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'To: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_details_type:
+  category: compose
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: 'Type: %s'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_gallery_cd:
+  category: compose
+  constraints:
+    max_length: 24
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Attach a photo
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_hint:
+  category: compose
+  constraints:
+    max_length: 41
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Write a message…
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: hint
+    screen: Unknown
+compose_menu_clear:
+  category: compose
+  constraints:
+    max_length: 15
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Clear
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_menu_copy:
+  category: compose
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Copy text
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_menu_delete:
+  category: compose
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Delete
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_menu_forward:
+  category: compose
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Forward
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_menu_next:
+  category: compose
+  constraints:
+    max_length: 14
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Next
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_menu_previous:
+  category: compose
+  constraints:
+    max_length: 18
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Previous
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_messages_empty:
+  category: compose
+  constraints:
+    max_length: null
+  context: {}
+  purpose: This is the start of your conversation. Say something nice!
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_number_picker_always:
+  category: compose
+  constraints:
+    max_length: 16
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Always
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_number_picker_default:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%s ∙ Default'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_number_picker_once:
+  category: compose
+  constraints:
+    max_length: 19
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Just once
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_number_picker_title:
+  category: compose
+  constraints:
+    max_length: 41
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Choose a phone number
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: title
+    screen: Unknown
+compose_schedule_cd:
+  category: compose
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Schedule message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_scheduled_for:
+  category: compose
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Scheduled for
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_scheduled_future:
+  category: compose
+  constraints:
+    max_length: 46
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Selected time must be in the future!
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_scheduled_plus:
+  category: compose
+  constraints:
+    max_length: 67
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: You must unlock Wize SMS+ to use scheduled messaging
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_scheduled_toast:
+  category: compose
+  constraints:
+    max_length: 35
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Added to scheduled messages
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_send_cd:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Send message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_send_group_summary:
+  category: compose
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Recipients and replies will be visible to everyone
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: description
+    screen: Unknown
+compose_send_group_title:
+  category: compose
+  constraints:
+    max_length: 41
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Send as group message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: title
+    screen: Unknown
+compose_sim_cd:
+  category: compose
+  constraints:
+    max_length: 36
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%s selected, change SIM card'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%s'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_sim_changed_toast:
+  category: compose
+  constraints:
+    max_length: 31
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: SIM %1$d (%2$s) selected
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$d'
+      position: 1
+    - placeholder: '%2$s'
+      position: 2
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+compose_subtitle_results:
+  category: compose
+  constraints:
+    max_length: 40
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%1$d of %2$d results'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%1$d'
+      position: 1
+    - placeholder: '%2$d'
+      position: 2
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: title
+    screen: Unknown
+compose_title_selected:
+  category: compose
+  constraints:
+    max_length: 21
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: '%d selected'
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: true
+    html_formatting: false
+    plurals: false
+    specifier_info:
+    - placeholder: '%d'
+      position: 1
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: title
+    screen: Unknown
+compose_vcard_label:
+  category: compose
+  constraints:
+    max_length: 22
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Contact card
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: label
+    screen: Unknown
+scheduled_compose_cd:
+  category: compose
+  constraints:
+    max_length: 23
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Schedule a message
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+shortcut_compose_disabled_message:
+  category: compose
+  constraints:
+    max_length: null
+  context: {}
+  purpose: Shortcut disabled
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: text
+    screen: Unknown
+shortcut_compose_long_label:
+  category: compose
+  constraints:
+    max_length: 20
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: New conversation
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: label
+    screen: Unknown
+shortcut_compose_short_label:
+  category: compose
+  constraints:
+    max_length: 17
+    reason: Estimated UI space limitation
+  context: {}
+  purpose: Compose
+  references: {}
+  technical:
+    contains_emoji: false
+    format_specifiers: false
+    html_formatting: false
+    plurals: false
+  translation_guidance:
+    style: action-oriented
+    terminology:
+      domain: messaging
+    tone: helpful, clear
+  ui:
+    element: label
+    screen: Unknown

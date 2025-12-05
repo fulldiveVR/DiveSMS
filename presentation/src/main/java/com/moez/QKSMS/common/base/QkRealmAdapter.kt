@@ -21,8 +21,7 @@
 
 package com.moez.QKSMS.common.base
 
-import android.os.Handler
-import android.os.Looper
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.moez.QKSMS.common.util.extensions.setVisible
@@ -35,7 +34,8 @@ import io.realm.RealmRecyclerViewAdapter
 import io.realm.RealmResults
 import timber.log.Timber
 
-abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkViewHolder>(null, true) {
+abstract class QkRealmAdapter<T : RealmModel> :
+    RealmRecyclerViewAdapter<T, QkViewHolder>(null, true) {
 
     /**
      * This view can be set, and the adapter will automatically control the visibility of this view
@@ -64,7 +64,9 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
      * toggle. If we are not in selection mode, then we will only toggle if [force]
      */
     protected fun toggleSelection(id: Long, force: Boolean = true): Boolean {
-        if (!force && selection.isEmpty()) return false
+        if (!force && selection.isEmpty()) {
+            return false
+        }
 
         selection = when (selection.contains(id)) {
             true -> selection - id
@@ -96,13 +98,13 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
 
     override fun updateData(data: OrderedRealmCollection<T>?) {
         val updateTimestamp = System.currentTimeMillis()
-        
+
         if (getData() === data) {
             return
         }
 
         val oldData = getData()
-        
+
         removeListener(getData())
         addListener(data)
 
@@ -112,19 +114,18 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
 
         // CRITICAL FIX: Handle frozen collections specially to avoid IllegalStateException
         if (data != null && (data as? RealmResults<T>)?.isFrozen == true) {
-            
             // Manually update the adapter data without calling super.updateData() which tries to add listeners
             try {
                 // Get the current data to compare
                 val oldData = getData()
                 val oldSize = oldData?.size ?: 0
                 val newSize = data.size
-                
+
                 // Set the new data using reflection
                 val field = RealmRecyclerViewAdapter::class.java.getDeclaredField("adapterData")
                 field.isAccessible = true
                 field.set(this, data)
-                
+
                 // Notify adapter with proper change notifications for better UI updates
                 if (oldData == null) {
                     // First time setting data
@@ -136,17 +137,9 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
                     // Same size, just content might have changed
                     notifyItemRangeChanged(0, newSize)
                 }
-                
-                
-                // CRITICAL FIX: Additional fallback - force complete refresh for frozen data
-                Handler(Looper.getMainLooper()).post {
-                    notifyDataSetChanged()
-                    
-                    // EXTREME FIX: Force RecyclerView to completely refresh
-                    Handler(Looper.getMainLooper()).postDelayed({
-                        notifyDataSetChanged()
-                    }, 100)
-                }
+
+                // NOTE: Removed multiple async notifyDataSetChanged() calls as they cause
+                // race conditions and break UI state (e.g., message selection state)
             } catch (e: Exception) {
                 // If reflection fails, try super but catch the exception
                 try {
@@ -159,23 +152,23 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
         } else {
             super.updateData(data)
         }
-        
+
     }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         val attachTimestamp = System.currentTimeMillis()
-        
+
         super.onAttachedToRecyclerView(recyclerView)
         addListener(data)
-        
+
     }
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
         val detachTimestamp = System.currentTimeMillis()
-        
+
         super.onDetachedFromRecyclerView(recyclerView)
         removeListener(data)
-        
+
     }
 
     private fun addListener(data: OrderedRealmCollection<T>?) {
@@ -188,6 +181,7 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
                     data.addChangeListener(emptyListener)
                 }
             }
+
             is RealmList<T> -> {
                 // CRITICAL FIX: Don't add listeners to frozen collections
                 if (data.isFrozen) {
@@ -195,6 +189,7 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
                     data.addChangeListener(emptyListener)
                 }
             }
+
             null -> {
             }
         }
@@ -210,6 +205,7 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
                     data.removeChangeListener(emptyListener)
                 }
             }
+
             is RealmList<T> -> {
                 // CRITICAL FIX: Don't try to remove listeners from frozen collections
                 if (data.isFrozen) {
@@ -217,6 +213,7 @@ abstract class QkRealmAdapter<T : RealmModel> : RealmRecyclerViewAdapter<T, QkVi
                     data.removeChangeListener(emptyListener)
                 }
             }
+
             null -> {
             }
         }

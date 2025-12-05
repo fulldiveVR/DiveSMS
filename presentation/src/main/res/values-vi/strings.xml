@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">Nhật ký thay đổi</string>
+  <string name="about_changelog_title">Nhật ký thay đổi</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">Liên hệ</string>
+  <string name="about_controller">Về bộ điều khiển</string>
+  <string name="about_copyright">Bản quyền</string>
+  <string name="about_copyright_title">Bản quyền</string>
+  <string name="about_developer">Trình duyệt WizeUp</string>
+  <string name="about_developer_title">Nhà phát triển</string>
+  <string name="about_license">Giấy phép</string>
+  <string name="about_license_title">Giấy phép</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">Về nguồn</string>
+  <string name="about_title">Giới thiệu</string>
+  <string name="about_version_title">Phiên bản</string>
+  <string name="app_name">Wize SMS</string>
+  <string name="archived_empty_text">Cuộc trò chuyện đã lưu trữ sẽ xuất hiện ở đây</string>
+  <string name="backup_backing_up">Đang sao lưu tin nhắn</string>
+  <string name="backup_disclaimer">Hiện tại, chỉ có SMS được hỗ trợ bởi Sao lưu và Khôi phục. Hỗ trợ MMS và sao lưu theo lịch trình sẽ sớm có!</string>
+  <string name="backup_last">Sao lưu cuối</string>
+  <string name="backup_loading">Đang tải…</string>
+  <string name="backup_never">Không bao giờ</string>
+  <string name="backup_notification_channel_name">Sao lưu và khôi phục</string>
+  <string name="backup_now">Sao lưu ngay</string>
+  <string name="backup_progress_finished">Hoàn tất!</string>
+  <string name="backup_progress_parsing">Đang phân tích sao lưu…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d tin nhắn</string>
+  <string name="backup_progress_saving">Đang lưu bản sao lưu…</string>
+  <string name="backup_progress_syncing">Đang đồng bộ tin nhắn…</string>
+  <string name="backup_restore_confirm_message">Bạn có chắc chắn muốn khôi phục tin nhắn của mình từ bản sao lưu này không?</string>
+  <string name="backup_restore_confirm_title">Khôi phục từ bản sao lưu</string>
+  <string name="backup_restore_dialog_empty">Không tìm thấy bản sao lưu</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/Sao lưu</string>
+  <string name="backup_restore_dialog_title">Sao lưu</string>
+  <string name="backup_restore_error_backup">Đang sao lưu…</string>
+  <string name="backup_restore_error_plus">Vui lòng mở khóa Wize SMS+ để sử dụng sao lưu và khôi phục</string>
+  <string name="backup_restore_error_restore">Đang khôi phục…</string>
+  <string name="backup_restore_stop_message">Các tin nhắn đã được khôi phục sẽ vẫn còn trên thiết bị của bạn</string>
+  <string name="backup_restore_stop_title">Dừng khôi phục</string>
+  <string name="backup_restore_summary">Chọn bản sao lưu</string>
+  <string name="backup_restore_title">Khôi phục</string>
+  <string name="backup_restoring">Khôi phục từ bản sao lưu</string>
+  <string name="backup_title">Sao lưu và khôi phục</string>
+  <string name="blocked_messages_empty">Tin nhắn bị chặn của bạn sẽ xuất hiện ở đây</string>
+  <string name="blocked_messages_title">Tin nhắn bị chặn</string>
+  <string name="blocked_numbers_add_cd">Chặn số mới</string>
+  <string name="blocked_numbers_dialog_block">Chặn</string>
+  <string name="blocked_numbers_dialog_hint">Số điện thoại</string>
+  <string name="blocked_numbers_dialog_title">Chặn tin nhắn từ</string>
+  <string name="blocked_numbers_empty">Số bị chặn của bạn sẽ xuất hiện ở đây</string>
+  <string name="blocked_numbers_title">Số bị chặn</string>
+  <string name="blocking_block_title">Chặn</string>
+  <string name="blocking_conversations">Cuộc trò chuyện bị chặn</string>
+  <string name="blocking_drop_summary">Xóa tin nhắn đến từ người gửi bị chặn thay vì ẩn chúng</string>
+  <string name="blocking_drop_title">Xóa tin nhắn</string>
+  <string name="blocking_manager_call_blocker_summary">Chặn tin nhắn rác, số điện thoại &amp; cuộc gọi không xác định với danh sách đen &amp; Lịch trình</string>
+  <string name="blocking_manager_call_blocker_title">Chặn Cuộc Gọi - Đến/Đi</string>
+  <string name="blocking_manager_call_control_summary">Tự động lọc cuộc gọi và tin nhắn của bạn ở một nơi tiện lợi! Community IQ™ cho phép bạn ngăn chặn các tin nhắn không mong muốn từ những kẻ gửi thư rác đã biết trong cộng đồng.</string>
+  <string name="blocking_manager_call_control_title">Kiểm soát Cuộc gọi</string>
+  <string name="blocking_manager_copy_summary" formatted="false">Tiếp tục đến %s và sao chép các số đã chặn hiện có của bạn</string>
+  <string name="blocking_manager_copy_title">Sao chép số bị chặn</string>
+  <string name="blocking_manager_qksms_summary">Chức năng chặn tích hợp trong Wize SMS</string>
+  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_sia_summary">Tự động lọc tin nhắn từ số không mong muốn bằng cách sử dụng ứng dụng \"Should I Answer\"</string>
+  <string name="blocking_manager_sia_title">Tôi có nên trả lời không?</string>
+  <string name="blocking_manager_title">Trình Quản Lý Chặn</string>
+  <string name="blocking_title">Chặn</string>
+  <string name="blocking_unblock_title">Bỏ chặn</string>
+  <string name="button_cancel">Hủy</string>
+  <string name="button_continue">Tiếp tục</string>
+  <string name="button_delete">Xóa</string>
+  <string name="button_more">Thêm</string>
+  <string name="button_save">Lưu</string>
+  <string name="button_set">Đặt</string>
+  <string name="button_stop">Dừng</string>
+  <string name="button_undo">Hoàn tác</string>
+  <string name="button_yes">Có</string>
+  <string name="changelog_added">Đã thêm</string>
+  <string name="changelog_dismiss">Bỏ qua</string>
+  <string name="changelog_fixed">Đã sửa</string>
+  <string name="changelog_improved">Cải thiện</string>
+  <string name="changelog_more">Thêm</string>
+  <string name="changelog_title">Mới trong Wize SMS</string>
+  <string name="changelog_version" formatted="false">Phiên bản %s</string>
+  <string name="compose_attach_cd">Thêm tệp đính kèm</string>
+  <string name="compose_camera_cd">Chụp ảnh</string>
+  <string name="compose_contact_cd">Đính kèm liên hệ</string>
+  <string name="compose_contact_error">Lỗi đọc liên hệ</string>
+  <string name="compose_details_delivered" formatted="false">Đã giao: %s</string>
+  <string name="compose_details_error_code" formatted="false">Mã lỗi: %d</string>
+  <string name="compose_details_from" formatted="false">Từ: %s</string>
+  <string name="compose_details_priority" formatted="false">Ưu tiên: %s</string>
+  <string name="compose_details_received" formatted="false">Đã nhận: %s</string>
+  <string name="compose_details_sent" formatted="false">Đã gửi: %s</string>
+  <string name="compose_details_size" formatted="false">Kích thước: %s</string>
+  <string name="compose_details_subject" formatted="false">Chủ đề: %s</string>
+  <string name="compose_details_title">Chi tiết tin nhắn</string>
+  <string name="compose_details_to" formatted="false">Đến: %s</string>
+  <string name="compose_details_type" formatted="false">Loại: %s</string>
+  <string name="compose_gallery_cd">Đính kèm ảnh</string>
+  <string name="compose_hint">Viết tin nhắn…</string>
+  <string name="compose_menu_clear">Xóa</string>
+  <string name="compose_menu_copy">Sao chép văn bản</string>
+  <string name="compose_menu_delete">Xóa</string>
+  <string name="compose_menu_forward">Chuyển tiếp</string>
+  <string name="compose_menu_next">Tiếp</string>
+  <string name="compose_menu_previous">Trước</string>
+  <string name="compose_messages_empty">Đây là khởi đầu cuộc trò chuyện của bạn. Nói điều gì đó tốt đẹp!</string>
+  <string name="compose_number_picker_always">Luôn luôn</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ Mặc định</string>
+  <string name="compose_number_picker_once">Chỉ một lần</string>
+  <string name="compose_number_picker_title">Chọn số điện thoại</string>
+  <string name="compose_schedule_cd">Lên lịch tin nhắn</string>
+  <string name="compose_scheduled_for">Đã lên lịch</string>
+  <string name="compose_scheduled_future">Thời gian đã chọn phải ở tương lai!</string>
+  <string name="compose_scheduled_plus">Bạn phải mở khóa Wize SMS+ để sử dụng tin nhắn theo lịch</string>
+  <string name="compose_scheduled_toast">Đã thêm vào tin nhắn đã lên lịch</string>
+  <string name="compose_send_cd">Gửi tin nhắn</string>
+  <string name="compose_send_group_summary">Người nhận và trả lời sẽ hiển thị cho mọi người</string>
+  <string name="compose_send_group_title">Gửi dưới dạng tin nhắn nhóm</string>
+  <string name="compose_sim_cd" formatted="false">%s đã chọn, đổi SIM</string>
+  <string name="compose_sim_changed_toast" formatted="false">Đã chọn SIM %1$d (%2$s)</string>
+  <string name="compose_subtitle_results" formatted="false">%1$d trong %2$d kết quả</string>
+  <string name="compose_title_selected" formatted="false">%d đã chọn</string>
+  <string name="compose_vcard_label">Thẻ liên hệ</string>
+  <string name="dialog_delete_title">Xóa</string>
+  <string name="drawer_archived">Đã lưu trữ</string>
+  <string name="drawer_blocking">Chặn</string>
+  <string name="drawer_help">Trợ giúp &amp; phản hồi</string>
+  <string name="drawer_inbox">Hộp thư đến</string>
+  <string name="drawer_invite">Mời bạn bè</string>
+  <string name="drawer_more">Thêm</string>
+  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus_banner_summary">Mở khóa các tính năng mới tuyệt vời và hỗ trợ phát triển</string>
+  <string name="drawer_scheduled">Đã lên lịch</string>
+  <string name="drawer_settings">Cài đặt</string>
+  <string name="gallery_error">Không thể tải phương tiện</string>
+  <string name="gallery_toast_saved">Đã lưu vào Tải xuống</string>
+  <string name="inbox_empty_text">Cuộc trò chuyện của bạn sẽ xuất hiện ở đây</string>
+  <string name="inbox_search_empty_text">Không có kết quả</string>
+  <string name="info_archive">Lưu trữ</string>
+  <string name="info_block">Chặn</string>
+  <string name="info_copied_address">Đã sao chép địa chỉ</string>
+  <string name="info_delete">Xóa hội thoại</string>
+  <string name="info_name">Tiêu đề cuộc trò chuyện</string>
+  <string name="info_notifications">Thông báo</string>
+  <string name="info_theme">Chủ đề</string>
+  <string name="info_title">Chi tiết</string>
+  <string name="info_unarchive">Bỏ lưu trữ</string>
+  <string name="info_unblock">Bỏ chặn</string>
+  <string name="install_browser_description">Cảm ơn bạn đã thử các ứng dụng Wize của chúng tôi. Chúng tôi có nhiều ứng dụng tuyệt vời khác như trình duyệt với tính năng AI. Hãy xem ngay!</string>
+  <string name="install_browser_title">Đồng bộ với WizeUp Browser</string>
+  <string name="install_submit">Tìm hiểu thêm</string>
+  <string name="main_default_sms_change">Thay đổi</string>
+  <string name="main_default_sms_message">Đặt Wize SMS làm ứng dụng SMS mặc định của bạn</string>
+  <string name="main_default_sms_title">Yêu thích nhắn tin lại</string>
+  <string name="main_draft">Bản nháp</string>
+  <string name="main_drawer_open_cd">Mở ngăn điều hướng</string>
+  <string name="main_fab_cd">Bắt đầu cuộc trò chuyện mới</string>
+  <string name="main_menu_add_contact">Thêm vào danh bạ</string>
+  <string name="main_menu_archive">Lưu trữ</string>
+  <string name="main_menu_block">Chặn</string>
+  <string name="main_menu_clear">Xóa</string>
+  <string name="main_menu_delete">Xóa</string>
+  <string name="main_menu_pin">Ghim lên đầu</string>
+  <string name="main_menu_read">Đánh dấu đã đọc</string>
+  <string name="main_menu_unarchive">Bỏ Lưu trữ</string>
+  <string name="main_menu_unpin">Bỏ ghim</string>
+  <string name="main_menu_unread">Đánh dấu là chưa đọc</string>
+  <string name="main_message_results" formatted="false">%d tin nhắn</string>
+  <string name="main_message_results_title">Kết quả trong tin nhắn</string>
+  <string name="main_permission_allow">Cho phép</string>
+  <string name="main_permission_contacts">Wize SMS cần quyền để xem danh bạ của bạn</string>
+  <string name="main_permission_required">Cần quyền truy cập</string>
+  <string name="main_permission_sms">Wize SMS cần quyền để gửi và xem tin nhắn SMS</string>
+  <string name="main_sender_you" formatted="false">Bạn: %s</string>
+  <string name="main_syncing">Đang đồng bộ tin nhắn…</string>
+  <string name="main_title_selected" formatted="false">%d đã chọn</string>
+  <string name="maybe_later">Có thể sau</string>
+  <string name="menu_add_person">Thêm người</string>
+  <string name="menu_call">Gọi</string>
+  <string name="menu_info">Chi tiết</string>
+  <string name="menu_save">Lưu vào Tải xuống</string>
+  <string name="menu_share">Chia sẻ</string>
+  <string name="message_status_delivered" formatted="false">Đã giao %s</string>
+  <string name="message_status_failed">Gửi thất bại. Nhấn để thử lại</string>
+  <string name="message_status_sending">Đang gửi…</string>
+  <string name="notification_message_failed_text" formatted="false">Tin nhắn đến %s không gửi được</string>
+  <string name="notification_message_failed_title">Tin nhắn chưa gửi</string>
+  <string name="qkreply_menu_call">Gọi</string>
+  <string name="qkreply_menu_collapse">Hiển thị ít hơn</string>
+  <string name="qkreply_menu_delete">Xóa</string>
+  <string name="qkreply_menu_expand">Hiển thị thêm</string>
+  <string name="qkreply_menu_read">Đánh dấu đã đọc</string>
+  <string name="qkreply_menu_view">Mở cuộc trò chuyện</string>
+  <string name="qksms_plus_backup_summary">Tự động sao lưu tin nhắn của bạn. Không bao giờ lo lắng về việc mất lịch sử của bạn nếu bạn đổi điện thoại hoặc điện thoại của bạn bị mất.</string>
+  <string name="qksms_plus_backup_title">Sao lưu tin nhắn</string>
+  <string name="qksms_plus_blacklist_summary">Chặn tin nhắn chứa từ khóa hoặc khớp với mẫu</string>
+  <string name="qksms_plus_blacklist_title">Chặn nâng cao</string>
+  <string name="qksms_plus_coming_soon">Sắp ra mắt</string>
+  <string name="qksms_plus_delayed_summary">Chờ vài giây trước khi gửi tin nhắn của bạn</string>
+  <string name="qksms_plus_delayed_title">Gửi trễ</string>
+  <string name="qksms_plus_description_summary" formatted="false">Bạn có thể cứu một nhà phát triển đang đói chỉ với %s</string>
+  <string name="qksms_plus_description_title">Hỗ trợ phát triển, mở khóa mọi thứ</string>
+  <string name="qksms_plus_donate">Quyên góp qua PayPal</string>
+  <string name="qksms_plus_emoji_summary">Tạo phím tắt auto-emoji tùy chỉnh</string>
+  <string name="qksms_plus_emoji_title">Emoji tự động tùy chỉnh</string>
+  <string name="qksms_plus_error">Đã xảy ra lỗi, vui lòng thử lại</string>
+  <string name="qksms_plus_forward_summary">Tự động chuyển tiếp tin nhắn từ người gửi nhất định</string>
+  <string name="qksms_plus_forward_title">Tự động chuyển tiếp</string>
+  <string name="qksms_plus_free_title">Wize SMS+ miễn phí cho người dùng F-Droid! Hãy ủng hộ bằng cách quyên góp.</string>
+  <string name="qksms_plus_more_summary">Wize SMS đang trong quá trình phát triển tích cực và việc mua hàng của bạn sẽ bao gồm tất cả các tính năng Wize SMS+ trong tương lai!</string>
+  <string name="qksms_plus_more_title">Thêm</string>
+  <string name="qksms_plus_night_summary">Kích hoạt chế độ ban đêm dựa trên thời gian trong ngày</string>
+  <string name="qksms_plus_night_title">Chế độ đêm tự động</string>
+  <string name="qksms_plus_respond_summary">Tự động trả lời tin nhắn đến bằng phản hồi đã đặt trước</string>
+  <string name="qksms_plus_respond_title">Tự động trả lời</string>
+  <string name="qksms_plus_scheduled_summary">Lên lịch tin nhắn để tự động gửi vào thời gian và ngày cụ thể</string>
+  <string name="qksms_plus_scheduled_title">Tin nhắn đã lên lịch</string>
+  <string name="qksms_plus_thanks_summary">Bây giờ bạn có quyền truy cập vào tất cả các tính năng của Wize SMS+</string>
+  <string name="qksms_plus_thanks_title">Cảm ơn bạn đã ủng hộ Wize SMS!</string>
+  <string name="qksms_plus_themes_summary">Mở khóa màu chủ đề đẹp không có trong bảng màu Material Design</string>
+  <string name="qksms_plus_themes_title">Chủ đề cao cấp</string>
+  <string name="qksms_plus_upgrade" formatted="false">Nâng cấp trọn đời cho %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">Mở khóa với %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">Mở khóa mãi mãi với %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">Mua một lần %1$s %2$s</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">Mở khóa + quyên góp cho %1$s %2$s</string>
+  <string name="rate_cancel">Không phải bây giờ</string>
+  <string name="rate_dismiss">Bỏ qua</string>
+  <string name="rate_okay">OK!</string>
+  <string name="rate_submit">Đánh giá</string>
+  <string name="rate_summary">Chia sẻ yêu thương và đánh giá chúng tôi trên Google Play!</string>
+  <string name="rate_title">Thích Wize SMS không?</string>
+  <string name="rate_us_description">Bạn có thích Wize SMS không? Chúng tôi mong nhận phản hồi để cải thiện ứng dụng.</string>
+  <string name="rate_us_title">Đánh giá</string>
+  <string name="scheduled_compose_cd">Lên lịch tin nhắn</string>
+  <string name="scheduled_empty_description">Gửi tin nhắn tự động vào đúng thời điểm bạn muốn</string>
+  <string name="scheduled_empty_message_1">Này! Sinh nhật của bạn là khi nào nhỉ?</string>
+  <string name="scheduled_empty_message_2">Vào ngày 23 tháng 12</string>
+  <string name="scheduled_empty_message_3">Chúc mừng sinh nhật! Nhìn xem tôi là một người bạn tuyệt vời thế nào, nhớ sinh nhật của bạn</string>
+  <string name="scheduled_empty_message_3_timestamp">Gửi vào ngày 23 tháng 12</string>
+  <string name="scheduled_options_title">Tin nhắn đã lên lịch</string>
+  <string name="scheduled_title">Đã lên lịch</string>
+  <string name="settings_about_title">Về Wize SMS</string>
+  <string name="settings_auto_delete">Xóa tin nhắn cũ tự động</string>
+  <string name="settings_auto_delete_dialog_hint">Số ngày</string>
+  <string name="settings_auto_delete_dialog_message">Tin nhắn sẽ bị xóa sau số ngày đã chỉ định</string>
+  <string name="settings_auto_delete_never">Không bao giờ</string>
+  <string name="settings_auto_delete_warning">Xóa tin nhắn cũ tự động?</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">Nếu bạn tiếp tục, %1$d tin nhắn sẽ bị xóa ngay bây giờ</string>
+  <string name="settings_auto_emoji_title">Biểu tượng cảm xúc tự động</string>
+  <string name="settings_automatic_colors_title">Màu liên hệ tự động</string>
+  <string name="settings_black_title">Chế độ đêm đen tuyền</string>
+  <string name="settings_category_appearance">Giao diện</string>
+  <string name="settings_category_general">Chung</string>
+  <string name="settings_category_qkreply">Phản hồi nhanh</string>
+  <string name="settings_delay_duration_hint">Nhập thời gian (giây)</string>
+  <string name="settings_delayed_title">Gửi chậm</string>
+  <string name="settings_delivery_summary">Xác nhận rằng tin nhắn đã được gửi thành công</string>
+  <string name="settings_delivery_title">Xác nhận giao hàng</string>
+  <string name="settings_logging_disabled">Ghi nhật ký gỡ lỗi tắt</string>
+  <string name="settings_logging_enabled">Ghi nhật ký gỡ lỗi bật</string>
+  <string name="settings_long_as_mms_summary">Nếu tin nhắn văn bản dài của bạn không gửi được hoặc gửi sai thứ tự, bạn có thể gửi chúng dưới dạng tin nhắn MMS. Có thể áp dụng phí bổ sung</string>
+  <string name="settings_long_as_mms_title">Gửi tin nhắn dài dưới dạng MMS</string>
+  <string name="settings_mms_size_title">Tự động nén tệp đính kèm MMS</string>
+  <string name="settings_mobile_summary">Khi soạn tin nhắn, chỉ hiển thị số di động</string>
+  <string name="settings_mobile_title">Chỉ số di động</string>
+  <string name="settings_night_end_title">Thời gian kết thúc</string>
+  <string name="settings_night_start_title">Thời gian bắt đầu</string>
+  <string name="settings_night_title">Chế độ ban đêm</string>
+  <string name="settings_notification_action_1">Nút 1</string>
+  <string name="settings_notification_action_2">Nút 2</string>
+  <string name="settings_notification_action_3">Nút 3</string>
+  <string name="settings_notification_actions_title">Hành động</string>
+  <string name="settings_notification_previews_title">Xem trước thông báo</string>
+  <string name="settings_notification_wake_title">Đánh thức màn hình</string>
+  <string name="settings_notifications_o_summary">Nhấn để tùy chỉnh</string>
+  <string name="settings_notifications_title">Thông báo</string>
+  <string name="settings_qkreply_summary">Cửa sổ bật lên cho tin nhắn mới</string>
+  <string name="settings_qkreply_tap_dismiss_summary">Nhấn bên ngoài cửa sổ bật lên để đóng</string>
+  <string name="settings_qkreply_tap_dismiss_title">Nhấn để đóng</string>
+  <string name="settings_qkreply_title">Phản hồi Nhanh</string>
+  <string name="settings_ringtone_none">Không có</string>
+  <string name="settings_ringtone_title">Âm thanh</string>
+  <string name="settings_signature_summary">Thêm chữ ký vào cuối tin nhắn của bạn</string>
+  <string name="settings_signature_title">Chữ ký</string>
+  <string name="settings_swipe_actions">Hành động vuốt</string>
+  <string name="settings_swipe_actions_change">Thay đổi</string>
+  <string name="settings_swipe_actions_left">Vuốt sang trái</string>
+  <string name="settings_swipe_actions_right">Vuốt sang phải</string>
+  <string name="settings_swipe_actions_summary">Cấu hình thao tác vuốt cho cuộc trò chuyện</string>
+  <string name="settings_sync_summary">Đồng bộ lại tin nhắn của bạn với cơ sở dữ liệu SMS gốc của Android</string>
+  <string name="settings_sync_title">Đồng bộ tin nhắn</string>
+  <string name="settings_system_font_title">Sử dụng phông hệ thống</string>
+  <string name="settings_text_size_title">Cỡ chữ</string>
+  <string name="settings_theme_title">Chủ đề</string>
+  <string name="settings_unicode_summary">Loại bỏ dấu từ các ký tự trong tin nhắn SMS gửi đi</string>
+  <string name="settings_unicode_title">Bỏ dấu</string>
+  <string name="settings_version" formatted="false">Phiên bản %s</string>
+  <string name="settings_vibration_title">Rung</string>
+  <string name="setup_next">Tiếp tục</string>
+  <string name="setup_skip">Bỏ qua</string>
+  <string name="shortcut_compose_disabled_message">Lối tắt bị vô hiệu hóa</string>
+  <string name="shortcut_compose_long_label">Cuộc trò chuyện mới</string>
+  <string name="shortcut_compose_short_label">Soạn</string>
+  <string name="theme_apply">Áp dụng</string>
+  <string name="theme_hex">HEX</string>
+  <string name="theme_material">Vật liệu</string>
+  <string name="title_archived">Đã lưu trữ</string>
+  <string name="title_compose">Nhập tên hoặc số</string>
+  <string name="title_conversations">Tìm trong hộp thư…</string>
+  <string name="title_notification_prefs">Thông báo</string>
+  <string name="title_settings">Cài đặt</string>
+  <string name="title_theme">Chủ đề</string>
+  <string name="toast_archived">Cuộc trò chuyện lưu trữ</string>
+  <string name="toast_copied">Đã sao chép</string>
+  <string name="toast_qksms_plus">Bạn phải mở khóa Wize SMS+ để sử dụng</string>
+  <string name="widget_loading">Đang tải…</string>
+  <string name="widget_more">Xem thêm cuộc trò chuyện</string>
+</resources>

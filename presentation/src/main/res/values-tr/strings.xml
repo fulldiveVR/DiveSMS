@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+  <string name="about_changelog">Değişiklik günlüğü</string>
+  <string name="about_changelog_title">Değişiklik günlüğü</string>
+  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact_title">İletişim</string>
+  <string name="about_controller">Denetleyici hakkında</string>
+  <string name="about_copyright">Telif Hakkı</string>
+  <string name="about_copyright_title">Telif Hakkı</string>
+  <string name="about_developer">WizeUp Tarayıcı</string>
+  <string name="about_developer_title">Geliştirici</string>
+  <string name="about_license">Lisans</string>
+  <string name="about_license_title">Lisans</string>
+  <string name="about_source">https://fulldive.com/privacy-policy</string>
+  <string name="about_source_title">Kaynak Hakkında</string>
+  <string name="about_title">Hakkında</string>
+  <string name="about_version_title">Sürüm</string>
+  <string name="app_name">Wize SMS</string>
+  <string name="archived_empty_text">Arşivlenen sohbetleriniz burada görünecek</string>
+  <string name="backup_backing_up">Mesajlar yedekleniyor</string>
+  <string name="backup_disclaimer">Şu anda, Yedekleme ve Geri Yükleme yalnızca SMS\'i destekliyor. MMS desteği ve planlı yedeklemeler yakında geliyor!</string>
+  <string name="backup_last">Son yedekleme</string>
+  <string name="backup_loading">Yükleniyor…</string>
+  <string name="backup_never">Asla</string>
+  <string name="backup_notification_channel_name">Yedekle ve geri yükle</string>
+  <string name="backup_now">Şimdi yedekle</string>
+  <string name="backup_progress_finished">Tamamlandı!</string>
+  <string name="backup_progress_parsing">Yedekleme ayrıştırılıyor…</string>
+  <string name="backup_progress_running" formatted="false">%d/%d mesaj</string>
+  <string name="backup_progress_saving">Yedekleme kaydediliyor…</string>
+  <string name="backup_progress_syncing">Mesajlar senkronize ediliyor…</string>
+  <string name="backup_restore_confirm_message">Bu yedekten mesajlarınızı geri yüklemek istediğinizden emin misiniz?</string>
+  <string name="backup_restore_confirm_title">Yedekten geri yükle</string>
+  <string name="backup_restore_dialog_empty">Yedek bulunamadı</string>
+  <string name="backup_restore_dialog_summary">/Wize SMS/Yedekler</string>
+  <string name="backup_restore_dialog_title">Yedekler</string>
+  <string name="backup_restore_error_backup">Yedekleme sürüyor…</string>
+  <string name="backup_restore_error_plus">Yedekleme ve geri yükleme için Wize SMS+\'yi açın</string>
+  <string name="backup_restore_error_restore">Geri yükleme sürüyor…</string>
+  <string name="backup_restore_stop_message">Zaten geri yüklenmiş olan mesajlar cihazınızda kalacaktır</string>
+  <string name="backup_restore_stop_title">Geri yüklemeyi durdur</string>
+  <string name="backup_restore_summary">Yedek seçin</string>
+  <string name="backup_restore_title">Geri Yükle</string>
+  <string name="backup_restoring">Yedekten geri yükleniyor</string>
+  <string name="backup_title">Yedekle ve geri yükle</string>
+  <string name="blocked_messages_empty">Engellenen mesajlarınız burada görünecek</string>
+  <string name="blocked_messages_title">Engellenen mesajlar</string>
+  <string name="blocked_numbers_add_cd">Yeni numara engelle</string>
+  <string name="blocked_numbers_dialog_block">Engelle</string>
+  <string name="blocked_numbers_dialog_hint">Telefon numarası</string>
+  <string name="blocked_numbers_dialog_title">Mesajları engelle</string>
+  <string name="blocked_numbers_empty">Engellenen numaralarınız burada görünecek</string>
+  <string name="blocked_numbers_title">Engellenen numaralar</string>
+  <string name="blocking_block_title">Engelle</string>
+  <string name="blocking_conversations">Engellenen konuşmalar</string>
+  <string name="blocking_drop_summary">Engellenen gönderenlerden gelen mesajları gizlemek yerine silin</string>
+  <string name="blocking_drop_title">Mesajları sil</string>
+  <string name="blocking_manager_call_blocker_summary">Kara liste ve Program ile spam mesajları, numaraları ve bilinmeyen aramaları engelleyin</string>
+  <string name="blocking_manager_call_blocker_title">Çağrı Engelleyici - Gelen/Giden</string>
+  <string name="blocking_manager_call_control_summary">Çağrılarınızı ve mesajlarınızı tek bir uygun yerde otomatik olarak filtreleyin! Community IQ™ topluluk tarafından bilinen spam göndericilerden istenmeyen mesajları engellemenizi sağlar.</string>
+  <string name="blocking_manager_call_control_title">Arama Kontrolü</string>
+  <string name="blocking_manager_copy_summary" formatted="false">%s\'e devam edin ve mevcut engellenen numaralarınızı kopyalayın</string>
+  <string name="blocking_manager_copy_title">Engellenen numaraları kopyala</string>
+  <string name="blocking_manager_qksms_summary">Wize SMS\'te yerleşik engelleme işlevi</string>
+  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_sia_summary">\"Should I Answer\" uygulamasını kullanarak istenmeyen numaralardan gelen mesajları otomatik olarak filtreleyin</string>
+  <string name="blocking_manager_sia_title">Cevap Vermeli miyim?</string>
+  <string name="blocking_manager_title">Engelleme Yöneticisi</string>
+  <string name="blocking_title">Engelleme</string>
+  <string name="blocking_unblock_title">Engeli Kaldır</string>
+  <string name="button_cancel">İptal</string>
+  <string name="button_continue">Devam Et</string>
+  <string name="button_delete">Sil</string>
+  <string name="button_more">Daha</string>
+  <string name="button_save">Kaydet</string>
+  <string name="button_set">Ayarla</string>
+  <string name="button_stop">Durdur</string>
+  <string name="button_undo">Geri Al</string>
+  <string name="button_yes">Evet</string>
+  <string name="changelog_added">Eklendi</string>
+  <string name="changelog_dismiss">Kapat</string>
+  <string name="changelog_fixed">Düzeltildi</string>
+  <string name="changelog_improved">Geliştirildi</string>
+  <string name="changelog_more">Daha fazla</string>
+  <string name="changelog_title">Wize SMS\'te Yeni</string>
+  <string name="changelog_version" formatted="false">Sürüm %s</string>
+  <string name="compose_attach_cd">Ek dosya ekle</string>
+  <string name="compose_camera_cd">Fotoğraf çek</string>
+  <string name="compose_contact_cd">Kişi ekle</string>
+  <string name="compose_contact_error">Kişi okuma hatası</string>
+  <string name="compose_details_delivered" formatted="false">Teslim: %s</string>
+  <string name="compose_details_error_code" formatted="false">Hata kodu: %d</string>
+  <string name="compose_details_from" formatted="false">Kimden: %s</string>
+  <string name="compose_details_priority" formatted="false">Öncelik: %s</string>
+  <string name="compose_details_received" formatted="false">Alındı: %s</string>
+  <string name="compose_details_sent" formatted="false">Gönderildi: %s</string>
+  <string name="compose_details_size" formatted="false">Boyut: %s</string>
+  <string name="compose_details_subject" formatted="false">Konu: %s</string>
+  <string name="compose_details_title">Mesaj ayrıntıları</string>
+  <string name="compose_details_to" formatted="false">Kime: %s</string>
+  <string name="compose_details_type" formatted="false">Tür: %s</string>
+  <string name="compose_gallery_cd">Fotoğraf ekle</string>
+  <string name="compose_hint">Mesaj yaz…</string>
+  <string name="compose_menu_clear">Temizle</string>
+  <string name="compose_menu_copy">Metni kopyala</string>
+  <string name="compose_menu_delete">Sil</string>
+  <string name="compose_menu_forward">İlet</string>
+  <string name="compose_menu_next">Sonraki</string>
+  <string name="compose_menu_previous">Önceki</string>
+  <string name="compose_messages_empty">Bu, konuşmanızın başlangıcı. Güzel bir şey söyleyin!</string>
+  <string name="compose_number_picker_always">Her zaman</string>
+  <string name="compose_number_picker_default" formatted="false">%s ∙ Varsayılan</string>
+  <string name="compose_number_picker_once">Sadece bir kez</string>
+  <string name="compose_number_picker_title">Telefon numarası seçin</string>
+  <string name="compose_schedule_cd">Mesaj zamanla</string>
+  <string name="compose_scheduled_for">Planlandı</string>
+  <string name="compose_scheduled_future">Seçilen zaman gelecekte olmalı!</string>
+  <string name="compose_scheduled_plus">Zamanlanmış mesajlaşmayı kullanmak için Wize SMS+ kilidini açmalısınız</string>
+  <string name="compose_scheduled_toast">Zamanlanmış mesajlara eklendi</string>
+  <string name="compose_send_cd">Mesaj gönder</string>
+  <string name="compose_send_group_summary">Alıcılar ve yanıtlar herkes tarafından görülebilir</string>
+  <string name="compose_send_group_title">Grup mesajı olarak gönder</string>
+  <string name="compose_sim_cd" formatted="false">%s seçildi, SIM kartı değiştir</string>
+  <string name="compose_sim_changed_toast" formatted="false">SIM %1$d (%2$s) seçildi</string>
+  <string name="compose_subtitle_results" formatted="false">%2$d sonuçtan %1$d tanesi</string>
+  <string name="compose_title_selected" formatted="false">%d seçildi</string>
+  <string name="compose_vcard_label">Kişi kartı</string>
+  <string name="dialog_delete_title">Sil</string>
+  <string name="drawer_archived">Arşivlendi</string>
+  <string name="drawer_blocking">Engelleme</string>
+  <string name="drawer_help">Yardım ve geri bildirim</string>
+  <string name="drawer_inbox">Gelen Kutusu</string>
+  <string name="drawer_invite">Arkadaşları davet et</string>
+  <string name="drawer_more">Daha</string>
+  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus_banner_summary">Harika yeni özelliklerin kilidini açın ve geliştirmeyi destekleyin</string>
+  <string name="drawer_scheduled">Planlandı</string>
+  <string name="drawer_settings">Ayarlar</string>
+  <string name="gallery_error">Medya yüklenemedi</string>
+  <string name="gallery_toast_saved">İndirilenlere kaydedildi</string>
+  <string name="inbox_empty_text">Sohbetleriniz burada görünecek</string>
+  <string name="inbox_search_empty_text">Sonuç yok</string>
+  <string name="info_archive">Arşiv</string>
+  <string name="info_block">Engelle</string>
+  <string name="info_copied_address">Adres kopyalandı</string>
+  <string name="info_delete">Sohbeti sil</string>
+  <string name="info_name">Sohbet başlığı</string>
+  <string name="info_notifications">Bildirimler</string>
+  <string name="info_theme">Tema</string>
+  <string name="info_title">Detaylar</string>
+  <string name="info_unarchive">Arşivden Çıkar</string>
+  <string name="info_unblock">Engeli Kaldır</string>
+  <string name="install_browser_description">Wize uygulamalarımızı denediğiniz için teşekkürler. AI özellikli tarayıcı gibi daha harika uygulamalarımız var. Göz atın!</string>
+  <string name="install_browser_title">WizeUp Tarayıcı ile Senkronize Et</string>
+  <string name="install_submit">Daha fazla bilgi</string>
+  <string name="main_default_sms_change">Değiştir</string>
+  <string name="main_default_sms_message">Wize SMS\'i varsayılan SMS uygulamanız yapın</string>
+  <string name="main_default_sms_title">Mesajlaşmayı yeniden sevin</string>
+  <string name="main_draft">Taslak</string>
+  <string name="main_drawer_open_cd">Gezinme çekmecesini aç</string>
+  <string name="main_fab_cd">Yeni sohbet başlat</string>
+  <string name="main_menu_add_contact">Kişilere ekle</string>
+  <string name="main_menu_archive">Arşiv</string>
+  <string name="main_menu_block">Engelle</string>
+  <string name="main_menu_clear">Temizle</string>
+  <string name="main_menu_delete">Sil</string>
+  <string name="main_menu_pin">Üste sabitle</string>
+  <string name="main_menu_read">Okundu olarak işaretle</string>
+  <string name="main_menu_unarchive">Arşivden Çıkar</string>
+  <string name="main_menu_unpin">Sabitlemeyi Kaldır</string>
+  <string name="main_menu_unread">Okunmadı olarak işaretle</string>
+  <string name="main_message_results" formatted="false">%d mesaj</string>
+  <string name="main_message_results_title">Mesajlardaki sonuçlar</string>
+  <string name="main_permission_allow">İzin Ver</string>
+  <string name="main_permission_contacts">Wize SMS\'in kişilerinizi görmek için izne ihtiyacı var</string>
+  <string name="main_permission_required">İzin gerekli</string>
+  <string name="main_permission_sms">Wize SMS\'in SMS göndermek ve görüntülemek için izne ihtiyacı var</string>
+  <string name="main_sender_you" formatted="false">Sen: %s</string>
+  <string name="main_syncing">Mesajlar senkronize ediliyor…</string>
+  <string name="main_title_selected" formatted="false">%d seçildi</string>
+  <string name="maybe_later">Belki sonra</string>
+  <string name="menu_add_person">Kişi ekle</string>
+  <string name="menu_call">Ara</string>
+  <string name="menu_info">Detaylar</string>
+  <string name="menu_save">İndirilenlere Kaydet</string>
+  <string name="menu_share">Paylaş</string>
+  <string name="message_status_delivered" formatted="false">Teslim Edildi %s</string>
+  <string name="message_status_failed">Gönderilemedi. Tekrar denemek için dokunun</string>
+  <string name="message_status_sending">Gönderiliyor…</string>
+  <string name="notification_message_failed_text" formatted="false">%s mesajı gönderilemedi</string>
+  <string name="notification_message_failed_title">Mesaj gönderilmedi</string>
+  <string name="qkreply_menu_call">Ara</string>
+  <string name="qkreply_menu_collapse">Daha az göster</string>
+  <string name="qkreply_menu_delete">Sil</string>
+  <string name="qkreply_menu_expand">Daha fazla göster</string>
+  <string name="qkreply_menu_read">Okundu olarak işaretle</string>
+  <string name="qkreply_menu_view">Sohbeti aç</string>
+  <string name="qksms_plus_backup_summary">Mesajlarınızı otomatik olarak yedekleyin. Telefonunuzu değiştirirseniz veya telefonunuz kaybolursa geçmişinizi kaybetme endişesi yaşamayın.</string>
+  <string name="qksms_plus_backup_title">Mesaj yedekleme</string>
+  <string name="qksms_plus_blacklist_summary">Anahtar kelimeler içeren veya kalıplarla eşleşen mesajları engelleyin</string>
+  <string name="qksms_plus_blacklist_title">Gelişmiş engelleme</string>
+  <string name="qksms_plus_coming_soon">Çok yakında</string>
+  <string name="qksms_plus_delayed_summary">Mesajınızı göndermeden önce birkaç saniye bekleyin</string>
+  <string name="qksms_plus_delayed_title">Gecikmeli gönderim</string>
+  <string name="qksms_plus_description_summary" formatted="false">Sadece %s ile aç bir geliştiriciyi kurtarabilirsiniz</string>
+  <string name="qksms_plus_description_title">Gelişimi destekleyin, her şeyi açın</string>
+  <string name="qksms_plus_donate">PayPal ile Bağış</string>
+  <string name="qksms_plus_emoji_summary">Özel otomatik emoji kısayolları oluşturun</string>
+  <string name="qksms_plus_emoji_title">Özel otomatik emoji</string>
+  <string name="qksms_plus_error">Bir hata oluştu, lütfen tekrar deneyin</string>
+  <string name="qksms_plus_forward_summary">Belirli göndericilerden gelen mesajları otomatik olarak yönlendirin</string>
+  <string name="qksms_plus_forward_title">Otomatik yönlendirme</string>
+  <string name="qksms_plus_free_title">Wize SMS+ F-Droid kullanıcılarına ücretsiz! Bağışla destek olun.</string>
+  <string name="qksms_plus_more_summary">Wize SMS aktif geliştirme aşamasında ve satın alımınız gelecekteki tüm Wize SMS+ özelliklerini içerecektir!</string>
+  <string name="qksms_plus_more_title">Daha Fazla</string>
+  <string name="qksms_plus_night_summary">Günün saatine göre gece modunu etkinleştirin</string>
+  <string name="qksms_plus_night_title">Otomatik gece modu</string>
+  <string name="qksms_plus_respond_summary">Gelen mesajlara otomatik olarak önceden ayarlanmış bir yanıtla cevap verin</string>
+  <string name="qksms_plus_respond_title">Otomatik yanıt</string>
+  <string name="qksms_plus_scheduled_summary">Mesajları belirli bir tarih ve saatte otomatik olarak gönderilecek şekilde planlayın</string>
+  <string name="qksms_plus_scheduled_title">Zamanlanmış mesajlar</string>
+  <string name="qksms_plus_thanks_summary">Artık Wize SMS+ özelliklerinin tümüne erişiminiz var</string>
+  <string name="qksms_plus_thanks_title">Wize SMS\'i desteklediğiniz için teşekkürler!</string>
+  <string name="qksms_plus_themes_summary">Material Design paletinde bulunmayan güzel tema renklerini açın</string>
+  <string name="qksms_plus_themes_title">Premium temalar</string>
+  <string name="qksms_plus_upgrade" formatted="false">%1$s %2$s için ömür boyu yükseltme</string>
+  <string name="qksms_plus_upgrade_b" formatted="false">%1$s %2$s için aç</string>
+  <string name="qksms_plus_upgrade_c" formatted="false">%1$s %2$s için sonsuza dek aç</string>
+  <string name="qksms_plus_upgrade_d" formatted="false">Tek seferlik %1$s %2$s satın alımı</string>
+  <string name="qksms_plus_upgrade_donate" formatted="false">Aç + bağış yap %1$s %2$s</string>
+  <string name="rate_cancel">Şimdi değil</string>
+  <string name="rate_dismiss">Kapat</string>
+  <string name="rate_okay">TAMAM!</string>
+  <string name="rate_submit">Değerlendir</string>
+  <string name="rate_summary">Biraz sevgi paylaş ve Google Play\'de bizi değerlendir!</string>
+  <string name="rate_title">Wize SMS\'ten memnun musunuz?</string>
+  <string name="rate_us_description">Wize SMS\'i beğendiniz mi? Uygulamayı geliştirmek için geri bildiriminizi bekliyoruz.</string>
+  <string name="rate_us_title">Bizi değerlendir</string>
+  <string name="scheduled_compose_cd">Mesajı zamanla</string>
+  <string name="scheduled_empty_description">Tam istediğiniz anda otomatik olarak mesaj gönderin</string>
+  <string name="scheduled_empty_message_1">Hey! Doğum günün ne zamandı?</string>
+  <string name="scheduled_empty_message_2">23 Aralık\'ta</string>
+  <string name="scheduled_empty_message_3">Doğum günün kutlu olsun! Doğum gününü hatırlayan ne harika bir arkadaş olduğuma bak</string>
+  <string name="scheduled_empty_message_3_timestamp">23 Aralık\'ta gönderiliyor</string>
+  <string name="scheduled_options_title">Zamanlanmış mesaj</string>
+  <string name="scheduled_title">Planlandı</string>
+  <string name="settings_about_title">Wize SMS Hakkında</string>
+  <string name="settings_auto_delete">Eski mesajları otomatik sil</string>
+  <string name="settings_auto_delete_dialog_hint">Gün sayısı</string>
+  <string name="settings_auto_delete_dialog_message">Mesajlar belirtilen gün sayısından sonra silinecektir</string>
+  <string name="settings_auto_delete_never">Asla</string>
+  <string name="settings_auto_delete_warning">Eski mesajları otomatik silinsin mi?</string>
+  <string name="settings_auto_delete_warning_message" formatted="false">Devam ederseniz, %1$d mesaj şimdi silinecek</string>
+  <string name="settings_auto_emoji_title">Otomatik emoji</string>
+  <string name="settings_automatic_colors_title">Otomatik kişi renkleri</string>
+  <string name="settings_black_title">Saf siyah gece modu</string>
+  <string name="settings_category_appearance">Görünüm</string>
+  <string name="settings_category_general">Genel</string>
+  <string name="settings_category_qkreply">Hızlı Yanıt</string>
+  <string name="settings_delay_duration_hint">Süreyi girin (saniye)</string>
+  <string name="settings_delayed_title">Gecikmeli gönderim</string>
+  <string name="settings_delivery_summary">Mesajların başarıyla gönderildiğini onaylayın</string>
+  <string name="settings_delivery_title">Teslimat onayları</string>
+  <string name="settings_logging_disabled">Hata ayıklama kapalı</string>
+  <string name="settings_logging_enabled">Hata ayıklama kaydı açık</string>
+  <string name="settings_long_as_mms_summary">Uzun metin mesajlarınız gönderilemiyorsa veya yanlış sırayla gönderiliyorsa, bunları MMS mesajı olarak gönderebilirsiniz. Ek ücretler uygulanabilir</string>
+  <string name="settings_long_as_mms_title">Uzun mesajları MMS olarak gönder</string>
+  <string name="settings_mms_size_title">MMS eklerini otomatik sıkıştır</string>
+  <string name="settings_mobile_summary">Mesaj yazarken sadece mobil numaraları göster</string>
+  <string name="settings_mobile_title">Yalnızca mobil numaralar</string>
+  <string name="settings_night_end_title">Bitiş saati</string>
+  <string name="settings_night_start_title">Başlangıç saati</string>
+  <string name="settings_night_title">Gece modu</string>
+  <string name="settings_notification_action_1">Düğme 1</string>
+  <string name="settings_notification_action_2">Düğme 2</string>
+  <string name="settings_notification_action_3">Düğme 3</string>
+  <string name="settings_notification_actions_title">Eylemler</string>
+  <string name="settings_notification_previews_title">Bildirim önizlemeleri</string>
+  <string name="settings_notification_wake_title">Ekranı uyandır</string>
+  <string name="settings_notifications_o_summary">Özelleştirmek için dokunun</string>
+  <string name="settings_notifications_title">Bildirimler</string>
+  <string name="settings_qkreply_summary">Yeni mesajlar için açılır pencere</string>
+  <string name="settings_qkreply_tap_dismiss_summary">Kapatmak için açılır pencerenin dışına dokunun</string>
+  <string name="settings_qkreply_tap_dismiss_title">Kapatmak için dokun</string>
+  <string name="settings_qkreply_title">Hızlı Yanıt</string>
+  <string name="settings_ringtone_none">Yok</string>
+  <string name="settings_ringtone_title">Ses</string>
+  <string name="settings_signature_summary">Mesajlarınızın sonuna bir imza ekleyin</string>
+  <string name="settings_signature_title">İmza</string>
+  <string name="settings_swipe_actions">Kaydırma işlemleri</string>
+  <string name="settings_swipe_actions_change">Değiştir</string>
+  <string name="settings_swipe_actions_left">Sola kaydır</string>
+  <string name="settings_swipe_actions_right">Sağa kaydır</string>
+  <string name="settings_swipe_actions_summary">Konuşmalar için kaydırma hareketlerini yapılandırın</string>
+  <string name="settings_sync_summary">Mesajlarınızı yerel Android SMS veritabanı ile yeniden senkronize edin</string>
+  <string name="settings_sync_title">Mesajları senkronize et</string>
+  <string name="settings_system_font_title">Sistem yazı tipini kullan</string>
+  <string name="settings_text_size_title">Yazı tipi boyutu</string>
+  <string name="settings_theme_title">Tema</string>
+  <string name="settings_unicode_summary">Giden SMS mesajlarındaki karakterlerden aksanları kaldır</string>
+  <string name="settings_unicode_title">Aksanları kaldır</string>
+  <string name="settings_version" formatted="false">Sürüm %s</string>
+  <string name="settings_vibration_title">Titreşim</string>
+  <string name="setup_next">Devam et</string>
+  <string name="setup_skip">Atla</string>
+  <string name="shortcut_compose_disabled_message">Kısayol devre dışı</string>
+  <string name="shortcut_compose_long_label">Yeni sohbet</string>
+  <string name="shortcut_compose_short_label">Oluştur</string>
+  <string name="theme_apply">Uygula</string>
+  <string name="theme_hex">HEX</string>
+  <string name="theme_material">Malzeme</string>
+  <string name="title_archived">Arşivlendi</string>
+  <string name="title_compose">Bir isim veya numara yazın</string>
+  <string name="title_conversations">Gelen kutusunda ara…</string>
+  <string name="title_notification_prefs">Bildirimler</string>
+  <string name="title_settings">Ayarlar</string>
+  <string name="title_theme">Tema</string>
+  <string name="toast_archived">Arşivlenen sohbet</string>
+  <string name="toast_copied">Kopyalandı</string>
+  <string name="toast_qksms_plus">Bunu kullanmak için Wize SMS+ kilidini açmalısınız</string>
+  <string name="widget_loading">Yükleniyor…</string>
+  <string name="widget_more">Daha fazla sohbeti görüntüle</string>
+</resources>
