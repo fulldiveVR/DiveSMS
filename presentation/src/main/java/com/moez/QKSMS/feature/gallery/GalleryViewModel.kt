@@ -78,9 +78,12 @@ class GalleryViewModel @Inject constructor(
                 .filter { permissions.hasStorage().also { if (!it) view.requestStoragePermission() } }
                 .withLatestFrom(view.pageChanged()) { _, part -> part.id }
                 .autoDispose(view.scope())
-                .subscribe { partId ->
-                    saveImage.execute(partId) { context.makeToast(R.string.gallery_toast_saved) }
-                }
+                .subscribe(
+                    { partId ->
+                        saveImage.execute(partId) { context.makeToast(R.string.gallery_toast_saved) }
+                    },
+                    { error -> timber.log.Timber.w(error, "Error saving image") }
+                )
 
         // Share image externally
         view.optionsItemSelected()
@@ -88,7 +91,10 @@ class GalleryViewModel @Inject constructor(
                 .filter { permissions.hasStorage().also { if (!it) view.requestStoragePermission() } }
                 .withLatestFrom(view.pageChanged()) { _, part -> part.id }
                 .autoDispose(view.scope())
-                .subscribe { partId -> messageRepo.savePart(partId)?.let(navigator::shareFile) }
+                .subscribe(
+                    { partId -> messageRepo.savePart(partId)?.let(navigator::shareFile) },
+                    { error -> timber.log.Timber.w(error, "Error sharing file") }
+                )
     }
 
 }

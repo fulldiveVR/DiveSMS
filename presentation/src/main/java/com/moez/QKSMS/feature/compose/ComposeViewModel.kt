@@ -451,20 +451,26 @@ class ComposeViewModel @Inject constructor(
             .mapNotNull(messageRepo::getPart)
             .filter { part -> part.isImage() || part.isVideo() }
             .autoDispose(view.scope())
-            .subscribe { part -> navigator.showMedia(part.id) }
+            .subscribe(
+                { part -> navigator.showMedia(part.id) },
+                { error -> Timber.w(error, "Error showing media") }
+            )
 
         // Non-media attachment clicks
         view.messagePartClickIntent
             .mapNotNull(messageRepo::getPart)
             .filter { part -> !part.isImage() && !part.isVideo() }
             .autoDispose(view.scope())
-            .subscribe { part ->
-                if (permissionManager.hasStorage()) {
-                    messageRepo.savePart(part.id)?.let(navigator::viewFile)
-                } else {
-                    view.requestStoragePermission()
-                }
-            }
+            .subscribe(
+                { part ->
+                    if (permissionManager.hasStorage()) {
+                        messageRepo.savePart(part.id)?.let(navigator::viewFile)
+                    } else {
+                        view.requestStoragePermission()
+                    }
+                },
+                { error -> Timber.w(error, "Error handling attachment click") }
+            )
 
         // Update the State when the message selected count changes
         view.messagesSelectedIntent
