@@ -205,4 +205,47 @@ class Preferences @Inject constructor(
             else -> rxPrefs.getString("ringtone_$threadId", default.get())
         }
     }
+
+    // Email forwarding preferences
+
+    /**
+     * Gets the stored SMTP password for an email account.
+     */
+    fun getSmtpPassword(accountId: Long): String? {
+        return sharedPrefs.getString("smtp_password_$accountId", null)
+    }
+
+    /**
+     * Stores an SMTP password for an email account.
+     */
+    fun setSmtpPassword(accountId: Long, password: String) {
+        sharedPrefs.edit().putString("smtp_password_$accountId", password).apply()
+    }
+
+    /**
+     * Clears the stored SMTP password for an email account.
+     */
+    fun clearSmtpPassword(accountId: Long) {
+        sharedPrefs.edit().remove("smtp_password_$accountId").apply()
+    }
+
+    /**
+     * Whether email forwarding is globally enabled.
+     */
+    val emailForwardingEnabled = rxPrefs.getBoolean("emailForwardingEnabled", false)
+
+    /**
+     * Destination email address for forwarding all SMS.
+     */
+    val emailForwardingAddress = rxPrefs.getString("emailForwardingAddress", "")
+
+    /**
+     * Whether to use WiFi only for email forwarding.
+     */
+    val emailForwardingWifiOnly = rxPrefs.getBoolean("emailForwardingWifiOnly", false)
+
+    /**
+     * Maximum retry attempts for failed email sends.
+     */
+    val emailForwardingMaxRetries = rxPrefs.getInteger("emailForwardingMaxRetries", 3)
 }

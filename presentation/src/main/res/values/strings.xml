@@ -183,6 +183,22 @@
     <string name="settings_mms_size_title">Auto-compress MMS attachments</string>
     <string name="settings_sync_title">Sync messages</string>
     <string name="settings_sync_summary">Re-sync your messages with the native Android SMS database</string>
+
+    <!-- Email Forwarding -->
+    <string name="settings_category_forwarding">Email Forwarding</string>
+    <string name="settings_forwarding_enabled_title">Forward SMS to email</string>
+    <string name="settings_forwarding_enabled_summary">Automatically forward all incoming SMS to email</string>
+    <string name="settings_forwarding_email_title">Destination email</string>
+    <string name="settings_forwarding_email_summary">Enter the email address to forward SMS to</string>
+    <string name="settings_forwarding_email_hint">example@gmail.com</string>
+    <string name="settings_forwarding_account_title">Email account</string>
+    <string name="settings_forwarding_account_summary_none">Tap to sign in with Gmail</string>
+    <string name="settings_forwarding_account_summary">Signed in as %s</string>
+    <string name="settings_forwarding_signed_in">Gmail account connected</string>
+    <string name="settings_forwarding_signed_out">Gmail account disconnected</string>
+    <string name="settings_forwarding_signout_message">Do you want to disconnect this Gmail account?</string>
+    <string name="settings_forwarding_signout_button">Disconnect</string>
+
     <string name="settings_about_title">About Wize SMS</string>
     <string name="settings_version">Version %s</string>
     <string name="settings_logging_enabled">Debug logging enabled</string>

@@ -66,6 +66,12 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$timber_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation project(":common")
+
+    // testing
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.1.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 }
 
 repositories {

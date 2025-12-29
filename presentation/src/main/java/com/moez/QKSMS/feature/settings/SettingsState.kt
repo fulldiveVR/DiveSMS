@@ -48,5 +48,9 @@ data class SettingsState(
     val longAsMms: Boolean = false,
     val maxMmsSizeSummary: String = "100KB",
     val maxMmsSizeId: Int = 100,
-    val syncProgress: SyncRepository.SyncProgress = SyncRepository.SyncProgress.Idle
+    val syncProgress: SyncRepository.SyncProgress = SyncRepository.SyncProgress.Idle,
+    // Email forwarding
+    val forwardingEnabled: Boolean = false,
+    val forwardingEmail: String = "",
+    val forwardingAccountName: String = ""
 )

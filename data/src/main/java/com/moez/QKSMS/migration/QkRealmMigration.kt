@@ -39,7 +39,7 @@ class QkRealmMigration @Inject constructor(
 ) : RealmMigration {
 
     companion object {
-        const val SchemaVersion: Long = 11
+        const val SchemaVersion: Long = 12
     }
 
     @SuppressLint("ApplySharedPref")
@@ -233,6 +233,66 @@ class QkRealmMigration @Inject constructor(
                         val messageId = part.linkingObjects("Message", "parts").firstOrNull()?.getLong("contentId") ?: 0
                         part.setLong("messageId", messageId)
                     }
+
+            version++
+        }
+
+        if (version == 11L) {
+            // EmailAccount entity
+            realm.schema.create("EmailAccount")
+                    .addField("id", Long::class.java, FieldAttribute.PRIMARY_KEY, FieldAttribute.REQUIRED)
+                    .addField("accountType", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("email", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("gmailAccountName", String::class.java)
+                    .addField("smtpHost", String::class.java)
+                    .addField("smtpPort", Int::class.java, FieldAttribute.REQUIRED)
+                    .addField("smtpUsername", String::class.java)
+                    .addField("smtpUseTls", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("isDefault", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("createdAt", Long::class.java, FieldAttribute.REQUIRED)
+                    .addField("lastUsed", Long::class.java)
+
+            // ForwardingFilter entity
+            realm.schema.create("ForwardingFilter")
+                    .addField("id", Long::class.java, FieldAttribute.PRIMARY_KEY, FieldAttribute.REQUIRED)
+                    .addField("name", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("enabled", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("priority", Int::class.java, FieldAttribute.REQUIRED)
+                    .addField("createdAt", Long::class.java, FieldAttribute.REQUIRED)
+                    .addField("updatedAt", Long::class.java, FieldAttribute.REQUIRED)
+                    .addField("senderFilter", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("senderMatchType", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("contentFilter", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("contentMatchType", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("isIncludeFilter", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("timeWindowEnabled", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("startTime", String::class.java)
+                    .addField("endTime", String::class.java)
+                    .addField("activeDays", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("simSlotFilter", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("destinationEmail", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("emailAccountId", Long::class.java, FieldAttribute.REQUIRED)
+                    .addField("emailSubjectTemplate", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("emailBodyTemplate", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("useHtmlTemplate", Boolean::class.java, FieldAttribute.REQUIRED)
+                    .addField("forwardedCount", Int::class.java, FieldAttribute.REQUIRED)
+                    .addField("lastTriggered", Long::class.java)
+
+            // ForwardingLog entity
+            realm.schema.create("ForwardingLog")
+                    .addField("id", Long::class.java, FieldAttribute.PRIMARY_KEY, FieldAttribute.REQUIRED)
+                    .addField("filterId", Long::class.java, FieldAttribute.INDEXED, FieldAttribute.REQUIRED)
+                    .addField("filterName", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("sender", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("messageBody", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("receivedAt", Long::class.java, FieldAttribute.INDEXED, FieldAttribute.REQUIRED)
+                    .addField("simSlot", Int::class.java, FieldAttribute.REQUIRED)
+                    .addField("destinationEmail", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("deliveryStatus", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("deliveryMethod", String::class.java, FieldAttribute.REQUIRED)
+                    .addField("errorMessage", String::class.java)
+                    .addField("sentAt", Long::class.java)
+                    .addField("retryCount", Int::class.java, FieldAttribute.REQUIRED)
 
             version++
         }

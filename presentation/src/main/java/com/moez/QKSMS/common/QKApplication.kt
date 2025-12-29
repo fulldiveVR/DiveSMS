@@ -32,6 +32,8 @@ import com.moez.QKSMS.manager.AnalyticsManager
 import com.moez.QKSMS.manager.ReferralManager
 import com.moez.QKSMS.migration.QkMigration
 import com.moez.QKSMS.migration.QkRealmMigration
+import com.moez.QKSMS.service.ForwardingWorkerHelper
+import com.moez.QKSMS.service.ForwardingWorkerHelperImplProvider
 import com.moez.QKSMS.util.NightModeManager
 import com.uber.rxdogtag.RxDogTag
 import com.uber.rxdogtag.autodispose.AutoDisposeConfigurer
@@ -78,11 +80,20 @@ class QKApplication : Application(), HasActivityInjector, HasBroadcastReceiverIn
     @Inject
     lateinit var referralManager: ReferralManager
 
+    @Inject
+    lateinit var forwardingWorkerHelper: ForwardingWorkerHelperImplProvider
+
     override fun onCreate() {
         super.onCreate()
 
+        // Initialize Timber for logging
+        Timber.plant(Timber.DebugTree())
+
         AppComponentManager.init(this)
         appComponent.inject(this)
+
+        // Initialize ForwardingWorkerHelper for email forwarding
+        ForwardingWorkerHelper.init(forwardingWorkerHelper)
 
         //  Multidex.install()
         Realm.init(this)

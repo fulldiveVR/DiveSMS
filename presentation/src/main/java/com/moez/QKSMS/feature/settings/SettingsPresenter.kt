@@ -28,6 +28,7 @@ import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.interactor.DeleteOldMessages
 import com.moez.QKSMS.interactor.SyncMessages
 import com.moez.QKSMS.manager.AnalyticsManager
+import com.moez.QKSMS.repository.ForwardingRepository
 import com.moez.QKSMS.repository.MessageRepository
 import com.moez.QKSMS.repository.SyncRepository
 import com.moez.QKSMS.service.AutoDeleteService
@@ -51,6 +52,7 @@ class SettingsPresenter @Inject constructor(
     private val context: Context,
     private val dateFormatter: DateFormatter,
     private val deleteOldMessages: DeleteOldMessages,
+    private val forwardingRepo: ForwardingRepository,
     private val messageRepo: MessageRepository,
     private val navigator: Navigator,
     private val nightModeManager: NightModeManager,
@@ -138,7 +140,22 @@ class SettingsPresenter @Inject constructor(
                 .distinctUntilChanged()
                 .subscribe { syncProgress -> newState { copy(syncProgress = syncProgress) } }
 
+        disposables += prefs.emailForwardingEnabled.asObservable()
+                .subscribe { enabled -> newState { copy(forwardingEnabled = enabled) } }
+
+        disposables += prefs.emailForwardingAddress.asObservable()
+                .subscribe { email -> newState { copy(forwardingEmail = email) } }
+
+        // Update forwarding account name from repository
+        updateForwardingAccountState()
+
         disposables += syncMessages
+    }
+
+    private fun updateForwardingAccountState() {
+        val account = forwardingRepo.getDefaultEmailAccount()
+        val accountName = account?.email ?: ""
+        newState { copy(forwardingAccountName = accountName) }
     }
 
     override fun bindIntents(view: SettingsView) {
@@ -200,6 +217,21 @@ class SettingsPresenter @Inject constructor(
                         R.id.sync -> syncMessages.execute(Unit)
 
                         R.id.about -> view.showAbout()
+
+                        R.id.forwardingEnabled -> prefs.emailForwardingEnabled.set(!prefs.emailForwardingEnabled.get())
+
+                        R.id.forwardingEmail -> view.showForwardingEmailDialog(prefs.emailForwardingAddress.get())
+
+                        R.id.forwardingAccount -> {
+                            val account = forwardingRepo.getDefaultEmailAccount()
+                            if (account != null && account.email.isNotBlank()) {
+                                // Already signed in, show sign-out option
+                                view.showGmailSignOutDialog()
+                            } else {
+                                // Not signed in, start sign-in flow
+                                view.requestGmailSignIn()
+                            }
+                        }
                     }
                 }
 
@@ -277,6 +309,37 @@ class SettingsPresenter @Inject constructor(
         view.mmsSizeSelected()
                 .autoDispose(view.scope())
                 .subscribe(prefs.mmsSize::set)
+
+        view.forwardingEmailChanged()
+                .doOnNext(prefs.emailForwardingAddress::set)
+                .autoDispose(view.scope())
+                .subscribe()
+    }
+
+    fun onGmailSignInResult(email: String?) {
+        Timber.i("SettingsPresenter: onGmailSignInResult called with email=$email")
+        if (email != null) {
+            // Save the Gmail account
+            Timber.i("SettingsPresenter: Saving Gmail account to Realm...")
+            val accountId = forwardingRepo.saveEmailAccount(
+                accountType = "GMAIL",
+                email = email,
+                gmailAccountName = email,
+                isDefault = true
+            )
+            Timber.i("SettingsPresenter: saveEmailAccount returned id=$accountId")
+            updateForwardingAccountState()
+        } else {
+            Timber.w("SettingsPresenter: Gmail sign-in returned null email")
+        }
+    }
+
+    fun onGmailSignOut() {
+        val account = forwardingRepo.getDefaultEmailAccount()
+        if (account != null) {
+            forwardingRepo.deleteEmailAccount(account.id)
+        }
+        updateForwardingAccountState()
     }
 
 }

@@ -69,6 +69,8 @@ import com.moez.QKSMS.mapper.CursorToPartImpl
 import com.moez.QKSMS.mapper.CursorToRecipient
 import com.moez.QKSMS.mapper.CursorToRecipientImpl
 import com.moez.QKSMS.mapper.RatingManagerImpl
+import com.moez.QKSMS.email.EmailService
+import com.moez.QKSMS.email.EmailServiceImpl
 import com.moez.QKSMS.repository.BackupRepository
 import com.moez.QKSMS.repository.BackupRepositoryImpl
 import com.moez.QKSMS.repository.BlockingRepository
@@ -77,6 +79,8 @@ import com.moez.QKSMS.repository.ContactRepository
 import com.moez.QKSMS.repository.ContactRepositoryImpl
 import com.moez.QKSMS.repository.ConversationRepository
 import com.moez.QKSMS.repository.ConversationRepositoryImpl
+import com.moez.QKSMS.repository.ForwardingRepository
+import com.moez.QKSMS.repository.ForwardingRepositoryImpl
 import com.moez.QKSMS.repository.MessageRepository
 import com.moez.QKSMS.repository.MessageRepositoryImpl
 import com.moez.QKSMS.repository.ScheduledMessageRepository
@@ -202,6 +206,9 @@ class AppModule(private var application: Application) {
     fun provideConversationRepository(repository: ConversationRepositoryImpl): ConversationRepository = repository
 
     @Provides
+    fun provideForwardingRepository(repository: ForwardingRepositoryImpl): ForwardingRepository = repository
+
+    @Provides
     fun provideMessageRepository(repository: MessageRepositoryImpl): MessageRepository = repository
 
     @Provides
@@ -209,5 +216,11 @@ class AppModule(private var application: Application) {
 
     @Provides
     fun provideSyncRepository(repository: SyncRepositoryImpl): SyncRepository = repository
+
+    // Email
+
+    @Provides
+    fun provideEmailService(service: EmailServiceImpl): EmailService = service
+
 
 }

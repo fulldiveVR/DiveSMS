@@ -40,7 +40,8 @@ class ReceiveSms @Inject constructor(
     private val messageRepo: MessageRepository,
     private val notificationManager: NotificationManager,
     private val updateBadge: UpdateBadge,
-    private val shortcutManager: ShortcutManager
+    private val shortcutManager: ShortcutManager,
+    private val forwardSms: ForwardSms
 ) : Interactor<ReceiveSms.Params>() {
 
     class Params(val subId: Int, val messages: Array<SmsMessage>)
@@ -81,6 +82,20 @@ class ReceiveSms @Inject constructor(
                     message
                 }
                 .doOnNext { message ->
+                    // Trigger email forwarding (async, doesn't block SMS flow)
+                    Timber.i("ReceiveSms: Triggering email forwarding for SMS from ${message.address}")
+                    try {
+                        forwardSms.execute(ForwardSms.Params(
+                            sender = message.address,
+                            body = message.body,
+                            timestamp = message.date,
+                            simSlot = message.subId
+                        ))
+                        Timber.i("ReceiveSms: ForwardSms.execute() called successfully")
+                    } catch (e: Exception) {
+                        Timber.e(e, "ReceiveSms: Error triggering email forwarding")
+                    }
+
                     conversationRepo.updateConversations(message.threadId) // Update the conversation
                 }
                 .mapNotNull { message ->

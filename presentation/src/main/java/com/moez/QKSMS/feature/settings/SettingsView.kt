@@ -36,6 +36,7 @@ interface SettingsView : QkViewContract<SettingsState> {
     fun signatureChanged(): Observable<String>
     fun autoDeleteChanged(): Observable<Int>
     fun mmsSizeSelected(): Observable<Int>
+    fun forwardingEmailChanged(): Observable<String>
 
     fun showQksmsPlusSnackbar()
     fun showNightModeDialog()
@@ -50,4 +51,7 @@ interface SettingsView : QkViewContract<SettingsState> {
     fun showSwipeActions()
     fun showThemePicker()
     fun showAbout()
+    fun showForwardingEmailDialog(email: String)
+    fun requestGmailSignIn()
+    fun showGmailSignOutDialog()
 }
