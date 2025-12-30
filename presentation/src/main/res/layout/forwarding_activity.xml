@@ -60,6 +60,55 @@
                 app:title="@string/settings_forwarding_account_title"
                 app:summary="@string/settings_forwarding_account_summary_none" />
 
+            <!-- Telegram Section -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="?android:attr/divider" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="72dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/forwarding_telegram_header"
+                android:textColor="?android:attr/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/telegramEnabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_send_black_24dp"
+                app:summary="@string/forwarding_telegram_enabled_summary"
+                app:title="@string/forwarding_telegram_enabled_title"
+                app:widget="@layout/settings_switch_widget" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/telegramChatId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/forwarding_telegram_chat_id_title"
+                app:summary="@string/forwarding_telegram_chat_id_summary" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/telegramTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/forwarding_telegram_test_title"
+                app:summary="@string/forwarding_telegram_test_summary" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/telegramHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/forwarding_telegram_help_title"
+                app:summary="@string/forwarding_telegram_help_summary" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

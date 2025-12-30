@@ -136,6 +136,30 @@
     <string name="backup_notification_channel_name">Backup and restore</string>
     <string name="scheduled_title">Scheduled</string>
     <string name="forwarding_title">Forwarding</string>
+
+    <!-- Telegram Forwarding -->
+    <string name="forwarding_telegram_header">Telegram</string>
+    <string name="forwarding_telegram_enabled_title">Forward to Telegram</string>
+    <string name="forwarding_telegram_enabled_summary">Send incoming SMS to your Telegram</string>
+    <string name="forwarding_telegram_chat_id_title">Telegram Chat ID</string>
+    <string name="forwarding_telegram_chat_id_summary">Tap to enter your Chat ID</string>
+    <string name="forwarding_telegram_chat_id_summary_set">Chat ID: %s</string>
+    <string name="forwarding_telegram_test_title">Send Test Message</string>
+    <string name="forwarding_telegram_test_summary">Verify your Telegram setup works</string>
+    <string name="forwarding_telegram_help_title">How to get Chat ID</string>
+    <string name="forwarding_telegram_help_summary">Step 1: Open @WizeSMSForwardBot\nStep 2: Tap START\nStep 3: Copy your Chat ID</string>
+    <string name="forwarding_telegram_chat_id_dialog_title">Enter Chat ID</string>
+    <string name="forwarding_telegram_test_success">Test message sent! Check Telegram</string>
+    <string name="forwarding_telegram_test_failed">Failed to send test message</string>
+    <string name="forwarding_telegram_no_chat_id">Please enter your Chat ID first</string>
+    <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+    <!-- Instructions for getting Chat ID (localizable) -->
+    <string name="forwarding_telegram_instruction_step1">1. Open Telegram</string>
+    <string name="forwarding_telegram_instruction_step2">2. Search for @WizeSMSForwardBot</string>
+    <string name="forwarding_telegram_instruction_step3">3. Tap START button</string>
+    <string name="forwarding_telegram_instruction_step4">4. Copy the Chat ID number</string>
+    <string name="forwarding_telegram_instruction_step5">5. Paste it here</string>
+
     <string name="scheduled_empty_description">Automatically send a message, at the exact moment you\'d like</string>
     <string name="scheduled_empty_message_1">Hey! When was your birthday again?</string>
     <string name="scheduled_empty_message_2">It\'s on December 23rd</string>

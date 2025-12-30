@@ -17,13 +17,28 @@
  * along with QKSMS.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.moez.QKSMS.feature.forwarding
+package com.moez.QKSMS.telegram
 
-data class ForwardingState(
-    val forwardingEnabled: Boolean = false,
-    val forwardingEmail: String = "",
-    val forwardingAccountName: String = "",
-    // Telegram
-    val telegramEnabled: Boolean = false,
-    val telegramChatId: String = ""
-)
+import io.reactivex.Single
+
+/**
+ * Interface for sending messages to Telegram.
+ */
+interface TelegramService {
+
+    /**
+     * Send an SMS to Telegram via Cloud Function.
+     */
+    fun sendSms(
+        chatId: String,
+        senderName: String,
+        senderNumber: String,
+        messageBody: String,
+        timestamp: Long
+    ): Single<Boolean>
+
+    /**
+     * Send a test message to verify the setup.
+     */
+    fun sendTestMessage(chatId: String): Single<Boolean>
+}

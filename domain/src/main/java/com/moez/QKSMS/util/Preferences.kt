@@ -248,4 +248,14 @@ class Preferences @Inject constructor(
      * Maximum retry attempts for failed email sends.
      */
     val emailForwardingMaxRetries = rxPrefs.getInteger("emailForwardingMaxRetries", 3)
+
+    /**
+     * Whether Telegram forwarding is enabled.
+     */
+    val telegramForwardingEnabled = rxPrefs.getBoolean("telegramForwardingEnabled", false)
+
+    /**
+     * Telegram chat ID for forwarding messages.
+     */
+    val telegramChatId = rxPrefs.getString("telegramChatId", "")
 }

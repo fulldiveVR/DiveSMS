@@ -23,6 +23,7 @@ package com.moez.QKSMS.interactor
 import com.moez.QKSMS.email.EmailService
 import com.moez.QKSMS.repository.ContactRepository
 import com.moez.QKSMS.repository.ForwardingRepository
+import com.moez.QKSMS.telegram.TelegramService
 import com.moez.QKSMS.util.Preferences
 import io.reactivex.Flowable
 import kotlinx.coroutines.runBlocking
@@ -33,14 +34,15 @@ import java.util.Locale
 import javax.inject.Inject
 
 /**
- * Interactor for forwarding ALL SMS messages to email.
- * Simple mode: forwards every incoming SMS to the configured email address.
+ * Interactor for forwarding ALL SMS messages to email and/or Telegram.
+ * Forwards every incoming SMS to configured destinations.
  */
 class ForwardSms @Inject constructor(
     private val prefs: Preferences,
     private val contactRepo: ContactRepository,
     private val forwardingRepo: ForwardingRepository,
-    private val emailService: EmailService
+    private val emailService: EmailService,
+    private val telegramService: TelegramService
 ) : Interactor<ForwardSms.Params>() {
 
     /**
@@ -60,12 +62,16 @@ class ForwardSms @Inject constructor(
             .doOnSubscribe {
                 Timber.i("ForwardSms: Observable subscribed")
             }
+            .doOnNext { p ->
+                // Forward to Telegram if enabled
+                forwardToTelegram(p)
+            }
             .filter {
-                // Check if forwarding is enabled
+                // Check if email forwarding is enabled
                 val enabled = prefs.emailForwardingEnabled.get()
-                Timber.i("ForwardSms: Forwarding enabled = $enabled")
+                Timber.i("ForwardSms: Email forwarding enabled = $enabled")
                 if (!enabled) {
-                    Timber.w("ForwardSms: Forwarding is disabled, skipping")
+                    Timber.d("ForwardSms: Email forwarding is disabled, skipping email")
                 }
                 enabled
             }
@@ -74,7 +80,7 @@ class ForwardSms @Inject constructor(
                 val destination = prefs.emailForwardingAddress.get()
                 Timber.i("ForwardSms: Destination email = '$destination'")
                 if (destination.isBlank()) {
-                    Timber.w("ForwardSms: No destination email configured, skipping")
+                    Timber.d("ForwardSms: No destination email configured, skipping email")
                 }
                 destination.isNotBlank()
             }
@@ -199,6 +205,46 @@ Sent via Wize SMS
         } catch (e: Exception) {
             Timber.w(e, "ForwardSms: Error getting contact name")
             null
+        }
+    }
+
+    /**
+     * Forward SMS to Telegram if enabled.
+     */
+    private fun forwardToTelegram(params: Params) {
+        val telegramEnabled = prefs.telegramForwardingEnabled.get()
+        val chatId = prefs.telegramChatId.get()
+
+        Timber.i("ForwardSms: Telegram enabled = $telegramEnabled, chatId = '$chatId'")
+
+        if (!telegramEnabled) {
+            Timber.d("ForwardSms: Telegram forwarding disabled, skipping")
+            return
+        }
+
+        if (chatId.isBlank()) {
+            Timber.w("ForwardSms: No Telegram chat ID configured, skipping")
+            return
+        }
+
+        val contactName = getContactName(params.sender) ?: params.sender
+
+        try {
+            val result = telegramService.sendSms(
+                chatId = chatId,
+                senderName = contactName,
+                senderNumber = params.sender,
+                messageBody = params.body,
+                timestamp = params.timestamp
+            ).blockingGet()
+
+            if (result) {
+                Timber.i("ForwardSms: SMS forwarded to Telegram successfully")
+            } else {
+                Timber.e("ForwardSms: Failed to forward SMS to Telegram")
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "ForwardSms: Error forwarding SMS to Telegram")
         }
     }
 }

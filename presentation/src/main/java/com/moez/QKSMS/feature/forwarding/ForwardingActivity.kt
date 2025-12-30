@@ -22,6 +22,7 @@ package com.moez.QKSMS.feature.forwarding
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
@@ -52,15 +53,27 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
     private lateinit var binding: ForwardingActivityBinding
 
     private val forwardingEmailSubject: Subject<String> = PublishSubject.create()
+    private val telegramChatIdSubject: Subject<String> = PublishSubject.create()
 
     private val forwardingEmailDialog: TextInputDialog by lazy {
         TextInputDialog(this, getString(R.string.settings_forwarding_email_title), forwardingEmailSubject::onNext)
+    }
+
+    private val telegramChatIdDialog: TextInputDialog by lazy {
+        TextInputDialog(this, getString(R.string.forwarding_telegram_chat_id_dialog_title), telegramChatIdSubject::onNext)
     }
 
     override val forwardingEnabledIntent by lazy { binding.forwardingEnabled.clicks() }
     override val forwardingEmailIntent by lazy { binding.forwardingEmail.clicks() }
     override val forwardingEmailChangedIntent: Observable<String> = forwardingEmailSubject
     override val forwardingAccountIntent by lazy { binding.forwardingAccount.clicks() }
+
+    // Telegram
+    override val telegramEnabledIntent by lazy { binding.telegramEnabled.clicks() }
+    override val telegramChatIdIntent by lazy { binding.telegramChatId.clicks() }
+    override val telegramChatIdChangedIntent: Observable<String> = telegramChatIdSubject
+    override val telegramTestIntent by lazy { binding.telegramTest.clicks() }
+    override val telegramHelpIntent by lazy { binding.telegramHelp.clicks() }
 
     private val viewModel by lazy { ViewModelProviders.of(this, viewModelFactory)[ForwardingViewModel::class.java] }
 
@@ -90,6 +103,12 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
             state.forwardingAccountName.isNotBlank() -> getString(R.string.settings_forwarding_account_summary, state.forwardingAccountName)
             else -> getString(R.string.settings_forwarding_account_summary_none)
         }
+
+        // Telegram
+        binding.telegramEnabled.findViewById<QkSwitch>(R.id.checkbox).isChecked = state.telegramEnabled
+        binding.telegramChatId.summary = state.telegramChatId.takeIf { it.isNotBlank() }
+            ?.let { getString(R.string.forwarding_telegram_chat_id_summary_set, it) }
+            ?: getString(R.string.forwarding_telegram_chat_id_summary)
     }
 
     override fun showForwardingEmailDialog(email: String) {
@@ -125,6 +144,22 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
             if (email != null) {
                 makeToast(R.string.settings_forwarding_signed_in)
             }
+        }
+    }
+
+    override fun showTelegramChatIdDialog(chatId: String) {
+        telegramChatIdDialog.setText(chatId).show()
+    }
+
+    override fun openTelegramBot() {
+        try {
+            // Try to open in Telegram app
+            val telegramIntent = Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=WizeSMSForwardBot"))
+            startActivity(telegramIntent)
+        } catch (e: Exception) {
+            // Fall back to web browser
+            val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/WizeSMSForwardBot"))
+            startActivity(webIntent)
         }
     }
 }

@@ -19,18 +19,24 @@
 
 package com.moez.QKSMS.feature.forwarding
 
+import android.content.Context
 import com.moez.QKSMS.common.base.QkViewModel
+import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.repository.ForwardingRepository
+import com.moez.QKSMS.telegram.TelegramService
 import com.moez.QKSMS.util.Preferences
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDispose
 import io.reactivex.rxkotlin.plusAssign
+import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
 import javax.inject.Inject
 
 class ForwardingViewModel @Inject constructor(
+    private val context: Context,
     private val forwardingRepo: ForwardingRepository,
-    private val prefs: Preferences
+    private val prefs: Preferences,
+    private val telegramService: TelegramService
 ) : QkViewModel<ForwardingView, ForwardingState>(ForwardingState()) {
 
     init {
@@ -39,6 +45,13 @@ class ForwardingViewModel @Inject constructor(
 
         disposables += prefs.emailForwardingAddress.asObservable()
             .subscribe { email -> newState { copy(forwardingEmail = email) } }
+
+        // Telegram
+        disposables += prefs.telegramForwardingEnabled.asObservable()
+            .subscribe { enabled -> newState { copy(telegramEnabled = enabled) } }
+
+        disposables += prefs.telegramChatId.asObservable()
+            .subscribe { chatId -> newState { copy(telegramChatId = chatId) } }
 
         updateForwardingAccountState()
     }
@@ -75,6 +88,52 @@ class ForwardingViewModel @Inject constructor(
                     view.requestGmailSignIn()
                 }
             }
+
+        // Telegram bindings
+        view.telegramEnabledIntent
+            .autoDispose(view.scope())
+            .subscribe { prefs.telegramForwardingEnabled.set(!prefs.telegramForwardingEnabled.get()) }
+
+        view.telegramChatIdIntent
+            .autoDispose(view.scope())
+            .subscribe { view.showTelegramChatIdDialog(prefs.telegramChatId.get()) }
+
+        view.telegramChatIdChangedIntent
+            .doOnNext(prefs.telegramChatId::set)
+            .autoDispose(view.scope())
+            .subscribe()
+
+        view.telegramTestIntent
+            .autoDispose(view.scope())
+            .subscribe { sendTestTelegramMessage(view) }
+
+        view.telegramHelpIntent
+            .autoDispose(view.scope())
+            .subscribe { view.openTelegramBot() }
+    }
+
+    private fun sendTestTelegramMessage(view: ForwardingView) {
+        val chatId = prefs.telegramChatId.get()
+        if (chatId.isBlank()) {
+            context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_telegram_no_chat_id)
+            return
+        }
+
+        disposables += telegramService.sendTestMessage(chatId)
+            .subscribeOn(Schedulers.io())
+            .subscribe(
+                { success ->
+                    if (success) {
+                        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_telegram_test_success)
+                    } else {
+                        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_telegram_test_failed)
+                    }
+                },
+                { error ->
+                    Timber.e(error, "Failed to send test Telegram message")
+                    context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_telegram_test_failed)
+                }
+            )
     }
 
     fun onGmailSignInResult(email: String?) {

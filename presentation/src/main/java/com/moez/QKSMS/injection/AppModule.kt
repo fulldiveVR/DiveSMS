@@ -222,5 +222,9 @@ class AppModule(private var application: Application) {
     @Provides
     fun provideEmailService(service: EmailServiceImpl): EmailService = service
 
+    // Telegram
+
+    @Provides
+    fun provideTelegramService(service: com.moez.QKSMS.telegram.TelegramServiceImpl): com.moez.QKSMS.telegram.TelegramService = service
 
 }
