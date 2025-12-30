@@ -321,6 +321,22 @@
   <string name="widget_loading">กำลังโหลด…</string>
   <string name="widget_more">ดูการสนทนาเพิ่มเติม</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">ส่งต่อไปยังอีเมล</string>
+  <string name="forwarding_email_enabled_summary">ส่ง SMS ที่ได้รับไปยังอีเมล</string>
+  <string name="forwarding_email_address_title">อีเมลปลายทาง</string>
+  <string name="forwarding_email_address_summary">แตะเพื่อป้อนอีเมล</string>
+  <string name="forwarding_email_address_summary_set">อีเมล: %s</string>
+  <string name="forwarding_email_account_title">บัญชี Gmail</string>
+  <string name="forwarding_email_account_summary_none">แตะเพื่อลงชื่อเข้าใช้ Gmail</string>
+  <string name="forwarding_email_account_summary_set">ลงชื่อเข้าใช้เป็น %s</string>
+  <string name="forwarding_email_signed_in">เชื่อมต่อบัญชี Gmail แล้ว</string>
+  <string name="forwarding_email_signed_out">ยกเลิกการเชื่อมต่อบัญชี Gmail</string>
+  <string name="forwarding_email_signout_message">คุณต้องการยกเลิกการเชื่อมต่อบัญชี Gmail นี้หรือไม่?</string>
+  <string name="forwarding_email_signout_button">ยกเลิกการเชื่อมต่อ</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">ส่งต่อไปยัง Telegram</string>

@@ -321,6 +321,22 @@
   <string name="widget_loading">Завантаження…</string>
   <string name="widget_more">Переглянути більше розмов</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">Пересилати на Email</string>
+  <string name="forwarding_email_enabled_summary">Надсилати вхідні SMS на пошту</string>
+  <string name="forwarding_email_address_title">Email отримувача</string>
+  <string name="forwarding_email_address_summary">Натисніть, щоб ввести email</string>
+  <string name="forwarding_email_address_summary_set">Email: %s</string>
+  <string name="forwarding_email_account_title">Акаунт Gmail</string>
+  <string name="forwarding_email_account_summary_none">Натисніть, щоб увійти в Gmail</string>
+  <string name="forwarding_email_account_summary_set">Увійшли як %s</string>
+  <string name="forwarding_email_signed_in">Акаунт Gmail підключено</string>
+  <string name="forwarding_email_signed_out">Акаунт Gmail відключено</string>
+  <string name="forwarding_email_signout_message">Ви хочете відключити цей акаунт Gmail?</string>
+  <string name="forwarding_email_signout_button">Відключити</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Пересилати в Telegram</string>

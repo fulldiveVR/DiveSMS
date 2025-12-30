@@ -321,6 +321,22 @@
   <string name="widget_loading">読み込み中…</string>
   <string name="widget_more">会話をもっと見る</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">メールに転送</string>
+  <string name="forwarding_email_enabled_summary">受信SMSをメールに送信</string>
+  <string name="forwarding_email_address_title">送信先メール</string>
+  <string name="forwarding_email_address_summary">タップしてメールを入力</string>
+  <string name="forwarding_email_address_summary_set">メール: %s</string>
+  <string name="forwarding_email_account_title">Gmailアカウント</string>
+  <string name="forwarding_email_account_summary_none">タップしてGmailにサインイン</string>
+  <string name="forwarding_email_account_summary_set">%sでサインイン中</string>
+  <string name="forwarding_email_signed_in">Gmailアカウント接続済み</string>
+  <string name="forwarding_email_signed_out">Gmailアカウント切断済み</string>
+  <string name="forwarding_email_signout_message">このGmailアカウントを切断しますか？</string>
+  <string name="forwarding_email_signout_button">切断</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Telegramに転送</string>

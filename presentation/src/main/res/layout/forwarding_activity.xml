@@ -37,28 +37,40 @@
             android:paddingTop="8dp"
             android:paddingBottom="8dp">
 
+            <!-- Email Section -->
+            <com.moez.QKSMS.common.widget.QkTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="72dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/forwarding_email_header"
+                android:textColor="?android:attr/colorAccent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
             <com.moez.QKSMS.common.widget.PreferenceView
                 android:id="@+id/forwardingEnabled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_send_black_24dp"
-                app:summary="@string/settings_forwarding_enabled_summary"
-                app:title="@string/settings_forwarding_enabled_title"
+                app:summary="@string/forwarding_email_enabled_summary"
+                app:title="@string/forwarding_email_enabled_title"
                 app:widget="@layout/settings_switch_widget" />
 
             <com.moez.QKSMS.common.widget.PreferenceView
                 android:id="@+id/forwardingEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:title="@string/settings_forwarding_email_title"
-                tools:summary="user@example.com" />
+                app:title="@string/forwarding_email_address_title"
+                app:summary="@string/forwarding_email_address_summary" />
 
             <com.moez.QKSMS.common.widget.PreferenceView
                 android:id="@+id/forwardingAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:title="@string/settings_forwarding_account_title"
-                app:summary="@string/settings_forwarding_account_summary_none" />
+                app:title="@string/forwarding_email_account_title"
+                app:summary="@string/forwarding_email_account_summary_none" />
 
             <!-- Telegram Section -->
             <View

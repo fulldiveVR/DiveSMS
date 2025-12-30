@@ -321,6 +321,22 @@
   <string name="widget_loading">Yükleniyor…</string>
   <string name="widget_more">Daha fazla sohbeti görüntüle</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">E-postaya ilet</string>
+  <string name="forwarding_email_enabled_summary">Gelen SMS\'leri e-postaya gönder</string>
+  <string name="forwarding_email_address_title">Hedef E-posta</string>
+  <string name="forwarding_email_address_summary">E-posta girmek için dokunun</string>
+  <string name="forwarding_email_address_summary_set">E-posta: %s</string>
+  <string name="forwarding_email_account_title">Gmail Hesabı</string>
+  <string name="forwarding_email_account_summary_none">Gmail\'e giriş yapmak için dokunun</string>
+  <string name="forwarding_email_account_summary_set">%s olarak giriş yapıldı</string>
+  <string name="forwarding_email_signed_in">Gmail hesabı bağlandı</string>
+  <string name="forwarding_email_signed_out">Gmail hesabı bağlantısı kesildi</string>
+  <string name="forwarding_email_signout_message">Bu Gmail hesabının bağlantısını kesmek istiyor musunuz?</string>
+  <string name="forwarding_email_signout_button">Bağlantıyı kes</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Telegram\'a ilet</string>

@@ -321,6 +321,22 @@
   <string name="widget_loading">লোড হচ্ছে…</string>
   <string name="widget_more">আরও কথোপকথন দেখুন</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">ইমেইলে ফরোয়ার্ড করুন</string>
+  <string name="forwarding_email_enabled_summary">ইনকামিং এসএমএস ইমেইলে পাঠান</string>
+  <string name="forwarding_email_address_title">গন্তব্য ইমেইল</string>
+  <string name="forwarding_email_address_summary">ইমেইল লিখতে ট্যাপ করুন</string>
+  <string name="forwarding_email_address_summary_set">ইমেইল: %s</string>
+  <string name="forwarding_email_account_title">Gmail অ্যাকাউন্ট</string>
+  <string name="forwarding_email_account_summary_none">Gmail এ সাইন ইন করতে ট্যাপ করুন</string>
+  <string name="forwarding_email_account_summary_set">%s হিসাবে সাইন ইন করা হয়েছে</string>
+  <string name="forwarding_email_signed_in">Gmail অ্যাকাউন্ট সংযুক্ত</string>
+  <string name="forwarding_email_signed_out">Gmail অ্যাকাউন্ট সংযোগ বিচ্ছিন্ন</string>
+  <string name="forwarding_email_signout_message">আপনি কি এই Gmail অ্যাকাউন্ট সংযোগ বিচ্ছিন্ন করতে চান?</string>
+  <string name="forwarding_email_signout_button">সংযোগ বিচ্ছিন্ন করুন</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">টেলিগ্রাম</string>
   <string name="forwarding_telegram_enabled_title">টেলিগ্রামে ফরোয়ার্ড করুন</string>

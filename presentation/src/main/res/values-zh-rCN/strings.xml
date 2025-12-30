@@ -321,6 +321,22 @@
   <string name="widget_loading">加载中…</string>
   <string name="widget_more">查看更多对话</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">转发到邮箱</string>
+  <string name="forwarding_email_enabled_summary">将收到的短信发送到邮箱</string>
+  <string name="forwarding_email_address_title">目标邮箱</string>
+  <string name="forwarding_email_address_summary">点击输入邮箱</string>
+  <string name="forwarding_email_address_summary_set">邮箱: %s</string>
+  <string name="forwarding_email_account_title">Gmail账户</string>
+  <string name="forwarding_email_account_summary_none">点击登录Gmail</string>
+  <string name="forwarding_email_account_summary_set">已登录 %s</string>
+  <string name="forwarding_email_signed_in">Gmail账户已连接</string>
+  <string name="forwarding_email_signed_out">Gmail账户已断开</string>
+  <string name="forwarding_email_signout_message">您要断开此Gmail账户吗？</string>
+  <string name="forwarding_email_signout_button">断开</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">转发到Telegram</string>

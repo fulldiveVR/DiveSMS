@@ -321,6 +321,22 @@
   <string name="widget_loading">Đang tải…</string>
   <string name="widget_more">Xem thêm cuộc trò chuyện</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">Chuyển tiếp đến Email</string>
+  <string name="forwarding_email_enabled_summary">Gửi SMS đến tới email của bạn</string>
+  <string name="forwarding_email_address_title">Email đích</string>
+  <string name="forwarding_email_address_summary">Nhấn để nhập email</string>
+  <string name="forwarding_email_address_summary_set">Email: %s</string>
+  <string name="forwarding_email_account_title">Tài khoản Gmail</string>
+  <string name="forwarding_email_account_summary_none">Nhấn để đăng nhập Gmail</string>
+  <string name="forwarding_email_account_summary_set">Đăng nhập với %s</string>
+  <string name="forwarding_email_signed_in">Đã kết nối tài khoản Gmail</string>
+  <string name="forwarding_email_signed_out">Đã ngắt kết nối tài khoản Gmail</string>
+  <string name="forwarding_email_signout_message">Bạn có muốn ngắt kết nối tài khoản Gmail này?</string>
+  <string name="forwarding_email_signout_button">Ngắt kết nối</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Chuyển tiếp đến Telegram</string>

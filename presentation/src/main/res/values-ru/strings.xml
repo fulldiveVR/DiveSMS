@@ -321,6 +321,22 @@
   <string name="widget_loading">Загрузка…</string>
   <string name="widget_more">Просмотреть больше бесед</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">Пересылка на Email</string>
+  <string name="forwarding_email_enabled_summary">Отправлять входящие SMS на почту</string>
+  <string name="forwarding_email_address_title">Email получателя</string>
+  <string name="forwarding_email_address_summary">Нажмите, чтобы ввести email</string>
+  <string name="forwarding_email_address_summary_set">Email: %s</string>
+  <string name="forwarding_email_account_title">Аккаунт Gmail</string>
+  <string name="forwarding_email_account_summary_none">Нажмите, чтобы войти в Gmail</string>
+  <string name="forwarding_email_account_summary_set">Вход выполнен как %s</string>
+  <string name="forwarding_email_signed_in">Аккаунт Gmail подключен</string>
+  <string name="forwarding_email_signed_out">Аккаунт Gmail отключен</string>
+  <string name="forwarding_email_signout_message">Вы хотите отключить этот аккаунт Gmail?</string>
+  <string name="forwarding_email_signout_button">Отключить</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Пересылка в Telegram</string>

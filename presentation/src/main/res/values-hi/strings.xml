@@ -321,6 +321,22 @@
   <string name="widget_loading">लोड हो रहा है…</string>
   <string name="widget_more">और वार्तालाप देखें</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">ईमेल पर फॉरवर्ड करें</string>
+  <string name="forwarding_email_enabled_summary">आने वाले SMS को ईमेल पर भेजें</string>
+  <string name="forwarding_email_address_title">गंतव्य ईमेल</string>
+  <string name="forwarding_email_address_summary">ईमेल दर्ज करने के लिए टैप करें</string>
+  <string name="forwarding_email_address_summary_set">ईमेल: %s</string>
+  <string name="forwarding_email_account_title">Gmail खाता</string>
+  <string name="forwarding_email_account_summary_none">Gmail में साइन इन करने के लिए टैप करें</string>
+  <string name="forwarding_email_account_summary_set">%s के रूप में साइन इन</string>
+  <string name="forwarding_email_signed_in">Gmail खाता कनेक्ट किया गया</string>
+  <string name="forwarding_email_signed_out">Gmail खाता डिस्कनेक्ट किया गया</string>
+  <string name="forwarding_email_signout_message">क्या आप इस Gmail खाते को डिस्कनेक्ट करना चाहते हैं?</string>
+  <string name="forwarding_email_signout_button">डिस्कनेक्ट करें</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">टेलीग्राम</string>
   <string name="forwarding_telegram_enabled_title">टेलीग्राम पर फॉरवर्ड करें</string>

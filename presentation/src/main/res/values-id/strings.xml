@@ -321,6 +321,22 @@
   <string name="widget_loading">Memuat…</string>
   <string name="widget_more">Lihat lebih banyak percakapan</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">Teruskan ke Email</string>
+  <string name="forwarding_email_enabled_summary">Kirim SMS masuk ke email Anda</string>
+  <string name="forwarding_email_address_title">Email Tujuan</string>
+  <string name="forwarding_email_address_summary">Ketuk untuk memasukkan email</string>
+  <string name="forwarding_email_address_summary_set">Email: %s</string>
+  <string name="forwarding_email_account_title">Akun Gmail</string>
+  <string name="forwarding_email_account_summary_none">Ketuk untuk masuk ke Gmail</string>
+  <string name="forwarding_email_account_summary_set">Masuk sebagai %s</string>
+  <string name="forwarding_email_signed_in">Akun Gmail terhubung</string>
+  <string name="forwarding_email_signed_out">Akun Gmail terputus</string>
+  <string name="forwarding_email_signout_message">Apakah Anda ingin memutuskan akun Gmail ini?</string>
+  <string name="forwarding_email_signout_button">Putuskan</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Teruskan ke Telegram</string>

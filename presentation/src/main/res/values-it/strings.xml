@@ -321,6 +321,22 @@
   <string name="widget_loading">Caricamento…</string>
   <string name="widget_more">Vedi altre conversazioni</string>
 
+  <!-- Email Forwarding -->
+  <string name="forwarding_email_header">Gmail</string>
+  <string name="forwarding_email_enabled_title">Inoltra a Email</string>
+  <string name="forwarding_email_enabled_summary">Invia SMS in arrivo alla tua email</string>
+  <string name="forwarding_email_address_title">Email di destinazione</string>
+  <string name="forwarding_email_address_summary">Tocca per inserire l\'email</string>
+  <string name="forwarding_email_address_summary_set">Email: %s</string>
+  <string name="forwarding_email_account_title">Account Gmail</string>
+  <string name="forwarding_email_account_summary_none">Tocca per accedere a Gmail</string>
+  <string name="forwarding_email_account_summary_set">Connesso come %s</string>
+  <string name="forwarding_email_signed_in">Account Gmail connesso</string>
+  <string name="forwarding_email_signed_out">Account Gmail disconnesso</string>
+  <string name="forwarding_email_signout_message">Vuoi disconnettere questo account Gmail?</string>
+  <string name="forwarding_email_signout_button">Disconnetti</string>
+  <string name="forwarding_email_hint">example@gmail.com</string>
+
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
   <string name="forwarding_telegram_enabled_title">Inoltra a Telegram</string>
