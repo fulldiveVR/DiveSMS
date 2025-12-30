@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Anda harus membuka Wize SMS+ untuk menggunakannya</string>
   <string name="widget_loading">Memuat…</string>
   <string name="widget_more">Lihat lebih banyak percakapan</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Teruskan ke Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Kirim SMS masuk ke Telegram Anda</string>
+  <string name="forwarding_telegram_chat_id_title">ID Chat Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Ketuk untuk memasukkan ID Chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID Chat: %s</string>
+  <string name="forwarding_telegram_test_title">Kirim pesan tes</string>
+  <string name="forwarding_telegram_test_summary">Verifikasi pengaturan Telegram berfungsi</string>
+  <string name="forwarding_telegram_help_title">Cara mendapatkan ID Chat</string>
+  <string name="forwarding_telegram_help_summary">Langkah 1: Buka @WizeSMSForwardBot\nLangkah 2: Ketuk START\nLangkah 3: Salin ID Chat Anda</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Masukkan ID Chat</string>
+  <string name="forwarding_telegram_test_success">Pesan tes terkirim! Periksa Telegram</string>
+  <string name="forwarding_telegram_test_failed">Gagal mengirim pesan tes</string>
+  <string name="forwarding_telegram_no_chat_id">Silakan masukkan ID Chat terlebih dahulu</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Buka Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Cari @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Ketuk tombol START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Salin nomor ID Chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Tempel di sini</string>
 </resources>

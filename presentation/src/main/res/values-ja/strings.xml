@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">使用するにはWize SMS+を解除してください</string>
   <string name="widget_loading">読み込み中…</string>
   <string name="widget_more">会話をもっと見る</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Telegramに転送</string>
+  <string name="forwarding_telegram_enabled_summary">受信SMSをTelegramに送信</string>
+  <string name="forwarding_telegram_chat_id_title">TelegramチャットID</string>
+  <string name="forwarding_telegram_chat_id_summary">タップしてチャットIDを入力</string>
+  <string name="forwarding_telegram_chat_id_summary_set">チャットID: %s</string>
+  <string name="forwarding_telegram_test_title">テストメッセージを送信</string>
+  <string name="forwarding_telegram_test_summary">Telegram設定の動作を確認</string>
+  <string name="forwarding_telegram_help_title">チャットIDの取得方法</string>
+  <string name="forwarding_telegram_help_summary">ステップ1: @WizeSMSForwardBotを開く\nステップ2: STARTをタップ\nステップ3: チャットIDをコピー</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">チャットIDを入力</string>
+  <string name="forwarding_telegram_test_success">テストメッセージ送信完了！Telegramを確認</string>
+  <string name="forwarding_telegram_test_failed">テストメッセージの送信に失敗</string>
+  <string name="forwarding_telegram_no_chat_id">先にチャットIDを入力してください</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Telegramを開く</string>
+  <string name="forwarding_telegram_instruction_step2">2. @WizeSMSForwardBotを検索</string>
+  <string name="forwarding_telegram_instruction_step3">3. STARTボタンをタップ</string>
+  <string name="forwarding_telegram_instruction_step4">4. チャットID番号をコピー</string>
+  <string name="forwarding_telegram_instruction_step5">5. ここに貼り付け</string>
 </resources>

@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">คุณต้องปลดล็อก Wize SMS+ เพื่อใช้งาน</string>
   <string name="widget_loading">กำลังโหลด…</string>
   <string name="widget_more">ดูการสนทนาเพิ่มเติม</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">ส่งต่อไปยัง Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">ส่ง SMS ที่ได้รับไปยัง Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">รหัสแชท Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">แตะเพื่อป้อนรหัสแชท</string>
+  <string name="forwarding_telegram_chat_id_summary_set">รหัสแชท: %s</string>
+  <string name="forwarding_telegram_test_title">ส่งข้อความทดสอบ</string>
+  <string name="forwarding_telegram_test_summary">ตรวจสอบว่าการตั้งค่า Telegram ใช้งานได้</string>
+  <string name="forwarding_telegram_help_title">วิธีรับรหัสแชท</string>
+  <string name="forwarding_telegram_help_summary">ขั้นตอน 1: เปิด @WizeSMSForwardBot\nขั้นตอน 2: แตะ START\nขั้นตอน 3: คัดลอกรหัสแชท</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">ป้อนรหัสแชท</string>
+  <string name="forwarding_telegram_test_success">ส่งข้อความทดสอบแล้ว! ตรวจสอบ Telegram</string>
+  <string name="forwarding_telegram_test_failed">ส่งข้อความทดสอบไม่สำเร็จ</string>
+  <string name="forwarding_telegram_no_chat_id">กรุณาป้อนรหัสแชทก่อน</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. เปิด Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. ค้นหา @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. แตะปุ่ม START</string>
+  <string name="forwarding_telegram_instruction_step4">4. คัดลอกหมายเลขรหัสแชท</string>
+  <string name="forwarding_telegram_instruction_step5">5. วางที่นี่</string>
 </resources>

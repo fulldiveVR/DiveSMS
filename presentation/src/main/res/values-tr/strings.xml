@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Bunu kullanmak için Wize SMS+ kilidini açmalısınız</string>
   <string name="widget_loading">Yükleniyor…</string>
   <string name="widget_more">Daha fazla sohbeti görüntüle</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Telegram\'a ilet</string>
+  <string name="forwarding_telegram_enabled_summary">Gelen SMS\'leri Telegram\'a gönder</string>
+  <string name="forwarding_telegram_chat_id_title">Telegram Sohbet Kimliği</string>
+  <string name="forwarding_telegram_chat_id_summary">Sohbet kimliğinizi girmek için dokunun</string>
+  <string name="forwarding_telegram_chat_id_summary_set">Sohbet Kimliği: %s</string>
+  <string name="forwarding_telegram_test_title">Test mesajı gönder</string>
+  <string name="forwarding_telegram_test_summary">Telegram kurulumunuzun çalıştığını doğrulayın</string>
+  <string name="forwarding_telegram_help_title">Sohbet kimliği nasıl alınır</string>
+  <string name="forwarding_telegram_help_summary">Adım 1: @WizeSMSForwardBot\'u açın\nAdım 2: START\'a dokunun\nAdım 3: Sohbet kimliğinizi kopyalayın</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Sohbet kimliği girin</string>
+  <string name="forwarding_telegram_test_success">Test mesajı gönderildi! Telegram\'ı kontrol edin</string>
+  <string name="forwarding_telegram_test_failed">Test mesajı gönderilemedi</string>
+  <string name="forwarding_telegram_no_chat_id">Lütfen önce sohbet kimliğinizi girin</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Telegram\'ı açın</string>
+  <string name="forwarding_telegram_instruction_step2">2. @WizeSMSForwardBot\'u arayın</string>
+  <string name="forwarding_telegram_instruction_step3">3. START düğmesine dokunun</string>
+  <string name="forwarding_telegram_instruction_step4">4. Sohbet kimliği numarasını kopyalayın</string>
+  <string name="forwarding_telegram_instruction_step5">5. Buraya yapıştırın</string>
 </resources>

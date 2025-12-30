@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Ви повинні розблокувати Wize SMS+, щоб використовувати це</string>
   <string name="widget_loading">Завантаження…</string>
   <string name="widget_more">Переглянути більше розмов</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Пересилати в Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Надсилати вхідні SMS в Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">Chat ID Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Натисніть, щоб ввести Chat ID</string>
+  <string name="forwarding_telegram_chat_id_summary_set">Chat ID: %s</string>
+  <string name="forwarding_telegram_test_title">Надіслати тестове повідомлення</string>
+  <string name="forwarding_telegram_test_summary">Перевірити налаштування Telegram</string>
+  <string name="forwarding_telegram_help_title">Як отримати Chat ID</string>
+  <string name="forwarding_telegram_help_summary">Крок 1: Відкрийте @WizeSMSForwardBot\nКрок 2: Натисніть START\nКрок 3: Скопіюйте Chat ID</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Введіть Chat ID</string>
+  <string name="forwarding_telegram_test_success">Тестове повідомлення надіслано! Перевірте Telegram</string>
+  <string name="forwarding_telegram_test_failed">Не вдалося надіслати тестове повідомлення</string>
+  <string name="forwarding_telegram_no_chat_id">Спочатку введіть Chat ID</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Відкрийте Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Знайдіть @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Натисніть кнопку START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Скопіюйте номер Chat ID</string>
+  <string name="forwarding_telegram_instruction_step5">5. Вставте його тут</string>
 </resources>

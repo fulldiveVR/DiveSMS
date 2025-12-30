@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Devi sbloccare Wize SMS+ per usarlo</string>
   <string name="widget_loading">Caricamento…</string>
   <string name="widget_more">Vedi altre conversazioni</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Inoltra a Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Invia SMS in arrivo al tuo Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">ID chat Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Tocca per inserire il tuo ID chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID chat: %s</string>
+  <string name="forwarding_telegram_test_title">Invia messaggio di prova</string>
+  <string name="forwarding_telegram_test_summary">Verifica che la configurazione Telegram funzioni</string>
+  <string name="forwarding_telegram_help_title">Come ottenere l\'ID chat</string>
+  <string name="forwarding_telegram_help_summary">Passo 1: Apri @WizeSMSForwardBot\nPasso 2: Tocca START\nPasso 3: Copia il tuo ID chat</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Inserisci ID chat</string>
+  <string name="forwarding_telegram_test_success">Messaggio di prova inviato! Controlla Telegram</string>
+  <string name="forwarding_telegram_test_failed">Impossibile inviare il messaggio di prova</string>
+  <string name="forwarding_telegram_no_chat_id">Inserisci prima il tuo ID chat</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Apri Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Cerca @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Tocca il pulsante START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Copia il numero ID chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Incollalo qui</string>
 </resources>

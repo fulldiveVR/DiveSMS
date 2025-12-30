@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Sie müssen Wize SMS+ entsperren, um dies zu nutzen</string>
   <string name="widget_loading">Laden…</string>
   <string name="widget_more">Mehr Unterhaltungen ansehen</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">An Telegram weiterleiten</string>
+  <string name="forwarding_telegram_enabled_summary">Eingehende SMS an Telegram senden</string>
+  <string name="forwarding_telegram_chat_id_title">Telegram Chat-ID</string>
+  <string name="forwarding_telegram_chat_id_summary">Tippen, um Chat-ID einzugeben</string>
+  <string name="forwarding_telegram_chat_id_summary_set">Chat-ID: %s</string>
+  <string name="forwarding_telegram_test_title">Testnachricht senden</string>
+  <string name="forwarding_telegram_test_summary">Telegram-Einrichtung überprüfen</string>
+  <string name="forwarding_telegram_help_title">So erhalten Sie die Chat-ID</string>
+  <string name="forwarding_telegram_help_summary">Schritt 1: @WizeSMSForwardBot öffnen\nSchritt 2: START tippen\nSchritt 3: Chat-ID kopieren</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Chat-ID eingeben</string>
+  <string name="forwarding_telegram_test_success">Testnachricht gesendet! Telegram überprüfen</string>
+  <string name="forwarding_telegram_test_failed">Testnachricht konnte nicht gesendet werden</string>
+  <string name="forwarding_telegram_no_chat_id">Bitte zuerst Chat-ID eingeben</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Telegram öffnen</string>
+  <string name="forwarding_telegram_instruction_step2">2. Nach @WizeSMSForwardBot suchen</string>
+  <string name="forwarding_telegram_instruction_step3">3. START-Taste tippen</string>
+  <string name="forwarding_telegram_instruction_step4">4. Chat-ID-Nummer kopieren</string>
+  <string name="forwarding_telegram_instruction_step5">5. Hier einfügen</string>
 </resources>

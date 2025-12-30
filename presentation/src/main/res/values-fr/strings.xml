@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Vous devez déverrouiller Wize SMS+ pour l\'utiliser</string>
   <string name="widget_loading">Chargement…</string>
   <string name="widget_more">Voir plus de conversations</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Transférer vers Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Envoyer les SMS entrants vers Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">ID de chat Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Appuyez pour entrer votre ID de chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID de chat: %s</string>
+  <string name="forwarding_telegram_test_title">Envoyer un message test</string>
+  <string name="forwarding_telegram_test_summary">Vérifier que votre configuration Telegram fonctionne</string>
+  <string name="forwarding_telegram_help_title">Comment obtenir l\'ID de chat</string>
+  <string name="forwarding_telegram_help_summary">Étape 1: Ouvrez @WizeSMSForwardBot\nÉtape 2: Appuyez sur START\nÉtape 3: Copiez votre ID de chat</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Entrer l\'ID de chat</string>
+  <string name="forwarding_telegram_test_success">Message test envoyé! Vérifiez Telegram</string>
+  <string name="forwarding_telegram_test_failed">Échec de l\'envoi du message test</string>
+  <string name="forwarding_telegram_no_chat_id">Veuillez d\'abord entrer votre ID de chat</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Ouvrez Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Recherchez @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Appuyez sur le bouton START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Copiez le numéro d\'ID de chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Collez-le ici</string>
 </resources>

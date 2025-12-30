@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Debes desbloquear Wize SMS+ para usar esto</string>
   <string name="widget_loading">Cargando…</string>
   <string name="widget_more">Ver más conversaciones</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Reenviar a Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Enviar SMS entrantes a tu Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">ID de chat de Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Toca para ingresar tu ID de chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID de chat: %s</string>
+  <string name="forwarding_telegram_test_title">Enviar mensaje de prueba</string>
+  <string name="forwarding_telegram_test_summary">Verificar que tu configuración de Telegram funciona</string>
+  <string name="forwarding_telegram_help_title">Cómo obtener el ID de chat</string>
+  <string name="forwarding_telegram_help_summary">Paso 1: Abre @WizeSMSForwardBot\nPaso 2: Toca START\nPaso 3: Copia tu ID de chat</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Ingresar ID de chat</string>
+  <string name="forwarding_telegram_test_success">¡Mensaje de prueba enviado! Revisa Telegram</string>
+  <string name="forwarding_telegram_test_failed">Error al enviar mensaje de prueba</string>
+  <string name="forwarding_telegram_no_chat_id">Por favor ingresa tu ID de chat primero</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Abre Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Busca @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Toca el botón START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Copia el número de ID de chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Pégalo aquí</string>
 </resources>

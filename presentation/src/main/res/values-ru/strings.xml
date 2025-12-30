@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Вы должны разблокировать Wize SMS+ для использования</string>
   <string name="widget_loading">Загрузка…</string>
   <string name="widget_more">Просмотреть больше бесед</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Пересылка в Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Отправлять входящие SMS в Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">Chat ID Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Нажмите, чтобы ввести Chat ID</string>
+  <string name="forwarding_telegram_chat_id_summary_set">Chat ID: %s</string>
+  <string name="forwarding_telegram_test_title">Отправить тестовое сообщение</string>
+  <string name="forwarding_telegram_test_summary">Проверить работу пересылки в Telegram</string>
+  <string name="forwarding_telegram_help_title">Как получить Chat ID</string>
+  <string name="forwarding_telegram_help_summary">Шаг 1: Откройте @WizeSMSForwardBot\nШаг 2: Нажмите START\nШаг 3: Скопируйте Chat ID</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Введите Chat ID</string>
+  <string name="forwarding_telegram_test_success">Тестовое сообщение отправлено! Проверьте Telegram</string>
+  <string name="forwarding_telegram_test_failed">Не удалось отправить тестовое сообщение</string>
+  <string name="forwarding_telegram_no_chat_id">Сначала введите Chat ID</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Откройте Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Найдите @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Нажмите кнопку START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Скопируйте номер Chat ID</string>
+  <string name="forwarding_telegram_instruction_step5">5. Вставьте его здесь</string>
 </resources>

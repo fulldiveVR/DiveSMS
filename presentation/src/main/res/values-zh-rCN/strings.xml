@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">您必须解锁Wize SMS+才能使用</string>
   <string name="widget_loading">加载中…</string>
   <string name="widget_more">查看更多对话</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">转发到Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">将收到的短信发送到Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">Telegram聊天ID</string>
+  <string name="forwarding_telegram_chat_id_summary">点击输入聊天ID</string>
+  <string name="forwarding_telegram_chat_id_summary_set">聊天ID: %s</string>
+  <string name="forwarding_telegram_test_title">发送测试消息</string>
+  <string name="forwarding_telegram_test_summary">验证Telegram设置是否正常</string>
+  <string name="forwarding_telegram_help_title">如何获取聊天ID</string>
+  <string name="forwarding_telegram_help_summary">步骤1: 打开 @WizeSMSForwardBot\n步骤2: 点击 START\n步骤3: 复制聊天ID</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">输入聊天ID</string>
+  <string name="forwarding_telegram_test_success">测试消息已发送！请查看Telegram</string>
+  <string name="forwarding_telegram_test_failed">发送测试消息失败</string>
+  <string name="forwarding_telegram_no_chat_id">请先输入聊天ID</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. 打开Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. 搜索 @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. 点击START按钮</string>
+  <string name="forwarding_telegram_instruction_step4">4. 复制聊天ID号码</string>
+  <string name="forwarding_telegram_instruction_step5">5. 粘贴到这里</string>
 </resources>

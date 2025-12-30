@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Você deve desbloquear o Wize SMS+ para usar</string>
   <string name="widget_loading">Carregando…</string>
   <string name="widget_more">Ver mais conversas</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Encaminhar para Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Enviar SMS recebidos para seu Telegram</string>
+  <string name="forwarding_telegram_chat_id_title">ID do chat do Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Toque para inserir seu ID do chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID do chat: %s</string>
+  <string name="forwarding_telegram_test_title">Enviar mensagem de teste</string>
+  <string name="forwarding_telegram_test_summary">Verificar se a configuração do Telegram funciona</string>
+  <string name="forwarding_telegram_help_title">Como obter o ID do chat</string>
+  <string name="forwarding_telegram_help_summary">Passo 1: Abra @WizeSMSForwardBot\nPasso 2: Toque em START\nPasso 3: Copie seu ID do chat</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Inserir ID do chat</string>
+  <string name="forwarding_telegram_test_success">Mensagem de teste enviada! Verifique o Telegram</string>
+  <string name="forwarding_telegram_test_failed">Falha ao enviar mensagem de teste</string>
+  <string name="forwarding_telegram_no_chat_id">Por favor, insira seu ID do chat primeiro</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Abra o Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Procure @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Toque no botão START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Copie o número do ID do chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Cole aqui</string>
 </resources>

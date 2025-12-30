@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Bạn phải mở khóa Wize SMS+ để sử dụng</string>
   <string name="widget_loading">Đang tải…</string>
   <string name="widget_more">Xem thêm cuộc trò chuyện</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Chuyển tiếp đến Telegram</string>
+  <string name="forwarding_telegram_enabled_summary">Gửi SMS đến tới Telegram của bạn</string>
+  <string name="forwarding_telegram_chat_id_title">ID Chat Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Nhấn để nhập ID Chat</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID Chat: %s</string>
+  <string name="forwarding_telegram_test_title">Gửi tin nhắn thử</string>
+  <string name="forwarding_telegram_test_summary">Xác minh cài đặt Telegram hoạt động</string>
+  <string name="forwarding_telegram_help_title">Cách lấy ID Chat</string>
+  <string name="forwarding_telegram_help_summary">Bước 1: Mở @WizeSMSForwardBot\nBước 2: Nhấn START\nBước 3: Sao chép ID Chat</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Nhập ID Chat</string>
+  <string name="forwarding_telegram_test_success">Đã gửi tin nhắn thử! Kiểm tra Telegram</string>
+  <string name="forwarding_telegram_test_failed">Không thể gửi tin nhắn thử</string>
+  <string name="forwarding_telegram_no_chat_id">Vui lòng nhập ID Chat trước</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Mở Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Tìm @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Nhấn nút START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Sao chép số ID Chat</string>
+  <string name="forwarding_telegram_instruction_step5">5. Dán vào đây</string>
 </resources>

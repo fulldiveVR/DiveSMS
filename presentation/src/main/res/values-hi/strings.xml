@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">इसे उपयोग करने के लिए Wize SMS+ अनलॉक करें</string>
   <string name="widget_loading">लोड हो रहा है…</string>
   <string name="widget_more">और वार्तालाप देखें</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">टेलीग्राम</string>
+  <string name="forwarding_telegram_enabled_title">टेलीग्राम पर फॉरवर्ड करें</string>
+  <string name="forwarding_telegram_enabled_summary">आने वाले SMS को टेलीग्राम पर भेजें</string>
+  <string name="forwarding_telegram_chat_id_title">टेलीग्राम चैट आईडी</string>
+  <string name="forwarding_telegram_chat_id_summary">चैट आईडी दर्ज करने के लिए टैप करें</string>
+  <string name="forwarding_telegram_chat_id_summary_set">चैट आईडी: %s</string>
+  <string name="forwarding_telegram_test_title">टेस्ट संदेश भेजें</string>
+  <string name="forwarding_telegram_test_summary">टेलीग्राम सेटअप काम कर रहा है, सत्यापित करें</string>
+  <string name="forwarding_telegram_help_title">चैट आईडी कैसे प्राप्त करें</string>
+  <string name="forwarding_telegram_help_summary">चरण 1: @WizeSMSForwardBot खोलें\nचरण 2: START टैप करें\nचरण 3: चैट आईडी कॉपी करें</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">चैट आईडी दर्ज करें</string>
+  <string name="forwarding_telegram_test_success">टेस्ट संदेश भेजा गया! टेलीग्राम जांचें</string>
+  <string name="forwarding_telegram_test_failed">टेस्ट संदेश भेजने में विफल</string>
+  <string name="forwarding_telegram_no_chat_id">कृपया पहले चैट आईडी दर्ज करें</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. टेलीग्राम खोलें</string>
+  <string name="forwarding_telegram_instruction_step2">2. @WizeSMSForwardBot खोजें</string>
+  <string name="forwarding_telegram_instruction_step3">3. START बटन टैप करें</string>
+  <string name="forwarding_telegram_instruction_step4">4. चैट आईडी नंबर कॉपी करें</string>
+  <string name="forwarding_telegram_instruction_step5">5. यहाँ पेस्ट करें</string>
 </resources>

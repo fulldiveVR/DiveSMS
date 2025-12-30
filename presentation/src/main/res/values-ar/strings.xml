@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">يجب فتح Wize SMS+ لاستخدام هذا</string>
   <string name="widget_loading">جارٍ التحميل…</string>
   <string name="widget_more">عرض المزيد من المحادثات</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">تيليجرام</string>
+  <string name="forwarding_telegram_enabled_title">إعادة التوجيه إلى تيليجرام</string>
+  <string name="forwarding_telegram_enabled_summary">إرسال الرسائل الواردة إلى تيليجرام</string>
+  <string name="forwarding_telegram_chat_id_title">معرف محادثة تيليجرام</string>
+  <string name="forwarding_telegram_chat_id_summary">انقر لإدخال معرف المحادثة</string>
+  <string name="forwarding_telegram_chat_id_summary_set">معرف المحادثة: %s</string>
+  <string name="forwarding_telegram_test_title">إرسال رسالة اختبار</string>
+  <string name="forwarding_telegram_test_summary">تحقق من عمل إعداد تيليجرام</string>
+  <string name="forwarding_telegram_help_title">كيفية الحصول على معرف المحادثة</string>
+  <string name="forwarding_telegram_help_summary">الخطوة 1: افتح @WizeSMSForwardBot\nالخطوة 2: انقر START\nالخطوة 3: انسخ معرف المحادثة</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">أدخل معرف المحادثة</string>
+  <string name="forwarding_telegram_test_success">تم إرسال رسالة الاختبار! تحقق من تيليجرام</string>
+  <string name="forwarding_telegram_test_failed">فشل إرسال رسالة الاختبار</string>
+  <string name="forwarding_telegram_no_chat_id">الرجاء إدخال معرف المحادثة أولاً</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. افتح تيليجرام</string>
+  <string name="forwarding_telegram_instruction_step2">2. ابحث عن @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. انقر على زر START</string>
+  <string name="forwarding_telegram_instruction_step4">4. انسخ رقم معرف المحادثة</string>
+  <string name="forwarding_telegram_instruction_step5">5. الصقه هنا</string>
 </resources>

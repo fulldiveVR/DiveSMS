@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">Musisz odblokować Wize SMS+, aby to użyć</string>
   <string name="widget_loading">Ładowanie…</string>
   <string name="widget_more">Zobacz więcej rozmów</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">Telegram</string>
+  <string name="forwarding_telegram_enabled_title">Przekaż do Telegrama</string>
+  <string name="forwarding_telegram_enabled_summary">Wysyłaj przychodzące SMS-y do Telegrama</string>
+  <string name="forwarding_telegram_chat_id_title">ID czatu Telegram</string>
+  <string name="forwarding_telegram_chat_id_summary">Dotknij, aby wprowadzić ID czatu</string>
+  <string name="forwarding_telegram_chat_id_summary_set">ID czatu: %s</string>
+  <string name="forwarding_telegram_test_title">Wyślij wiadomość testową</string>
+  <string name="forwarding_telegram_test_summary">Sprawdź, czy konfiguracja Telegrama działa</string>
+  <string name="forwarding_telegram_help_title">Jak uzyskać ID czatu</string>
+  <string name="forwarding_telegram_help_summary">Krok 1: Otwórz @WizeSMSForwardBot\nKrok 2: Dotknij START\nKrok 3: Skopiuj ID czatu</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">Wprowadź ID czatu</string>
+  <string name="forwarding_telegram_test_success">Wiadomość testowa wysłana! Sprawdź Telegram</string>
+  <string name="forwarding_telegram_test_failed">Nie udało się wysłać wiadomości testowej</string>
+  <string name="forwarding_telegram_no_chat_id">Najpierw wprowadź ID czatu</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. Otwórz Telegram</string>
+  <string name="forwarding_telegram_instruction_step2">2. Wyszukaj @WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step3">3. Dotknij przycisku START</string>
+  <string name="forwarding_telegram_instruction_step4">4. Skopiuj numer ID czatu</string>
+  <string name="forwarding_telegram_instruction_step5">5. Wklej go tutaj</string>
 </resources>

@@ -320,4 +320,26 @@
   <string name="toast_qksms_plus">사용하려면 Wize SMS+를 잠금 해제해야 합니다</string>
   <string name="widget_loading">로딩 중…</string>
   <string name="widget_more">대화 더 보기</string>
+
+  <!-- Telegram Forwarding -->
+  <string name="forwarding_telegram_header">텔레그램</string>
+  <string name="forwarding_telegram_enabled_title">텔레그램으로 전달</string>
+  <string name="forwarding_telegram_enabled_summary">수신 SMS를 텔레그램으로 전송</string>
+  <string name="forwarding_telegram_chat_id_title">텔레그램 채팅 ID</string>
+  <string name="forwarding_telegram_chat_id_summary">탭하여 채팅 ID 입력</string>
+  <string name="forwarding_telegram_chat_id_summary_set">채팅 ID: %s</string>
+  <string name="forwarding_telegram_test_title">테스트 메시지 보내기</string>
+  <string name="forwarding_telegram_test_summary">텔레그램 설정 작동 확인</string>
+  <string name="forwarding_telegram_help_title">채팅 ID 얻는 방법</string>
+  <string name="forwarding_telegram_help_summary">1단계: @WizeSMSForwardBot 열기\n2단계: START 탭하기\n3단계: 채팅 ID 복사</string>
+  <string name="forwarding_telegram_chat_id_dialog_title">채팅 ID 입력</string>
+  <string name="forwarding_telegram_test_success">테스트 메시지 전송됨! 텔레그램 확인</string>
+  <string name="forwarding_telegram_test_failed">테스트 메시지 전송 실패</string>
+  <string name="forwarding_telegram_no_chat_id">먼저 채팅 ID를 입력하세요</string>
+  <string name="forwarding_telegram_bot_name">@WizeSMSForwardBot</string>
+  <string name="forwarding_telegram_instruction_step1">1. 텔레그램 열기</string>
+  <string name="forwarding_telegram_instruction_step2">2. @WizeSMSForwardBot 검색</string>
+  <string name="forwarding_telegram_instruction_step3">3. START 버튼 탭</string>
+  <string name="forwarding_telegram_instruction_step4">4. 채팅 ID 번호 복사</string>
+  <string name="forwarding_telegram_instruction_step5">5. 여기에 붙여넣기</string>
 </resources>
