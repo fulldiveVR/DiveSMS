@@ -41,7 +41,6 @@ import com.moez.QKSMS.common.QkDialog
 import com.moez.QKSMS.common.base.QkController
 import com.moez.QKSMS.common.util.Colors
 import com.moez.QKSMS.common.util.extensions.animateLayoutChanges
-import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.common.util.extensions.setBackgroundTint
 import com.moez.QKSMS.common.util.extensions.setVisible
 import com.moez.QKSMS.common.widget.PreferenceView
@@ -63,7 +62,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
 import com.fulldive.extension.divesms.databinding.SettingsControllerBinding
-import timber.log.Timber
 import javax.inject.Inject
 import kotlin.coroutines.resume
 
@@ -84,15 +82,10 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
     private val autoDeleteDialog: AutoDeleteDialog by lazy {
         AutoDeleteDialog(activity!!, autoDeleteSubject::onNext)
     }
-    private val forwardingEmailDialog: TextInputDialog by lazy {
-        TextInputDialog(activity!!, context.getString(R.string.settings_forwarding_email_title), forwardingEmailSubject::onNext)
-    }
-
     private val startTimeSelectedSubject: Subject<Pair<Int, Int>> = PublishSubject.create()
     private val endTimeSelectedSubject: Subject<Pair<Int, Int>> = PublishSubject.create()
     private val signatureSubject: Subject<String> = PublishSubject.create()
     private val autoDeleteSubject: Subject<Int> = PublishSubject.create()
-    private val forwardingEmailSubject: Subject<String> = PublishSubject.create()
 
     private val progressAnimator by lazy { ObjectAnimator.ofInt(binding.syncingProgress, "progress", 0, 0) }
 
@@ -158,8 +151,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
 
     override fun mmsSizeSelected(): Observable<Int> = mmsSizeDialog.adapter.menuItemClicks
 
-    override fun forwardingEmailChanged(): Observable<String> = forwardingEmailSubject
-
     override fun render(state: SettingsState) {
         binding.theme.findViewById<View>(R.id.themePreview).setBackgroundTint(state.theme)
         binding.night.summary = state.nightModeSummary
@@ -212,15 +203,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
                 progressAnimator.apply { setIntValues(binding.syncingProgress.progress, state.syncProgress.progress) }.start()
                 binding.syncingProgress.isIndeterminate = state.syncProgress.indeterminate
             }
-        }
-
-        // Email forwarding
-        binding.forwardingEnabled.findViewById<QkSwitch>(R.id.checkbox).isChecked = state.forwardingEnabled
-        binding.forwardingEmail.summary = state.forwardingEmail.takeIf { it.isNotBlank() }
-                ?: context.getString(R.string.settings_forwarding_email_summary)
-        binding.forwardingAccount.summary = when {
-            state.forwardingAccountName.isNotBlank() -> context.getString(R.string.settings_forwarding_account_summary, state.forwardingAccountName)
-            else -> context.getString(R.string.settings_forwarding_account_summary_none)
         }
     }
 
@@ -286,37 +268,6 @@ class SettingsController : QkController<SettingsView, SettingsState, SettingsPre
         router.pushController(RouterTransaction.with(AboutController())
                 .pushChangeHandler(QkChangeHandler())
                 .popChangeHandler(QkChangeHandler()))
-    }
-
-    override fun showForwardingEmailDialog(email: String) {
-        forwardingEmailDialog.setText(email).show()
-    }
-
-    override fun requestGmailSignIn() {
-        (activity as? SettingsActivity)?.startGmailSignIn()
-    }
-
-    fun onGmailSignInResult(email: String?) {
-        Timber.i("SettingsController: onGmailSignInResult called with email=$email")
-        presenter.onGmailSignInResult(email)
-        if (email != null) {
-            Timber.i("SettingsController: Showing signed-in toast")
-            context.makeToast(R.string.settings_forwarding_signed_in)
-        } else {
-            Timber.w("SettingsController: Email was null, not showing toast")
-        }
-    }
-
-    override fun showGmailSignOutDialog() {
-        AlertDialog.Builder(activity!!)
-            .setTitle(R.string.settings_forwarding_account_title)
-            .setMessage(R.string.settings_forwarding_signout_message)
-            .setNegativeButton(R.string.button_cancel, null)
-            .setPositiveButton(R.string.settings_forwarding_signout_button) { _, _ ->
-                presenter.onGmailSignOut()
-                context.makeToast(R.string.settings_forwarding_signed_out)
-            }
-            .show()
     }
 
 }

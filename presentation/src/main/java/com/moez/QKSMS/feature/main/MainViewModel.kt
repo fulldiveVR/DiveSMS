@@ -240,6 +240,7 @@ class MainViewModel @Inject constructor(
                         }
                         NavItem.BACKUP -> navigator.showBackup()
                         NavItem.SCHEDULED -> navigator.showScheduled()
+                        NavItem.FORWARDING -> navigator.showForwarding()
                         NavItem.BLOCKING -> navigator.showBlockedConversations()
                         NavItem.SETTINGS -> navigator.showSettings()
                         NavItem.HELP -> navigator.showSupport()

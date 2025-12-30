@@ -117,6 +117,7 @@ class MainActivity : QkThemedActivity(), MainView {
             drawerBinding.inbox.clicks().map { NavItem.INBOX },
             drawerBinding.archived.clicks().map { NavItem.ARCHIVED },
             drawerBinding.scheduled.clicks().map { NavItem.SCHEDULED },
+            drawerBinding.forwarding.clicks().map { NavItem.FORWARDING },
             drawerBinding.blocking.clicks().map { NavItem.BLOCKING },
             drawerBinding.settings.clicks().map { NavItem.SETTINGS }
         ))

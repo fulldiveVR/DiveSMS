@@ -35,6 +35,8 @@ import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivity
 import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivityModule
 import com.moez.QKSMS.feature.qkreply.QkReplyActivity
 import com.moez.QKSMS.feature.qkreply.QkReplyActivityModule
+import com.moez.QKSMS.feature.forwarding.ForwardingActivity
+import com.moez.QKSMS.feature.forwarding.ForwardingActivityModule
 import com.moez.QKSMS.feature.scheduled.ScheduledActivity
 import com.moez.QKSMS.feature.scheduled.ScheduledActivityModule
 import com.moez.QKSMS.feature.settings.SettingsActivity
@@ -80,6 +82,10 @@ abstract class ActivityBuilderModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [ScheduledActivityModule::class])
     abstract fun bindScheduledActivity(): ScheduledActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = [ForwardingActivityModule::class])
+    abstract fun bindForwardingActivity(): ForwardingActivity
 
     @ActivityScope
     @ContributesAndroidInjector(modules = [])

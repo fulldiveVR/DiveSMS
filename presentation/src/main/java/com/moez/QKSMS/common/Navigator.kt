@@ -38,6 +38,7 @@ import com.moez.QKSMS.feature.conversationinfo.ConversationInfoActivity
 import com.moez.QKSMS.feature.gallery.GalleryActivity
 import com.moez.QKSMS.feature.notificationprefs.NotificationPrefsActivity
 import com.moez.QKSMS.feature.plus.PlusActivity
+import com.moez.QKSMS.feature.forwarding.ForwardingActivity
 import com.moez.QKSMS.feature.scheduled.ScheduledActivity
 import com.moez.QKSMS.feature.settings.SettingsActivity
 import com.moez.QKSMS.manager.AnalyticsManager
@@ -131,6 +132,12 @@ class Navigator @Inject constructor(
     fun showScheduled() {
         analyticsManager.track("Viewed Scheduled")
         val intent = Intent(context, ScheduledActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun showForwarding() {
+        analyticsManager.track("Viewed Forwarding")
+        val intent = Intent(context, ForwardingActivity::class.java)
         startActivity(intent)
     }
 

@@ -213,40 +213,6 @@
             android:layout_marginBottom="8dp"
             android:background="?android:attr/divider" />
 
-        <com.moez.QKSMS.common.widget.QkTextView
-            style="@style/PreferenceCategory"
-            android:text="@string/settings_category_forwarding" />
-
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/forwardingEnabled"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:icon="@drawable/ic_send_black_24dp"
-            app:title="@string/settings_forwarding_enabled_title"
-            app:summary="@string/settings_forwarding_enabled_summary"
-            app:widget="@layout/settings_switch_widget" />
-
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/forwardingEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="@string/settings_forwarding_email_title"
-            tools:summary="user@example.com" />
-
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/forwardingAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="@string/settings_forwarding_account_title"
-            app:summary="@string/settings_forwarding_account_summary_none" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="?android:attr/divider" />
-
         <com.moez.QKSMS.common.widget.PreferenceView
             android:id="@+id/sync"
             android:layout_width="match_parent"
