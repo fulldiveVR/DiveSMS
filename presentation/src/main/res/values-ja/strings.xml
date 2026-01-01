@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">このGmailアカウントを切断しますか？</string>
   <string name="forwarding_email_signout_button">切断</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">テストメッセージを送信</string>
+  <string name="forwarding_email_test_summary">メール設定を確認</string>
+  <string name="forwarding_email_test_success">テストメール送信完了！受信箱を確認</string>
+  <string name="forwarding_email_test_failed">テストメールの送信に失敗</string>
+  <string name="forwarding_email_no_destination">先に宛先メールを入力してください</string>
+  <string name="forwarding_email_no_account">先にGmailにサインインしてください</string>
+  <string name="forwarding_email_account_not_ready">Gmailアカウントの再接続が必要です</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

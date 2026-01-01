@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">আপনি কি এই Gmail অ্যাকাউন্ট সংযোগ বিচ্ছিন্ন করতে চান?</string>
   <string name="forwarding_email_signout_button">সংযোগ বিচ্ছিন্ন করুন</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">পরীক্ষামূলক বার্তা পাঠান</string>
+  <string name="forwarding_email_test_summary">আপনার ইমেইল সেটআপ পরীক্ষা করুন</string>
+  <string name="forwarding_email_test_success">পরীক্ষামূলক ইমেইল পাঠানো হয়েছে! ইনবক্স দেখুন</string>
+  <string name="forwarding_email_test_failed">পরীক্ষামূলক ইমেইল পাঠাতে ব্যর্থ</string>
+  <string name="forwarding_email_no_destination">প্রথমে প্রাপকের ইমেইল দিন</string>
+  <string name="forwarding_email_no_account">প্রথমে Gmail এ সাইন ইন করুন</string>
+  <string name="forwarding_email_account_not_ready">Gmail অ্যাকাউন্ট পুনরায় সংযোগ প্রয়োজন</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">টেলিগ্রাম</string>

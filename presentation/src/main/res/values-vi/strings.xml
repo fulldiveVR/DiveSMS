@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Bạn có muốn ngắt kết nối tài khoản Gmail này?</string>
   <string name="forwarding_email_signout_button">Ngắt kết nối</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Gửi tin nhắn thử</string>
+  <string name="forwarding_email_test_summary">Xác minh cài đặt email</string>
+  <string name="forwarding_email_test_success">Đã gửi email thử! Kiểm tra hộp thư</string>
+  <string name="forwarding_email_test_failed">Gửi email thử thất bại</string>
+  <string name="forwarding_email_no_destination">Vui lòng nhập email đích trước</string>
+  <string name="forwarding_email_no_account">Vui lòng đăng nhập Gmail trước</string>
+  <string name="forwarding_email_account_not_ready">Tài khoản Gmail cần kết nối lại</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

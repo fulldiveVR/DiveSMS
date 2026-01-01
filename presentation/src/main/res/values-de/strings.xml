@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Möchten Sie dieses Gmail-Konto trennen?</string>
   <string name="forwarding_email_signout_button">Trennen</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Testnachricht senden</string>
+  <string name="forwarding_email_test_summary">E-Mail-Einrichtung überprüfen</string>
+  <string name="forwarding_email_test_success">Test-E-Mail gesendet! Posteingang prüfen</string>
+  <string name="forwarding_email_test_failed">Test-E-Mail konnte nicht gesendet werden</string>
+  <string name="forwarding_email_no_destination">Bitte zuerst Ziel-E-Mail eingeben</string>
+  <string name="forwarding_email_no_account">Bitte zuerst bei Gmail anmelden</string>
+  <string name="forwarding_email_account_not_ready">Gmail-Konto muss neu verbunden werden</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

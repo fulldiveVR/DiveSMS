@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Ви хочете відключити цей акаунт Gmail?</string>
   <string name="forwarding_email_signout_button">Відключити</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Надіслати тестове повідомлення</string>
+  <string name="forwarding_email_test_summary">Перевірте налаштування email</string>
+  <string name="forwarding_email_test_success">Тестовий лист надіслано! Перевірте пошту</string>
+  <string name="forwarding_email_test_failed">Не вдалося надіслати тестовий лист</string>
+  <string name="forwarding_email_no_destination">Спочатку введіть email отримувача</string>
+  <string name="forwarding_email_no_account">Спочатку увійдіть в Gmail</string>
+  <string name="forwarding_email_account_not_ready">Потрібно повторно підключити Gmail</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

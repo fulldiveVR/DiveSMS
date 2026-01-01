@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Bu Gmail hesabının bağlantısını kesmek istiyor musunuz?</string>
   <string name="forwarding_email_signout_button">Bağlantıyı kes</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Test Mesajı Gönder</string>
+  <string name="forwarding_email_test_summary">E-posta ayarınızı doğrulayın</string>
+  <string name="forwarding_email_test_success">Test e-postası gönderildi! Gelen kutunuzu kontrol edin</string>
+  <string name="forwarding_email_test_failed">Test e-postası gönderilemedi</string>
+  <string name="forwarding_email_no_destination">Önce hedef e-postayı girin</string>
+  <string name="forwarding_email_no_account">Önce Gmail\'e giriş yapın</string>
+  <string name="forwarding_email_account_not_ready">Gmail hesabının yeniden bağlanması gerekiyor</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

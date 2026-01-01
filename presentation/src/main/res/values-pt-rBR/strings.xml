@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Deseja desconectar esta conta Gmail?</string>
   <string name="forwarding_email_signout_button">Desconectar</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Enviar mensagem de teste</string>
+  <string name="forwarding_email_test_summary">Verificar configuração de e-mail</string>
+  <string name="forwarding_email_test_success">E-mail de teste enviado! Verifique sua caixa</string>
+  <string name="forwarding_email_test_failed">Falha ao enviar e-mail de teste</string>
+  <string name="forwarding_email_no_destination">Primeiro insira o e-mail de destino</string>
+  <string name="forwarding_email_no_account">Primeiro faça login no Gmail</string>
+  <string name="forwarding_email_account_not_ready">Conta Gmail precisa ser reconectada</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

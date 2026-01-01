@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">هل تريد فصل حساب Gmail هذا؟</string>
   <string name="forwarding_email_signout_button">فصل</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">إرسال رسالة اختبار</string>
+  <string name="forwarding_email_test_summary">تحقق من إعداد البريد الإلكتروني</string>
+  <string name="forwarding_email_test_success">تم إرسال بريد الاختبار! تحقق من صندوق الوارد</string>
+  <string name="forwarding_email_test_failed">فشل إرسال بريد الاختبار</string>
+  <string name="forwarding_email_no_destination">يرجى إدخال البريد الإلكتروني أولاً</string>
+  <string name="forwarding_email_no_account">يرجى تسجيل الدخول إلى Gmail أولاً</string>
+  <string name="forwarding_email_account_not_ready">حساب Gmail يحتاج إعادة الاتصال</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">تيليجرام</string>

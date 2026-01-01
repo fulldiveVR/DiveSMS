@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Czy chcesz rozłączyć to konto Gmail?</string>
   <string name="forwarding_email_signout_button">Rozłącz</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Wyślij wiadomość testową</string>
+  <string name="forwarding_email_test_summary">Sprawdź konfigurację e-mail</string>
+  <string name="forwarding_email_test_success">Testowy e-mail wysłany! Sprawdź skrzynkę</string>
+  <string name="forwarding_email_test_failed">Nie udało się wysłać testowego e-maila</string>
+  <string name="forwarding_email_no_destination">Najpierw wprowadź docelowy e-mail</string>
+  <string name="forwarding_email_no_account">Najpierw zaloguj się do Gmaila</string>
+  <string name="forwarding_email_account_not_ready">Konto Gmail wymaga ponownego połączenia</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

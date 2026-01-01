@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">Apakah Anda ingin memutuskan akun Gmail ini?</string>
   <string name="forwarding_email_signout_button">Putuskan</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">Kirim Pesan Uji</string>
+  <string name="forwarding_email_test_summary">Verifikasi pengaturan email Anda</string>
+  <string name="forwarding_email_test_success">Email uji terkirim! Periksa kotak masuk</string>
+  <string name="forwarding_email_test_failed">Gagal mengirim email uji</string>
+  <string name="forwarding_email_no_destination">Masukkan email tujuan terlebih dahulu</string>
+  <string name="forwarding_email_no_account">Masuk ke Gmail terlebih dahulu</string>
+  <string name="forwarding_email_account_not_ready">Akun Gmail perlu dihubungkan ulang</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

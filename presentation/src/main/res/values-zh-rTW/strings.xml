@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">您要斷開此Gmail帳戶嗎？</string>
   <string name="forwarding_email_signout_button">斷開</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">傳送測試訊息</string>
+  <string name="forwarding_email_test_summary">驗證電子郵件設定</string>
+  <string name="forwarding_email_test_success">測試郵件已傳送！請檢查收件匣</string>
+  <string name="forwarding_email_test_failed">傳送測試郵件失敗</string>
+  <string name="forwarding_email_no_destination">請先輸入目標郵箱</string>
+  <string name="forwarding_email_no_account">請先登入Gmail</string>
+  <string name="forwarding_email_account_not_ready">Gmail帳戶需要重新連接</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>

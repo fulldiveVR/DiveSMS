@@ -336,6 +336,13 @@
   <string name="forwarding_email_signout_message">คุณต้องการยกเลิกการเชื่อมต่อบัญชี Gmail นี้หรือไม่?</string>
   <string name="forwarding_email_signout_button">ยกเลิกการเชื่อมต่อ</string>
   <string name="forwarding_email_hint">example@gmail.com</string>
+  <string name="forwarding_email_test_title">ส่งข้อความทดสอบ</string>
+  <string name="forwarding_email_test_summary">ตรวจสอบการตั้งค่าอีเมล</string>
+  <string name="forwarding_email_test_success">ส่งอีเมลทดสอบแล้ว! ตรวจสอบกล่องจดหมาย</string>
+  <string name="forwarding_email_test_failed">ส่งอีเมลทดสอบไม่สำเร็จ</string>
+  <string name="forwarding_email_no_destination">กรุณาใส่อีเมลปลายทางก่อน</string>
+  <string name="forwarding_email_no_account">กรุณาลงชื่อเข้าใช้ Gmail ก่อน</string>
+  <string name="forwarding_email_account_not_ready">บัญชี Gmail ต้องเชื่อมต่อใหม่</string>
 
   <!-- Telegram Forwarding -->
   <string name="forwarding_telegram_header">Telegram</string>
