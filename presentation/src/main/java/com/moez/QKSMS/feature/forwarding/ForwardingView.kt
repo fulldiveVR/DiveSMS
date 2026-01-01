@@ -28,6 +28,7 @@ interface ForwardingView : QkView<ForwardingState> {
     val forwardingEmailIntent: Observable<*>
     val forwardingEmailChangedIntent: Observable<String>
     val forwardingAccountIntent: Observable<*>
+    val emailTestIntent: Observable<*>
     val emailStatusActionIntent: Observable<*>
 
     // Telegram

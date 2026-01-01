@@ -23,12 +23,18 @@ import android.content.Context
 import com.moez.QKSMS.common.base.QkViewModel
 import com.moez.QKSMS.common.util.ForwardingNotificationManager
 import com.moez.QKSMS.common.util.extensions.makeToast
+import com.moez.QKSMS.email.EmailService
 import com.moez.QKSMS.manager.ForwardingStatusManager
 import com.moez.QKSMS.model.ForwardingStatus
 import com.moez.QKSMS.model.ForwardingType
 import com.moez.QKSMS.repository.ForwardingRepository
 import com.moez.QKSMS.telegram.TelegramService
 import com.moez.QKSMS.util.Preferences
+import io.reactivex.android.schedulers.AndroidSchedulers
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import com.uber.autodispose.android.lifecycle.scope
 import com.uber.autodispose.autoDispose
 import io.reactivex.rxkotlin.plusAssign
@@ -41,6 +47,7 @@ class ForwardingViewModel @Inject constructor(
     private val forwardingRepo: ForwardingRepository,
     private val prefs: Preferences,
     private val telegramService: TelegramService,
+    private val emailService: EmailService,
     private val statusManager: ForwardingStatusManager,
     private val notificationManager: ForwardingNotificationManager
 ) : QkViewModel<ForwardingView, ForwardingState>(ForwardingState()) {
@@ -142,6 +149,10 @@ class ForwardingViewModel @Inject constructor(
             .autoDispose(view.scope())
             .subscribe()
 
+        view.emailTestIntent
+            .autoDispose(view.scope())
+            .subscribe { sendTestEmail() }
+
         view.telegramTestIntent
             .autoDispose(view.scope())
             .subscribe { sendTestTelegramMessage(view) }
@@ -184,6 +195,66 @@ class ForwardingViewModel @Inject constructor(
         context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_status_cleared)
     }
 
+    private fun sendTestEmail() {
+        val destinationEmail = prefs.emailForwardingAddress.get()
+        if (destinationEmail.isBlank()) {
+            context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_no_destination)
+            return
+        }
+
+        val emailAccount = forwardingRepo.getDefaultEmailAccount()
+        if (emailAccount == null) {
+            context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_no_account)
+            return
+        }
+
+        if (!emailService.isAccountReady(emailAccount)) {
+            context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_account_not_ready)
+            return
+        }
+
+        // Copy Realm object values to avoid thread access issues
+        val accountCopy = com.moez.QKSMS.model.EmailAccount(
+            id = emailAccount.id,
+            accountType = emailAccount.accountType,
+            email = emailAccount.email,
+            gmailAccountName = emailAccount.gmailAccountName,
+            smtpHost = emailAccount.smtpHost,
+            smtpPort = emailAccount.smtpPort,
+            smtpUsername = emailAccount.smtpUsername,
+            smtpUseTls = emailAccount.smtpUseTls,
+            isDefault = emailAccount.isDefault,
+            createdAt = emailAccount.createdAt,
+            lastUsed = emailAccount.lastUsed
+        )
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val result = emailService.sendEmail(
+                to = destinationEmail,
+                subject = "Wize SMS Test Message",
+                body = "This is a test message from Wize SMS.\n\nIf you received this email, your email forwarding is working correctly!",
+                isHtml = false,
+                account = accountCopy
+            )
+
+            withContext(Dispatchers.Main) {
+                when (result) {
+                    is EmailService.SendResult.Success -> {
+                        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_test_success)
+                    }
+                    is EmailService.SendResult.Failure -> {
+                        Timber.e("Failed to send test email: ${result.error}")
+                        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_test_failed)
+                    }
+                    is EmailService.SendResult.AuthRequired -> {
+                        Timber.w("Auth required for test email: ${result.message}")
+                        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_email_account_not_ready)
+                    }
+                }
+            }
+        }
+    }
+
     private fun sendTestTelegramMessage(view: ForwardingView) {
         val chatId = prefs.telegramChatId.get()
         if (chatId.isBlank()) {
@@ -193,6 +264,7 @@ class ForwardingViewModel @Inject constructor(
 
         disposables += telegramService.sendTestMessage(chatId)
             .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { success ->
                     if (success) {

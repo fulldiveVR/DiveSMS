@@ -152,6 +152,13 @@
     <string name="forwarding_email_signout_message">Do you want to disconnect this Gmail account?</string>
     <string name="forwarding_email_signout_button">Disconnect</string>
     <string name="forwarding_email_hint">example@gmail.com</string>
+    <string name="forwarding_email_test_title">Send Test Message</string>
+    <string name="forwarding_email_test_summary">Verify your email setup works</string>
+    <string name="forwarding_email_test_success">Test email sent! Check your inbox</string>
+    <string name="forwarding_email_test_failed">Failed to send test email</string>
+    <string name="forwarding_email_no_destination">Please enter destination email first</string>
+    <string name="forwarding_email_no_account">Please sign in with Gmail first</string>
+    <string name="forwarding_email_account_not_ready">Gmail account needs reconnection</string>
 
     <!-- Telegram Forwarding -->
     <string name="forwarding_telegram_header">Telegram</string>

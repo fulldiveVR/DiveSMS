@@ -70,6 +70,7 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
     override val forwardingEmailIntent by lazy { binding.forwardingEmail.clicks() }
     override val forwardingEmailChangedIntent: Observable<String> = forwardingEmailSubject
     override val forwardingAccountIntent by lazy { binding.forwardingAccount.clicks() }
+    override val emailTestIntent by lazy { binding.emailTest.clicks() }
     override val emailStatusActionIntent by lazy {
         Observable.merge(
             binding.emailStatusBanner.clicks(),

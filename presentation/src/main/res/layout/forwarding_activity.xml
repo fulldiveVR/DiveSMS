@@ -163,6 +163,13 @@
                 app:title="@string/forwarding_email_account_title"
                 app:summary="@string/forwarding_email_account_summary_none" />
 
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/emailTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/forwarding_email_test_title"
+                app:summary="@string/forwarding_email_test_summary" />
+
             <!-- Telegram Section -->
             <View
                 android:layout_width="match_parent"
