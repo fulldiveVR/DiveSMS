@@ -398,4 +398,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">เชื่อมต่อใหม่</string>
   <string name="forwarding_notification_action_open">เปิดการตั้งค่า</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">ความเป็นส่วนตัวของคุณสำคัญ การส่งต่ออีเมลประมวลผลในเครื่องของคุณผ่านเซิร์ฟเวอร์ที่ปลอดภัยของ Google การส่งต่อ Telegram ใช้ฟังก์ชันคลาวด์โอเพนซอร์สของเรา ไม่มีข้อความถูกเก็บไว้ในเซิร์ฟเวอร์ของเรา Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

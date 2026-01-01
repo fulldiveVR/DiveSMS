@@ -404,4 +404,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Połącz ponownie</string>
   <string name="forwarding_notification_action_open">Otwórz ustawienia</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Twoja prywatność ma znaczenie. Przekazywanie emaili jest przetwarzane lokalnie na urządzeniu przez bezpieczne serwery Google. Przekazywanie przez Telegram wykorzystuje naszą funkcję chmurową open-source. Żadne wiadomości nie są przechowywane na naszych serwerach. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

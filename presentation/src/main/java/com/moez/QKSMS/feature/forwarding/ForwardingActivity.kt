@@ -24,6 +24,10 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
@@ -109,6 +113,28 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
                 binding.collapsingToolbar.collapsingToolbar.setExpandedTitleTypeface(typeface)
             }
         }
+
+        setupPrivacyNote()
+    }
+
+    private fun setupPrivacyNote() {
+        val noteText = getString(R.string.forwarding_privacy_note)
+        val linkText = "Privacy Policy"
+        val spannable = SpannableString(noteText)
+
+        val linkStart = noteText.indexOf(linkText)
+        if (linkStart >= 0) {
+            val clickableSpan = object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    val privacyUrl = getString(R.string.forwarding_privacy_policy_url)
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(privacyUrl)))
+                }
+            }
+            spannable.setSpan(clickableSpan, linkStart, linkStart + linkText.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+
+        binding.privacyNote.text = spannable
+        binding.privacyNote.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun render(state: ForwardingState) {

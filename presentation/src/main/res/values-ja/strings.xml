@@ -398,4 +398,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">再接続</string>
   <string name="forwarding_notification_action_open">設定を開く</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">プライバシーを大切にしています。メール転送はGoogleの安全なサーバーを使用してデバイス上でローカル処理されます。Telegram転送はオープンソースのクラウド機能を使用します。メッセージは当社のサーバーに保存されません。Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Yeniden bağlan</string>
   <string name="forwarding_notification_action_open">Ayarları aç</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Gizliliğiniz önemli. E-posta yönlendirme, Google\'ın güvenli sunucuları kullanılarak cihazınızda yerel olarak işlenir. Telegram yönlendirme açık kaynaklı bulut fonksiyonumuzu kullanır. Sunucularımızda hiçbir mesaj saklanmaz. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

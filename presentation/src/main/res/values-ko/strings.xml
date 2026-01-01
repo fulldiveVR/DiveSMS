@@ -399,4 +399,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">재연결</string>
   <string name="forwarding_notification_action_open">설정 열기</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">개인정보 보호를 중요시합니다. 이메일 전달은 Google의 보안 서버를 사용하여 기기에서 로컬로 처리됩니다. 텔레그램 전달은 오픈소스 클라우드 기능을 사용합니다. 메시지는 서버에 저장되지 않습니다. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

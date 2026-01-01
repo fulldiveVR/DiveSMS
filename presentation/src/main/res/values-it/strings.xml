@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Riconnetti</string>
   <string name="forwarding_notification_action_open">Apri impostazioni</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">La tua privacy è importante. L\'inoltro email viene elaborato localmente sul tuo dispositivo tramite i server sicuri di Google. L\'inoltro Telegram utilizza la nostra funzione cloud open-source. Nessun messaggio viene memorizzato sui nostri server. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

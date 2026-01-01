@@ -310,6 +310,21 @@
                 app:title="@string/forwarding_telegram_help_title"
                 app:summary="@string/forwarding_telegram_help_summary" />
 
+            <!-- Privacy Note -->
+            <com.moez.QKSMS.common.widget.QkTextView
+                android:id="@+id/privacyNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/forwarding_privacy_note"
+                android:textSize="11sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:alpha="0.7"
+                android:lineSpacingExtra="2dp" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Reconectar</string>
   <string name="forwarding_notification_action_open">Abrir ajustes</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Tu privacidad importa. El reenvío por email se procesa localmente en tu dispositivo usando los servidores seguros de Google. El reenvío por Telegram usa nuestra función en la nube de código abierto. No se almacenan mensajes en nuestros servidores. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

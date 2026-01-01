@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">পুনরায় সংযোগ</string>
   <string name="forwarding_notification_action_open">সেটিংস খুলুন</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">আপনার গোপনীয়তা গুরুত্বপূর্ণ। ইমেইল ফরওয়ার্ডিং Google-এর সুরক্ষিত সার্ভার ব্যবহার করে আপনার ডিভাইসে স্থানীয়ভাবে প্রক্রিয়াকৃত হয়। Telegram ফরওয়ার্ডিং আমাদের ওপেন-সোর্স ক্লাউড ফাংশন ব্যবহার করে। আমাদের সার্ভারে কোনো বার্তা সংরক্ষিত হয় না। Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

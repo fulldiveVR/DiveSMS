@@ -399,4 +399,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">重新連接</string>
   <string name="forwarding_notification_action_open">開啟設定</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">您的隱私很重要。郵件轉發透過Google安全伺服器在您的裝置上本地處理。Telegram轉發使用我們的開源雲端功能。我們的伺服器不儲存任何訊息。Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

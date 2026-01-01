@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Reconnecter</string>
   <string name="forwarding_notification_action_open">Ouvrir les paramètres</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Votre vie privée compte. Le transfert par email est traité localement sur votre appareil via les serveurs sécurisés de Google. Le transfert Telegram utilise notre fonction cloud open-source. Aucun message n\'est stocké sur nos serveurs. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

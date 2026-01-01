@@ -219,6 +219,10 @@
     <string name="forwarding_notification_action_reconnect">Reconnect</string>
     <string name="forwarding_notification_action_open">Open Settings</string>
 
+    <!-- Forwarding Privacy Note -->
+    <string name="forwarding_privacy_note">Your privacy matters. Email forwarding is processed locally on your device using Google\'s secure email servers. Telegram forwarding uses our open-source cloud function. No messages are stored on our servers. Privacy Policy</string>
+    <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
+
     <string name="scheduled_empty_description">Automatically send a message, at the exact moment you\'d like</string>
     <string name="scheduled_empty_message_1">Hey! When was your birthday again?</string>
     <string name="scheduled_empty_message_2">It\'s on December 23rd</string>

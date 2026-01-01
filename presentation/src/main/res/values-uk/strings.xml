@@ -404,4 +404,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Перепідключити</string>
   <string name="forwarding_notification_action_open">Відкрити налаштування</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Ваша конфіденційність важлива. Пересилання email обробляється локально на вашому пристрої через захищені сервери Google. Пересилання в Telegram використовує нашу функцію з відкритим кодом. Повідомлення не зберігаються на наших серверах. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

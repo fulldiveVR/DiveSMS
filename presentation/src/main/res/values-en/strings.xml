@@ -365,4 +365,8 @@
   <string name="forwarding_telegram_instruction_step3">3. Tap START button</string>
   <string name="forwarding_telegram_instruction_step4">4. Copy the Chat ID number</string>
   <string name="forwarding_telegram_instruction_step5">5. Paste it here</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Your privacy matters. Email forwarding is processed locally on your device using Google\'s secure email servers. Telegram forwarding uses our open-source cloud function. No messages are stored on our servers. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

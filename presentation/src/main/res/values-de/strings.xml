@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">Erneut verbinden</string>
   <string name="forwarding_notification_action_open">Einstellungen öffnen</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">Ihre Privatsphäre ist wichtig. E-Mail-Weiterleitung wird lokal auf Ihrem Gerät über Googles sichere Server verarbeitet. Telegram-Weiterleitung nutzt unsere Open-Source-Cloud-Funktion. Keine Nachrichten werden auf unseren Servern gespeichert. Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>

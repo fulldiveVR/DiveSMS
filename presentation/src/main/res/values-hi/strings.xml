@@ -400,4 +400,8 @@
   </plurals>
   <string name="forwarding_notification_action_reconnect">पुनः कनेक्ट करें</string>
   <string name="forwarding_notification_action_open">सेटिंग्स खोलें</string>
+
+  <!-- Forwarding Privacy Note -->
+  <string name="forwarding_privacy_note">आपकी गोपनीयता मायने रखती है। ईमेल फॉरवर्डिंग Google के सुरक्षित सर्वर का उपयोग करके आपके डिवाइस पर स्थानीय रूप से प्रोसेस होती है। Telegram फॉरवर्डिंग हमारे ओपन-सोर्स क्लाउड फंक्शन का उपयोग करती है। हमारे सर्वर पर कोई संदेश संग्रहीत नहीं होते। Privacy Policy</string>
+  <string name="forwarding_privacy_policy_url">https://www.aiwize.com/privacy-policy</string>
 </resources>
