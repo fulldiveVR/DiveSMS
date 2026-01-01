@@ -358,4 +358,39 @@
   <string name="forwarding_telegram_instruction_step3">3. Toca el botón START</string>
   <string name="forwarding_telegram_instruction_step4">4. Copia el número de ID de chat</string>
   <string name="forwarding_telegram_instruction_step5">5. Pégalo aquí</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Conectado</string>
+  <string name="forwarding_status_pending">Pendiente</string>
+  <string name="forwarding_status_needs_reconnect">Reconectar</string>
+  <string name="forwarding_status_disconnected">Desconectado</string>
+  <string name="forwarding_status_issue">Problema</string>
+  <string name="forwarding_status_pending_title">Algunos mensajes fallaron</string>
+  <string name="forwarding_status_reconnect_title">Reconexión necesaria</string>
+  <string name="forwarding_status_reconnect_message">Inicia sesión de nuevo para continuar el reenvío</string>
+  <string name="forwarding_status_disconnected_title">Cuenta desconectada</string>
+  <string name="forwarding_status_disconnected_message">Inicia sesión para activar el reenvío por email</string>
+  <string name="forwarding_status_telegram_issue_title">Problema de reenvío</string>
+  <string name="forwarding_status_telegram_issue_message">Verifica tu configuración de Telegram</string>
+  <string name="forwarding_status_action_fix">ARREGLAR</string>
+  <string name="forwarding_status_action_retry">LIMPIAR</string>
+  <string name="forwarding_status_cleared">Estado limpiado</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d mensaje no pudo ser reenviado</item>
+    <item quantity="other">%d mensajes no pudieron ser reenviados</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Estado de reenvío</string>
+  <string name="forwarding_notification_channel_description">Notificaciones sobre problemas de reenvío</string>
+  <string name="forwarding_notification_email_auth_title">Gmail necesita reconexión</string>
+  <string name="forwarding_notification_telegram_auth_title">Problema con Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Problema de reenvío por email</string>
+  <string name="forwarding_notification_telegram_failed_title">Problema de reenvío por Telegram</string>
+  <string name="forwarding_notification_auth_content">Toca para reconectar</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d mensaje no pudo ser reenviado</item>
+    <item quantity="other">%d mensajes no pudieron ser reenviados</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Reconectar</string>
+  <string name="forwarding_notification_action_open">Abrir ajustes</string>
 </resources>

@@ -38,16 +38,107 @@
             android:paddingBottom="8dp">
 
             <!-- Email Section -->
-            <com.moez.QKSMS.common.widget.QkTextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:paddingStart="72dp"
+                android:paddingEnd="16dp"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/forwarding_email_header"
-                android:textColor="?android:attr/colorAccent"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:paddingBottom="8dp">
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/forwarding_email_header"
+                    android:textColor="?android:attr/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:id="@+id/emailStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="Connected"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <!-- Email Status Banner (shown when there are issues) -->
+            <LinearLayout
+                android:id="@+id/emailStatusBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_rectangle_warning"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/emailStatusIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_warning_black_24dp"
+                    android:tint="@color/warning_text"
+                    tools:ignore="UseAppTint" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <com.moez.QKSMS.common.widget.QkTextView
+                        android:id="@+id/emailStatusTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/warning_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Reconnection needed" />
+
+                    <com.moez.QKSMS.common.widget.QkTextView
+                        android:id="@+id/emailStatusMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/warning_text"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"
+                        tools:text="3 messages couldn't be forwarded" />
+
+                </LinearLayout>
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:id="@+id/emailStatusAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/warning_text"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="@string/forwarding_status_action_fix" />
+
+            </LinearLayout>
 
             <com.moez.QKSMS.common.widget.PreferenceView
                 android:id="@+id/forwardingEnabled"
@@ -80,16 +171,107 @@
                 android:layout_marginBottom="8dp"
                 android:background="?android:attr/divider" />
 
-            <com.moez.QKSMS.common.widget.QkTextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:paddingStart="72dp"
+                android:paddingEnd="16dp"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/forwarding_telegram_header"
-                android:textColor="?android:attr/colorAccent"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:paddingBottom="8dp">
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/forwarding_telegram_header"
+                    android:textColor="?android:attr/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:id="@+id/telegramStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="Connected"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <!-- Telegram Status Banner (shown when there are issues) -->
+            <LinearLayout
+                android:id="@+id/telegramStatusBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_rectangle_warning"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/telegramStatusIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_warning_black_24dp"
+                    android:tint="@color/warning_text"
+                    tools:ignore="UseAppTint" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <com.moez.QKSMS.common.widget.QkTextView
+                        android:id="@+id/telegramStatusTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/warning_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="Connection issue" />
+
+                    <com.moez.QKSMS.common.widget.QkTextView
+                        android:id="@+id/telegramStatusMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/warning_text"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"
+                        tools:text="5 messages couldn't be forwarded" />
+
+                </LinearLayout>
+
+                <com.moez.QKSMS.common.widget.QkTextView
+                    android:id="@+id/telegramStatusAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/warning_text"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="@string/forwarding_status_action_retry" />
+
+            </LinearLayout>
 
             <com.moez.QKSMS.common.widget.PreferenceView
                 android:id="@+id/telegramEnabled"

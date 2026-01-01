@@ -358,4 +358,38 @@
   <string name="forwarding_telegram_instruction_step3">3. START 버튼 탭</string>
   <string name="forwarding_telegram_instruction_step4">4. 채팅 ID 번호 복사</string>
   <string name="forwarding_telegram_instruction_step5">5. 여기에 붙여넣기</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">연결됨</string>
+  <string name="forwarding_status_pending">대기 중</string>
+  <string name="forwarding_status_needs_reconnect">재연결 필요</string>
+  <string name="forwarding_status_disconnected">연결 해제됨</string>
+  <string name="forwarding_status_issue">문제 발생</string>
+  <string name="forwarding_status_pending_title">일부 메시지 전달 실패</string>
+  <string name="forwarding_status_reconnect_title">재연결이 필요합니다</string>
+  <string name="forwarding_status_reconnect_message">전달을 계속하려면 다시 로그인하세요</string>
+  <string name="forwarding_status_disconnected_title">계정 연결 해제됨</string>
+  <string name="forwarding_status_disconnected_message">이메일 전달을 활성화하려면 로그인하세요</string>
+  <string name="forwarding_status_telegram_issue_title">전달 문제</string>
+  <string name="forwarding_status_telegram_issue_message">텔레그램 설정을 확인하세요</string>
+  <string name="forwarding_status_action_fix">수정</string>
+  <string name="forwarding_status_action_retry">지우기</string>
+  <string name="forwarding_status_cleared">상태가 지워졌습니다</string>
+  <plurals name="forwarding_status_failed_messages">
+      <item quantity="other">%d개의 메시지를 전달할 수 없습니다</item>
+  </plurals>
+
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">전달 상태</string>
+  <string name="forwarding_notification_channel_description">전달 문제에 대한 알림</string>
+  <string name="forwarding_notification_email_auth_title">Gmail 재연결 필요</string>
+  <string name="forwarding_notification_telegram_auth_title">텔레그램 문제</string>
+  <string name="forwarding_notification_email_failed_title">이메일 전달 문제</string>
+  <string name="forwarding_notification_telegram_failed_title">텔레그램 전달 문제</string>
+  <string name="forwarding_notification_auth_content">탭하여 재연결하고 전달을 재개하세요</string>
+  <plurals name="forwarding_notification_failed_content">
+      <item quantity="other">%d개의 메시지를 전달할 수 없습니다</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">재연결</string>
+  <string name="forwarding_notification_action_open">설정 열기</string>
 </resources>

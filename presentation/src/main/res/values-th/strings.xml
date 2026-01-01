@@ -358,4 +358,37 @@
   <string name="forwarding_telegram_instruction_step3">3. แตะปุ่ม START</string>
   <string name="forwarding_telegram_instruction_step4">4. คัดลอกหมายเลขรหัสแชท</string>
   <string name="forwarding_telegram_instruction_step5">5. วางที่นี่</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">เชื่อมต่อแล้ว</string>
+  <string name="forwarding_status_pending">รอดำเนินการ</string>
+  <string name="forwarding_status_needs_reconnect">ต้องเชื่อมต่อใหม่</string>
+  <string name="forwarding_status_disconnected">ตัดการเชื่อมต่อ</string>
+  <string name="forwarding_status_issue">ปัญหา</string>
+  <string name="forwarding_status_pending_title">ข้อความบางส่วนส่งไม่สำเร็จ</string>
+  <string name="forwarding_status_reconnect_title">ต้องเชื่อมต่อใหม่</string>
+  <string name="forwarding_status_reconnect_message">กรุณาลงชื่อเข้าใช้อีกครั้งเพื่อดำเนินการส่งต่อ</string>
+  <string name="forwarding_status_disconnected_title">บัญชีถูกตัดการเชื่อมต่อ</string>
+  <string name="forwarding_status_disconnected_message">ลงชื่อเข้าใช้เพื่อเปิดใช้งานการส่งต่ออีเมล</string>
+  <string name="forwarding_status_telegram_issue_title">ปัญหาการส่งต่อ</string>
+  <string name="forwarding_status_telegram_issue_message">ตรวจสอบการตั้งค่า Telegram ของคุณ</string>
+  <string name="forwarding_status_action_fix">แก้ไข</string>
+  <string name="forwarding_status_action_retry">ล้าง</string>
+  <string name="forwarding_status_cleared">ล้างสถานะแล้ว</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="other">ไม่สามารถส่งต่อ %d ข้อความ</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">สถานะการส่งต่อ</string>
+  <string name="forwarding_notification_channel_description">การแจ้งเตือนเกี่ยวกับปัญหาการส่งต่อ</string>
+  <string name="forwarding_notification_email_auth_title">Gmail ต้องเชื่อมต่อใหม่</string>
+  <string name="forwarding_notification_telegram_auth_title">ปัญหา Telegram</string>
+  <string name="forwarding_notification_email_failed_title">ปัญหาการส่งต่ออีเมล</string>
+  <string name="forwarding_notification_telegram_failed_title">ปัญหาการส่งต่อ Telegram</string>
+  <string name="forwarding_notification_auth_content">แตะเพื่อเชื่อมต่อใหม่</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="other">ไม่สามารถส่งต่อ %d ข้อความ</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">เชื่อมต่อใหม่</string>
+  <string name="forwarding_notification_action_open">เปิดการตั้งค่า</string>
 </resources>

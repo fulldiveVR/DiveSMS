@@ -19,11 +19,15 @@
 
 package com.moez.QKSMS.feature.forwarding
 
+import com.moez.QKSMS.model.ForwardingStatus
+
 data class ForwardingState(
     val forwardingEnabled: Boolean = false,
     val forwardingEmail: String = "",
     val forwardingAccountName: String = "",
+    val emailStatus: ForwardingStatus = ForwardingStatus.Disabled,
     // Telegram
     val telegramEnabled: Boolean = false,
-    val telegramChatId: String = ""
+    val telegramChatId: String = "",
+    val telegramStatus: ForwardingStatus = ForwardingStatus.Disabled
 )

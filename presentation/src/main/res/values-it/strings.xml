@@ -358,4 +358,39 @@
   <string name="forwarding_telegram_instruction_step3">3. Tocca il pulsante START</string>
   <string name="forwarding_telegram_instruction_step4">4. Copia il numero ID chat</string>
   <string name="forwarding_telegram_instruction_step5">5. Incollalo qui</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Connesso</string>
+  <string name="forwarding_status_pending">In sospeso</string>
+  <string name="forwarding_status_needs_reconnect">Riconnessione richiesta</string>
+  <string name="forwarding_status_disconnected">Disconnesso</string>
+  <string name="forwarding_status_issue">Problema</string>
+  <string name="forwarding_status_pending_title">Alcuni messaggi non inviati</string>
+  <string name="forwarding_status_reconnect_title">Riconnessione necessaria</string>
+  <string name="forwarding_status_reconnect_message">Accedi di nuovo per continuare l\'inoltro</string>
+  <string name="forwarding_status_disconnected_title">Account disconnesso</string>
+  <string name="forwarding_status_disconnected_message">Accedi per attivare l\'inoltro email</string>
+  <string name="forwarding_status_telegram_issue_title">Problema di inoltro</string>
+  <string name="forwarding_status_telegram_issue_message">Controlla la configurazione di Telegram</string>
+  <string name="forwarding_status_action_fix">CORREGGI</string>
+  <string name="forwarding_status_action_retry">CANCELLA</string>
+  <string name="forwarding_status_cleared">Stato cancellato</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d messaggio non è stato inoltrato</item>
+    <item quantity="other">%d messaggi non sono stati inoltrati</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Stato inoltro</string>
+  <string name="forwarding_notification_channel_description">Notifiche sui problemi di inoltro</string>
+  <string name="forwarding_notification_email_auth_title">Gmail richiede riconnessione</string>
+  <string name="forwarding_notification_telegram_auth_title">Problema Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Problema inoltro email</string>
+  <string name="forwarding_notification_telegram_failed_title">Problema inoltro Telegram</string>
+  <string name="forwarding_notification_auth_content">Tocca per riconnetterti</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d messaggio non è stato inoltrato</item>
+    <item quantity="other">%d messaggi non sono stati inoltrati</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Riconnetti</string>
+  <string name="forwarding_notification_action_open">Apri impostazioni</string>
 </resources>

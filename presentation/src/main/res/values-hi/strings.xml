@@ -358,4 +358,39 @@
   <string name="forwarding_telegram_instruction_step3">3. START बटन टैप करें</string>
   <string name="forwarding_telegram_instruction_step4">4. चैट आईडी नंबर कॉपी करें</string>
   <string name="forwarding_telegram_instruction_step5">5. यहाँ पेस्ट करें</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">कनेक्टेड</string>
+  <string name="forwarding_status_pending">लंबित</string>
+  <string name="forwarding_status_needs_reconnect">पुनः कनेक्ट करें</string>
+  <string name="forwarding_status_disconnected">डिस्कनेक्टेड</string>
+  <string name="forwarding_status_issue">समस्या</string>
+  <string name="forwarding_status_pending_title">कुछ संदेश भेजने में विफल</string>
+  <string name="forwarding_status_reconnect_title">पुनः कनेक्शन आवश्यक</string>
+  <string name="forwarding_status_reconnect_message">फॉरवर्डिंग जारी रखने के लिए फिर से साइन इन करें</string>
+  <string name="forwarding_status_disconnected_title">खाता डिस्कनेक्टेड</string>
+  <string name="forwarding_status_disconnected_message">ईमेल फॉरवर्डिंग सक्षम करने के लिए साइन इन करें</string>
+  <string name="forwarding_status_telegram_issue_title">फॉरवर्डिंग समस्या</string>
+  <string name="forwarding_status_telegram_issue_message">अपनी टेलीग्राम कॉन्फ़िगरेशन जांचें</string>
+  <string name="forwarding_status_action_fix">ठीक करें</string>
+  <string name="forwarding_status_action_retry">साफ़ करें</string>
+  <string name="forwarding_status_cleared">स्थिति साफ़ की गई</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d संदेश फॉरवर्ड नहीं किया जा सका</item>
+    <item quantity="other">%d संदेश फॉरवर्ड नहीं किए जा सके</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">फॉरवर्डिंग स्थिति</string>
+  <string name="forwarding_notification_channel_description">फॉरवर्डिंग समस्याओं के बारे में सूचनाएं</string>
+  <string name="forwarding_notification_email_auth_title">Gmail को पुनः कनेक्शन चाहिए</string>
+  <string name="forwarding_notification_telegram_auth_title">टेलीग्राम समस्या</string>
+  <string name="forwarding_notification_email_failed_title">ईमेल फॉरवर्डिंग समस्या</string>
+  <string name="forwarding_notification_telegram_failed_title">टेलीग्राम फॉरवर्डिंग समस्या</string>
+  <string name="forwarding_notification_auth_content">पुनः कनेक्ट करने के लिए टैप करें</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d संदेश फॉरवर्ड नहीं किया जा सका</item>
+    <item quantity="other">%d संदेश फॉरवर्ड नहीं किए जा सके</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">पुनः कनेक्ट करें</string>
+  <string name="forwarding_notification_action_open">सेटिंग्स खोलें</string>
 </resources>

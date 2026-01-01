@@ -358,4 +358,43 @@
   <string name="forwarding_telegram_instruction_step3">3. Dotknij przycisku START</string>
   <string name="forwarding_telegram_instruction_step4">4. Skopiuj numer ID czatu</string>
   <string name="forwarding_telegram_instruction_step5">5. Wklej go tutaj</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Połączono</string>
+  <string name="forwarding_status_pending">Oczekuje</string>
+  <string name="forwarding_status_needs_reconnect">Wymaga ponownego połączenia</string>
+  <string name="forwarding_status_disconnected">Rozłączono</string>
+  <string name="forwarding_status_issue">Problem</string>
+  <string name="forwarding_status_pending_title">Niektóre wiadomości nie zostały wysłane</string>
+  <string name="forwarding_status_reconnect_title">Wymagane ponowne połączenie</string>
+  <string name="forwarding_status_reconnect_message">Zaloguj się ponownie, aby kontynuować przekazywanie</string>
+  <string name="forwarding_status_disconnected_title">Konto rozłączone</string>
+  <string name="forwarding_status_disconnected_message">Zaloguj się, aby włączyć przekazywanie emaili</string>
+  <string name="forwarding_status_telegram_issue_title">Problem z przekazywaniem</string>
+  <string name="forwarding_status_telegram_issue_message">Sprawdź konfigurację Telegram</string>
+  <string name="forwarding_status_action_fix">NAPRAW</string>
+  <string name="forwarding_status_action_retry">WYCZYŚĆ</string>
+  <string name="forwarding_status_cleared">Status wyczyszczony</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d wiadomość nie mogła zostać przekazana</item>
+    <item quantity="few">%d wiadomości nie mogły zostać przekazane</item>
+    <item quantity="many">%d wiadomości nie mogło zostać przekazanych</item>
+    <item quantity="other">%d wiadomości nie mogło zostać przekazanych</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Status przekazywania</string>
+  <string name="forwarding_notification_channel_description">Powiadomienia o problemach z przekazywaniem</string>
+  <string name="forwarding_notification_email_auth_title">Gmail wymaga ponownego połączenia</string>
+  <string name="forwarding_notification_telegram_auth_title">Problem z Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Problem z przekazywaniem emaili</string>
+  <string name="forwarding_notification_telegram_failed_title">Problem z przekazywaniem przez Telegram</string>
+  <string name="forwarding_notification_auth_content">Dotknij, aby połączyć ponownie</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d wiadomość nie mogła zostać przekazana</item>
+    <item quantity="few">%d wiadomości nie mogły zostać przekazane</item>
+    <item quantity="many">%d wiadomości nie mogło zostać przekazanych</item>
+    <item quantity="other">%d wiadomości nie mogło zostać przekazanych</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Połącz ponownie</string>
+  <string name="forwarding_notification_action_open">Otwórz ustawienia</string>
 </resources>

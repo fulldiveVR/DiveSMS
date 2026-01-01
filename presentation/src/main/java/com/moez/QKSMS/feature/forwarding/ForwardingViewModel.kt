@@ -21,7 +21,11 @@ package com.moez.QKSMS.feature.forwarding
 
 import android.content.Context
 import com.moez.QKSMS.common.base.QkViewModel
+import com.moez.QKSMS.common.util.ForwardingNotificationManager
 import com.moez.QKSMS.common.util.extensions.makeToast
+import com.moez.QKSMS.manager.ForwardingStatusManager
+import com.moez.QKSMS.model.ForwardingStatus
+import com.moez.QKSMS.model.ForwardingType
 import com.moez.QKSMS.repository.ForwardingRepository
 import com.moez.QKSMS.telegram.TelegramService
 import com.moez.QKSMS.util.Preferences
@@ -36,24 +40,59 @@ class ForwardingViewModel @Inject constructor(
     private val context: Context,
     private val forwardingRepo: ForwardingRepository,
     private val prefs: Preferences,
-    private val telegramService: TelegramService
+    private val telegramService: TelegramService,
+    private val statusManager: ForwardingStatusManager,
+    private val notificationManager: ForwardingNotificationManager
 ) : QkViewModel<ForwardingView, ForwardingState>(ForwardingState()) {
 
     init {
         disposables += prefs.emailForwardingEnabled.asObservable()
-            .subscribe { enabled -> newState { copy(forwardingEnabled = enabled) } }
+            .subscribe { enabled ->
+                newState { copy(forwardingEnabled = enabled) }
+                updateEmailStatus()
+            }
 
         disposables += prefs.emailForwardingAddress.asObservable()
             .subscribe { email -> newState { copy(forwardingEmail = email) } }
 
         // Telegram
         disposables += prefs.telegramForwardingEnabled.asObservable()
-            .subscribe { enabled -> newState { copy(telegramEnabled = enabled) } }
+            .subscribe { enabled ->
+                newState { copy(telegramEnabled = enabled) }
+                updateTelegramStatus()
+            }
 
         disposables += prefs.telegramChatId.asObservable()
             .subscribe { chatId -> newState { copy(telegramChatId = chatId) } }
 
+        // Status subscriptions
+        disposables += statusManager.emailStatus
+            .subscribe { status -> newState { copy(emailStatus = status) } }
+
+        disposables += statusManager.telegramStatus
+            .subscribe { status -> newState { copy(telegramStatus = status) } }
+
         updateForwardingAccountState()
+        updateEmailStatus()
+        updateTelegramStatus()
+    }
+
+    private fun updateEmailStatus() {
+        val status = if (prefs.emailForwardingEnabled.get()) {
+            statusManager.getEmailStatus()
+        } else {
+            ForwardingStatus.Disabled
+        }
+        newState { copy(emailStatus = status) }
+    }
+
+    private fun updateTelegramStatus() {
+        val status = if (prefs.telegramForwardingEnabled.get()) {
+            statusManager.getTelegramStatus()
+        } else {
+            ForwardingStatus.Disabled
+        }
+        newState { copy(telegramStatus = status) }
     }
 
     private fun updateForwardingAccountState() {
@@ -110,6 +149,39 @@ class ForwardingViewModel @Inject constructor(
         view.telegramHelpIntent
             .autoDispose(view.scope())
             .subscribe { view.openTelegramBot() }
+
+        // Status action handlers
+        view.emailStatusActionIntent
+            .autoDispose(view.scope())
+            .subscribe { handleEmailStatusAction(view) }
+
+        view.telegramStatusActionIntent
+            .autoDispose(view.scope())
+            .subscribe { handleTelegramStatusAction() }
+    }
+
+    private fun handleEmailStatusAction(view: ForwardingView) {
+        val status = statusManager.getEmailStatus()
+        when (status) {
+            is ForwardingStatus.NeedsReconnect, is ForwardingStatus.Disconnected -> {
+                // User needs to sign in again
+                view.requestGmailSignIn()
+            }
+            is ForwardingStatus.Pending -> {
+                // Clear failures and dismiss notification
+                statusManager.clearFailures(ForwardingType.EMAIL)
+                notificationManager.dismissNotification(ForwardingType.EMAIL)
+                context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_status_cleared)
+            }
+            else -> {}
+        }
+    }
+
+    private fun handleTelegramStatusAction() {
+        // Clear failures and dismiss notification
+        statusManager.clearFailures(ForwardingType.TELEGRAM)
+        notificationManager.dismissNotification(ForwardingType.TELEGRAM)
+        context.makeToast(com.fulldive.extension.divesms.R.string.forwarding_status_cleared)
     }
 
     private fun sendTestTelegramMessage(view: ForwardingView) {

@@ -358,4 +358,39 @@
   <string name="forwarding_telegram_instruction_step3">3. START düğmesine dokunun</string>
   <string name="forwarding_telegram_instruction_step4">4. Sohbet kimliği numarasını kopyalayın</string>
   <string name="forwarding_telegram_instruction_step5">5. Buraya yapıştırın</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Bağlı</string>
+  <string name="forwarding_status_pending">Beklemede</string>
+  <string name="forwarding_status_needs_reconnect">Yeniden bağlanma gerekli</string>
+  <string name="forwarding_status_disconnected">Bağlantı kesildi</string>
+  <string name="forwarding_status_issue">Sorun</string>
+  <string name="forwarding_status_pending_title">Bazı mesajlar gönderilemedi</string>
+  <string name="forwarding_status_reconnect_title">Yeniden bağlanma gerekli</string>
+  <string name="forwarding_status_reconnect_message">Yönlendirmeye devam etmek için tekrar giriş yapın</string>
+  <string name="forwarding_status_disconnected_title">Hesap bağlantısı kesildi</string>
+  <string name="forwarding_status_disconnected_message">E-posta yönlendirmesini etkinleştirmek için giriş yapın</string>
+  <string name="forwarding_status_telegram_issue_title">Yönlendirme sorunu</string>
+  <string name="forwarding_status_telegram_issue_message">Telegram yapılandırmanızı kontrol edin</string>
+  <string name="forwarding_status_action_fix">DÜZELT</string>
+  <string name="forwarding_status_action_retry">TEMİZLE</string>
+  <string name="forwarding_status_cleared">Durum temizlendi</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d mesaj yönlendirilemedi</item>
+    <item quantity="other">%d mesaj yönlendirilemedi</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Yönlendirme Durumu</string>
+  <string name="forwarding_notification_channel_description">Yönlendirme sorunları hakkında bildirimler</string>
+  <string name="forwarding_notification_email_auth_title">Gmail yeniden bağlanma gerektiriyor</string>
+  <string name="forwarding_notification_telegram_auth_title">Telegram sorunu</string>
+  <string name="forwarding_notification_email_failed_title">E-posta yönlendirme sorunu</string>
+  <string name="forwarding_notification_telegram_failed_title">Telegram yönlendirme sorunu</string>
+  <string name="forwarding_notification_auth_content">Yeniden bağlanmak için dokunun</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d mesaj yönlendirilemedi</item>
+    <item quantity="other">%d mesaj yönlendirilemedi</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Yeniden bağlan</string>
+  <string name="forwarding_notification_action_open">Ayarları aç</string>
 </resources>

@@ -21,6 +21,8 @@
 package com.moez.QKSMS.interactor
 
 import com.moez.QKSMS.email.EmailService
+import com.moez.QKSMS.manager.ForwardingStatusReporter
+import com.moez.QKSMS.model.ForwardingType
 import com.moez.QKSMS.repository.ContactRepository
 import com.moez.QKSMS.repository.ForwardingRepository
 import com.moez.QKSMS.telegram.TelegramService
@@ -42,7 +44,8 @@ class ForwardSms @Inject constructor(
     private val contactRepo: ContactRepository,
     private val forwardingRepo: ForwardingRepository,
     private val emailService: EmailService,
-    private val telegramService: TelegramService
+    private val telegramService: TelegramService,
+    private val statusReporter: ForwardingStatusReporter
 ) : Interactor<ForwardSms.Params>() {
 
     /**
@@ -154,12 +157,15 @@ class ForwardSms @Inject constructor(
                     when (result) {
                         is EmailService.SendResult.Success -> {
                             Timber.i("ForwardSms: Email sent successfully to $destinationEmail")
+                            statusReporter.reportSuccess(ForwardingType.EMAIL)
                         }
                         is EmailService.SendResult.Failure -> {
                             Timber.e("ForwardSms: Failed to send email: ${result.error}")
+                            statusReporter.reportFailure(ForwardingType.EMAIL, result.error, isAuthError = false)
                         }
                         is EmailService.SendResult.AuthRequired -> {
                             Timber.w("ForwardSms: Auth required for ${result.accountType}")
+                            statusReporter.reportFailure(ForwardingType.EMAIL, "Authentication required", isAuthError = true)
                         }
                     }
                 }
@@ -240,11 +246,14 @@ Sent via Wize SMS
 
             if (result) {
                 Timber.i("ForwardSms: SMS forwarded to Telegram successfully")
+                statusReporter.reportSuccess(ForwardingType.TELEGRAM)
             } else {
                 Timber.e("ForwardSms: Failed to forward SMS to Telegram")
+                statusReporter.reportFailure(ForwardingType.TELEGRAM, "Failed to send message", isAuthError = false)
             }
         } catch (e: Exception) {
             Timber.e(e, "ForwardSms: Error forwarding SMS to Telegram")
+            statusReporter.reportFailure(ForwardingType.TELEGRAM, e.message ?: "Unknown error", isAuthError = false)
         }
     }
 }

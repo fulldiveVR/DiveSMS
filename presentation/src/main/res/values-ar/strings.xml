@@ -358,4 +358,47 @@
   <string name="forwarding_telegram_instruction_step3">3. انقر على زر START</string>
   <string name="forwarding_telegram_instruction_step4">4. انسخ رقم معرف المحادثة</string>
   <string name="forwarding_telegram_instruction_step5">5. الصقه هنا</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">متصل</string>
+  <string name="forwarding_status_pending">قيد الانتظار</string>
+  <string name="forwarding_status_needs_reconnect">يحتاج إعادة الاتصال</string>
+  <string name="forwarding_status_disconnected">غير متصل</string>
+  <string name="forwarding_status_issue">مشكلة</string>
+  <string name="forwarding_status_pending_title">فشل إرسال بعض الرسائل</string>
+  <string name="forwarding_status_reconnect_title">مطلوب إعادة الاتصال</string>
+  <string name="forwarding_status_reconnect_message">يرجى تسجيل الدخول مرة أخرى لمتابعة التحويل</string>
+  <string name="forwarding_status_disconnected_title">الحساب غير متصل</string>
+  <string name="forwarding_status_disconnected_message">سجل الدخول لتفعيل تحويل البريد الإلكتروني</string>
+  <string name="forwarding_status_telegram_issue_title">مشكلة في التحويل</string>
+  <string name="forwarding_status_telegram_issue_message">تحقق من إعدادات تيليجرام</string>
+  <string name="forwarding_status_action_fix">إصلاح</string>
+  <string name="forwarding_status_action_retry">مسح</string>
+  <string name="forwarding_status_cleared">تم مسح الحالة</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="zero">لم يتم تحويل أي رسائل</item>
+    <item quantity="one">لم يتم تحويل رسالة واحدة</item>
+    <item quantity="two">لم يتم تحويل رسالتين</item>
+    <item quantity="few">لم يتم تحويل %d رسائل</item>
+    <item quantity="many">لم يتم تحويل %d رسالة</item>
+    <item quantity="other">لم يتم تحويل %d رسالة</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">حالة التحويل</string>
+  <string name="forwarding_notification_channel_description">إشعارات حول مشاكل التحويل</string>
+  <string name="forwarding_notification_email_auth_title">Gmail يحتاج إعادة الاتصال</string>
+  <string name="forwarding_notification_telegram_auth_title">مشكلة في تيليجرام</string>
+  <string name="forwarding_notification_email_failed_title">مشكلة في تحويل البريد الإلكتروني</string>
+  <string name="forwarding_notification_telegram_failed_title">مشكلة في تحويل تيليجرام</string>
+  <string name="forwarding_notification_auth_content">انقر لإعادة الاتصال</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="zero">لم يتم تحويل أي رسائل</item>
+    <item quantity="one">لم يتم تحويل رسالة واحدة</item>
+    <item quantity="two">لم يتم تحويل رسالتين</item>
+    <item quantity="few">لم يتم تحويل %d رسائل</item>
+    <item quantity="many">لم يتم تحويل %d رسالة</item>
+    <item quantity="other">لم يتم تحويل %d رسالة</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">إعادة الاتصال</string>
+  <string name="forwarding_notification_action_open">فتح الإعدادات</string>
 </resources>

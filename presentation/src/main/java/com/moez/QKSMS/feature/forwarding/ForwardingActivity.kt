@@ -24,7 +24,9 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.jakewharton.rxbinding2.view.clicks
@@ -36,6 +38,7 @@ import com.moez.QKSMS.common.util.extensions.makeToast
 import com.moez.QKSMS.common.widget.QkSwitch
 import com.moez.QKSMS.common.widget.TextInputDialog
 import com.moez.QKSMS.email.GmailOAuthManager
+import com.moez.QKSMS.model.ForwardingStatus
 import dagger.android.AndroidInjection
 import io.reactivex.Observable
 import io.reactivex.subjects.PublishSubject
@@ -67,6 +70,12 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
     override val forwardingEmailIntent by lazy { binding.forwardingEmail.clicks() }
     override val forwardingEmailChangedIntent: Observable<String> = forwardingEmailSubject
     override val forwardingAccountIntent by lazy { binding.forwardingAccount.clicks() }
+    override val emailStatusActionIntent by lazy {
+        Observable.merge(
+            binding.emailStatusBanner.clicks(),
+            binding.emailStatusAction.clicks()
+        )
+    }
 
     // Telegram
     override val telegramEnabledIntent by lazy { binding.telegramEnabled.clicks() }
@@ -74,6 +83,12 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
     override val telegramChatIdChangedIntent: Observable<String> = telegramChatIdSubject
     override val telegramTestIntent by lazy { binding.telegramTest.clicks() }
     override val telegramHelpIntent by lazy { binding.telegramHelp.clicks() }
+    override val telegramStatusActionIntent by lazy {
+        Observable.merge(
+            binding.telegramStatusBanner.clicks(),
+            binding.telegramStatusAction.clicks()
+        )
+    }
 
     private val viewModel by lazy { ViewModelProviders.of(this, viewModelFactory)[ForwardingViewModel::class.java] }
 
@@ -104,11 +119,134 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
             else -> getString(R.string.settings_forwarding_account_summary_none)
         }
 
+        // Email status
+        renderEmailStatus(state.emailStatus, state.forwardingEnabled)
+
         // Telegram
         binding.telegramEnabled.findViewById<QkSwitch>(R.id.checkbox).isChecked = state.telegramEnabled
         binding.telegramChatId.summary = state.telegramChatId.takeIf { it.isNotBlank() }
             ?.let { getString(R.string.forwarding_telegram_chat_id_summary_set, it) }
             ?: getString(R.string.forwarding_telegram_chat_id_summary)
+
+        // Telegram status
+        renderTelegramStatus(state.telegramStatus, state.telegramEnabled)
+    }
+
+    private fun renderEmailStatus(status: ForwardingStatus, isEnabled: Boolean) {
+        // Status chip
+        when {
+            !isEnabled -> {
+                binding.emailStatus.visibility = View.GONE
+                binding.emailStatusBanner.visibility = View.GONE
+            }
+            status is ForwardingStatus.Connected -> {
+                binding.emailStatus.visibility = View.VISIBLE
+                binding.emailStatus.text = getString(R.string.forwarding_status_connected)
+                binding.emailStatus.setTextColor(ContextCompat.getColor(this, R.color.status_connected))
+                binding.emailStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_connected)
+                binding.emailStatusBanner.visibility = View.GONE
+            }
+            status is ForwardingStatus.Pending -> {
+                binding.emailStatus.visibility = View.VISIBLE
+                binding.emailStatus.text = getString(R.string.forwarding_status_pending)
+                binding.emailStatus.setTextColor(ContextCompat.getColor(this, R.color.status_warning))
+                binding.emailStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_warning)
+                // Show banner
+                binding.emailStatusBanner.visibility = View.VISIBLE
+                binding.emailStatusTitle.text = getString(R.string.forwarding_status_pending_title)
+                binding.emailStatusMessage.text = resources.getQuantityString(
+                    R.plurals.forwarding_status_failed_messages,
+                    status.failedCount,
+                    status.failedCount
+                )
+                binding.emailStatusAction.text = getString(R.string.forwarding_status_action_retry)
+            }
+            status is ForwardingStatus.NeedsReconnect -> {
+                binding.emailStatus.visibility = View.VISIBLE
+                binding.emailStatus.text = getString(R.string.forwarding_status_needs_reconnect)
+                binding.emailStatus.setTextColor(ContextCompat.getColor(this, R.color.status_warning))
+                binding.emailStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_warning)
+                // Show banner
+                binding.emailStatusBanner.visibility = View.VISIBLE
+                binding.emailStatusTitle.text = getString(R.string.forwarding_status_reconnect_title)
+                binding.emailStatusMessage.text = getString(R.string.forwarding_status_reconnect_message)
+                binding.emailStatusAction.text = getString(R.string.forwarding_status_action_fix)
+            }
+            status is ForwardingStatus.Disconnected -> {
+                binding.emailStatus.visibility = View.VISIBLE
+                binding.emailStatus.text = getString(R.string.forwarding_status_disconnected)
+                binding.emailStatus.setTextColor(ContextCompat.getColor(this, R.color.status_error))
+                binding.emailStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_error)
+                // Show banner
+                binding.emailStatusBanner.visibility = View.VISIBLE
+                binding.emailStatusTitle.text = getString(R.string.forwarding_status_disconnected_title)
+                binding.emailStatusMessage.text = getString(R.string.forwarding_status_disconnected_message)
+                binding.emailStatusAction.text = getString(R.string.forwarding_status_action_fix)
+            }
+            else -> {
+                binding.emailStatus.visibility = View.GONE
+                binding.emailStatusBanner.visibility = View.GONE
+            }
+        }
+    }
+
+    private fun renderTelegramStatus(status: ForwardingStatus, isEnabled: Boolean) {
+        when {
+            !isEnabled -> {
+                binding.telegramStatus.visibility = View.GONE
+                binding.telegramStatusBanner.visibility = View.GONE
+            }
+            status is ForwardingStatus.Connected -> {
+                binding.telegramStatus.visibility = View.VISIBLE
+                binding.telegramStatus.text = getString(R.string.forwarding_status_connected)
+                binding.telegramStatus.setTextColor(ContextCompat.getColor(this, R.color.status_connected))
+                binding.telegramStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_connected)
+                binding.telegramStatusBanner.visibility = View.GONE
+            }
+            status is ForwardingStatus.Pending -> {
+                binding.telegramStatus.visibility = View.VISIBLE
+                binding.telegramStatus.text = getString(R.string.forwarding_status_pending)
+                binding.telegramStatus.setTextColor(ContextCompat.getColor(this, R.color.status_warning))
+                binding.telegramStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_warning)
+                // Show banner
+                binding.telegramStatusBanner.visibility = View.VISIBLE
+                binding.telegramStatusTitle.text = getString(R.string.forwarding_status_pending_title)
+                binding.telegramStatusMessage.text = resources.getQuantityString(
+                    R.plurals.forwarding_status_failed_messages,
+                    status.failedCount,
+                    status.failedCount
+                )
+                binding.telegramStatusAction.text = getString(R.string.forwarding_status_action_retry)
+            }
+            status is ForwardingStatus.NeedsReconnect || status is ForwardingStatus.Disconnected -> {
+                val failedCount = when (status) {
+                    is ForwardingStatus.NeedsReconnect -> status.failedCount
+                    is ForwardingStatus.Disconnected -> status.failedCount
+                    else -> 0
+                }
+                binding.telegramStatus.visibility = View.VISIBLE
+                binding.telegramStatus.text = getString(R.string.forwarding_status_issue)
+                binding.telegramStatus.setTextColor(ContextCompat.getColor(this, R.color.status_error))
+                binding.telegramStatus.setBackgroundResource(R.drawable.rounded_rectangle_status_error)
+                // Show banner
+                binding.telegramStatusBanner.visibility = View.VISIBLE
+                binding.telegramStatusTitle.text = getString(R.string.forwarding_status_telegram_issue_title)
+                binding.telegramStatusMessage.text = if (failedCount > 0) {
+                    resources.getQuantityString(
+                        R.plurals.forwarding_status_failed_messages,
+                        failedCount,
+                        failedCount
+                    )
+                } else {
+                    getString(R.string.forwarding_status_telegram_issue_message)
+                }
+                binding.telegramStatusAction.text = getString(R.string.forwarding_status_action_retry)
+            }
+            else -> {
+                binding.telegramStatus.visibility = View.GONE
+                binding.telegramStatusBanner.visibility = View.GONE
+            }
+        }
     }
 
     override fun showForwardingEmailDialog(email: String) {

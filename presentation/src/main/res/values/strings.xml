@@ -176,6 +176,42 @@
     <string name="forwarding_telegram_instruction_step4">4. Copy the Chat ID number</string>
     <string name="forwarding_telegram_instruction_step5">5. Paste it here</string>
 
+    <!-- Forwarding Status -->
+    <string name="forwarding_status_connected">Connected</string>
+    <string name="forwarding_status_pending">Pending</string>
+    <string name="forwarding_status_needs_reconnect">Needs reconnect</string>
+    <string name="forwarding_status_disconnected">Disconnected</string>
+    <string name="forwarding_status_issue">Issue</string>
+    <string name="forwarding_status_pending_title">Some messages failed</string>
+    <string name="forwarding_status_reconnect_title">Reconnection needed</string>
+    <string name="forwarding_status_reconnect_message">Please sign in again to continue forwarding</string>
+    <string name="forwarding_status_disconnected_title">Account disconnected</string>
+    <string name="forwarding_status_disconnected_message">Sign in to enable email forwarding</string>
+    <string name="forwarding_status_telegram_issue_title">Forwarding issue</string>
+    <string name="forwarding_status_telegram_issue_message">Check your Telegram configuration</string>
+    <string name="forwarding_status_action_fix">FIX</string>
+    <string name="forwarding_status_action_retry">CLEAR</string>
+    <string name="forwarding_status_cleared">Status cleared</string>
+    <plurals name="forwarding_status_failed_messages">
+        <item quantity="one">%d message couldn\'t be forwarded</item>
+        <item quantity="other">%d messages couldn\'t be forwarded</item>
+    </plurals>
+
+    <!-- Forwarding Notifications -->
+    <string name="forwarding_notification_channel_name">Forwarding Status</string>
+    <string name="forwarding_notification_channel_description">Notifications about forwarding issues</string>
+    <string name="forwarding_notification_email_auth_title">Gmail needs reconnection</string>
+    <string name="forwarding_notification_telegram_auth_title">Telegram issue</string>
+    <string name="forwarding_notification_email_failed_title">Email forwarding issue</string>
+    <string name="forwarding_notification_telegram_failed_title">Telegram forwarding issue</string>
+    <string name="forwarding_notification_auth_content">Tap to reconnect and resume forwarding</string>
+    <plurals name="forwarding_notification_failed_content">
+        <item quantity="one">%d message couldn\'t be forwarded</item>
+        <item quantity="other">%d messages couldn\'t be forwarded</item>
+    </plurals>
+    <string name="forwarding_notification_action_reconnect">Reconnect</string>
+    <string name="forwarding_notification_action_open">Open Settings</string>
+
     <string name="scheduled_empty_description">Automatically send a message, at the exact moment you\'d like</string>
     <string name="scheduled_empty_message_1">Hey! When was your birthday again?</string>
     <string name="scheduled_empty_message_2">It\'s on December 23rd</string>

@@ -358,4 +358,37 @@
   <string name="forwarding_telegram_instruction_step3">3. STARTボタンをタップ</string>
   <string name="forwarding_telegram_instruction_step4">4. チャットID番号をコピー</string>
   <string name="forwarding_telegram_instruction_step5">5. ここに貼り付け</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">接続済み</string>
+  <string name="forwarding_status_pending">保留中</string>
+  <string name="forwarding_status_needs_reconnect">再接続が必要</string>
+  <string name="forwarding_status_disconnected">切断済み</string>
+  <string name="forwarding_status_issue">問題</string>
+  <string name="forwarding_status_pending_title">一部のメッセージが送信できませんでした</string>
+  <string name="forwarding_status_reconnect_title">再接続が必要です</string>
+  <string name="forwarding_status_reconnect_message">転送を続行するには再度サインインしてください</string>
+  <string name="forwarding_status_disconnected_title">アカウントが切断されました</string>
+  <string name="forwarding_status_disconnected_message">メール転送を有効にするにはサインインしてください</string>
+  <string name="forwarding_status_telegram_issue_title">転送の問題</string>
+  <string name="forwarding_status_telegram_issue_message">Telegram の設定を確認してください</string>
+  <string name="forwarding_status_action_fix">修正</string>
+  <string name="forwarding_status_action_retry">クリア</string>
+  <string name="forwarding_status_cleared">ステータスをクリアしました</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="other">%d 件のメッセージを転送できませんでした</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">転送ステータス</string>
+  <string name="forwarding_notification_channel_description">転送の問題に関する通知</string>
+  <string name="forwarding_notification_email_auth_title">Gmail の再接続が必要です</string>
+  <string name="forwarding_notification_telegram_auth_title">Telegram の問題</string>
+  <string name="forwarding_notification_email_failed_title">メール転送の問題</string>
+  <string name="forwarding_notification_telegram_failed_title">Telegram 転送の問題</string>
+  <string name="forwarding_notification_auth_content">タップして再接続</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="other">%d 件のメッセージを転送できませんでした</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">再接続</string>
+  <string name="forwarding_notification_action_open">設定を開く</string>
 </resources>

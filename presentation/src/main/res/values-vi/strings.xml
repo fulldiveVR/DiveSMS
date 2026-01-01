@@ -358,4 +358,37 @@
   <string name="forwarding_telegram_instruction_step3">3. Nhấn nút START</string>
   <string name="forwarding_telegram_instruction_step4">4. Sao chép số ID Chat</string>
   <string name="forwarding_telegram_instruction_step5">5. Dán vào đây</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Đã kết nối</string>
+  <string name="forwarding_status_pending">Đang chờ</string>
+  <string name="forwarding_status_needs_reconnect">Cần kết nối lại</string>
+  <string name="forwarding_status_disconnected">Đã ngắt kết nối</string>
+  <string name="forwarding_status_issue">Vấn đề</string>
+  <string name="forwarding_status_pending_title">Một số tin nhắn gửi thất bại</string>
+  <string name="forwarding_status_reconnect_title">Cần kết nối lại</string>
+  <string name="forwarding_status_reconnect_message">Vui lòng đăng nhập lại để tiếp tục chuyển tiếp</string>
+  <string name="forwarding_status_disconnected_title">Tài khoản đã ngắt kết nối</string>
+  <string name="forwarding_status_disconnected_message">Đăng nhập để bật chuyển tiếp email</string>
+  <string name="forwarding_status_telegram_issue_title">Vấn đề chuyển tiếp</string>
+  <string name="forwarding_status_telegram_issue_message">Kiểm tra cấu hình Telegram của bạn</string>
+  <string name="forwarding_status_action_fix">SỬA</string>
+  <string name="forwarding_status_action_retry">XÓA</string>
+  <string name="forwarding_status_cleared">Đã xóa trạng thái</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="other">%d tin nhắn không thể chuyển tiếp</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Trạng thái chuyển tiếp</string>
+  <string name="forwarding_notification_channel_description">Thông báo về vấn đề chuyển tiếp</string>
+  <string name="forwarding_notification_email_auth_title">Gmail cần kết nối lại</string>
+  <string name="forwarding_notification_telegram_auth_title">Vấn đề Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Vấn đề chuyển tiếp email</string>
+  <string name="forwarding_notification_telegram_failed_title">Vấn đề chuyển tiếp Telegram</string>
+  <string name="forwarding_notification_auth_content">Nhấn để kết nối lại</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="other">%d tin nhắn không thể chuyển tiếp</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Kết nối lại</string>
+  <string name="forwarding_notification_action_open">Mở cài đặt</string>
 </resources>

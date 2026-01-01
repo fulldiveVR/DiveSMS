@@ -227,4 +227,9 @@ class AppModule(private var application: Application) {
     @Provides
     fun provideTelegramService(service: com.moez.QKSMS.telegram.TelegramServiceImpl): com.moez.QKSMS.telegram.TelegramService = service
 
+    // Forwarding Status
+
+    @Provides
+    fun provideForwardingStatusReporter(manager: com.moez.QKSMS.manager.ForwardingStatusManager): com.moez.QKSMS.manager.ForwardingStatusReporter = manager
+
 }

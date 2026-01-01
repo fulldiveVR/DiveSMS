@@ -358,4 +358,37 @@
   <string name="forwarding_telegram_instruction_step3">3. Ketuk tombol START</string>
   <string name="forwarding_telegram_instruction_step4">4. Salin nomor ID Chat</string>
   <string name="forwarding_telegram_instruction_step5">5. Tempel di sini</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Terhubung</string>
+  <string name="forwarding_status_pending">Menunggu</string>
+  <string name="forwarding_status_needs_reconnect">Perlu menghubungkan ulang</string>
+  <string name="forwarding_status_disconnected">Terputus</string>
+  <string name="forwarding_status_issue">Masalah</string>
+  <string name="forwarding_status_pending_title">Beberapa pesan gagal dikirim</string>
+  <string name="forwarding_status_reconnect_title">Perlu menghubungkan ulang</string>
+  <string name="forwarding_status_reconnect_message">Silakan masuk lagi untuk melanjutkan penerusan</string>
+  <string name="forwarding_status_disconnected_title">Akun terputus</string>
+  <string name="forwarding_status_disconnected_message">Masuk untuk mengaktifkan penerusan email</string>
+  <string name="forwarding_status_telegram_issue_title">Masalah penerusan</string>
+  <string name="forwarding_status_telegram_issue_message">Periksa konfigurasi Telegram Anda</string>
+  <string name="forwarding_status_action_fix">PERBAIKI</string>
+  <string name="forwarding_status_action_retry">HAPUS</string>
+  <string name="forwarding_status_cleared">Status dihapus</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="other">%d pesan tidak dapat diteruskan</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Status Penerusan</string>
+  <string name="forwarding_notification_channel_description">Pemberitahuan tentang masalah penerusan</string>
+  <string name="forwarding_notification_email_auth_title">Gmail perlu dihubungkan ulang</string>
+  <string name="forwarding_notification_telegram_auth_title">Masalah Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Masalah penerusan email</string>
+  <string name="forwarding_notification_telegram_failed_title">Masalah penerusan Telegram</string>
+  <string name="forwarding_notification_auth_content">Ketuk untuk menghubungkan ulang</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="other">%d pesan tidak dapat diteruskan</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Hubungkan ulang</string>
+  <string name="forwarding_notification_action_open">Buka pengaturan</string>
 </resources>

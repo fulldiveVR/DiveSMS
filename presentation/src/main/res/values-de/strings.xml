@@ -358,4 +358,39 @@
   <string name="forwarding_telegram_instruction_step3">3. START-Taste tippen</string>
   <string name="forwarding_telegram_instruction_step4">4. Chat-ID-Nummer kopieren</string>
   <string name="forwarding_telegram_instruction_step5">5. Hier einfügen</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Verbunden</string>
+  <string name="forwarding_status_pending">Ausstehend</string>
+  <string name="forwarding_status_needs_reconnect">Erneut verbinden</string>
+  <string name="forwarding_status_disconnected">Getrennt</string>
+  <string name="forwarding_status_issue">Problem</string>
+  <string name="forwarding_status_pending_title">Einige Nachrichten fehlgeschlagen</string>
+  <string name="forwarding_status_reconnect_title">Erneute Verbindung erforderlich</string>
+  <string name="forwarding_status_reconnect_message">Bitte erneut anmelden, um die Weiterleitung fortzusetzen</string>
+  <string name="forwarding_status_disconnected_title">Konto getrennt</string>
+  <string name="forwarding_status_disconnected_message">Anmelden, um E-Mail-Weiterleitung zu aktivieren</string>
+  <string name="forwarding_status_telegram_issue_title">Weiterleitungsproblem</string>
+  <string name="forwarding_status_telegram_issue_message">Überprüfen Sie Ihre Telegram-Einstellungen</string>
+  <string name="forwarding_status_action_fix">BEHEBEN</string>
+  <string name="forwarding_status_action_retry">LÖSCHEN</string>
+  <string name="forwarding_status_cleared">Status gelöscht</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d Nachricht konnte nicht weitergeleitet werden</item>
+    <item quantity="other">%d Nachrichten konnten nicht weitergeleitet werden</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Weiterleitungsstatus</string>
+  <string name="forwarding_notification_channel_description">Benachrichtigungen über Weiterleitungsprobleme</string>
+  <string name="forwarding_notification_email_auth_title">Gmail muss erneut verbunden werden</string>
+  <string name="forwarding_notification_telegram_auth_title">Telegram-Problem</string>
+  <string name="forwarding_notification_email_failed_title">E-Mail-Weiterleitungsproblem</string>
+  <string name="forwarding_notification_telegram_failed_title">Telegram-Weiterleitungsproblem</string>
+  <string name="forwarding_notification_auth_content">Tippen zum erneuten Verbinden</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d Nachricht konnte nicht weitergeleitet werden</item>
+    <item quantity="other">%d Nachrichten konnten nicht weitergeleitet werden</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Erneut verbinden</string>
+  <string name="forwarding_notification_action_open">Einstellungen öffnen</string>
 </resources>

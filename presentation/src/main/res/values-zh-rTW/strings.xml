@@ -358,4 +358,38 @@
   <string name="forwarding_telegram_instruction_step3">3. 點擊START按鈕</string>
   <string name="forwarding_telegram_instruction_step4">4. 複製聊天ID號碼</string>
   <string name="forwarding_telegram_instruction_step5">5. 貼上到這裡</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">已連接</string>
+  <string name="forwarding_status_pending">待處理</string>
+  <string name="forwarding_status_needs_reconnect">需要重新連接</string>
+  <string name="forwarding_status_disconnected">已斷開</string>
+  <string name="forwarding_status_issue">出現問題</string>
+  <string name="forwarding_status_pending_title">部分訊息發送失敗</string>
+  <string name="forwarding_status_reconnect_title">需要重新連接</string>
+  <string name="forwarding_status_reconnect_message">請重新登入以繼續轉發</string>
+  <string name="forwarding_status_disconnected_title">帳戶已斷開</string>
+  <string name="forwarding_status_disconnected_message">登入以啟用郵件轉發</string>
+  <string name="forwarding_status_telegram_issue_title">轉發問題</string>
+  <string name="forwarding_status_telegram_issue_message">請檢查您的Telegram配置</string>
+  <string name="forwarding_status_action_fix">修復</string>
+  <string name="forwarding_status_action_retry">清除</string>
+  <string name="forwarding_status_cleared">狀態已清除</string>
+  <plurals name="forwarding_status_failed_messages">
+      <item quantity="other">%d則訊息無法轉發</item>
+  </plurals>
+
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">轉發狀態</string>
+  <string name="forwarding_notification_channel_description">有關轉發問題的通知</string>
+  <string name="forwarding_notification_email_auth_title">Gmail需要重新連接</string>
+  <string name="forwarding_notification_telegram_auth_title">Telegram問題</string>
+  <string name="forwarding_notification_email_failed_title">郵件轉發問題</string>
+  <string name="forwarding_notification_telegram_failed_title">Telegram轉發問題</string>
+  <string name="forwarding_notification_auth_content">點擊重新連接並恢復轉發</string>
+  <plurals name="forwarding_notification_failed_content">
+      <item quantity="other">%d則訊息無法轉發</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">重新連接</string>
+  <string name="forwarding_notification_action_open">開啟設定</string>
 </resources>

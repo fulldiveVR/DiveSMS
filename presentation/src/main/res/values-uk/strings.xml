@@ -358,4 +358,43 @@
   <string name="forwarding_telegram_instruction_step3">3. Натисніть кнопку START</string>
   <string name="forwarding_telegram_instruction_step4">4. Скопіюйте номер Chat ID</string>
   <string name="forwarding_telegram_instruction_step5">5. Вставте його тут</string>
+
+  <!-- Forwarding Status -->
+  <string name="forwarding_status_connected">Підключено</string>
+  <string name="forwarding_status_pending">Очікування</string>
+  <string name="forwarding_status_needs_reconnect">Потрібне перепідключення</string>
+  <string name="forwarding_status_disconnected">Відключено</string>
+  <string name="forwarding_status_issue">Проблема</string>
+  <string name="forwarding_status_pending_title">Деякі повідомлення не надіслано</string>
+  <string name="forwarding_status_reconnect_title">Потрібне перепідключення</string>
+  <string name="forwarding_status_reconnect_message">Увійдіть знову для продовження пересилання</string>
+  <string name="forwarding_status_disconnected_title">Обліковий запис відключено</string>
+  <string name="forwarding_status_disconnected_message">Увійдіть для увімкнення пересилання на email</string>
+  <string name="forwarding_status_telegram_issue_title">Проблема з пересиланням</string>
+  <string name="forwarding_status_telegram_issue_message">Перевірте налаштування Telegram</string>
+  <string name="forwarding_status_action_fix">ВИПРАВИТИ</string>
+  <string name="forwarding_status_action_retry">ОЧИСТИТИ</string>
+  <string name="forwarding_status_cleared">Статус очищено</string>
+  <plurals name="forwarding_status_failed_messages">
+    <item quantity="one">%d повідомлення не вдалося переслати</item>
+    <item quantity="few">%d повідомлення не вдалося переслати</item>
+    <item quantity="many">%d повідомлень не вдалося переслати</item>
+    <item quantity="other">%d повідомлень не вдалося переслати</item>
+  </plurals>
+  <!-- Forwarding Notifications -->
+  <string name="forwarding_notification_channel_name">Статус пересилання</string>
+  <string name="forwarding_notification_channel_description">Сповіщення про проблеми пересилання</string>
+  <string name="forwarding_notification_email_auth_title">Gmail потребує перепідключення</string>
+  <string name="forwarding_notification_telegram_auth_title">Проблема з Telegram</string>
+  <string name="forwarding_notification_email_failed_title">Проблема з пересиланням на email</string>
+  <string name="forwarding_notification_telegram_failed_title">Проблема з пересиланням у Telegram</string>
+  <string name="forwarding_notification_auth_content">Натисніть для перепідключення</string>
+  <plurals name="forwarding_notification_failed_content">
+    <item quantity="one">%d повідомлення не вдалося переслати</item>
+    <item quantity="few">%d повідомлення не вдалося переслати</item>
+    <item quantity="many">%d повідомлень не вдалося переслати</item>
+    <item quantity="other">%d повідомлень не вдалося переслати</item>
+  </plurals>
+  <string name="forwarding_notification_action_reconnect">Перепідключити</string>
+  <string name="forwarding_notification_action_open">Відкрити налаштування</string>
 </resources>
