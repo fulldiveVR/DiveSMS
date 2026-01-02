@@ -24,6 +24,7 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.net.Uri
 import android.os.Bundle
+import android.text.InputType
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
@@ -67,7 +68,7 @@ class ForwardingActivity : QkThemedActivity(), ForwardingView {
     }
 
     private val telegramChatIdDialog: TextInputDialog by lazy {
-        TextInputDialog(this, getString(R.string.forwarding_telegram_chat_id_dialog_title), telegramChatIdSubject::onNext)
+        TextInputDialog(this, getString(R.string.forwarding_telegram_chat_id_dialog_title), telegramChatIdSubject::onNext, InputType.TYPE_CLASS_NUMBER)
     }
 
     override val forwardingEnabledIntent by lazy { binding.forwardingEnabled.clicks() }

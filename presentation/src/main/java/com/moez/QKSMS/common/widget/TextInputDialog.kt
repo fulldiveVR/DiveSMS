@@ -23,17 +23,24 @@ package com.moez.QKSMS.common.widget
 
 import android.app.Activity
 import android.content.DialogInterface
+import android.text.InputType
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import com.fulldive.extension.divesms.R
 import com.fulldive.extension.divesms.databinding.TextInputDialogBinding
 
-class TextInputDialog(context: Activity, hint: String, listener: (String) -> Unit) : AlertDialog(context) {
+class TextInputDialog(
+    context: Activity,
+    hint: String,
+    listener: (String) -> Unit,
+    inputType: Int = InputType.TYPE_CLASS_TEXT
+) : AlertDialog(context) {
 
     private val binding = TextInputDialogBinding.inflate(LayoutInflater.from(context))
 
     init {
         binding.field.hint = hint
+        binding.field.inputType = inputType
 
         setView(binding.root)
         setButton(DialogInterface.BUTTON_NEUTRAL, context.getString(R.string.button_cancel)) { _, _ -> }
