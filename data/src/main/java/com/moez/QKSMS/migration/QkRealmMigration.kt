@@ -250,7 +250,7 @@ class QkRealmMigration @Inject constructor(
                     .addField("smtpUseTls", Boolean::class.java, FieldAttribute.REQUIRED)
                     .addField("isDefault", Boolean::class.java, FieldAttribute.REQUIRED)
                     .addField("createdAt", Long::class.java, FieldAttribute.REQUIRED)
-                    .addField("lastUsed", Long::class.java)
+                    .addField("lastUsed", Long::class.javaObjectType)
 
             // ForwardingFilter entity
             realm.schema.create("ForwardingFilter")
@@ -276,7 +276,7 @@ class QkRealmMigration @Inject constructor(
                     .addField("emailBodyTemplate", String::class.java, FieldAttribute.REQUIRED)
                     .addField("useHtmlTemplate", Boolean::class.java, FieldAttribute.REQUIRED)
                     .addField("forwardedCount", Int::class.java, FieldAttribute.REQUIRED)
-                    .addField("lastTriggered", Long::class.java)
+                    .addField("lastTriggered", Long::class.javaObjectType)
 
             // ForwardingLog entity
             realm.schema.create("ForwardingLog")
@@ -291,7 +291,7 @@ class QkRealmMigration @Inject constructor(
                     .addField("deliveryStatus", String::class.java, FieldAttribute.REQUIRED)
                     .addField("deliveryMethod", String::class.java, FieldAttribute.REQUIRED)
                     .addField("errorMessage", String::class.java)
-                    .addField("sentAt", Long::class.java)
+                    .addField("sentAt", Long::class.javaObjectType)
                     .addField("retryCount", Int::class.java, FieldAttribute.REQUIRED)
 
             version++
