@@ -231,6 +231,7 @@ class ComposeViewModel @Inject constructor(
                 val position = messages.indexOfFirst { it.id == selected } + 1
                 newState { copy(searchSelectionPosition = position, searchResults = messages.size) }
             }
+            Unit
         }.subscribe()
 
         val latestSubId = messages
