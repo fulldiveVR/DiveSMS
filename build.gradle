@@ -58,10 +58,6 @@ allprojects {
             name 'glide-snapshot'
             url 'https://oss.sonatype.org/content/repositories/snapshots'
         }
-        maven {
-            url "http://office.fulldive.com:8083"
-            allowInsecureProtocol = true
-        }
         mavenCentral()
     }
 }

@@ -122,8 +122,9 @@ configurations {
 }
 
 dependencies {
-    implementation "com.snore.guard:divesms:1.4.0"
-    implementation 'com.fulldive:popups:1.0.20'
+    // com.snore.guard:divesms and com.fulldive:popups removed: they were served only by the
+    // unreachable internal Maven repo at office.fulldive.com
+
     // lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
@@ -176,7 +177,8 @@ dependencies {
     })
 
     // realm - commented out due to version compatibility issues
-    implementation("io.realm:android-adapters:$realm_adapters_version") { transitive = false }
+    // io.realm:android-adapters was jcenter-only; jitpack serves the identical upstream source
+    implementation("com.github.realm:realm-android-adapters:$realm_adapters_version") { transitive = false }
     kapt "io.realm:realm-annotations:$realm_version"
     kapt "io.realm:realm-annotations-processor:$realm_version"
 
@@ -238,14 +240,9 @@ dependencies {
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
-    maven {
-        url "http://office.fulldive.com:8083"
-        allowInsecureProtocol = true
-    }
 //    maven { url 'https://maven.joyyinc.com/nexus/content/repositories/public/' }
 }
 
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("WithAnalytics")) {
-    apply plugin: 'io.fabric'
     apply plugin: 'com.google.gms.google-services'
 }

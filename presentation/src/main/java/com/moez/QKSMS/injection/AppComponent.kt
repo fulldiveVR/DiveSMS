@@ -21,7 +21,6 @@
 
 package com.moez.QKSMS.injection
 
-import com.fulldive.startapppopups.PopupManager
 import com.moez.QKSMS.common.QKApplication
 import com.moez.QKSMS.common.QkDialog
 import com.moez.QKSMS.common.util.QkChooserTargetService
