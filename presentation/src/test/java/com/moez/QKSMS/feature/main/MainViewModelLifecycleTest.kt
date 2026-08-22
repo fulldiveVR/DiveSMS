@@ -20,14 +20,15 @@ package com.moez.QKSMS.feature.main
 
 import com.moez.QKSMS.model.Conversation
 import com.moez.QKSMS.repository.ConversationRepository
+import io.reactivex.BackpressureStrategy
 import io.reactivex.subjects.BehaviorSubject
 import io.realm.RealmResults
+import com.moez.QKSMS.extensions.asObservable
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
-import com.moez.QKSMS.extensions.asObservable
 
 /**
  * Test class to verify the UI lifecycle fixes
@@ -47,8 +48,10 @@ class MainViewModelLifecycleTest {
         MockitoAnnotations.initMocks(this)
         realmSubject = BehaviorSubject.create()
         
-        // Mock RealmResults behavior
-        `when`(realmResults.asObservable()).thenReturn(realmSubject)
+        // Mock RealmResults behavior. asObservable() is a Kotlin extension function and
+        // cannot be stubbed by Mockito, so stub the member call it delegates to instead.
+        `when`(realmResults.asFlowable())
+                .thenReturn(realmSubject.toFlowable(BackpressureStrategy.LATEST))
         `when`(conversationRepo.getConversations()).thenReturn(realmResults)
     }
 
@@ -57,10 +60,14 @@ class MainViewModelLifecycleTest {
         // Given: RealmResults is not loaded yet
         `when`(realmResults.isLoaded).thenReturn(false)
         
-        // When: ViewModel is created
+        // When: the conversation stream is consumed the way the ViewModel consumes it
         // Then: Initial state should have null data
         // This prevents showing empty UI before data is actually loaded
-        
+        val emissions = mutableListOf<RealmResults<Conversation>>()
+        conversationRepo.getConversations().asObservable()
+                .filter { conversations -> conversations.isLoaded }
+                .subscribe { conversations -> emissions.add(conversations) }
+
         // Simulate data loading
         `when`(realmResults.isLoaded).thenReturn(true)
         realmSubject.onNext(realmResults)
@@ -74,9 +81,13 @@ class MainViewModelLifecycleTest {
         // Given: RealmResults starts as not loaded
         `when`(realmResults.isLoaded).thenReturn(false)
         
-        // When: Navigation occurs
+        // When: Navigation occurs and the conversation stream is consumed
         // Then: Should wait for data to be loaded before updating state
-        
+        val emissions = mutableListOf<RealmResults<Conversation>>()
+        conversationRepo.getConversations().asObservable()
+                .filter { conversations -> conversations.isLoaded }
+                .subscribe { conversations -> emissions.add(conversations) }
+
         // Simulate data becoming available
         `when`(realmResults.isLoaded).thenReturn(true)
         realmSubject.onNext(realmResults)
