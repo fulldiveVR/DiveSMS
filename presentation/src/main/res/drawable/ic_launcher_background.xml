@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  IMVERSED adaptive icon background: 108x108dp brand gradient.
+  Axis fitted to imversed-03.png (~82 degrees, i.e. top -> bottom, leaning right),
+  spanning the central 72dp safe window so the full green-to-violet ramp is
+  visible after the adaptive mask crops the 108dp canvas.
+  Stops: spring green #05F2C7 -> blue #0930FF -> violet #7506FD.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr xmlns:aapt="http://schemas.android.com/aapt"
+            name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="48.9"
+                android:startY="18"
+                android:endX="59.1"
+                android:endY="90">
+                <item
+                    android:color="#05F2C7"
+                    android:offset="0.0" />
+                <item
+                    android:color="#0930FF"
+                    android:offset="0.62" />
+                <item
+                    android:color="#7506FD"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

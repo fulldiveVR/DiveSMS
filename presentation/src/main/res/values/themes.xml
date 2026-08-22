@@ -31,7 +31,7 @@
     <style name="AppLaunchTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:navigationBarColor">@color/backgroundDark</item>
         <item name="android:statusBarColor">@color/backgroundDark</item>
-        <item name="android:windowBackground">@color/backgroundDark</item>
+        <item name="android:windowBackground">@drawable/window_background_launch</item>
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme" />

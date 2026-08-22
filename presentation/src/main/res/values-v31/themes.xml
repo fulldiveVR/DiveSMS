@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      API 31+ uses the platform splash screen. The animated-icon slot is a 288dp
+      canvas masked to a 192dp circle, so the mark must stay inside the central
+      two thirds - ic_brand_mark's glyph is 48/108 of its canvas (~128dp of 288),
+      well inside. windowBackground is left as the flat brand dark so the
+      handoff into MainActivity does not flash.
+    -->
+    <style name="AppLaunchTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:navigationBarColor">@color/backgroundDark</item>
+        <item name="android:statusBarColor">@color/backgroundDark</item>
+        <item name="android:windowBackground">@color/backgroundDark</item>
+        <item name="android:windowSplashScreenBackground">@color/backgroundDark</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_brand_mark</item>
+    </style>
+
+</resources>

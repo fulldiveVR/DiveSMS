@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  IMVERSED glyph, white on transparent, 108x108dp adaptive-icon foreground.
-
-  Path data is the glyph lifted verbatim out of imversed_logo.svg (viewBox
-  112x37); only the dot and the "V" subpaths are kept, the rounded-square
-  container is dropped. Raw glyph bounds in SVG units: x 3.0156..11.0566,
-  y 14.2615..23.9806 (8.041 x 9.7191).
-
-  The group scales it by 48/9.7191 = 4.93872 (glyph height 48dp, width 39.7dp)
-  and centres it on (54,54), so the whole mark sits inside the central 72x72dp
-  adaptive safe zone with room to spare under a circular OEM mask
-  (bounding radius ~31dp vs the 36dp circle).
+  IMVERSED mark for launch screens: brand-gradient disc with the white glyph.
+  Same geometry as the adaptive icon layers, flattened into one vector so it can
+  be used as a windowBackground layer (pre-31) and as the API 31+ splash icon.
 -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
@@ -18,18 +10,36 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
+    <path android:pathData="M54,0A54,54 0 1,1 54,108A54,54 0 1,1 54,0Z">
+        <aapt:attr xmlns:aapt="http://schemas.android.com/aapt"
+            name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="48.9"
+                android:startY="18"
+                android:endX="59.1"
+                android:endY="90">
+                <item
+                    android:color="#05F2C7"
+                    android:offset="0.0" />
+                <item
+                    android:color="#0930FF"
+                    android:offset="0.62" />
+                <item
+                    android:color="#7506FD"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
     <group
         android:scaleX="4.93872"
         android:scaleY="4.93872"
         android:translateX="19.25"
         android:translateY="-40.437">
-
-        <!-- dot -->
         <path
             android:fillColor="#FFFFFF"
             android:pathData="M4.50677,15.007C4.50677,15.4188 4.17296,15.7526 3.7612,15.7526C3.34943,15.7526 3.01562,15.4188 3.01562,15.007C3.01562,14.5953 3.34943,14.2615 3.7612,14.2615C4.17296,14.2615 4.50677,14.5953 4.50677,15.007Z" />
-
-        <!-- V -->
         <path
             android:fillColor="#FFFFFF"
             android:pathData="M5.67786,15.0072C5.67786,14.5954 6.01167,14.2616 6.42343,14.2616H10.3111C10.5597,14.2616 10.792,14.3855 10.9304,14.5921C11.0688,14.7986 11.0952,15.0606 11.0006,15.2906L7.61895,23.5185C7.5039,23.7984 7.23104,23.981 6.92839,23.9806C6.62573,23.9802 6.35335,23.7969 6.23902,23.5167L4.05557,18.1646C3.90003,17.7833 4.08301,17.3481 4.46427,17.1926C4.84553,17.0371 5.28069,17.22 5.43623,17.6013L6.93192,21.2676L9.19853,15.7527H6.42343C6.01167,15.7527 5.67786,15.4189 5.67786,15.0072Z" />
