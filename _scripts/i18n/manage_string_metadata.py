@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-String Metadata Management for Wize SMS (DiveSMS)
+String Metadata Management for IMVERSED Messenger (DiveSMS)
 
 This script manages translation context metadata for all string resources.
 It provides tools to add, update, query, and validate metadata for AI-powered translations.
@@ -118,7 +118,7 @@ class MetadataManager:
             print(f"✗ Metadata file not found: {self.metadata_file}")
             self.file_data = {
                 "metadata_version": "1.0",
-                "project": "Wize SMS (DiveSMS)",
+                "project": "IMVERSED Messenger (DiveSMS)",
                 "default_locale": "en",
                 "last_updated": datetime.now().strftime("%Y-%m-%d"),
                 "total_strings": 0,
@@ -245,7 +245,7 @@ class MetadataManager:
         xml_strings = self.get_strings_from_xml()
 
         export_data = {
-            "project": "Wize SMS (DiveSMS)",
+            "project": "IMVERSED Messenger (DiveSMS)",
             "source_locale": "en",
             "target_locale": target_locale,
             "export_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),

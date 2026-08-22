@@ -275,7 +275,7 @@ qksms_plus_free_title:
     max_length: 135
     reason: Estimated UI space limitation
   context: {}
-  purpose: Wize SMS+ is free for F-Droid users! If you\'d like to support development,
+  purpose: IMVERSED Messenger+ is free for F-Droid users! If you\'d like to support development,
     a do...
   references: {}
   technical:
@@ -296,7 +296,7 @@ qksms_plus_more_summary:
   constraints:
     max_length: null
   context: {}
-  purpose: Wize SMS is under active development, and your purchase will include all
+  purpose: IMVERSED Messenger is under active development, and your purchase will include all
     future ...
   references: {}
   technical:
@@ -420,7 +420,7 @@ qksms_plus_thanks_summary:
   constraints:
     max_length: null
   context: {}
-  purpose: You now have access to all Wize SMS+ features
+  purpose: You now have access to all IMVERSED Messenger+ features
   references: {}
   technical:
     contains_emoji: false
@@ -441,7 +441,7 @@ qksms_plus_thanks_title:
     max_length: 54
     reason: Estimated UI space limitation
   context: {}
-  purpose: Thank you for supporting Wize SMS!
+  purpose: Thank you for supporting IMVERSED Messenger!
   references: {}
   technical:
     contains_emoji: false

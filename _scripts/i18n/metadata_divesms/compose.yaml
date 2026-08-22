@@ -687,7 +687,7 @@ compose_scheduled_plus:
     max_length: 67
     reason: Estimated UI space limitation
   context: {}
-  purpose: You must unlock Wize SMS+ to use scheduled messaging
+  purpose: You must unlock IMVERSED Messenger+ to use scheduled messaging
   references: {}
   technical:
     contains_emoji: false

@@ -231,8 +231,8 @@ class ForwardingViewModel @Inject constructor(
         CoroutineScope(Dispatchers.IO).launch {
             val result = emailService.sendEmail(
                 to = destinationEmail,
-                subject = "Wize SMS Test Message",
-                body = "This is a test message from Wize SMS.\n\nIf you received this email, your email forwarding is working correctly!",
+                subject = "IMVERSED Messenger Test Message",
+                body = "This is a test message from IMVERSED Messenger.\n\nIf you received this email, your email forwarding is working correctly!",
                 isHtml = false,
                 account = accountCopy
             )

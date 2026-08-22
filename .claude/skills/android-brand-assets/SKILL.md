@@ -140,5 +140,5 @@ the build is a real gate.
 
 ## Out of scope
 
-Do not change `app_name` or any string resource. The user-visible name is still
-"Wize SMS"; the rename is a separate decision.
+Do not change `app_name` or any string resource. The user-visible name is
+"IMVERSED Messenger"; string changes are a separate task.

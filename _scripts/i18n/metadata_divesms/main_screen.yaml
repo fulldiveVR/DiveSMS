@@ -24,7 +24,7 @@ main_default_sms_message:
   constraints:
     max_length: null
   context: {}
-  purpose: Make Wize SMS your default SMS app
+  purpose: Make IMVERSED Messenger your default SMS app
   references: {}
   technical:
     contains_emoji: false
@@ -405,7 +405,7 @@ main_permission_contacts:
     max_length: 61
     reason: Estimated UI space limitation
   context: {}
-  purpose: Wize SMS needs permission to view your contacts
+  purpose: IMVERSED Messenger needs permission to view your contacts
   references: {}
   technical:
     contains_emoji: false
@@ -447,7 +447,7 @@ main_permission_sms:
     max_length: 71
     reason: Estimated UI space limitation
   context: {}
-  purpose: Wize SMS needs permission to send and view SMS messages
+  purpose: IMVERSED Messenger needs permission to send and view SMS messages
   references: {}
   technical:
     contains_emoji: false

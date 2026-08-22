@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "divesms-i18n"
 version = "1.0.0"
-description = "Wize SMS (DiveSMS) Translation System - AI-powered internationalization with context-aware translations"
+description = "IMVERSED Messenger (DiveSMS) Translation System - AI-powered internationalization with context-aware translations"
 authors = ["Fulldive Team"]
 readme = "README.md"
 package-mode = false

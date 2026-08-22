@@ -2,12 +2,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="about_changelog">Değişiklik günlüğü</string>
   <string name="about_changelog_title">Değişiklik günlüğü</string>
-  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact">support@fulldive.com</string>
   <string name="about_contact_title">İletişim</string>
   <string name="about_controller">Denetleyici hakkında</string>
   <string name="about_copyright">Telif Hakkı</string>
   <string name="about_copyright_title">Telif Hakkı</string>
-  <string name="about_developer">WizeUp Tarayıcı</string>
+  <string name="about_developer">IMVERSED</string>
   <string name="about_developer_title">Geliştirici</string>
   <string name="about_license">Lisans</string>
   <string name="about_license_title">Lisans</string>
@@ -15,7 +15,7 @@
   <string name="about_source_title">Kaynak Hakkında</string>
   <string name="about_title">Hakkında</string>
   <string name="about_version_title">Sürüm</string>
-  <string name="app_name">Wize SMS</string>
+  <string name="app_name">IMVERSED Messenger</string>
   <string name="archived_empty_text">Arşivlenen sohbetleriniz burada görünecek</string>
   <string name="backup_backing_up">Mesajlar yedekleniyor</string>
   <string name="backup_disclaimer">Şu anda, Yedekleme ve Geri Yükleme yalnızca SMS\'i destekliyor. MMS desteği ve planlı yedeklemeler yakında geliyor!</string>
@@ -32,10 +32,10 @@
   <string name="backup_restore_confirm_message">Bu yedekten mesajlarınızı geri yüklemek istediğinizden emin misiniz?</string>
   <string name="backup_restore_confirm_title">Yedekten geri yükle</string>
   <string name="backup_restore_dialog_empty">Yedek bulunamadı</string>
-  <string name="backup_restore_dialog_summary">/Wize SMS/Yedekler</string>
+  <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
   <string name="backup_restore_dialog_title">Yedekler</string>
   <string name="backup_restore_error_backup">Yedekleme sürüyor…</string>
-  <string name="backup_restore_error_plus">Yedekleme ve geri yükleme için Wize SMS+\'yi açın</string>
+  <string name="backup_restore_error_plus">Yedekleme ve geri yükleme için IMVERSED Messenger+\'yi açın</string>
   <string name="backup_restore_error_restore">Geri yükleme sürüyor…</string>
   <string name="backup_restore_stop_message">Zaten geri yüklenmiş olan mesajlar cihazınızda kalacaktır</string>
   <string name="backup_restore_stop_title">Geri yüklemeyi durdur</string>
@@ -61,8 +61,8 @@
   <string name="blocking_manager_call_control_title">Arama Kontrolü</string>
   <string name="blocking_manager_copy_summary" formatted="false">%s\'e devam edin ve mevcut engellenen numaralarınızı kopyalayın</string>
   <string name="blocking_manager_copy_title">Engellenen numaraları kopyala</string>
-  <string name="blocking_manager_qksms_summary">Wize SMS\'te yerleşik engelleme işlevi</string>
-  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_qksms_summary">IMVERSED Messenger\'te yerleşik engelleme işlevi</string>
+  <string name="blocking_manager_qksms_title">IMVERSED Messenger</string>
   <string name="blocking_manager_sia_summary">\"Should I Answer\" uygulamasını kullanarak istenmeyen numaralardan gelen mesajları otomatik olarak filtreleyin</string>
   <string name="blocking_manager_sia_title">Cevap Vermeli miyim?</string>
   <string name="blocking_manager_title">Engelleme Yöneticisi</string>
@@ -82,7 +82,7 @@
   <string name="changelog_fixed">Düzeltildi</string>
   <string name="changelog_improved">Geliştirildi</string>
   <string name="changelog_more">Daha fazla</string>
-  <string name="changelog_title">Wize SMS\'te Yeni</string>
+  <string name="changelog_title">IMVERSED Messenger\'te Yeni</string>
   <string name="changelog_version" formatted="false">Sürüm %s</string>
   <string name="compose_attach_cd">Ek dosya ekle</string>
   <string name="compose_camera_cd">Fotoğraf çek</string>
@@ -115,7 +115,7 @@
   <string name="compose_schedule_cd">Mesaj zamanla</string>
   <string name="compose_scheduled_for">Planlandı</string>
   <string name="compose_scheduled_future">Seçilen zaman gelecekte olmalı!</string>
-  <string name="compose_scheduled_plus">Zamanlanmış mesajlaşmayı kullanmak için Wize SMS+ kilidini açmalısınız</string>
+  <string name="compose_scheduled_plus">Zamanlanmış mesajlaşmayı kullanmak için IMVERSED Messenger+ kilidini açmalısınız</string>
   <string name="compose_scheduled_toast">Zamanlanmış mesajlara eklendi</string>
   <string name="compose_send_cd">Mesaj gönder</string>
   <string name="compose_send_group_summary">Alıcılar ve yanıtlar herkes tarafından görülebilir</string>
@@ -132,7 +132,7 @@
   <string name="drawer_inbox">Gelen Kutusu</string>
   <string name="drawer_invite">Arkadaşları davet et</string>
   <string name="drawer_more">Daha</string>
-  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus">IMVERSED Messenger+</string>
   <string name="drawer_plus_banner_summary">Harika yeni özelliklerin kilidini açın ve geliştirmeyi destekleyin</string>
   <string name="drawer_scheduled">Planlandı</string>
   <string name="drawer_settings">Ayarlar</string>
@@ -154,7 +154,7 @@
   <string name="install_browser_title">WizeUp Tarayıcı ile Senkronize Et</string>
   <string name="install_submit">Daha fazla bilgi</string>
   <string name="main_default_sms_change">Değiştir</string>
-  <string name="main_default_sms_message">Wize SMS\'i varsayılan SMS uygulamanız yapın</string>
+  <string name="main_default_sms_message">IMVERSED Messenger\'i varsayılan SMS uygulamanız yapın</string>
   <string name="main_default_sms_title">Mesajlaşmayı yeniden sevin</string>
   <string name="main_draft">Taslak</string>
   <string name="main_drawer_open_cd">Gezinme çekmecesini aç</string>
@@ -172,9 +172,9 @@
   <string name="main_message_results" formatted="false">%d mesaj</string>
   <string name="main_message_results_title">Mesajlardaki sonuçlar</string>
   <string name="main_permission_allow">İzin Ver</string>
-  <string name="main_permission_contacts">Wize SMS\'in kişilerinizi görmek için izne ihtiyacı var</string>
+  <string name="main_permission_contacts">IMVERSED Messenger\'in kişilerinizi görmek için izne ihtiyacı var</string>
   <string name="main_permission_required">İzin gerekli</string>
-  <string name="main_permission_sms">Wize SMS\'in SMS göndermek ve görüntülemek için izne ihtiyacı var</string>
+  <string name="main_permission_sms">IMVERSED Messenger\'in SMS göndermek ve görüntülemek için izne ihtiyacı var</string>
   <string name="main_sender_you" formatted="false">Sen: %s</string>
   <string name="main_syncing">Mesajlar senkronize ediliyor…</string>
   <string name="main_title_selected" formatted="false">%d seçildi</string>
@@ -210,8 +210,8 @@
   <string name="qksms_plus_error">Bir hata oluştu, lütfen tekrar deneyin</string>
   <string name="qksms_plus_forward_summary">Belirli göndericilerden gelen mesajları otomatik olarak yönlendirin</string>
   <string name="qksms_plus_forward_title">Otomatik yönlendirme</string>
-  <string name="qksms_plus_free_title">Wize SMS+ F-Droid kullanıcılarına ücretsiz! Bağışla destek olun.</string>
-  <string name="qksms_plus_more_summary">Wize SMS aktif geliştirme aşamasında ve satın alımınız gelecekteki tüm Wize SMS+ özelliklerini içerecektir!</string>
+  <string name="qksms_plus_free_title">IMVERSED Messenger+ F-Droid kullanıcılarına ücretsiz! Bağışla destek olun.</string>
+  <string name="qksms_plus_more_summary">IMVERSED Messenger aktif geliştirme aşamasında ve satın alımınız gelecekteki tüm IMVERSED Messenger+ özelliklerini içerecektir!</string>
   <string name="qksms_plus_more_title">Daha Fazla</string>
   <string name="qksms_plus_night_summary">Günün saatine göre gece modunu etkinleştirin</string>
   <string name="qksms_plus_night_title">Otomatik gece modu</string>
@@ -219,8 +219,8 @@
   <string name="qksms_plus_respond_title">Otomatik yanıt</string>
   <string name="qksms_plus_scheduled_summary">Mesajları belirli bir tarih ve saatte otomatik olarak gönderilecek şekilde planlayın</string>
   <string name="qksms_plus_scheduled_title">Zamanlanmış mesajlar</string>
-  <string name="qksms_plus_thanks_summary">Artık Wize SMS+ özelliklerinin tümüne erişiminiz var</string>
-  <string name="qksms_plus_thanks_title">Wize SMS\'i desteklediğiniz için teşekkürler!</string>
+  <string name="qksms_plus_thanks_summary">Artık IMVERSED Messenger+ özelliklerinin tümüne erişiminiz var</string>
+  <string name="qksms_plus_thanks_title">IMVERSED Messenger\'i desteklediğiniz için teşekkürler!</string>
   <string name="qksms_plus_themes_summary">Material Design paletinde bulunmayan güzel tema renklerini açın</string>
   <string name="qksms_plus_themes_title">Premium temalar</string>
   <string name="qksms_plus_upgrade" formatted="false">%1$s %2$s için ömür boyu yükseltme</string>
@@ -233,8 +233,8 @@
   <string name="rate_okay">TAMAM!</string>
   <string name="rate_submit">Değerlendir</string>
   <string name="rate_summary">Biraz sevgi paylaş ve Google Play\'de bizi değerlendir!</string>
-  <string name="rate_title">Wize SMS\'ten memnun musunuz?</string>
-  <string name="rate_us_description">Wize SMS\'i beğendiniz mi? Uygulamayı geliştirmek için geri bildiriminizi bekliyoruz.</string>
+  <string name="rate_title">IMVERSED Messenger\'ten memnun musunuz?</string>
+  <string name="rate_us_description">IMVERSED Messenger\'i beğendiniz mi? Uygulamayı geliştirmek için geri bildiriminizi bekliyoruz.</string>
   <string name="rate_us_title">Bizi değerlendir</string>
   <string name="scheduled_compose_cd">Mesajı zamanla</string>
   <string name="scheduled_empty_description">Tam istediğiniz anda otomatik olarak mesaj gönderin</string>
@@ -244,7 +244,7 @@
   <string name="scheduled_empty_message_3_timestamp">23 Aralık\'ta gönderiliyor</string>
   <string name="scheduled_options_title">Zamanlanmış mesaj</string>
   <string name="scheduled_title">Planlandı</string>
-  <string name="settings_about_title">Wize SMS Hakkında</string>
+  <string name="settings_about_title">IMVERSED Messenger Hakkında</string>
   <string name="settings_auto_delete">Eski mesajları otomatik sil</string>
   <string name="settings_auto_delete_dialog_hint">Gün sayısı</string>
   <string name="settings_auto_delete_dialog_message">Mesajlar belirtilen gün sayısından sonra silinecektir</string>
@@ -317,7 +317,7 @@
   <string name="title_theme">Tema</string>
   <string name="toast_archived">Arşivlenen sohbet</string>
   <string name="toast_copied">Kopyalandı</string>
-  <string name="toast_qksms_plus">Bunu kullanmak için Wize SMS+ kilidini açmalısınız</string>
+  <string name="toast_qksms_plus">Bunu kullanmak için IMVERSED Messenger+ kilidini açmalısınız</string>
   <string name="widget_loading">Yükleniyor…</string>
   <string name="widget_more">Daha fazla sohbeti görüntüle</string>
 

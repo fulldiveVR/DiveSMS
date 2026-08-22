@@ -193,7 +193,7 @@ class TemplateEngineTest {
 
         // Default body contains message
         assertTrue(result.body.contains("Test message"))
-        assertTrue(result.body.contains("Wize SMS"))
+        assertTrue(result.body.contains("IMVERSED Messenger"))
     }
 
     // ==================== HTML Template Tests ====================
@@ -244,7 +244,7 @@ class TemplateEngineTest {
         // Should use default templates
         assertFalse(result.subject.contains("{{"))
         assertFalse(result.body.contains("{{"))
-        assertTrue(result.body.contains("Wize SMS"))
+        assertTrue(result.body.contains("IMVERSED Messenger"))
     }
 
     // ==================== Available Variables Tests ====================

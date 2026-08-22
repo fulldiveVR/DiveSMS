@@ -27,9 +27,9 @@ def main():
     else:
         index = {
             "version": "1.0",
-            "project": "Wize SMS (DiveSMS)",
+            "project": "IMVERSED Messenger (DiveSMS)",
             "default_locale": "en",
-            "description": "String metadata for Wize SMS, organized by category for efficient AI-powered translation",
+            "description": "String metadata for IMVERSED Messenger, organized by category for efficient AI-powered translation",
             "notes": {
                 "format": "Split YAML format with category-based organization",
                 "benefits": "Token-efficient loading, easier maintenance, scalable architecture"

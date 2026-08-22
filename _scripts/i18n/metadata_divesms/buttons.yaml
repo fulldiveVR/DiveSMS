@@ -297,7 +297,7 @@ rate_title:
     max_length: 38
     reason: Estimated UI space limitation
   context: {}
-  purpose: Enjoying Wize SMS?
+  purpose: Enjoying IMVERSED Messenger?
   references: {}
   technical:
     contains_emoji: false
@@ -318,7 +318,7 @@ rate_us_description:
     max_length: 117
     reason: Estimated UI space limitation
   context: {}
-  purpose: Do you like Wize SMS? We would love to hear your feedback and make the
+  purpose: Do you like IMVERSED Messenger? We would love to hear your feedback and make the
     app bette...
   references: {}
   technical:

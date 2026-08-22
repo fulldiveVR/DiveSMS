@@ -54,7 +54,7 @@ PROFILES = {
     'divesms': {
         'metadata_dir': 'metadata_divesms',
         'strings_path': 'presentation/src/main/res/values/strings.xml',
-        'description': 'Wize SMS/DiveSMS strings'
+        'description': 'IMVERSED Messenger/DiveSMS strings'
     }
 }
 

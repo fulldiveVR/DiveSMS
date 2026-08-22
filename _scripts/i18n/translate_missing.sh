@@ -16,7 +16,7 @@ set -e  # Exit on error
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-echo "🔍 Wize SMS (DiveSMS) - Translate Missing Strings"
+echo "🔍 IMVERSED Messenger (DiveSMS) - Translate Missing Strings"
 echo "=============================================="
 echo ""
 

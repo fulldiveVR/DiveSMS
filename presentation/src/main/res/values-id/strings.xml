@@ -2,12 +2,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="about_changelog">Catatan perubahan</string>
   <string name="about_changelog_title">Catatan perubahan</string>
-  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact">support@fulldive.com</string>
   <string name="about_contact_title">Kontak</string>
   <string name="about_controller">Tentang pengontrol</string>
   <string name="about_copyright">Hak Cipta</string>
   <string name="about_copyright_title">Hak Cipta</string>
-  <string name="about_developer">Peramban WizeUp</string>
+  <string name="about_developer">IMVERSED</string>
   <string name="about_developer_title">Pengembang</string>
   <string name="about_license">Lisensi</string>
   <string name="about_license_title">Lisensi</string>
@@ -15,7 +15,7 @@
   <string name="about_source_title">Tentang Sumber</string>
   <string name="about_title">Tentang</string>
   <string name="about_version_title">Versi</string>
-  <string name="app_name">Wize SMS</string>
+  <string name="app_name">IMVERSED Messenger</string>
   <string name="archived_empty_text">Percakapan yang diarsipkan akan muncul di sini</string>
   <string name="backup_backing_up">Mencadangkan pesan</string>
   <string name="backup_disclaimer">Saat ini, hanya SMS yang didukung oleh Backup dan Restore. Dukungan MMS dan pencadangan terjadwal akan segera hadir!</string>
@@ -32,10 +32,10 @@
   <string name="backup_restore_confirm_message">Apakah Anda yakin ingin memulihkan pesan Anda dari cadangan ini?</string>
   <string name="backup_restore_confirm_title">Pulihkan dari cadangan</string>
   <string name="backup_restore_dialog_empty">Tidak ada cadangan</string>
-  <string name="backup_restore_dialog_summary">/Wize SMS/Cadangan</string>
+  <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
   <string name="backup_restore_dialog_title">Cadangan</string>
   <string name="backup_restore_error_backup">Cadangan sedang berlangsung…</string>
-  <string name="backup_restore_error_plus">Harap buka kunci Wize SMS+ untuk menggunakan cadangan dan pemulihan</string>
+  <string name="backup_restore_error_plus">Harap buka kunci IMVERSED Messenger+ untuk menggunakan cadangan dan pemulihan</string>
   <string name="backup_restore_error_restore">Pemulihan sedang berlangsung…</string>
   <string name="backup_restore_stop_message">Pesan yang sudah dipulihkan akan tetap ada di perangkat Anda</string>
   <string name="backup_restore_stop_title">Hentikan pemulihan</string>
@@ -61,8 +61,8 @@
   <string name="blocking_manager_call_control_title">Kontrol Panggilan</string>
   <string name="blocking_manager_copy_summary" formatted="false">Lanjutkan ke %s dan salin nomor yang diblokir yang ada</string>
   <string name="blocking_manager_copy_title">Salin nomor yang diblokir</string>
-  <string name="blocking_manager_qksms_summary">Fungsi pemblokiran bawaan di Wize SMS</string>
-  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_qksms_summary">Fungsi pemblokiran bawaan di IMVERSED Messenger</string>
+  <string name="blocking_manager_qksms_title">IMVERSED Messenger</string>
   <string name="blocking_manager_sia_summary">Secara otomatis memfilter pesan dari nomor yang tidak diinginkan dengan menggunakan aplikasi \"Should I Answer\"</string>
   <string name="blocking_manager_sia_title">Haruskah Saya Menjawab?</string>
   <string name="blocking_manager_title">Pengelola Pemblokiran</string>
@@ -82,7 +82,7 @@
   <string name="changelog_fixed">Diperbaiki</string>
   <string name="changelog_improved">Ditingkatkan</string>
   <string name="changelog_more">Lainnya</string>
-  <string name="changelog_title">Baru di Wize SMS</string>
+  <string name="changelog_title">Baru di IMVERSED Messenger</string>
   <string name="changelog_version" formatted="false">Versi %s</string>
   <string name="compose_attach_cd">Tambahkan lampiran</string>
   <string name="compose_camera_cd">Ambil foto</string>
@@ -115,7 +115,7 @@
   <string name="compose_schedule_cd">Jadwalkan pesan</string>
   <string name="compose_scheduled_for">Dijadwalkan untuk</string>
   <string name="compose_scheduled_future">Waktu yang dipilih harus di masa depan!</string>
-  <string name="compose_scheduled_plus">Anda harus membuka Wize SMS+ untuk menggunakan pesan terjadwal</string>
+  <string name="compose_scheduled_plus">Anda harus membuka IMVERSED Messenger+ untuk menggunakan pesan terjadwal</string>
   <string name="compose_scheduled_toast">Ditambahkan ke pesan terjadwal</string>
   <string name="compose_send_cd">Kirim pesan</string>
   <string name="compose_send_group_summary">Penerima dan balasan akan terlihat oleh semua orang</string>
@@ -132,7 +132,7 @@
   <string name="drawer_inbox">Kotak Masuk</string>
   <string name="drawer_invite">Undang teman</string>
   <string name="drawer_more">Lainnya</string>
-  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus">IMVERSED Messenger+</string>
   <string name="drawer_plus_banner_summary">Buka fitur baru yang menakjubkan dan dukung pengembangan</string>
   <string name="drawer_scheduled">Dijadwalkan</string>
   <string name="drawer_settings">Pengaturan</string>
@@ -154,7 +154,7 @@
   <string name="install_browser_title">Sinkronkan dengan WizeUp Browser</string>
   <string name="install_submit">Pelajari lebih</string>
   <string name="main_default_sms_change">Ubah</string>
-  <string name="main_default_sms_message">Jadikan Wize SMS aplikasi SMS default Anda</string>
+  <string name="main_default_sms_message">Jadikan IMVERSED Messenger aplikasi SMS default Anda</string>
   <string name="main_default_sms_title">Cintai SMS lagi</string>
   <string name="main_draft">Draf</string>
   <string name="main_drawer_open_cd">Buka laci navigasi</string>
@@ -172,9 +172,9 @@
   <string name="main_message_results" formatted="false">%d pesan</string>
   <string name="main_message_results_title">Hasil dalam pesan</string>
   <string name="main_permission_allow">Izinkan</string>
-  <string name="main_permission_contacts">Wize SMS memerlukan izin untuk melihat kontak Anda</string>
+  <string name="main_permission_contacts">IMVERSED Messenger memerlukan izin untuk melihat kontak Anda</string>
   <string name="main_permission_required">Izin diperlukan</string>
-  <string name="main_permission_sms">Wize SMS memerlukan izin untuk mengirim dan melihat pesan SMS</string>
+  <string name="main_permission_sms">IMVERSED Messenger memerlukan izin untuk mengirim dan melihat pesan SMS</string>
   <string name="main_sender_you" formatted="false">Anda: %s</string>
   <string name="main_syncing">Menyinkronkan pesan…</string>
   <string name="main_title_selected" formatted="false">%d dipilih</string>
@@ -210,8 +210,8 @@
   <string name="qksms_plus_error">Terjadi kesalahan, silakan coba lagi</string>
   <string name="qksms_plus_forward_summary">Teruskan pesan secara otomatis dari pengirim tertentu</string>
   <string name="qksms_plus_forward_title">Penerusan otomatis</string>
-  <string name="qksms_plus_free_title">Wize SMS+ gratis untuk pengguna F-Droid! Dukung kami dengan donasi.</string>
-  <string name="qksms_plus_more_summary">Wize SMS sedang dalam pengembangan aktif, dan pembelian Anda akan mencakup semua fitur Wize SMS+ di masa depan!</string>
+  <string name="qksms_plus_free_title">IMVERSED Messenger+ gratis untuk pengguna F-Droid! Dukung kami dengan donasi.</string>
+  <string name="qksms_plus_more_summary">IMVERSED Messenger sedang dalam pengembangan aktif, dan pembelian Anda akan mencakup semua fitur IMVERSED Messenger+ di masa depan!</string>
   <string name="qksms_plus_more_title">Lebih</string>
   <string name="qksms_plus_night_summary">Aktifkan mode malam berdasarkan waktu</string>
   <string name="qksms_plus_night_title">Mode malam otomatis</string>
@@ -219,8 +219,8 @@
   <string name="qksms_plus_respond_title">Balas otomatis</string>
   <string name="qksms_plus_scheduled_summary">Jadwalkan pesan untuk dikirim secara otomatis pada waktu dan tanggal tertentu</string>
   <string name="qksms_plus_scheduled_title">Pesan terjadwal</string>
-  <string name="qksms_plus_thanks_summary">Anda sekarang memiliki akses ke semua fitur Wize SMS+</string>
-  <string name="qksms_plus_thanks_title">Terima kasih telah mendukung Wize SMS!</string>
+  <string name="qksms_plus_thanks_summary">Anda sekarang memiliki akses ke semua fitur IMVERSED Messenger+</string>
+  <string name="qksms_plus_thanks_title">Terima kasih telah mendukung IMVERSED Messenger!</string>
   <string name="qksms_plus_themes_summary">Buka warna tema indah yang tidak tersedia di palet Material Design</string>
   <string name="qksms_plus_themes_title">Tema premium</string>
   <string name="qksms_plus_upgrade" formatted="false">Peningkatan seumur hidup untuk %1$s %2$s</string>
@@ -233,8 +233,8 @@
   <string name="rate_okay">OKE!</string>
   <string name="rate_submit">Nilai</string>
   <string name="rate_summary">Bagikan cinta dan beri kami peringkat di Google Play!</string>
-  <string name="rate_title">Menikmati Wize SMS?</string>
-  <string name="rate_us_description">Apakah Anda suka Wize SMS? Kami ingin mendengar masukan Anda untuk memperbaiki aplikasi.</string>
+  <string name="rate_title">Menikmati IMVERSED Messenger?</string>
+  <string name="rate_us_description">Apakah Anda suka IMVERSED Messenger? Kami ingin mendengar masukan Anda untuk memperbaiki aplikasi.</string>
   <string name="rate_us_title">Beri nilai</string>
   <string name="scheduled_compose_cd">Jadwalkan pesan</string>
   <string name="scheduled_empty_description">Kirim pesan otomatis pada saat yang Anda inginkan</string>
@@ -244,7 +244,7 @@
   <string name="scheduled_empty_message_3_timestamp">Mengirim pada 23 Desember</string>
   <string name="scheduled_options_title">Pesan terjadwal</string>
   <string name="scheduled_title">Dijadwalkan</string>
-  <string name="settings_about_title">Tentang Wize SMS</string>
+  <string name="settings_about_title">Tentang IMVERSED Messenger</string>
   <string name="settings_auto_delete">Hapus pesan lama otomatis</string>
   <string name="settings_auto_delete_dialog_hint">Jumlah hari</string>
   <string name="settings_auto_delete_dialog_message">Pesan akan dihapus setelah jumlah hari yang ditentukan</string>
@@ -317,7 +317,7 @@
   <string name="title_theme">Tema</string>
   <string name="toast_archived">Percakapan diarsipkan</string>
   <string name="toast_copied">Disalin</string>
-  <string name="toast_qksms_plus">Anda harus membuka Wize SMS+ untuk menggunakannya</string>
+  <string name="toast_qksms_plus">Anda harus membuka IMVERSED Messenger+ untuk menggunakannya</string>
   <string name="widget_loading">Memuat…</string>
   <string name="widget_more">Lihat lebih banyak percakapan</string>
 

@@ -2,12 +2,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="about_changelog">পরিবর্তন তালিকা</string>
   <string name="about_changelog_title">পরিবর্তন তালিকা</string>
-  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact">support@fulldive.com</string>
   <string name="about_contact_title">যোগাযোগ</string>
   <string name="about_controller">নিয়ন্ত্রক সম্পর্কে</string>
   <string name="about_copyright">কপিরাইট</string>
   <string name="about_copyright_title">কপিরাইট</string>
-  <string name="about_developer">WizeUp ব্রাউজার</string>
+  <string name="about_developer">IMVERSED</string>
   <string name="about_developer_title">ডেভেলপার</string>
   <string name="about_license">লাইসেন্স</string>
   <string name="about_license_title">লাইসেন্স</string>
@@ -32,10 +32,10 @@
   <string name="backup_restore_confirm_message">আপনি কি নিশ্চিত যে আপনি এই ব্যাকআপ থেকে আপনার বার্তাগুলি পুনরুদ্ধার করতে চান?</string>
   <string name="backup_restore_confirm_title">ব্যাকআপ থেকে পুনরুদ্ধার করুন</string>
   <string name="backup_restore_dialog_empty">কোনও ব্যাকআপ পাওয়া যায়নি</string>
-  <string name="backup_restore_dialog_summary">/Wize SMS/ব্যাকআপ</string>
+  <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
   <string name="backup_restore_dialog_title">ব্যাকআপ</string>
   <string name="backup_restore_error_backup">ব্যাকআপ চলছে…</string>
-  <string name="backup_restore_error_plus">ব্যাকআপ এবং পুনরুদ্ধার ব্যবহারের জন্য Wize SMS+ আনলক করুন</string>
+  <string name="backup_restore_error_plus">ব্যাকআপ এবং পুনরুদ্ধার ব্যবহারের জন্য IMVERSED Messenger+ আনলক করুন</string>
   <string name="backup_restore_error_restore">পুনরুদ্ধার চলছে…</string>
   <string name="backup_restore_stop_message">যেসব বার্তা ইতিমধ্যেই পুনরুদ্ধার করা হয়েছে সেগুলি আপনার ডিভাইসে থাকবে</string>
   <string name="backup_restore_stop_title">পুনরুদ্ধার থামান</string>
@@ -61,7 +61,7 @@
   <string name="blocking_manager_call_control_title">কল নিয়ন্ত্রণ</string>
   <string name="blocking_manager_copy_summary" formatted="false">%s এ যান এবং আপনার বিদ্যমান ব্লক করা নম্বরগুলি কপি করুন</string>
   <string name="blocking_manager_copy_title">ব্লক করা নম্বরগুলি কপি করুন</string>
-  <string name="blocking_manager_qksms_summary">Wize SMS-এ অন্তর্নির্মিত ব্লকিং কার্যকারিতা</string>
+  <string name="blocking_manager_qksms_summary">IMVERSED Messenger-এ অন্তর্নির্মিত ব্লকিং কার্যকারিতা</string>
   <string name="blocking_manager_qksms_title">ওয়াইজ এসএমএস</string>
   <string name="blocking_manager_sia_summary">\"Should I Answer\" অ্যাপ ব্যবহার করে অবাঞ্ছিত নম্বর থেকে স্বয়ংক্রিয়ভাবে বার্তা ফিল্টার করুন</string>
   <string name="blocking_manager_sia_title">আমার কি উত্তর দেওয়া উচিত?</string>
@@ -82,7 +82,7 @@
   <string name="changelog_fixed">সংশোধিত</string>
   <string name="changelog_improved">উন্নত</string>
   <string name="changelog_more">আরও</string>
-  <string name="changelog_title">Wize SMS-এ নতুন</string>
+  <string name="changelog_title">IMVERSED Messenger-এ নতুন</string>
   <string name="changelog_version" formatted="false">সংস্করণ %s</string>
   <string name="compose_attach_cd">সংযুক্তি যোগ করুন</string>
   <string name="compose_camera_cd">ছবি তুলুন</string>
@@ -115,7 +115,7 @@
   <string name="compose_schedule_cd">বার্তা নির্ধারণ করুন</string>
   <string name="compose_scheduled_for">নির্ধারিত</string>
   <string name="compose_scheduled_future">নির্বাচিত সময় ভবিষ্যতে হতে হবে!</string>
-  <string name="compose_scheduled_plus">তালিকাভুক্ত বার্তা ব্যবহার করতে Wize SMS+ আনলক করুন</string>
+  <string name="compose_scheduled_plus">তালিকাভুক্ত বার্তা ব্যবহার করতে IMVERSED Messenger+ আনলক করুন</string>
   <string name="compose_scheduled_toast">তালিকাভুক্ত বার্তায় যোগ করা হয়েছে</string>
   <string name="compose_send_cd">বার্তা পাঠান</string>
   <string name="compose_send_group_summary">প্রাপক এবং উত্তরগুলি সবার জন্য দৃশ্যমান হবে</string>
@@ -154,7 +154,7 @@
   <string name="install_browser_title">WizeUp ব্রাউজার দিয়ে সিঙ্ক করুন</string>
   <string name="install_submit">আরও জানুন</string>
   <string name="main_default_sms_change">পরিবর্তন</string>
-  <string name="main_default_sms_message">Wize SMS-কে আপনার ডিফল্ট SMS অ্যাপ করুন</string>
+  <string name="main_default_sms_message">IMVERSED Messenger-কে আপনার ডিফল্ট SMS অ্যাপ করুন</string>
   <string name="main_default_sms_title">আবার মেসেজিং ভালোবাসুন</string>
   <string name="main_draft">খসড়া</string>
   <string name="main_drawer_open_cd">নেভিগেশন ড্রয়ার খুলুন</string>
@@ -172,9 +172,9 @@
   <string name="main_message_results" formatted="false">%d বার্তা</string>
   <string name="main_message_results_title">বার্তায় ফলাফল</string>
   <string name="main_permission_allow">অনুমতি দিন</string>
-  <string name="main_permission_contacts">Wize SMS আপনার পরিচিতি দেখতে অনুমতি চায়</string>
+  <string name="main_permission_contacts">IMVERSED Messenger আপনার পরিচিতি দেখতে অনুমতি চায়</string>
   <string name="main_permission_required">অনুমতি প্রয়োজন</string>
-  <string name="main_permission_sms">Wize SMS-এর SMS পাঠাতে ও দেখতে অনুমতি প্রয়োজন</string>
+  <string name="main_permission_sms">IMVERSED Messenger-এর SMS পাঠাতে ও দেখতে অনুমতি প্রয়োজন</string>
   <string name="main_sender_you" formatted="false">আপনি: %s</string>
   <string name="main_syncing">বার্তা সিঙ্ক হচ্ছে…</string>
   <string name="main_title_selected" formatted="false">%d নির্বাচিত</string>
@@ -210,8 +210,8 @@
   <string name="qksms_plus_error">একটি ত্রুটি ঘটেছে, অনুগ্রহ করে আবার চেষ্টা করুন</string>
   <string name="qksms_plus_forward_summary">নির্দিষ্ট প্রেরকদের থেকে বার্তা স্বয়ংক্রিয়ভাবে ফরোয়ার্ড করুন</string>
   <string name="qksms_plus_forward_title">স্বয়ংক্রিয় ফরোয়ার্ড</string>
-  <string name="qksms_plus_free_title">F-Droid ব্যবহারকারীদের জন্য Wize SMS+ বিনামূল্যে! অনুদান দিয়ে আমাদের সমর্থন করুন।</string>
-  <string name="qksms_plus_more_summary">Wize SMS সক্রিয় উন্নয়নে রয়েছে, এবং আপনার ক্রয়ে ভবিষ্যতের সমস্ত Wize SMS+ বৈশিষ্ট্য অন্তর্ভুক্ত থাকবে!</string>
+  <string name="qksms_plus_free_title">F-Droid ব্যবহারকারীদের জন্য IMVERSED Messenger+ বিনামূল্যে! অনুদান দিয়ে আমাদের সমর্থন করুন।</string>
+  <string name="qksms_plus_more_summary">IMVERSED Messenger সক্রিয় উন্নয়নে রয়েছে, এবং আপনার ক্রয়ে ভবিষ্যতের সমস্ত IMVERSED Messenger+ বৈশিষ্ট্য অন্তর্ভুক্ত থাকবে!</string>
   <string name="qksms_plus_more_title">আরও</string>
   <string name="qksms_plus_night_summary">দিনের সময় অনুযায়ী নাইট মোড সক্রিয় করুন</string>
   <string name="qksms_plus_night_title">স্বয়ংক্রিয় নাইট মোড</string>
@@ -219,8 +219,8 @@
   <string name="qksms_plus_respond_title">স্বয়ংক্রিয় উত্তর</string>
   <string name="qksms_plus_scheduled_summary">বার্তাগুলি নির্দিষ্ট সময় এবং তারিখে স্বয়ংক্রিয়ভাবে পাঠানোর জন্য নির্ধারণ করুন</string>
   <string name="qksms_plus_scheduled_title">নির্ধারিত বার্তা</string>
-  <string name="qksms_plus_thanks_summary">এখন আপনি সমস্ত Wize SMS+ বৈশিষ্ট্যগুলিতে অ্যাক্সেস পাবেন</string>
-  <string name="qksms_plus_thanks_title">Wize SMS সমর্থনের জন্য ধন্যবাদ!</string>
+  <string name="qksms_plus_thanks_summary">এখন আপনি সমস্ত IMVERSED Messenger+ বৈশিষ্ট্যগুলিতে অ্যাক্সেস পাবেন</string>
+  <string name="qksms_plus_thanks_title">IMVERSED Messenger সমর্থনের জন্য ধন্যবাদ!</string>
   <string name="qksms_plus_themes_summary">মেটেরিয়াল ডিজাইন প্যালেটে উপলব্ধ নয় এমন সুন্দর থিম রং আনলক করুন</string>
   <string name="qksms_plus_themes_title">প্রিমিয়াম থিম</string>
   <string name="qksms_plus_upgrade" formatted="false">%1$s %2$s এর জন্য আজীবন আপগ্রেড</string>
@@ -233,8 +233,8 @@
   <string name="rate_okay">ঠিক আছে!</string>
   <string name="rate_submit">মূল্যায়ন</string>
   <string name="rate_summary">ভালোবাসা ভাগ করুন এবং Google Play-এ আমাদের রেটিং দিন!</string>
-  <string name="rate_title">Wize SMS উপভোগ করছেন?</string>
-  <string name="rate_us_description">আপনি কি Wize SMS পছন্দ করেন? অ্যাপটি উন্নত করতে আপনার মতামত শুনতে চাই।</string>
+  <string name="rate_title">IMVERSED Messenger উপভোগ করছেন?</string>
+  <string name="rate_us_description">আপনি কি IMVERSED Messenger পছন্দ করেন? অ্যাপটি উন্নত করতে আপনার মতামত শুনতে চাই।</string>
   <string name="rate_us_title">রেট করুন</string>
   <string name="scheduled_compose_cd">বার্তা নির্ধারণ করুন</string>
   <string name="scheduled_empty_description">আপনি যখন চান ঠিক সেই মুহূর্তে স্বয়ংক্রিয়ভাবে বার্তা পাঠান</string>
@@ -244,7 +244,7 @@
   <string name="scheduled_empty_message_3_timestamp">২৩ ডিসেম্বর পাঠানো হবে</string>
   <string name="scheduled_options_title">নির্ধারিত বার্তা</string>
   <string name="scheduled_title">নির্ধারিত</string>
-  <string name="settings_about_title">Wize SMS সম্পর্কে</string>
+  <string name="settings_about_title">IMVERSED Messenger সম্পর্কে</string>
   <string name="settings_auto_delete">পুরানো বার্তা স্বয়ংক্রিয়ভাবে মুছুন</string>
   <string name="settings_auto_delete_dialog_hint">দিনের সংখ্যা</string>
   <string name="settings_auto_delete_dialog_message">বার্তাগুলি নির্দিষ্ট দিনের পরে মুছে ফেলা হবে</string>
@@ -317,7 +317,7 @@
   <string name="title_theme">থিম</string>
   <string name="toast_archived">আর্কাইভ করা কথোপকথন</string>
   <string name="toast_copied">কপি হয়েছে</string>
-  <string name="toast_qksms_plus">এটি ব্যবহার করতে Wize SMS+ আনলক করুন</string>
+  <string name="toast_qksms_plus">এটি ব্যবহার করতে IMVERSED Messenger+ আনলক করুন</string>
   <string name="widget_loading">লোড হচ্ছে…</string>
   <string name="widget_more">আরও কথোপকথন দেখুন</string>
 

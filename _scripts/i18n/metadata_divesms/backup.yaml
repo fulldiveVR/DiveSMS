@@ -274,7 +274,7 @@ backup_restore_dialog_summary:
   constraints:
     max_length: null
   context: {}
-  purpose: /Wize SMS/Backups
+  purpose: /QKSMS/Backups
   references: {}
   technical:
     contains_emoji: false
@@ -331,7 +331,7 @@ backup_restore_error_plus:
     max_length: 63
     reason: Estimated UI space limitation
   context: {}
-  purpose: Please unlock Wize SMS+ to use backup and restore
+  purpose: Please unlock IMVERSED Messenger+ to use backup and restore
   references: {}
   technical:
     contains_emoji: false

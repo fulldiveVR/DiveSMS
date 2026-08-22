@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">Wize SMS</string>
+    <string name="app_name">IMVERSED Messenger</string>
     <string name="shortcut_compose_long_label">New conversation</string>
     <string name="shortcut_compose_short_label">Compose</string>
     <string name="shortcut_compose_disabled_message">Shortcut disabled</string>
@@ -37,11 +37,11 @@
     <string name="archived_empty_text">Your archived conversations will appear here</string>
     <string name="main_fab_cd">Start new conversation</string>
     <string name="main_default_sms_title">Love texting again</string>
-    <string name="main_default_sms_message">Make Wize SMS your default SMS app</string>
+    <string name="main_default_sms_message">Make IMVERSED Messenger your default SMS app</string>
     <string name="main_default_sms_change">Change</string>
     <string name="main_permission_required">Permission required</string>
-    <string name="main_permission_sms">Wize SMS needs permission to send and view SMS messages</string>
-    <string name="main_permission_contacts">Wize SMS needs permission to view your contacts</string>
+    <string name="main_permission_sms">IMVERSED Messenger needs permission to send and view SMS messages</string>
+    <string name="main_permission_contacts">IMVERSED Messenger needs permission to view your contacts</string>
     <string name="main_permission_allow">Allow</string>
     <string name="drawer_inbox">Inbox</string>
     <string name="drawer_archived">Archived</string>
@@ -50,10 +50,10 @@
     <string name="drawer_blocking">Blocking</string>
     <string name="drawer_more">More</string>
     <string name="drawer_settings">Settings</string>
-    <string name="drawer_plus">Wize SMS+</string>
+    <string name="drawer_plus">IMVERSED Messenger+</string>
     <string name="drawer_help">Help &amp; feedback</string>
     <string name="drawer_plus_banner_summary">Unlock amazing new features, and support development</string>
-    <string name="rate_title">Enjoying Wize SMS?</string>
+    <string name="rate_title">Enjoying IMVERSED Messenger?</string>
     <string name="rate_summary">Share some love and rate us on Google Play!</string>
     <string name="rate_okay">OKAY!</string>
     <string name="rate_dismiss">DISMISS</string>
@@ -66,7 +66,7 @@
     <string name="compose_vcard_label">Contact card</string>
     <string name="compose_scheduled_for">Scheduled for</string>
     <string name="compose_scheduled_future">Selected time must be in the future!</string>
-    <string name="compose_scheduled_plus">You must unlock Wize SMS+ to use scheduled messaging</string>
+    <string name="compose_scheduled_plus">You must unlock IMVERSED Messenger+ to use scheduled messaging</string>
     <string name="compose_scheduled_toast">Added to scheduled messages</string>
     <string name="compose_hint">Write a message&#x2026;</string>
     <string name="compose_menu_copy">Copy text</string>
@@ -116,7 +116,7 @@
     <string name="backup_never">Never</string>
     <string name="backup_restore_title">Restore</string>
     <string name="backup_restore_summary">Select a backup</string>
-    <string name="backup_restore_error_plus">Please unlock Wize SMS+ to use backup and restore</string>
+    <string name="backup_restore_error_plus">Please unlock IMVERSED Messenger+ to use backup and restore</string>
     <string name="backup_restore_error_backup">Backup in progress&#x2026;</string>
     <string name="backup_restore_error_restore">Restore in progress&#x2026;</string>
     <string name="backup_restore_confirm_title">Restore from backup</string>
@@ -124,7 +124,7 @@
     <string name="backup_restore_stop_title">Stop restore</string>
     <string name="backup_restore_stop_message">Messages that have already been restored will remain on your device</string>
     <string name="backup_restore_dialog_title">Backups</string>
-    <string name="backup_restore_dialog_summary">/Wize SMS/Backups</string>
+    <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
     <string name="backup_restore_dialog_empty">No backups found</string>
     <string name="backup_disclaimer">Currently, only SMS is supported by Backup and Restore. MMS support and scheduled backups will be coming soon!</string>
     <string name="backup_now">Backup now</string>
@@ -288,7 +288,7 @@
     <string name="settings_forwarding_signout_message">Do you want to disconnect this Gmail account?</string>
     <string name="settings_forwarding_signout_button">Disconnect</string>
 
-    <string name="settings_about_title">About Wize SMS</string>
+    <string name="settings_about_title">About IMVERSED Messenger</string>
     <string name="settings_version">Version %s</string>
     <string name="settings_logging_enabled">Debug logging enabled</string>
     <string name="settings_logging_disabled">Debug logging disabled</string>
@@ -298,8 +298,8 @@
     <string name="blocking_drop_summary">Drop incoming messages from blocked senders instead of hiding them</string>
     <string name="blocking_conversations">Blocked conversations</string>
     <string name="blocking_manager_title">Blocking Manager</string>
-    <string name="blocking_manager_qksms_title">Wize SMS</string>
-    <string name="blocking_manager_qksms_summary">Built-in blocking functionality in Wize SMS</string>
+    <string name="blocking_manager_qksms_title">IMVERSED Messenger</string>
+    <string name="blocking_manager_qksms_summary">Built-in blocking functionality in IMVERSED Messenger</string>
     <string name="blocking_manager_call_control_title">Call Control</string>
     <string name="blocking_manager_call_control_summary">Automatically filter your calls and messages in one convenient place! Community IQ&#x2122; allows you to prevent unwanted messages from community known spammers</string>
     <string name="blocking_manager_sia_title">Should I Answer?</string>
@@ -323,6 +323,10 @@
     <string name="about_contact_title">Contact</string>
     <string name="about_license_title">License</string>
     <string name="about_copyright_title">Copyright</string>
+    <string name="about_privacy_title">Privacy policy</string>
+    <string name="about_description">IMVERSED Messenger is downloadable Android communications software for composing, sending, receiving, and organizing SMS and MMS messages.</string>
+    <string name="about_copyright_summary">© 2026 IMVERSED</string>
+    <string name="about_license_summary">Open source under the GNU General Public License v3.0. Based on QKSMS, © 2017 Moez Bhatti.</string>
     <string name="qksms_plus_description_title">Support development, unlock everything</string>
     <string name="qksms_plus_description_summary">You can save a starving developer for just %s</string>
     <string name="qksms_plus_upgrade">Lifetime upgrade for %1$s %2$s</string>
@@ -330,9 +334,9 @@
     <string name="qksms_plus_upgrade_c">Unlock forever for %1$s %2$s</string>
     <string name="qksms_plus_upgrade_d">One-time purchase of %1$s %2$s</string>
     <string name="qksms_plus_upgrade_donate">Unlock + donate for %1$s %2$s</string>
-    <string name="qksms_plus_thanks_title">Thank you for supporting Wize SMS!</string>
-    <string name="qksms_plus_thanks_summary">You now have access to all Wize SMS+ features</string>
-    <string name="qksms_plus_free_title">Wize SMS+ is free for F-Droid users! If you\'d like to support development, a donation would be highly appreciated.</string>
+    <string name="qksms_plus_thanks_title">Thank you for supporting IMVERSED Messenger!</string>
+    <string name="qksms_plus_thanks_summary">You now have access to all IMVERSED Messenger+ features</string>
+    <string name="qksms_plus_free_title">IMVERSED Messenger+ is free for F-Droid users! If you\'d like to support development, a donation would be highly appreciated.</string>
     <string name="qksms_plus_donate">Donate via PayPal</string>
     <string name="qksms_plus_coming_soon">Coming soon</string>
     <string name="qksms_plus_themes_title">Premium themes</string>
@@ -354,7 +358,7 @@
     <string name="qksms_plus_respond_title">Auto-respond</string>
     <string name="qksms_plus_respond_summary">Automatically respond to incoming messages with a preset response</string>
     <string name="qksms_plus_more_title">More</string>
-    <string name="qksms_plus_more_summary">Wize SMS is under active development, and your purchase will include all future Wize SMS+ features!</string>
+    <string name="qksms_plus_more_summary">IMVERSED Messenger is under active development, and your purchase will include all future IMVERSED Messenger+ features!</string>
     <string name="widget_loading">Loading&#x2026;</string>
     <string name="widget_more">View more conversations</string>
     <string name="qkreply_menu_read">Mark as read</string>
@@ -366,10 +370,10 @@
     <string name="theme_material">Material</string>
     <string name="theme_hex">HEX</string>
     <string name="theme_apply">Apply</string>
-    <string name="about_developer">WizeUp Browser</string>
+    <string name="about_developer">IMVERSED</string>
     <string name="about_source">https://fulldive.com/privacy-policy</string>
-    <string name="about_contact">https://fulldive.com</string>
-    <string name="changelog_title">New in Wize SMS</string>
+    <string name="about_contact">support@fulldive.com</string>
+    <string name="changelog_title">New in IMVERSED Messenger</string>
     <string name="changelog_version">Version %s</string>
     <string name="changelog_added">Added</string>
     <string name="changelog_improved">Improved</string>
@@ -387,7 +391,7 @@
     <string name="button_undo">Undo</string>
     <string name="toast_copied">Copied</string>
     <string name="toast_archived">Archived conversation</string>
-    <string name="toast_qksms_plus">You must unlock Wize SMS+ to use this</string>
+    <string name="toast_qksms_plus">You must unlock IMVERSED Messenger+ to use this</string>
     <string name="notification_message_failed_title">Message not sent</string>
     <string name="notification_message_failed_text">The message to %s failed to send</string>
     <string name="rate_submit">Rate</string>
@@ -397,7 +401,7 @@
     <string name="rate_us_title">Rate us</string>
     <string name="install_browser_title">Sync with WizeUp Browser</string>
     <string name="install_browser_description">Thank you for trying our Wize apps, we feature many more great apps such as a browser with reach AI features, check it out!</string>
-    <string name="rate_us_description">Do you like Wize SMS? We would love to hear your feedback and make the app better for you.</string>
+    <string name="rate_us_description">Do you like IMVERSED Messenger? We would love to hear your feedback and make the app better for you.</string>
     <string-array name="night_modes">
         <item>System</item>
         <item>Disabled</item>

@@ -2,12 +2,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="about_changelog">Änderungsprotokoll</string>
   <string name="about_changelog_title">Änderungsprotokoll</string>
-  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact">support@fulldive.com</string>
   <string name="about_contact_title">Kontakt</string>
   <string name="about_controller">Über den Controller</string>
   <string name="about_copyright">Urheberrecht</string>
   <string name="about_copyright_title">Urheberrecht</string>
-  <string name="about_developer">WizeUp Browser</string>
+  <string name="about_developer">IMVERSED</string>
   <string name="about_developer_title">Entwickler</string>
   <string name="about_license">Lizenz</string>
   <string name="about_license_title">Lizenz</string>
@@ -15,7 +15,7 @@
   <string name="about_source_title">Über die Quelle</string>
   <string name="about_title">Über</string>
   <string name="about_version_title">Version</string>
-  <string name="app_name">Wize SMS</string>
+  <string name="app_name">IMVERSED Messenger</string>
   <string name="archived_empty_text">Ihre archivierten Unterhaltungen erscheinen hier</string>
   <string name="backup_backing_up">Nachrichten sichern</string>
   <string name="backup_disclaimer">Derzeit wird nur SMS von Backup und Wiederherstellung unterstützt. MMS-Unterstützung und geplante Backups kommen bald!</string>
@@ -32,10 +32,10 @@
   <string name="backup_restore_confirm_message">Sind Sie sicher, dass Sie Ihre Nachrichten aus diesem Backup wiederherstellen möchten?</string>
   <string name="backup_restore_confirm_title">Aus Backup wiederherstellen</string>
   <string name="backup_restore_dialog_empty">Keine Backups gefunden</string>
-  <string name="backup_restore_dialog_summary">/Wize SMS/Sicherungen</string>
+  <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
   <string name="backup_restore_dialog_title">Backups</string>
   <string name="backup_restore_error_backup">Sicherung läuft…</string>
-  <string name="backup_restore_error_plus">Bitte Wize SMS+ entsperren, um Backup und Wiederherstellung zu nutzen</string>
+  <string name="backup_restore_error_plus">Bitte IMVERSED Messenger+ entsperren, um Backup und Wiederherstellung zu nutzen</string>
   <string name="backup_restore_error_restore">Wiederherstellung läuft…</string>
   <string name="backup_restore_stop_message">Bereits wiederhergestellte Nachrichten bleiben auf Ihrem Gerät</string>
   <string name="backup_restore_stop_title">Wiederherstellung stoppen</string>
@@ -61,8 +61,8 @@
   <string name="blocking_manager_call_control_title">Anrufkontrolle</string>
   <string name="blocking_manager_copy_summary" formatted="false">Weiter zu %s und kopiere deine bestehenden blockierten Nummern</string>
   <string name="blocking_manager_copy_title">Blockierte Nummern kopieren</string>
-  <string name="blocking_manager_qksms_summary">Integrierte Blockierfunktion in Wize SMS</string>
-  <string name="blocking_manager_qksms_title">Wize SMS</string>
+  <string name="blocking_manager_qksms_summary">Integrierte Blockierfunktion in IMVERSED Messenger</string>
+  <string name="blocking_manager_qksms_title">IMVERSED Messenger</string>
   <string name="blocking_manager_sia_summary">Filtern Sie automatisch Nachrichten von unerwünschten Nummern mit der App \"Should I Answer\"</string>
   <string name="blocking_manager_sia_title">Soll ich antworten?</string>
   <string name="blocking_manager_title">Blockierungsmanager</string>
@@ -82,7 +82,7 @@
   <string name="changelog_fixed">Behoben</string>
   <string name="changelog_improved">Verbessert</string>
   <string name="changelog_more">Mehr</string>
-  <string name="changelog_title">Neu in Wize SMS</string>
+  <string name="changelog_title">Neu in IMVERSED Messenger</string>
   <string name="changelog_version" formatted="false">Version %s</string>
   <string name="compose_attach_cd">Anhang hinzufügen</string>
   <string name="compose_camera_cd">Foto aufnehmen</string>
@@ -115,7 +115,7 @@
   <string name="compose_schedule_cd">Nachricht planen</string>
   <string name="compose_scheduled_for">Geplant für</string>
   <string name="compose_scheduled_future">Die gewählte Zeit muss in der Zukunft liegen!</string>
-  <string name="compose_scheduled_plus">Sie müssen Wize SMS+ entsperren, um geplante Nachrichten zu nutzen</string>
+  <string name="compose_scheduled_plus">Sie müssen IMVERSED Messenger+ entsperren, um geplante Nachrichten zu nutzen</string>
   <string name="compose_scheduled_toast">Zu geplanten Nachrichten hinzugefügt</string>
   <string name="compose_send_cd">Nachricht senden</string>
   <string name="compose_send_group_summary">Empfänger und Antworten sind für alle sichtbar</string>
@@ -132,7 +132,7 @@
   <string name="drawer_inbox">Posteingang</string>
   <string name="drawer_invite">Freunde einladen</string>
   <string name="drawer_more">Mehr</string>
-  <string name="drawer_plus">Wize SMS+</string>
+  <string name="drawer_plus">IMVERSED Messenger+</string>
   <string name="drawer_plus_banner_summary">Schalte erstaunliche neue Funktionen frei und unterstütze die Entwicklung</string>
   <string name="drawer_scheduled">Geplant</string>
   <string name="drawer_settings">Einstellungen</string>
@@ -154,7 +154,7 @@
   <string name="install_browser_title">Mit WizeUp Browser synchronisieren</string>
   <string name="install_submit">Mehr erfahren</string>
   <string name="main_default_sms_change">Ändern</string>
-  <string name="main_default_sms_message">Machen Sie Wize SMS zu Ihrer Standard-SMS-App</string>
+  <string name="main_default_sms_message">Machen Sie IMVERSED Messenger zu Ihrer Standard-SMS-App</string>
   <string name="main_default_sms_title">Wieder Freude am Texten</string>
   <string name="main_draft">Entwurf</string>
   <string name="main_drawer_open_cd">Navigationsleiste öffnen</string>
@@ -172,9 +172,9 @@
   <string name="main_message_results" formatted="false">%d Nachrichten</string>
   <string name="main_message_results_title">Ergebnisse in Nachrichten</string>
   <string name="main_permission_allow">Erlauben</string>
-  <string name="main_permission_contacts">Wize SMS benötigt die Erlaubnis, Ihre Kontakte zu sehen</string>
+  <string name="main_permission_contacts">IMVERSED Messenger benötigt die Erlaubnis, Ihre Kontakte zu sehen</string>
   <string name="main_permission_required">Berechtigung erforderlich</string>
-  <string name="main_permission_sms">Wize SMS benötigt die Erlaubnis, SMS zu senden und anzusehen</string>
+  <string name="main_permission_sms">IMVERSED Messenger benötigt die Erlaubnis, SMS zu senden und anzusehen</string>
   <string name="main_sender_you" formatted="false">Du: %s</string>
   <string name="main_syncing">Nachrichten synchronisieren…</string>
   <string name="main_title_selected" formatted="false">%d ausgewählt</string>
@@ -210,8 +210,8 @@
   <string name="qksms_plus_error">Ein Fehler ist aufgetreten, bitte erneut versuchen</string>
   <string name="qksms_plus_forward_summary">Nachrichten von bestimmten Absendern automatisch weiterleiten</string>
   <string name="qksms_plus_forward_title">Automatisch weiterleiten</string>
-  <string name="qksms_plus_free_title">Wize SMS+ ist kostenlos für F-Droid-Nutzer! Unterstützen Sie uns mit einer Spende.</string>
-  <string name="qksms_plus_more_summary">Wize SMS befindet sich in aktiver Entwicklung, und Ihr Kauf wird alle zukünftigen Funktionen von Wize SMS+ beinhalten!</string>
+  <string name="qksms_plus_free_title">IMVERSED Messenger+ ist kostenlos für F-Droid-Nutzer! Unterstützen Sie uns mit einer Spende.</string>
+  <string name="qksms_plus_more_summary">IMVERSED Messenger befindet sich in aktiver Entwicklung, und Ihr Kauf wird alle zukünftigen Funktionen von IMVERSED Messenger+ beinhalten!</string>
   <string name="qksms_plus_more_title">Mehr</string>
   <string name="qksms_plus_night_summary">Aktivieren Sie den Nachtmodus basierend auf der Tageszeit</string>
   <string name="qksms_plus_night_title">Automatischer Nachtmodus</string>
@@ -219,8 +219,8 @@
   <string name="qksms_plus_respond_title">Automatisch antworten</string>
   <string name="qksms_plus_scheduled_summary">Nachrichten planen, um sie automatisch zu einem bestimmten Zeitpunkt und Datum zu senden</string>
   <string name="qksms_plus_scheduled_title">Geplante Nachrichten</string>
-  <string name="qksms_plus_thanks_summary">Sie haben jetzt Zugriff auf alle Funktionen von Wize SMS+</string>
-  <string name="qksms_plus_thanks_title">Danke für Ihre Unterstützung von Wize SMS!</string>
+  <string name="qksms_plus_thanks_summary">Sie haben jetzt Zugriff auf alle Funktionen von IMVERSED Messenger+</string>
+  <string name="qksms_plus_thanks_title">Danke für Ihre Unterstützung von IMVERSED Messenger!</string>
   <string name="qksms_plus_themes_summary">Schalte wunderschöne Themenfarben frei, die nicht in der Material Design-Palette verfügbar sind</string>
   <string name="qksms_plus_themes_title">Premium-Themen</string>
   <string name="qksms_plus_upgrade" formatted="false">Lebenslanges Upgrade für %1$s %2$s</string>
@@ -233,8 +233,8 @@
   <string name="rate_okay">OK!</string>
   <string name="rate_submit">Bewerten</string>
   <string name="rate_summary">Teile etwas Liebe und bewerte uns auf Google Play!</string>
-  <string name="rate_title">Genießen Sie Wize SMS?</string>
-  <string name="rate_us_description">Gefällt dir Wize SMS? Wir freuen uns auf dein Feedback, um die App zu verbessern.</string>
+  <string name="rate_title">Genießen Sie IMVERSED Messenger?</string>
+  <string name="rate_us_description">Gefällt dir IMVERSED Messenger? Wir freuen uns auf dein Feedback, um die App zu verbessern.</string>
   <string name="rate_us_title">Bewerten</string>
   <string name="scheduled_compose_cd">Nachricht planen</string>
   <string name="scheduled_empty_description">Senden Sie automatisch eine Nachricht zum gewünschten Zeitpunkt</string>
@@ -244,7 +244,7 @@
   <string name="scheduled_empty_message_3_timestamp">Versand am 23. Dezember</string>
   <string name="scheduled_options_title">Geplante Nachricht</string>
   <string name="scheduled_title">Geplant</string>
-  <string name="settings_about_title">Über Wize SMS</string>
+  <string name="settings_about_title">Über IMVERSED Messenger</string>
   <string name="settings_auto_delete">Alte Nachrichten automatisch löschen</string>
   <string name="settings_auto_delete_dialog_hint">Anzahl der Tage</string>
   <string name="settings_auto_delete_dialog_message">Nach der angegebenen Anzahl von Tagen werden Nachrichten gelöscht</string>
@@ -317,7 +317,7 @@
   <string name="title_theme">Thema</string>
   <string name="toast_archived">Archiviertes Gespräch</string>
   <string name="toast_copied">Kopiert</string>
-  <string name="toast_qksms_plus">Sie müssen Wize SMS+ entsperren, um dies zu nutzen</string>
+  <string name="toast_qksms_plus">Sie müssen IMVERSED Messenger+ entsperren, um dies zu nutzen</string>
   <string name="widget_loading">Laden…</string>
   <string name="widget_more">Mehr Unterhaltungen ansehen</string>
 

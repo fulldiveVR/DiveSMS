@@ -118,7 +118,7 @@ changelog_title:
     max_length: 25
     reason: Estimated UI space limitation
   context: {}
-  purpose: New in Wize SMS
+  purpose: New in IMVERSED Messenger
   references: {}
   technical:
     contains_emoji: false

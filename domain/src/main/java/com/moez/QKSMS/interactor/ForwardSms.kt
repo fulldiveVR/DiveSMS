@@ -194,7 +194,7 @@ Message:
 ${params.body}
 ---
 
-Sent via Wize SMS
+Sent via IMVERSED Messenger
         """.trimIndent()
     }
 

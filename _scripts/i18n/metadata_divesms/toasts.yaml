@@ -42,7 +42,7 @@ toast_qksms_plus:
     max_length: 48
     reason: Estimated UI space limitation
   context: {}
-  purpose: You must unlock Wize SMS+ to use this
+  purpose: You must unlock IMVERSED Messenger+ to use this
   references: {}
   technical:
     contains_emoji: false

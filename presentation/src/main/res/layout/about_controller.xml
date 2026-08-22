@@ -28,34 +28,102 @@
     android:background="?android:attr/windowBackground">
 
     <LinearLayout
-        android:id="@+id/preferences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:animateLayoutChanges="true"
-        android:orientation="vertical"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:orientation="vertical">
 
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/version"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/about_version_title"
-            tools:summary="3.0.8" />
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingTop="32dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="24dp">
 
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/developer"
+            <ImageView
+                android:id="@+id/brandMark"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_brand_mark" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                android:id="@+id/appName"
+                style="@style/TextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                app:textSize="toolbar" />
+
+            <com.moez.QKSMS.common.widget.QkTextView
+                android:id="@+id/appDescription"
+                style="@style/TextSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="@string/about_description" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/preferences"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:summary="@string/about_developer"
-            app:title="@string/about_developer_title" />
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
 
-        <com.moez.QKSMS.common.widget.PreferenceView
-            android:id="@+id/contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:summary="@string/about_contact"
-            app:title="@string/about_contact_title" />
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/about_version_title"
+                tools:summary="3.0.8" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/about_copyright_summary"
+                app:title="@string/about_copyright_title" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/about_license_summary"
+                app:title="@string/about_license_title" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/developer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/about_developer"
+                app:title="@string/about_developer_title" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/about_contact"
+                app:title="@string/about_contact_title" />
+
+            <com.moez.QKSMS.common.widget.PreferenceView
+                android:id="@+id/privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/about_source"
+                app:title="@string/about_privacy_title" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

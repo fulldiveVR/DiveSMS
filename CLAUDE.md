@@ -13,7 +13,7 @@ Consequence: in a file whose package is `com.moez.QKSMS.feature.foo`, generated 
 package to match the applicationId, and do not create sources under `com/fulldive/...`.
 `:android-smsmms` is the exception: its namespace and package are `com.klinker.android.send_message`.
 
-User-visible app name is currently "Wize SMS".
+User-visible app name is "IMVERSED Messenger".
 
 ## 2. The internal maven repo is gone (resolved)
 

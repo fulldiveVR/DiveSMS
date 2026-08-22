@@ -4,7 +4,7 @@ settings_about_title:
     max_length: 24
     reason: Estimated UI space limitation
   context: {}
-  purpose: About Wize SMS
+  purpose: About IMVERSED Messenger
   references: {}
   technical:
     contains_emoji: false

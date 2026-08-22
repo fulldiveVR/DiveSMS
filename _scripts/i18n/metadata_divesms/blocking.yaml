@@ -359,7 +359,7 @@ blocking_manager_qksms_summary:
   constraints:
     max_length: null
   context: {}
-  purpose: Built-in blocking functionality in Wize SMS
+  purpose: Built-in blocking functionality in IMVERSED Messenger
   references: {}
   technical:
     contains_emoji: false
@@ -380,7 +380,7 @@ blocking_manager_qksms_title:
     max_length: 18
     reason: Estimated UI space limitation
   context: {}
-  purpose: Wize SMS
+  purpose: IMVERSED Messenger
   references: {}
   technical:
     contains_emoji: false

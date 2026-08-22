@@ -46,7 +46,7 @@ about_developer:
     max_length: 24
     reason: Estimated UI space limitation
   context: {}
-  purpose: WizeUp Browser
+  purpose: IMVERSED
   references: {}
   technical:
     contains_emoji: false
@@ -130,7 +130,7 @@ app_name:
     max_length: 18
     reason: Estimated UI space limitation
   context: {}
-  purpose: Wize SMS
+  purpose: IMVERSED Messenger
   references: {}
   technical:
     contains_emoji: false

@@ -119,7 +119,7 @@ Message:
 ${log.messageBody}
 ---
 
-Sent via Wize SMS (Retry)
+Sent via IMVERSED Messenger (Retry)
         """.trimIndent()
     }
 }

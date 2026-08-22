@@ -38,8 +38,10 @@ class AboutPresenter @Inject constructor(
             .autoDispose(view.scope())
             .subscribe { preference ->
                 when (preference.id) {
+                    R.id.license -> navigator.showLicense()
                     R.id.developer -> navigator.showDeveloper()
                     R.id.contact -> navigator.showSupport()
+                    R.id.privacy -> navigator.showPrivacyPolicy()
                 }
             }
     }

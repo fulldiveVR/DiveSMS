@@ -1,6 +1,6 @@
-# Translation Infrastructure (i18n) for Wize SMS (DiveSMS)
+# Translation Infrastructure (i18n) for IMVERSED Messenger (DiveSMS)
 
-This folder contains all tools and metadata for translating Wize SMS strings using AI-powered contextual translation.
+This folder contains all tools and metadata for translating IMVERSED Messenger strings using AI-powered contextual translation.
 
 ## Quick Start
 
@@ -286,4 +286,4 @@ poetry install
 
 **Version:** 1.0
 **Last Updated:** 2025-12-05
-**Project:** Wize SMS (DiveSMS)
+**Project:** IMVERSED Messenger (DiveSMS)

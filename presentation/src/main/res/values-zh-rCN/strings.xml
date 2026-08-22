@@ -2,12 +2,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
   <string name="about_changelog">更新日志</string>
   <string name="about_changelog_title">更新日志</string>
-  <string name="about_contact">https://fulldive.com</string>
+  <string name="about_contact">support@fulldive.com</string>
   <string name="about_contact_title">联系</string>
   <string name="about_controller">关于控制器</string>
   <string name="about_copyright">版权</string>
   <string name="about_copyright_title">版权</string>
-  <string name="about_developer">WizeUp 浏览器</string>
+  <string name="about_developer">IMVERSED</string>
   <string name="about_developer_title">开发者</string>
   <string name="about_license">许可</string>
   <string name="about_license_title">许可</string>
@@ -15,7 +15,7 @@
   <string name="about_source_title">关于来源</string>
   <string name="about_title">关于</string>
   <string name="about_version_title">版本</string>
-  <string name="app_name">Wize短信</string>
+  <string name="app_name">IMVERSED Messenger</string>
   <string name="archived_empty_text">您的存档对话将显示在此处</string>
   <string name="backup_backing_up">正在备份消息</string>
   <string name="backup_disclaimer">目前，备份和恢复仅支持短信。彩信支持和定时备份即将推出！</string>
@@ -32,10 +32,10 @@
   <string name="backup_restore_confirm_message">您确定要从此备份中恢复消息吗？</string>
   <string name="backup_restore_confirm_title">从备份恢复</string>
   <string name="backup_restore_dialog_empty">未找到备份</string>
-  <string name="backup_restore_dialog_summary">/Wize SMS/备份</string>
+  <string name="backup_restore_dialog_summary">/QKSMS/Backups</string>
   <string name="backup_restore_dialog_title">备份</string>
   <string name="backup_restore_error_backup">备份进行中…</string>
-  <string name="backup_restore_error_plus">请解锁Wize SMS+以使用备份和恢复</string>
+  <string name="backup_restore_error_plus">请解锁IMVERSED Messenger+以使用备份和恢复</string>
   <string name="backup_restore_error_restore">正在恢复中…</string>
   <string name="backup_restore_stop_message">已恢复的消息将保留在您的设备上</string>
   <string name="backup_restore_stop_title">停止恢复</string>
@@ -61,8 +61,8 @@
   <string name="blocking_manager_call_control_title">呼叫控制</string>
   <string name="blocking_manager_copy_summary" formatted="false">继续到 %s 并复制您现有的已阻止号码</string>
   <string name="blocking_manager_copy_title">复制已阻止的号码</string>
-  <string name="blocking_manager_qksms_summary">Wize SMS 内置的屏蔽功能</string>
-  <string name="blocking_manager_qksms_title">智短信</string>
+  <string name="blocking_manager_qksms_summary">IMVERSED Messenger 内置的屏蔽功能</string>
+  <string name="blocking_manager_qksms_title">IMVERSED Messenger</string>
   <string name="blocking_manager_sia_summary">使用“Should I Answer”应用自动过滤来自未知号码的消息</string>
   <string name="blocking_manager_sia_title">我该接听吗？</string>
   <string name="blocking_manager_title">阻止管理器</string>
@@ -82,7 +82,7 @@
   <string name="changelog_fixed">已修复</string>
   <string name="changelog_improved">改进</string>
   <string name="changelog_more">更多</string>
-  <string name="changelog_title">Wize SMS 新功能</string>
+  <string name="changelog_title">IMVERSED Messenger 新功能</string>
   <string name="changelog_version" formatted="false">版本 %s</string>
   <string name="compose_attach_cd">添加附件</string>
   <string name="compose_camera_cd">拍照</string>
@@ -115,7 +115,7 @@
   <string name="compose_schedule_cd">定时发送</string>
   <string name="compose_scheduled_for">计划于</string>
   <string name="compose_scheduled_future">选择的时间必须在未来！</string>
-  <string name="compose_scheduled_plus">您必须解锁Wize SMS+才能使用定时消息</string>
+  <string name="compose_scheduled_plus">您必须解锁IMVERSED Messenger+才能使用定时消息</string>
   <string name="compose_scheduled_toast">已添加到计划消息</string>
   <string name="compose_send_cd">发送消息</string>
   <string name="compose_send_group_summary">收件人和回复将对所有人可见</string>
@@ -132,7 +132,7 @@
   <string name="drawer_inbox">收件箱</string>
   <string name="drawer_invite">邀请朋友</string>
   <string name="drawer_more">更多</string>
-  <string name="drawer_plus">智短信+</string>
+  <string name="drawer_plus">IMVERSED Messenger+</string>
   <string name="drawer_plus_banner_summary">解锁惊人的新功能，支持开发</string>
   <string name="drawer_scheduled">已计划</string>
   <string name="drawer_settings">设置</string>
@@ -154,7 +154,7 @@
   <string name="install_browser_title">与WizeUp浏览器同步</string>
   <string name="install_submit">了解更多</string>
   <string name="main_default_sms_change">更改</string>
-  <string name="main_default_sms_message">将 Wize SMS 设为默认短信应用</string>
+  <string name="main_default_sms_message">将 IMVERSED Messenger 设为默认短信应用</string>
   <string name="main_default_sms_title">重新爱上发短信</string>
   <string name="main_draft">草稿</string>
   <string name="main_drawer_open_cd">打开导航抽屉</string>
@@ -172,9 +172,9 @@
   <string name="main_message_results" formatted="false">%d 条消息</string>
   <string name="main_message_results_title">消息中的结果</string>
   <string name="main_permission_allow">允许</string>
-  <string name="main_permission_contacts">Wize SMS需要权限查看您的联系人</string>
+  <string name="main_permission_contacts">IMVERSED Messenger需要权限查看您的联系人</string>
   <string name="main_permission_required">需要权限</string>
-  <string name="main_permission_sms">Wize SMS需要权限发送和查看短信</string>
+  <string name="main_permission_sms">IMVERSED Messenger需要权限发送和查看短信</string>
   <string name="main_sender_you" formatted="false">你：%s</string>
   <string name="main_syncing">正在同步消息…</string>
   <string name="main_title_selected" formatted="false">已选择 %d 项</string>
@@ -210,8 +210,8 @@
   <string name="qksms_plus_error">发生错误，请重试</string>
   <string name="qksms_plus_forward_summary">自动转发来自特定发件人的消息</string>
   <string name="qksms_plus_forward_title">自动转发</string>
-  <string name="qksms_plus_free_title">Wize SMS+ 对 F-Droid 用户免费！欢迎捐赠支持我们。</string>
-  <string name="qksms_plus_more_summary">Wize SMS 正在积极开发中，您的购买将包括所有未来的 Wize SMS+ 功能！</string>
+  <string name="qksms_plus_free_title">IMVERSED Messenger+ 对 F-Droid 用户免费！欢迎捐赠支持我们。</string>
+  <string name="qksms_plus_more_summary">IMVERSED Messenger 正在积极开发中，您的购买将包括所有未来的 IMVERSED Messenger+ 功能！</string>
   <string name="qksms_plus_more_title">更多</string>
   <string name="qksms_plus_night_summary">根据时间启用夜间模式</string>
   <string name="qksms_plus_night_title">自动夜间模式</string>
@@ -219,8 +219,8 @@
   <string name="qksms_plus_respond_title">自动回复</string>
   <string name="qksms_plus_scheduled_summary">安排消息在特定时间和日期自动发送</string>
   <string name="qksms_plus_scheduled_title">定时消息</string>
-  <string name="qksms_plus_thanks_summary">您现在可以使用所有 Wize SMS+ 功能</string>
-  <string name="qksms_plus_thanks_title">感谢您支持Wize SMS！</string>
+  <string name="qksms_plus_thanks_summary">您现在可以使用所有 IMVERSED Messenger+ 功能</string>
+  <string name="qksms_plus_thanks_title">感谢您支持IMVERSED Messenger！</string>
   <string name="qksms_plus_themes_summary">解锁不在Material Design调色板中的美丽主题颜色</string>
   <string name="qksms_plus_themes_title">高级主题</string>
   <string name="qksms_plus_upgrade" formatted="false">%1$s %2$s 终身升级</string>
@@ -233,8 +233,8 @@
   <string name="rate_okay">好的！</string>
   <string name="rate_submit">评分</string>
   <string name="rate_summary">分享您的喜爱并在 Google Play 上为我们评分！</string>
-  <string name="rate_title">喜欢Wize短信吗？</string>
-  <string name="rate_us_description">您喜欢Wize SMS吗？我们期待您的反馈以改进应用。</string>
+  <string name="rate_title">喜欢IMVERSED Messenger吗？</string>
+  <string name="rate_us_description">您喜欢IMVERSED Messenger吗？我们期待您的反馈以改进应用。</string>
   <string name="rate_us_title">评价我们</string>
   <string name="scheduled_compose_cd">定时发送消息</string>
   <string name="scheduled_empty_description">在您想要的确切时刻自动发送消息</string>
@@ -244,7 +244,7 @@
   <string name="scheduled_empty_message_3_timestamp">将在12月23日发送</string>
   <string name="scheduled_options_title">定时消息</string>
   <string name="scheduled_title">已安排</string>
-  <string name="settings_about_title">关于Wize SMS</string>
+  <string name="settings_about_title">关于IMVERSED Messenger</string>
   <string name="settings_auto_delete">自动删除旧消息</string>
   <string name="settings_auto_delete_dialog_hint">天数</string>
   <string name="settings_auto_delete_dialog_message">消息将在指定天数后被删除</string>
@@ -317,7 +317,7 @@
   <string name="title_theme">主题</string>
   <string name="toast_archived">已归档对话</string>
   <string name="toast_copied">已复制</string>
-  <string name="toast_qksms_plus">您必须解锁Wize SMS+才能使用</string>
+  <string name="toast_qksms_plus">您必须解锁IMVERSED Messenger+才能使用</string>
   <string name="widget_loading">加载中…</string>
   <string name="widget_more">查看更多对话</string>
 

@@ -157,7 +157,12 @@ class Navigator @Inject constructor(
     }
 
     fun showLicense() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/moezbhatti/qksms/blob/master/LICENSE"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/fulldiveVR/DiveSMS/blob/master/LICENSE"))
+        startActivityExternal(intent)
+    }
+
+    fun showPrivacyPolicy() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://fulldive.com/privacy-policy"))
         startActivityExternal(intent)
     }
 
@@ -178,7 +183,7 @@ class Navigator @Inject constructor(
     }
 
     fun showRating() {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.moez.QKSMS"))
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=${context.packageName}"))
                 .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY
                         or Intent.FLAG_ACTIVITY_NEW_DOCUMENT
                         or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
@@ -186,7 +191,7 @@ class Navigator @Inject constructor(
         try {
             startActivityExternal(intent)
         } catch (e: ActivityNotFoundException) {
-            val url = "http://play.google.com/store/apps/details?id=com.moez.QKSMS"
+            val url = "http://play.google.com/store/apps/details?id=${context.packageName}"
             startActivityExternal(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
         }
     }
@@ -222,7 +227,7 @@ class Navigator @Inject constructor(
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:")
         intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("support@fulldive.com"))
-        intent.putExtra(Intent.EXTRA_SUBJECT, "DiveSms Support")
+        intent.putExtra(Intent.EXTRA_SUBJECT, "IMVERSED Messenger Support")
         intent.putExtra(Intent.EXTRA_TEXT, StringBuilder("\n\n")
                 .append("\n\n--- Please write your message above this line ---\n\n")
                 .append("Package: ${context.packageName}\n")

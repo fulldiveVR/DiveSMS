@@ -45,7 +45,7 @@ class AboutController : QkController<AboutView, Unit, AboutPresenter>(), AboutVi
     override fun onViewCreated() {
         super.onViewCreated()
         binding = AboutControllerBinding.bind(containerView!!)
-        binding.version.summary = BuildConfig.VERSION_NAME
+        binding.version.summary = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
     }
 
     override fun onAttach(view: View) {

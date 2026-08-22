@@ -58,7 +58,7 @@ Message:
 {{message}}
 ---
 
-Sent via Wize SMS
+Sent via IMVERSED Messenger
         """.trimIndent()
 
         // Template variables
